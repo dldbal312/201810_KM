@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<title>K&amp;M2 Publising 코딩진행표</title>
+<link rel="stylesheet" href="/guide/base.css">
+<script src="/js/jQuery/jquery-2.2.4.min.js"></script>
+<script src="/guide/dtree.js"></script>
+</head>
+<body>
+<div id="wrap">
+	<h1 class="titH1"><span>K&amp;M2</span></h1>
+
+	<div class="status">
+		<h2>페이지 작업 상태</h2>
+		<ol>
+			<li><span class="t-ing">작업진행중</span></li>
+			<li><span class="t-modify">수정</span></li>
+			<li><span class="t-confirm">완료(개발가능)</span></li>
+		</ol>
+	</div>
+	<div class="dtree-wrap">
+		<p><a href="javascript: a.openAll();"><img src="/guide/images/btn_expand.gif" alt="Expand All" /></a> <a href="javascript: a.closeAll();"><img src="/guide/images/btn_collapse.gif" alt="Collapse All" /></a></p>
+		<script type="text/javascript">
+			var tree = {
+				'WSG': {
+					'업무 가이드': {
+						'기본가이드': ['/guide/html/guide.html', '', 'mainFrame'],
+						'상세규칙': ['/guide/html/guide_markup.html', '', 'mainFrame']
+						},
+					'PC 컨텐츠 가이드': {
+						'폰트': ['/guide/html/guide_font.html', '', 'mainFrame'],
+						'박스형태': ['/guide/html/guide_box.html', '', 'mainFrame'],
+						'버튼 /  탭': ['/guide/html/guide_btn.html', '', 'mainFrame'],
+						'입력서식': ['/guide/html/guide_form.html', '', 'mainFrame'],
+						'테이블': ['/guide/html/guide_table.html', '', 'mainFrame'],
+						'알림, 확인 메세지': ['/guide/html/guide_msg.html', '', 'mainFrame'],
+						'기타': ['/guide/html/guide_etc.html', '', 'mainFrame']
+						},
+					'PC 레이아웃': ['/guide/html/guide_layout.html', '', 'mainFrame'],
+					'공통': ['/html/layout.html', '수정', 'mainFrame']
+					}
+				};
+
+			var a = new dTree('a', tree);
+			document.write(a);
+		</script>
+
+	
+		<p><a href="javascript: b.openAll();"><img src="/guide/images/btn_expand.gif" alt="Expand All" /></a> <a href="javascript: b.closeAll();"><img src="/guide/images/btn_collapse.gif" alt="Collapse All" /></a></p>
+		<script type="text/javascript">
+			var tree2 = {
+			'센터장': {
+					'출결키패드': ['/html/attendance.html', '완료', 'mainFrame'],
+					'로그인': ['/html/login.html', '완료', 'mainFrame'],
+					'비밀번호 변경 알림': ['/html/changePassword.html', '완료', 'mainFrame'],
+					'초기 비밀번호 변경': ['/html/initialPassword.html', '완료', 'mainFrame'],
+					'고객관리': {
+						'가망고객관리': ['/html/memberLead.html', '완료', 'mainFrame'],
+						/*'상담관리': {
+							'상담 예약 관리 목록': ['/html/.html', '', 'mainFrame'],
+							'상담 예약 등록': ['/html/.html', '', 'mainFrame'],
+							'상담 예약 상세(미완료)': ['/html/.html', '', 'mainFrame'],
+							'상담 예약 상세(상담완료)': ['/html/.html', '', 'mainFrame'],
+							'회원 상담': ['/html/.html', '', 'mainFrame'],
+							'회원 상담 등록': ['/html/.html', '', 'mainFrame'],
+							'회원 상담 상세': ['/html/.html', '', 'mainFrame']
+						},*/
+						'회원관리': {
+							'회원조회': ['/html/member.html', '완료', 'mainFrame']/*,
+							'무료체험': ['/html/.html', '', 'mainFrame'],
+							'입회': ['/html/.html', '', 'mainFrame'],
+							'퇴회/복회': ['/html/.html', '', 'mainFrame'],
+							'휴회': ['/html/.html', '', 'mainFrame'],
+							'과목전환': ['/html/.html', '', 'mainFrame'],
+							'메시지 발송': ['/html/.html', '', 'mainFrame']*/
+						},
+						/*'메시지 관리': ['/html/.html', '', 'mainFrame']*/
+					},
+					'학습운영영관리': {
+						/*'Schedule': ['/html/schedule.html', '', 'mainFrame'],
+						'출결관리': {
+							'출석부': ['/html/.html', '', 'mainFrame'],
+							'리스트 - 체크인': ['/html/.html', '', 'mainFrame'],
+							'리스트 - 체크아웃': ['/html/.html', '', 'mainFrame']
+						},
+						'진도관리': {
+							'진도설정': ['/html/.html', '', 'mainFrame'],
+							'진도 상세': ['/html/.html', '', 'mainFrame']
+						},
+						'DT관리': ['/html/.html', '', 'mainFrame'],*/
+						'학습결과': {
+							/*'개인(과목)별 리스트': ['/html/.html', '', 'mainFrame'],
+							'최근학습모니터링': ['/html/.html', '', 'mainFrame'],*/
+							'해답지': ['/html/answerSheet.html', '완료', 'mainFrame']/*,
+							'상담용 리포트': ['/html/.html', '', 'mainFrame']*/
+						}
+					},
+					'재무영업관리': {
+						'청구납부관리': {
+							'회비납부': ['/html/feePayment.html', '', 'mainFrame']/*,
+							'STATEMENT': ['/html/.html', '', 'mainFrame'],
+							'회비수납내역': ['/html/.html', '', 'mainFrame'],
+							'충전횟수관리': ['/html/.html', '', 'mainFrame']*/
+						},
+						/*'예치금 관리': ['/html/.html', '', 'mainFrame'],
+						'회비타입관리': ['/html/.html', '', 'mainFrame'],
+						'재무분석': ['/html/.html', '', 'mainFrame'],*/
+						'스페셜오더': ['/html/special-order.html', '완료', 'mainFrame']/*,
+						'회비타입변경': ['/html/.html', '', 'mainFrame'],
+						'양식관리': ['/html/.html', '', 'mainFrame']*/
+					},
+					'센터 운영': {
+						/*'센터정보': ['/html/.html', '', 'mainFrame'],*/
+						'Staff 관리': {
+							'계정관리': ['/html/staffManagement.html', '완료', 'mainFrame']/*,
+							'계정권한관리': ['/html/.html', '', 'mainFrame']*/
+						}/*,
+						'리포트': ['/html/.html', '', 'mainFrame']*/
+					},
+					'관리자': {
+						'공통코드관리': ['/html/codeManagement.html', '완료', 'mainFrame']/*,
+						'메뉴관리': ['/html/.html', '', 'mainFrame'],
+						'권한관리': {
+							'롤(패턴)관리': ['/html/.html', '', 'mainFrame'],
+							'권한 상세 관리': ['/html/.html', '', 'mainFrame'],
+							'권한별 롤 매핑': ['/html/.html', '', 'mainFrame'],
+							'권한별 메뉴 매핑': ['/html/.html', '', 'mainFrame']
+						},
+						'로그관리': {
+							'개인정보 접근 로그': ['/html/.html', '', 'mainFrame'],
+							'페이지 접근 로그': ['/html/.html', '', 'mainFrame'],
+							'접속 로그': ['/html/.html', '', 'mainFrame'],
+							'서비스 이용(CRUD) 로그': ['/html/.html', '', 'mainFrame'],
+							'권한 부여 로그': ['/html/.html', '', 'mainFrame']
+						}*/
+					}
+				} 
+			};
+
+			var b = new dTree('b', tree2);
+			document.write(b);
+		</script>
+
+		<p><a href="javascript: c.openAll();"><img src="/guide/images/btn_expand.gif" alt="Expand All" /></a> <a href="javascript: c.closeAll();"><img src="/guide/images/btn_collapse.gif" alt="Collapse All" /></a></p>
+		<script type="text/javascript">
+			var tree3 = {
+			'법인': {
+					'시스템 관리자': ['/html/systemManager.html', '완료', 'mainFrame'],
+					'법인환경설정': ['/html/corporateSetting.html', '완료', 'mainFrame'],
+					'무료체험 과목 세팅': ['/html/freeTrialSetting.html', '완료', 'mainFrame']
+				} 
+			};
+			var c = new dTree('c', tree3);
+			document.write(c);
+		</script>
+
+
+	</div>
+</div>
+
+
+</body>
+</html>

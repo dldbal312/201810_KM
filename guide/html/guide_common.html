@@ -1,0 +1,1481 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<link rel="SHORTCUT ICON" href="/images/favicon.ico">
+<title>Key&amp;Manager ver.2</title>
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/fontawesome-all.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" type="text/css" href="/css/custom.css">
+<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+<script src="/js/vendors/jquery-ui.min.js"></script>
+<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+<script src="/js/vendors/moment.js"></script>
+<script src="/js/vendors/bootstrap.min.js"></script>
+<script src="/js/vendors/bootstrap-datetimepicker.min.js"></script>
+</head>
+<body class="nav-sm">
+<div class="wrapper">		
+	<div class="left_col">
+		<div id="sidebar-menu" class="main_menu_side main_menu">
+			<div class="menu_section">
+				<ul class="nav side-menu">
+					<li class="parent_menu"><a href="#"><i class="ico-schedule"></i>Schedule</a><a role="button" class="submenu-open"></a></li>
+					<li class="parent_menu"><a href="#"><i class="ico-member"></i>Member</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Member</a>
+								<ul class="nav-depth3">
+									<li class="active"><a href="#">Subject Transfer</a></li>
+									<li><a href="#">Learning</a></li> 
+									<li><a href="#">Attendance</a></li> 
+								</ul>
+							</li>
+							<li><a href="#">Attendance</a></li> 
+							<li><a href="#">Subject Transfer</a></li>
+							<li><a href="#">Learning</a></li> 
+							<li><a href="#">Attendance</a></li> 
+						</ul>
+					</li>
+					<li class="parent_menu"><a href="#"><i class="ico-learning"></i>Learning</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Member</a></li>
+							<li><a href="#">Attendance</a></li>
+							<li><a href="#">Subject Transfer</a></li>
+							<li><a href="#">Learning</a></li>
+							<li><a href="#">Attendance</a></li>
+						</ul>
+					</li>
+					<li class="parent_menu"><a href="#"><i class="ico-finance"></i>Finance</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Member</a></li>
+							<li><a href="#">Attendance</a></li> 
+							<li><a href="#">Subject Transfer</a></li>
+							<li><a href="#">Learning</a></li> 
+							<li><a href="#">Attendance</a></li> 
+						</ul>
+					</li>
+					<li class="parent_menu"><a href="#"><i class="ico-center"></i>Center</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Member</a></li>
+							<li><a href="#">Attendance</a></li> 
+							<li><a href="#">Subject Transfer</a></li>
+							<li><a href="#">Learning</a></li> 
+							<li><a href="#">Attendance</a></li> 
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="right_col">		
+		<div class="nav_menu">
+			<div class="toggle">
+				<a href="#" class="menu_toggle"><i></i></a>
+			</div>
+			<div class="head-wrap">
+				<div class="pull-left head-favorite">
+					<ul class="head-favorite-list">
+						<li><a href="#" class="list">Create member</a><a href="#" class="ico-delete"><i class="fas fa-times"></i></a></li>
+						<li><a href="#" class="list">Payment</a><a href="#" class="ico-delete"><i class="fas fa-times"></i></a></li>
+						<li><a href="#" class="list">My student</a><a href="#" class="ico-delete"><i class="fas fa-times"></i></a></li>
+					</ul>
+					<a href="#" class="favorite-set"><span class="ico-count cl-gray"></span>My menu add</a>
+				</div>
+				<div class="pull-right head-user-info">
+					<a href="#" class="head-logout">Logout</a>
+					<span class="head-name">Tony tony chopa (FC0001S)</span>
+					<a href="#" class="head-mypage">My page</a>
+				</div>
+			</div>
+		</div>
+		<div class="right_content" role="main">
+			<div class="container-fluid">
+				<div class="page-title">
+				  <div class="title_left">
+					<h3>PAGE TITLE</h3>
+				  </div>
+				</div>
+				<div class="row py-1">
+					<div class="col-md-12">
+						<button type="button" class="btn btn-primary">OK</button>
+						<button type="button" class="btn btn-success">Save</button>   
+						<button type="button" class="btn btn-info">Reset</button>
+						<button type="button" class="btn btn-primary disabled" disabled="disabled">Save(비활성화)</button>
+						<button type="button" class="btn btn-info disabled" disabled="disabled">Reset(비활성화)</button>
+						<button type="button" class="btn-list-del">Delete</button>
+						<button type="button" class="btn-list-open">Add</button>
+					</div>
+				</div>
+				<div class="row py-1">
+					<div class="col-md-12 text-right">
+						<a href="#" class="btn btn-primary">Add Student</a>
+						<a href="#" class="btn btn-primary">Delete</a>
+					</div>
+				</div>
+				<div class="row py-1">
+					<div class="col-md-12 text-left">
+						<a href="#" class="btn btn-primary">Add Student</a>
+						<a href="#" class="btn btn-primary">Delete</a>
+					</div>
+				</div>
+				<div class="row py-1">
+					<div class="col-md-12">
+						<span class="pull-left">
+							<a href="#" class="btn btn-primary">left</a>
+						</span> 
+						<span class="pull-right">
+							<a href="#" class="btn btn-primary">right</a>
+						</span>
+					</div>
+				</div>
+				<div class="row py-1">
+					<div class="col-md-12 text-center">
+						<a href="#" class="btn btn-primary">OK</a>
+						<a href="#" class="btn btn-info">Cancel</a>
+					</div>
+				</div>
+				<div class="row py-1">
+					<form class="form-inline">
+						<div class="col-md-12 py-2">
+							<div class="form-group">
+								<input type="text" class="form-control input-sm clearable" placeholder="default">
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control input-sm clearable" placeholder="focus">
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control input-sm clearable" placeholder="readonly" readonly="readonly">
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control input-sm clearable" placeholder="disabled" disabled>
+							</div>
+						</div>
+						<div class="col-md-12 py-2">
+							<div class="form-group">
+								<div class="input-group date">
+									<input type="text" class="form-control input-sm clearable" placeholder="dd/mm/yyyy" />
+									<span class="input-group-addon">
+										<span class="calendar-icon"></span>
+									</span>
+								</div>
+							</div>
+							<span class="date-period-divider">~</span>
+							<div class="form-group">
+								<div class="input-group date">
+									<input type="text" class="form-control input-sm clearable" placeholder="dd/mm/yyyy" />
+									<span class="input-group-addon">
+										<span class="calendar-icon"></span>
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12 py-2">
+							<div class="form-group">
+								<div class="input-group date">
+									<input type="text" class="form-control input-sm clearable" placeholder="dd/mm/yyyy" />
+									<span class="input-group-addon">
+										<span class="calendar-icon"></span>
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="checkbox checkbox-primary checkbox-inline">
+								<input id="checkbox1" type="checkbox" checked="checked">
+								<label for="checkbox1">체크박스1</label>
+							</div>
+							<div class="checkbox checkbox-primary checkbox-inline">
+								<input id="checkbox2" type="checkbox">
+								<label for="checkbox2">체크박스2</label>
+							</div>
+							<div class="checkbox checkbox-primary checkbox-inline">
+								<input id="checkbox3" type="checkbox" disabled>
+								<label for="checkbox3">체크박스3</label>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="radio radio-primary radio-inline">
+								<input type="radio" id="inlineRadio1" value="option1" name="radioInline1" checked="checked">
+								<label for="inlineRadio1"> 라디오1-1 </label>
+							</div>
+							<div class="radio radio-primary radio-inline">
+								<input type="radio" id="inlineRadio2" value="option1" name="radioInline1">
+								<label for="inlineRadio2"> 라디오1-2 </label>
+							</div>
+							<div class="radio radio-primary radio-inline">
+								<input type="radio" id="inlineRadio3" value="option1" name="radioInline2" disabled>
+								<label for="inlineRadio3"> 라디오2-1 </label>
+							</div>
+							<div class="radio radio-primary radio-inline">
+								<input type="radio" id="inlineRadio4" value="option1" name="radioInline2" checked="checked" disabled>
+								<label for="inlineRadio4"> 라디오2-2 </label>
+							</div>
+						</div>
+						<div class="col-md-12 py-2">
+							<div class="btn-group" data-toggle="buttons">
+								<label class="btn btn-default active">
+									<input type="radio" name="options" id="option1" autocomplete="off" checked="checked">
+									<span>All</span>
+								</label>
+								<label class="btn btn-default">
+									<input type="radio" name="options" id="option2" autocomplete="off">
+									<span>Teaching Booklet</span>
+								</label>
+								<label class="btn btn-default">
+									<input type="radio" name="options" id="option3" autocomplete="off">
+									<span>Supplemental Booklet</span>
+								</label>
+								<label class="btn btn-default">
+									<input type="radio" name="options" id="option4" autocomplete="off">
+									<span>Material</span>
+								</label>
+							</div>
+						</div>
+						<div class="col-md-12 py-2">
+							<div class="form-group">				
+								<select class="form-control input-sm">
+									<option value="0" selected="" title="All">All</option>
+									<option value="1" title="EL Math">EL Math</option>
+									<option value="2" title="EL Play Math">EL Play Math</option>
+									<option value="3" title="EL Eng">EL Eng</option>
+									<option value="4" title="EL Kor">EL Kor</option>
+									<option value="5" title="EL Matematika">EL Matematika</option>
+									<option value="6" title="EL Eng Sparks">EL Eng Sparks</option>
+									<option value="7" title="NNP Kor">NNP Kor</option>
+									<option value="8" title="NNP Infant Kor">NNP Infant Kor</option>
+									<option value="9" title="NNP Mid. Society">NNP Mid. Society</option>
+									<option value="10" title="NNP WebPlus Mid. Kor">NNP WebPlus Mid. Kor</option>
+									<option value="11" title="NNP Thinking P. Math">NNP Thinking P. Math</option>
+									<option value="12" title="NNP Infant Math">NNP Infant Math</option>
+									<option value="13" title="NNP Eng">NNP Eng</option>
+									<option value="14" title="Super Talk Talk">Super Talk Talk</option>
+									<option value="15" title="NNP Chinese Char.">NNP Chinese Char.</option>
+									<option value="16" title="NNP Japanese">NNP Japanese</option>
+									<option value="17" title="NNP Social Study">NNP Social Study</option>
+									<option value="18" title="NNP Science">NNP Science</option>
+									<option value="19" title="CH Chinese">CH Chinese</option>
+									<option value="20" title="Inopi Math">Inopi Math</option>
+									<option value="21" title="NNP Clinic Kor">NNP Clinic Kor</option>
+									<option value="22" title="NNP Baby">NNP Baby</option>
+									<option value="23" title="Inopi">Inopi</option>
+									<option value="24" title="EL Eng Blended">EL Eng Blended</option>
+									<option value="25" title="Inopi Math Online">Inopi Math Online</option>
+									<option value="26" title="EL Math Online">EL Math Online</option>
+									<option value="27" title="EL HappyTalk">EL HappyTalk</option>
+									<option value="28" title="EL Chinese.J">EL Chinese.J</option>
+									<option value="29" title="EL Matematika Online">EL Matematika Online</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<select class="form-control input-sm" disabled="disabled" >
+									<option value="0" title="All">All</option>
+									<option value="1" selected="" title="Daekyo Malaysia">Daekyo Malaysia</option>
+								</select>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="row py-1">
+					<div class="col-md-12">
+						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#searchMember">회원검색</button>
+						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#searchManager">교사검색</button>   
+						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addStudent">회원등록</button>
+						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#studentInfo">회원상세</button>
+						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#info">정보알림</button>
+						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#confirm">확인알림</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<span class="ft-logo">KEY &amp; MANAGER</span>
+			<p class="ft-copy">Copyright &copy; 2018 Daekyo Co., Ltd All rights reserved. For more information, contact <a href="mailto:myeyelevel@myeyelevel.com">myeyelevel@myeyelevel.com</a></p>
+			<div class="ft-site">
+				<dl>
+					<dt><a href="#class">LINKS</a></dt>
+					<dd>
+						<ul>
+							<li><a href="https://sites.google.com/a/myeyelevel.com/itisthekey/" target="_blank">User guide</a></li>
+							<li><a href="http://www.myeyelevel.com/Global/English/" target="_blank">Eyelevel Site</a></li>
+							<li><a href="http://www.iamthekey.com/" target="_blank">Brand Site</a></li>
+							<li><a href="http://eng.daekyo.com/En/default.aspx" target="_blank">Corporate Site</a></li>
+							<li><a href="http://elu.myeyelevel.com" target="_blank">Eye Level University</a></li>
+							<li><a href="http://email.myeyelevel.com" target="_blank">Email</a></li>
+						</ul>
+					</dd>
+				</dl>
+			</div>
+		</footer>
+	</div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="searchMember" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title" id="myModalLabel1">Search Member</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal form-label-left">
+                    <div class="form-group">
+                        <div class="col-md-8 col-md-offset-2">
+                            <label class="control-label col-md-4" for="member-id">Member ID</label>
+                            <div class="col-md-8">
+                                <input type="text" id="member-id" class="form-control input-sm clearable col-md-12">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-8 col-md-offset-2">
+                            <label class="control-label col-md-4" for="member-name">Name</label>
+                            <div class="col-md-8">
+                                <input type="text" id="member-name" name="member-name" class="form-control input-sm clearable col-md-12">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group text-center">
+                        <a href="#" class="btn btn-primary">조회</a>
+                    </div>
+                </form>
+                <div class="bx-table">
+                    <div class="tb-dimm"><span class="txts">Fetching data...</span></div>
+                    <table class="table">
+                        <colgroup>
+                            <col style="width:30%">
+                            <col style="width:40%">
+                            <col style="width:30%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">Member ID</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Birthday</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="#">G00204614</a></td>
+                                <td><a href="#">Brandon Tan</a></td>
+                                <td><a href="#">02/03/2013</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Save</button>
+                <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="searchManager" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title" id="myModalLabel2">Search Manager</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal form-label-left">
+                    <div class="form-group">
+                        <div class="col-md-8 col-md-offset-2">
+                            <label class="control-label col-md-4" for="first-name">Manager ID</label>
+                            <div class="col-md-8">
+                                <input type="text" id="manager-id" class="form-control input-sm clearable col-md-12">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-8 col-md-offset-2">
+                            <label class="control-label col-md-4" for="member-name">Name</label>
+                            <div class="col-md-8">
+                                <input type="text" id="member-name" class="form-control input-sm clearable col-md-12">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group text-center">
+                        <a href="#" class="btn btn-primary">조회</a>
+                    </div>
+                </form>
+                <div class="bx-table">
+                    <div class="tb-dimm"><span class="txts">Fetching data...</span></div>
+                    <table class="table">
+                        <colgroup>
+                            <col style="width:30%">
+                            <col style="width:70%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">Manager ID</th>
+                                <th scope="col">Name</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="#">K30001134</a></td>
+                                <td><a href="#">hwkim hwkim</a></td>
+                            </tr>
+							<tr>
+                                <td><a href="#">K30001134</a></td>
+                                <td><a href="#">hwkim hwkim</a></td>
+                            </tr>
+							<tr>
+                                <td><a href="#">K30001134</a></td>
+                                <td><a href="#">hwkim hwkim</a></td>
+                            </tr>
+							<tr>
+                                <td><a href="#">K30001134</a></td>
+                                <td><a href="#">hwkim hwkim</a></td>
+                            </tr>
+							<tr>
+                                <td><a href="#">K30001134</a></td>
+                                <td><a href="#">hwkim hwkim</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Save</button>
+                <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="addStudent" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3">
+	<div class="modal-dialog modal-wide" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel3">Add Student</h4>
+			</div>
+			<div class="modal-body">
+				<div class="col-md-12">
+					<h5 class="cm-h5">Basic info</h5>
+				</div>
+				<div class="row">
+					<form class="form-group">
+						<div class="col-md-12">
+							<div class="col-md-3">
+								<div class="form-group">
+									<span class="lb-txt mb-1">First Name<i class="required">*</i></span>
+									<input type="text" class="form-control input-sm clearable" value="">
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="form-group">
+									<span class="lb-txt mb-1">Middle Name</span>
+									<input type="text" class="form-control input-sm clearable" value="">
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="form-group">
+									<span class="lb-txt mb-1">Last Name<i class="required">*</i></span>
+									<input type="text" class="form-control input-sm clearable" value="">
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="form-group">
+									<span class="lb-txt mb-1">Grade<i class="required">*</i></span>
+									<div class="form-inline">
+										<select class="form-control input-sm">
+											<option value="1" title="Age 0~1">Age 0~1</option>
+											<option value="2" title="Age 1~2">Age 1~2</option>
+											<option value="3" title="Age 2~3">Age 2~3</option>
+											<option value="4" title="Age 3~4">Age 3~4</option>
+											<option value="5" title="Age 4~5">Age 4~5</option>
+											<option value="6" title="Age 5~6">Age 5~6</option>
+											<option value="7" title="Primary Standard 1" selected="selected">Primary Standard 1</option>
+											<option value="8" title="Primary Standard 2">Primary Standard 2</option>
+											<option value="9" title="Primary Standard 3">Primary Standard 3</option>
+											<option value="10" title="Primary Standard 4">Primary Standard 4</option>
+											<option value="11" title="Primary Standard 5">Primary Standard 5</option>
+											<option value="12" title="Primary Standard 6">Primary Standard 6</option>
+											<option value="13" title="Secondary Form 1">Secondary Form 1</option>
+											<option value="14" title="Secondary Form 2">Secondary Form 2</option>
+											<option value="15" title="Secondary Form 3">Secondary Form 3</option>
+											<option value="16" title="Secondary Form 4">Secondary Form 4</option>
+											<option value="17" title="Secondary Form 5">Secondary Form 5</option>
+											<option value="18" title="Secondary Form 6">Secondary Form 6</option>
+										</select>
+										<span class="ico-gpm"></span>
+										<select class="form-control input-sm">
+											<option value="" title="" selected="selected">12</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="row">
+									<div class="ln_dashed"></div>
+									<button type="button" class="bt-more" data-toggle="collapse" data-target="#more1" aria-expanded="false" aria-controls="collapseExample"><span class="fas fa-plus"></span><span class="fas fa-minus"></span></button>
+									<div class="collapse" id="more1">
+										<div class="col-md-3">
+											<div class="form-group">
+												<span class="lb-txt mb-1">Parent Contact 1</span>
+												<input type="text" class="form-control input-sm clearable" value="">
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="form-group">
+												<span class="lb-txt mb-1">Parent Contact 2</span>
+												<input type="text" class="form-control input-sm clearable" value="">
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="form-group">
+												<span class="lb-txt mb-1">Parent E-mail</span>
+												<div class="form-inline">
+													<div class="input-group">
+														<input class="form-control input-sm clearable" type="text">
+														<div class="input-group-btn">
+															<button type="button" class="btn btn-default btn-request">Request</button><!-- <span class="verified">√ Not verified</span> -->
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="form-group">
+												<span class="lb-txt mb-1">Gender</span>
+												<div class="form-inline">
+													<div class="radio radio-primary radio-inline">
+														<input type="radio" id="radioInline40" value="option1" name="radioInline40" checked="checked">
+														<label for="radioInline40"> Female </label>
+													</div>
+													<div class="radio radio-primary radio-inline">
+														<input type="radio" id="radioInline41" value="option1" name="radioInline40">
+														<label for="radioInline41"> Male </label>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="form-group">
+												<span class="lb-txt mb-1">Birthday</span>
+												<div class="input-group date">
+													<input type="text" class="form-control input-sm clearable datepicker" placeholder="dd/mm/yyyy" name="requestDateFrom" id="requestDateFrom" />
+													<span class="input-group-addon">
+														<span class="calendar-icon"></span>
+													</span>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="form-group">
+												<span class="lb-txt mb-1">School</span>
+												<input type="text" class="form-control input-sm clearable" value="Daekyo">
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<span class="lb-txt mb-1">Messenger</span>
+												<div class="form-inline">
+													<div class="radio radio-primary radio-inline">
+														<input type="radio" id="radioInline10" value="option1" name="radioInline10" checked="checked">
+														<label for="radioInline10"><span class="ico-facebook">Facebook</span></label>
+													</div>
+													<div class="radio radio-primary radio-inline mr-2">
+														<input type="radio" id="inlineRadio11" value="option1" name="radioInline10">
+														<label for="inlineRadio11"><span class="ico-wechat">Wechat</span></label>
+													</div>
+													<div class="input-group">
+														<input class="form-control input-sm clearable" type="text">
+														<div class="input-group-btn">
+															<button type="button" class="btn btn-default btn-request">Request</button><!-- <span class="verified active">√ Verified</span> -->
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<span class="lb-txt mb-1">Notice</span>
+												<div class="form-inline">
+													<div class="radio radio-primary radio-inline">
+														<input type="radio" id="radioInline20" value="option1" name="radioInline20" checked="checked">
+														<label for="radioInline20">Email</label>
+													</div>
+													<div class="radio radio-primary radio-inline">
+														<input type="radio" id="radioInline21" value="option1" name="radioInline20">
+														<label for="radioInline21">Messenger</label>
+													</div>
+													<div class="radio radio-primary radio-inline">
+														<input type="radio" id="radioInline22" value="option1" name="radioInline20">
+														<label for="radioInline22">Prefer not to receive</label>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<span class="lb-txt mb-1">Remarks</span>
+												<input type="text" class="form-control input-sm clearable" value="">
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="form-group">
+												<span class="lb-txt mb-1">Zip Code</span>
+												<input type="text" class="form-control input-sm clearable w-" value="">
+											</div>
+										</div>
+										<div class="col-md-9">
+											<div class="form-group">
+												<span class="lb-txt mb-1">Address</span>
+												<input type="text" class="form-control input-sm clearable" value="">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="modal-footer">	
+				<button type="button" class="btn btn-primary">Save & Enroll/Free Trial</button>
+				<button type="button" class="btn btn-primary">Save</button>
+				<button type="button" class="btn btn-info" data-dismiss="modal">Cancel</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="studentInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4">
+	<div class="modal-dialog modal-wide" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel4">회원상세</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-md-12">
+							<div class="pull-left col-md-8">
+							<h5 class="cm-h5">Basic info<small class="ml-2">SHekinah Francesca Louis (K30000718)</small></h5>
+						</div>
+						<div class="pull-right mt-2">	
+							<!-- <button type="button" class="btn btn-info">회원삭제</button> -->
+							<button type="button" class="btn btn-primary">Save</button>
+							<button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<form class="form-group col-md-12">
+						<div class="col-md-3">
+							<div class="form-group">
+								<span class="lb-txt mb-1">First Name<i class="required">*</i></span>
+								<input type="text" class="form-control input-sm clearable" value="SHekinah">
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="form-group">
+								<span class="lb-txt mb-1">Middle Name</span>
+								<input type="text" class="form-control input-sm clearable" value="SHekinah">
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="form-group">
+								<span class="lb-txt mb-1">Last Name<i class="required">*</i></span>
+								<input type="text" class="form-control input-sm clearable" value="SHekinah">
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="form-group">
+								<span class="lb-txt mb-1">Grade<i class="required">*</i></span>
+								<div class="form-inline">
+									<select class="form-control input-sm">
+										<option value="1" title="Age 0~1">Age 0~1</option>
+										<option value="2" title="Age 1~2">Age 1~2</option>
+										<option value="3" title="Age 2~3">Age 2~3</option>
+										<option value="4" title="Age 3~4">Age 3~4</option>
+										<option value="5" title="Age 4~5">Age 4~5</option>
+										<option value="6" title="Age 5~6">Age 5~6</option>
+										<option value="7" title="Primary Standard 1" selected="selected">Primary Standard 1</option>
+										<option value="8" title="Primary Standard 2">Primary Standard 2</option>
+										<option value="9" title="Primary Standard 3">Primary Standard 3</option>
+										<option value="10" title="Primary Standard 4">Primary Standard 4</option>
+										<option value="11" title="Primary Standard 5">Primary Standard 5</option>
+										<option value="12" title="Primary Standard 6">Primary Standard 6</option>
+										<option value="13" title="Secondary Form 1">Secondary Form 1</option>
+										<option value="14" title="Secondary Form 2">Secondary Form 2</option>
+										<option value="15" title="Secondary Form 3">Secondary Form 3</option>
+										<option value="16" title="Secondary Form 4">Secondary Form 4</option>
+										<option value="17" title="Secondary Form 5">Secondary Form 5</option>
+										<option value="18" title="Secondary Form 6">Secondary Form 6</option>
+									</select>
+									<span class="ico-gpm"></span>
+									<select class="form-control input-sm">
+										<option value="" title="" selected="selected">12</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="form-group">
+								<span class="lb-txt mb-1">Parent Contact 1<i class="required">*</i></span>
+								<input type="text" class="form-control input-sm clearable" value="012345678901">
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="form-group">
+								<span class="lb-txt mb-1">Parent E-mail</span>
+								<div class="form-inline">
+									<div class="input-group">
+										<input class="form-control input-sm clearable" type="text" value="aaaaaaaaaaaaa@gmail.com">
+										<div class="input-group-btn">
+											<!-- <button type="button" class="btn btn-default btn-request">Request</button> --><span class="verified active">√ Verified</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-5">
+							<div class="form-group">
+								<span class="lb-txt mb-1">Messenger</span>
+								<div class="form-inline">
+									<div class="radio radio-primary radio-inline">
+										<input type="radio" id="radioInline100" value="option1" name="radioInline100" checked="checked">
+										<label for="radioInline100"><span class="ico-facebook">Facebook</span></label>
+									</div>
+									<div class="radio radio-primary radio-inline mr-2">
+										<input type="radio" id="inlineRadio110" value="option1" name="radioInline100">
+										<label for="inlineRadio110"><span class="ico-wechat">Wechat</span></label>
+									</div>
+									<div class="input-group">
+										<input class="form-control input-sm clearable" type="text">
+										<div class="input-group-btn">
+											<button type="button" class="btn btn-default btn-request">Request</button><!-- <span class="verified">√ Not Verified</span> -->
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="form-group">
+								<span class="lb-txt mb-1">Attendance Code</span>
+								<div class="form-inline">
+									<div class="input-group">
+										<input class="form-control input-sm clearable" type="text" value="1234">
+										<div class="input-group-btn">
+											<button type="button" class="btn btn-default btn-request">Request</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-md-4">
+							<div class="form-group">
+								<span class="lb-txt mb-1">Notice</span>
+								<div class="form-inline">
+									<div class="radio radio-primary radio-inline">
+										<input type="radio" id="radioInline200" value="option1" name="radioInline200" checked="checked">
+										<label for="radioInline200"> Email </label>
+									</div>
+									<div class="radio radio-primary radio-inline">
+										<input type="radio" id="radioInline210" value="option1" name="radioInline200">
+										<label for="radioInline210"> Messenger </label>
+									</div>
+									<div class="radio radio-primary radio-inline">
+										<input type="radio" id="radioInline220" value="option1" name="radioInline200">
+										<label for="radioInline220"> Prefer not to receive </label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="form-group">
+								<span class="lb-txt mb-1">Personal Info Agreement</span>
+								<div class="form-inline">
+									<div class="radio radio-primary radio-inline">
+										<input type="radio" id="radioInline300" value="option1" name="radioInline300" checked="checked">
+										<label for="radioInline300"> YES </label>
+									</div>
+									<div class="radio radio-primary radio-inline">
+										<input type="radio" id="radioInline310" value="option1" name="radioInline300">
+										<label for="radioInline310"> NO </label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="row">
+								<div class="ln_dashed"></div>
+								<button type="button" class="bt-more" data-toggle="collapse" data-target="#more2" aria-expanded="false" aria-controls="collapseExample"><span class="fas fa-plus"></span><span class="fas fa-minus"></span></button>
+								<div class="collapse" id="more2">
+									<div class="col-md-3">
+										<div class="form-group">
+											<span class="lb-txt mb-1">Parent Contact 2</span>
+											<input type="text" class="form-control input-sm clearable" value="012345678901">
+										</div>
+									</div>
+									<div class="col-md-3">
+										<div class="form-group">
+											<span class="lb-txt mb-1">Gender</span>
+											<div class="form-inline">
+												<div class="radio radio-primary radio-inline">
+													<input type="radio" id="radioInline400" value="option1" name="radioInline400" checked="checked">
+													<label for="radioInline400"> Female </label>
+												</div>
+												<div class="radio radio-primary radio-inline">
+													<input type="radio" id="radioInline410" value="option1" name="radioInline400">
+													<label for="radioInline410"> Male </label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-3">
+										<div class="form-group">
+											<span class="lb-txt mb-1">Birthday</span>
+											<div class="form-inline input-group date">
+												<input class="form-control input-sm clearable" type="text" placeholder="dd/mm/yyyy">
+												<span class="input-group-addon">
+													<span class="calendar-icon"></span>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-3">
+										<div class="form-group">
+											<span class="lb-txt mb-1">School</span>
+											<input type="text" class="form-control input-sm clearable" value="Daekyo">
+										</div>
+									</div>
+									
+									<div class="col-md-2">
+										<div class="form-group">
+											<span class="lb-txt mb-1">Zip Code</span>
+											<input type="text" class="form-control input-sm clearable w-" value="">
+										</div>
+									</div>
+									<div class="col-md-5">
+										<div class="form-group">
+											<span class="lb-txt mb-1">Address</span>
+											<input type="text" class="form-control input-sm clearable" value="">
+										</div>
+									</div>
+									<div class="col-md-5">
+										<div class="form-group">
+											<span class="lb-txt mb-1">Remarks</span>
+											<input type="text" class="form-control input-sm clearable" value="">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="pull-right">
+							<a href="#" class="btn btn-success">Add subject</a>
+							<a href="#" class="btn btn-success">Free trial</a>
+						</div>
+						<ul class="nav nav-tabs" role="tablist">
+							<li role="presentation" class="active"><a href="#tab-box1" aria-controls="tab-box1" role="tab" data-toggle="tab">Study</a></li>
+							<li role="presentation"><a href="#tab-box2" aria-controls="tab-box2" role="tab" data-toggle="tab">Dropped Subject</a></li>
+							<li role="presentation"><a href="#tab-box3" aria-controls="tab-box3" role="tab" data-toggle="tab">Progress</a></li>
+							<li role="presentation"><a href="#tab-box4" aria-controls="tab-box4" role="tab" data-toggle="tab">payment</a></li>
+							<li role="presentation"><a href="#tab-box5" aria-controls="tab-box5" role="tab" data-toggle="tab">Consultation</a></li>
+							<li role="presentation"><a href="#tab-box6" aria-controls="tab-box6" role="tab" data-toggle="tab">Test</a></li>
+							<li role="presentation"><a href="#tab-box7" aria-controls="tab-box7" role="tab" data-toggle="tab">교재 학습결과</a></li>
+							<li role="presentation"><a href="#tab-box8" aria-controls="tab-box8" role="tab" data-toggle="tab">Change Histroy</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="row">
+					<div class="tab-content">
+						<div role="tabpanel" class="tab-pane active" id="tab-box1">
+							<div class="row">
+								<div class="col-md-12 mt-3 mb-1">
+									<!-- <div class="pull-left mt-1">
+										Total : <span id="total">37</span>
+									</div> -->
+									<div class="pull-right">
+										<a href="#" class="btn btn-success">Drop</a>
+									</div>
+								</div>
+							</div>
+							<div class="bx-table">
+								<div class="tb-dimm"><span class="txts">Fetching data...</span></div>
+								<div class="y-scroll">
+									<table class="table tb-check table-sort">
+										<thead>
+											<tr>
+												<th scope="col"><a href="#" class="sorting">Subject</a></th>
+												<th scope="col"><a href="#" class="sorting">Status</a></th>
+												<th scope="col"><a href="#" class="sorting">Enrollment Date</a></th>
+												<th scope="col"><a href="#" class="sorting">No. of Study Weeks</a></th>
+												<th scope="col"><a href="#" class="sorting">SP(1)</a></th>
+												<th scope="col"><a href="#" class="sorting">SP(2)</a></th>
+												<th scope="col"><a href="#" class="sorting">Tuition Type</a></th>
+												<th scope="col"><a href="#" class="sorting">Max Booklets/Wk</a></th>
+												<th scope="col"><a href="#" class="sorting">Study Start M/Y</a></th>
+												<th scope="col"><a href="#" class="sorting">Enrollment Fee</a></th>
+												<th scope="col"><a href="#" class="sorting">Study Day</a></th>
+												<th scope="col"><a href="#" class="sorting">Enrollment Channel</a></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>EL Matematka</td>
+												<td>Study</td>
+												<td>23/04/2018</td>
+												<td>2</td>
+												<td>01-01</td>
+												<td>01-19</td>
+												<td>001 D01 D01 Ins..</td>
+												<td>3</td>
+												<td>04/2018</td>
+												<td>N</td>
+												<td>Mon, Tue,..</td>
+												<td>Recommended by…</td>
+											</tr>
+											<tr>
+												<td>EL Matematka</td>
+												<td>Study</td>
+												<td>23/04/2018</td>
+												<td>2</td>
+												<td>01-01</td>
+												<td>01-19</td>
+												<td>001 D01 D01 Ins..</td>
+												<td>3</td>
+												<td>04/2018</td>
+												<td>N</td>
+												<td>Mon, Tue,..</td>
+												<td>Recommended by…</td>
+											</tr>
+											<tr>
+												<td>EL Matematka</td>
+												<td>Study</td>
+												<td>23/04/2018</td>
+												<td>2</td>
+												<td>01-01</td>
+												<td>01-19</td>
+												<td>001 D01 D01 Ins..</td>
+												<td>3</td>
+												<td>04/2018</td>
+												<td>N</td>
+												<td>Mon, Tue,..</td>
+												<td>Recommended by…</td>
+											</tr>
+											<tr>
+												<td>EL Matematka</td>
+												<td>Study</td>
+												<td>23/04/2018</td>
+												<td>2</td>
+												<td>01-01</td>
+												<td>01-19</td>
+												<td>001 D01 D01 Ins..</td>
+												<td>3</td>
+												<td>04/2018</td>
+												<td>N</td>
+												<td>Mon, Tue,..</td>
+												<td>Recommended by…</td>
+											</tr>
+											<tr>
+												<td>EL Matematka</td>
+												<td>Study</td>
+												<td>23/04/2018</td>
+												<td>2</td>
+												<td>01-01</td>
+												<td>01-19</td>
+												<td>001 D01 D01 Ins..</td>
+												<td>3</td>
+												<td>04/2018</td>
+												<td>N</td>
+												<td>Mon, Tue,..</td>
+												<td>Recommended by…</td>
+											</tr>
+											<tr>
+												<td>EL Matematka</td>
+												<td>Study</td>
+												<td>23/04/2018</td>
+												<td>2</td>
+												<td>01-01</td>
+												<td>01-19</td>
+												<td>001 D01 D01 Ins..</td>
+												<td>3</td>
+												<td>04/2018</td>
+												<td>N</td>
+												<td>Mon, Tue,..</td>
+												<td>Recommended by…</td>
+											</tr>
+											<tr>
+												<td>EL Matematka</td>
+												<td>Study</td>
+												<td>23/04/2018</td>
+												<td>2</td>
+												<td>01-01</td>
+												<td>01-19</td>
+												<td>001 D01 D01 Ins..</td>
+												<td>3</td>
+												<td>04/2018</td>
+												<td>N</td>
+												<td>Mon, Tue,..</td>
+												<td>Recommended by…</td>
+											</tr>
+											<tr>
+												<td>EL Matematka</td>
+												<td>Study</td>
+												<td>23/04/2018</td>
+												<td>2</td>
+												<td>01-01</td>
+												<td>01-19</td>
+												<td>001 D01 D01 Ins..</td>
+												<td>3</td>
+												<td>04/2018</td>
+												<td>N</td>
+												<td>Mon, Tue,..</td>
+												<td>Recommended by…</td>
+											</tr>
+											<tr>
+												<td>EL Matematka</td>
+												<td>Study</td>
+												<td>23/04/2018</td>
+												<td>2</td>
+												<td>01-01</td>
+												<td>01-19</td>
+												<td>001 D01 D01 Ins..</td>
+												<td>3</td>
+												<td>04/2018</td>
+												<td>N</td>
+												<td>Mon, Tue,..</td>
+												<td>Recommended by…</td>
+											</tr>
+											<tr>
+												<td>EL Matematka</td>
+												<td>Study</td>
+												<td>23/04/2018</td>
+												<td>2</td>
+												<td>01-01</td>
+												<td>01-19</td>
+												<td>001 D01 D01 Ins..</td>
+												<td>3</td>
+												<td>04/2018</td>
+												<td>N</td>
+												<td>Mon, Tue,..</td>
+												<td>Recommended by…</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div role="tabpane2" class="tab-pane" id="tab-box2">
+							<div class="row">
+								<div class="col-md-12 mt-3 mb-1">
+									<!-- <div class="pull-left mt-1">
+										Total : <span id="total">1</span>
+									</div> -->
+								</div>
+							</div>
+							<div class="bx-table">
+								<div class="tb-dimm"><span class="txts">Fetching data...</span></div>
+								<div class="y-scroll">
+									<table class="table tb-check table-sort">
+										<thead>
+											<tr>
+												<th scope="col"><a href="#" class="sorting">Subject</a></th>
+												<th scope="col"><a href="#" class="sorting">Status</a></th>
+												<th scope="col"><a href="#" class="sorting">Drop Date</a></th>
+												<th scope="col"><a href="#" class="sorting">No. of Study Weeks</a></th>
+												<th scope="col"><a href="#" class="sorting">Study Day</a></th>
+												<th scope="col"><a href="#" class="sorting">Dropped-out Reason</a></th>
+												<th scope="col"><a href="#" class="sorting">복회가능성</a></th>
+												<th scope="col"><a href="#" class="sorting">복회예상일</a></th>
+												<th scope="col"><a href="#" class="sorting">Remarks</a></th>
+												<th scope="col"><a href="#" class="sorting">Resume</a></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>NNP Eng</td>
+												<td>Drop</td>
+												<td>23/04/2018</td>
+												<td>0</td>
+												<td>MON</td>
+												<td>Changed to a priv…</td>
+												<td>High</td>
+												<td>21/05/2018</td>
+												<td></td>
+												<td><a href="#" class="btn btn-default">복회</a></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div role="tabpane3" class="tab-pane" id="tab-box3">
+							<div class="row">
+								<div class="col-md-12 mt-3 mb-1">
+									<div class="pull-right">
+										<a href="#" class="btn btn-success">ProgressDetail</a>
+									</div>
+									<div class="pull-left mt-1">
+										<form class="form-inline">
+											<div class="row">
+												<div class="col-md-12">
+													<div class="form-group">
+														<span class="lb-txt mt-1">Subject</span>
+														<select class="form-control input-sm">
+															<option value="" selected>ALL</option>
+														</select>
+													</div>
+													<div class="form-group">
+														<span class="lb-txt mt-1">Study Month  </span>
+														<div class="input-group date">
+															<input type="text" class="form-control input-sm clearable datepicker" placeholder="dd/mm/yyyy">
+															<span class="input-group-addon">
+																<span class="calendar-icon"></span>
+															</span>
+														</div>
+													</div>
+													<span class="date-period-divider">~</span>
+													<div class="form-group">
+														<div class="input-group date">
+															<input type="text" class="form-control input-sm clearable datepicker" placeholder="dd/mm/yyyy">
+															<span class="input-group-addon">
+																<span class="calendar-icon"></span>
+															</span>
+														</div>
+													</div>
+													<a class="btn btn-primary" href="#">Search</a>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+							<div class="bx-table">
+								<div class="tb-dimm"><span class="txts">Fetching data...</span></div>
+								<div class="y-scroll">
+									<table class="table tb-check table-sort">
+										<thead>
+											<tr>
+												<th scope="col"><a href="#" class="sorting">Subject</a></th>
+												<th scope="col"><a href="#" class="sorting">Progress Date</a></th>
+												<th scope="col"><a href="#" class="sorting">표준모델 코드</a></th>
+												<th scope="col"><a href="#" class="sorting">Category</a></th>
+												<th scope="col"><a href="#" class="sorting">Level. Set</a></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>EL Matematka</td>
+												<td>23/04/2018</td>
+												<td>2112311</td>
+												<td>BTM</td>
+												<td>0308  0412 0414</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div role="tabpane4" class="tab-pane" id="tab-box4">
+							<div class="row">
+								<div class="col-md-12 mt-3 mb-1">
+									<div class="pull-right">
+										<form class="form-inline">
+											<span class="tx_red">* 6개월 기준 STATEMENT가 보여집니다.</span>
+											<div class="form-group mx-2">
+												<span class="lb-txt mt-1">Balance</span>
+												<input type="text" class="form-control input-sm clearable" placeholder="0.00">
+											</div>
+											<a href="#" class="btn btn-success">Payment Detail</a>
+										</form>
+									</div>
+								</div>
+							</div>
+							<div class="bx-table">
+								<div class="tb-dimm"><span class="txts">Fetching data...</span></div>
+								<div class="y-scroll">
+									<table class="table tb-check table-sort">
+										<thead>
+											<tr>
+												<th scope="col"><a href="#" class="sorting">날짜</a></th>
+												<th scope="col"><a href="#" class="sorting">청구 월</a></th>
+												<th scope="col"><a href="#" class="sorting">청구/영수 번호</a></th>
+												<th scope="col"><a href="#" class="sorting">청구 금액</a></th>
+												<th scope="col"><a href="#" class="sorting">납부 금액</a></th>
+												<th scope="col"><a href="#" class="sorting">조정 금액</a></th>
+												<th scope="col"><a href="#" class="sorting">환불 금액</a></th>
+												<th scope="col"><a href="#" class="sorting">잔액</a></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>23/04/2018</td>
+												<td>11-2017</td>
+												<td><a href="#" class="link-modal">I-2017-11-nnnn</a></td>
+												<td class="right">123.34</td>
+												<td class="right"></td>
+												<td class="right"></td>
+												<td class="right"></td>
+												<td class="right">4655.33</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div role="tabpane5" class="tab-pane" id="tab-box5">
+							<div class="row">
+								<div class="col-md-12 mt-3 mb-1">
+									<div class="pull-right">
+										<a href="#" class="btn btn-success">등록</a>
+									</div>
+								</div>
+							</div>
+							<div class="bx-table">
+								<div class="tb-dimm"><span class="txts">Fetching data...</span></div>
+								<div class="y-scroll">
+									<table class="table tb-check table-sort">
+										<thead>
+											<tr>
+												<th scope="col"><a href="#" class="sorting">Type</a></th>
+												<th scope="col"><a href="#" class="sorting">Consulted by</a></th>
+												<th scope="col"><a href="#" class="sorting">Date</a></th>
+												<th scope="col"><a href="#" class="sorting">Discussed Contents</a></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Studying</td>
+												<td>Bukit Damansara</td>
+												<td>23/04/2018</td>
+												<td><input type="text" class="form-control input-sm clearable" value="착한 학생이네요."></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div role="tabpane6" class="tab-pane" id="tab-box6">
+							<div class="row mt-3">
+								<div class="col-md-12 mt-3">
+									<div class="bx-table">
+										<div class="tb-dimm"><span class="txts">Fetching data...</span></div>
+										<div class="y-scroll">
+											<table class="table tb-check table-sort">
+												<thead>
+													<tr>
+														<th scope="col"><a href="#" class="sorting">Subject</a></th>
+														<th scope="col"><a href="#" class="sorting">Test Type</a></th>
+														<th scope="col"><a href="#" class="sorting">교재</a></th>
+														<th scope="col"><a href="#" class="sorting">카테고리</a></th>
+														<th scope="col"><a href="#" class="sorting">정답률</a></th>
+														<th scope="col"><a href="#" class="sorting">Point</a></th>
+														<th scope="col"><a href="#" class="sorting">Test Time(s)</a></th>
+														<th scope="col"><a href="#" class="sorting">Test Date</a></th>
+														<th scope="col"><a href="#" class="sorting">상세</a></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>EL Matematka</td>
+														<td>LT</td>
+														<td>Level 5</td>
+														<td>BTM</td>
+														<td>33/34(97%)</td>
+														<td>99</td>
+														<td>170s/180s</td>
+														<td>02/04/2018</td>
+														<td><a href="#" class="link-blank">자세히보기</a></td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div role="tabpane7" class="tab-pane" id="tab-box7">
+							<div class="row">
+								<div class="col-md-12 mt-3 mb-1">
+									<div class="pull-left">
+										<form class="form-inline">
+											<div class="form-group mr-2">
+												<span class="lb-txt mt-1">Subject</span>
+												<select class="form-control input-sm">
+													<option value="" selected>ALL</option>
+												</select>
+											</div>
+											<a class="btn btn-primary" href="#">Search</a>
+										</form>
+									</div>
+								</div>
+							</div>
+							<div class="bx-table">
+								<div class="tb-dimm"><span class="txts">Fetching data...</span></div>
+								<div class="y-scroll">
+									<table class="table tb-check table-sort">
+										<thead>
+											<tr>
+												<th scope="col"><a href="#" class="sorting">진도일자</a></th>
+												<th scope="col"><a href="#" class="sorting">Subject</a></th>
+												<th scope="col"><a href="#" class="sorting">교재</a></th>
+												<th scope="col"><a href="#" class="sorting">학습구분</a></th>
+												<th scope="col"><a href="#" class="sorting">센터학습/숙제여부</a></th>
+												<th scope="col"><a href="#" class="sorting">학습결과</a></th>
+												<th scope="col"><a href="#" class="sorting">SAR</a></th>
+												<th scope="col"><a href="#" class="sorting">SCT</a></th>
+												<th scope="col"><a href="#" class="sorting">Fluency</a></th>
+												<th scope="col"><a href="#" class="sorting">채점일자</a></th>
+												<th scope="col"><a href="#" class="sorting">상세</a></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>02/04/2018</td>
+												<td>EL Eng</td>
+												<td>Level F-05</td>
+												<td>OFF</td>
+												<td>센터학습</td>
+												<td>17/20(85%)</td>
+												<td></td>
+												<td></td>
+												<td>80s/120s</td>
+												<td>02/04/2018</td>
+												<td><a href="#" class="link-blank">자세히보기</a></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div role="tabpane8" class="tab-pane" id="tab-box8">
+							<div class="row">
+								<div class="col-md-12 mt-3">
+									<div class="bx-table">
+										<div class="tb-dimm"><span class="txts">Fetching data...</span></div>
+										<div class="y-scroll">
+											<table class="table tb-check table-sort">
+												<thead>
+													<tr>
+														<th scope="col"><a href="#" class="sorting">Subject</a></th>
+														<th scope="col"><a href="#" class="sorting">Change Date</a></th>
+														<th scope="col"><a href="#" class="sorting">Change Type</a></th>
+														<th scope="col"><a href="#" class="sorting">Change Detail</a></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>EL Math</td>
+														<td>15/03/2018</td>
+														<td>Resume</td>
+														<td class="left">
+															<table class="table table-bordered mb-0">
+																<colgroup>
+																	<col style="width:17%">
+																	<col style="width:13%">
+																	<col style="width:17%">
+																	<col style="width:13%">
+																	<col style="width:17%">
+																	<col style="width:13%">
+																</colgroup>
+																<tbody>
+																	<tr>
+																		<th scope="row" class="left">Study Start Date</th>
+																		<td>15/03/2018</td>
+																		<th scope="row" class="left">No. of Booklets/Wk</th>
+																		<td>6</td>
+																		<th scope="row" class="left">Enrollment Date</th>
+																		<td>15/03/2018</td>
+																	</tr>
+																	<tr>
+																		<th scope="row" class="left">No. of Study Weeks</th>
+																		<td>1</td>
+																		<th scope="row" class="left">Drop Date</th>
+																		<td>15/03/2018</td>
+																		<th scope="row" class="left">Drop Release Quantity</th>
+																		<td>0</td>
+																	</tr>
+																	<tr>
+																		<th scope="row" class="left">Dropped-out Reason</th>
+																		<td>[Etc] Etc</td>
+																		<th scope="row" class="left">Remarks</th>
+																		<td>test</td>
+																		<th scope="row" class="left">S.P(1) / S.P(2)</th>
+																		<td>05-07 / 06-23</td>
+																	</tr>
+																	<tr>
+																		<th scope="row" class="left">Study Day</th>
+																		<td>Mon,Tue</td>
+																		<th scope="row" class="left">Enrollment Fee</th>
+																		<td>N</td>
+																		<th scope="row" class="left"></th>
+																		<td></td>
+																	</tr>
+																</tbody>
+															</table>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="info" tabindex="-1" role="dialog" aria-labelledby="myModalLabel5">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title" id="myModalLabel5">INFO</h4>
+			</div>
+			<div class="modal-body">
+				<p>Page Expired - Key&Manager</p>
+				<p>The page has expired. Click OK to continue.</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="confirm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel6">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel6">INFO</h4>
+			</div>
+			<div class="modal-body">
+				<p>예약 코멘트가 없습니다. </p>
+				<p>등록하시겠습니까?</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary">OK</button>
+				<button type="button" class="btn btn-info" data-dismiss="modal">Cancel</button>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="/js/custom.js"></script>
+</body>
+</html>

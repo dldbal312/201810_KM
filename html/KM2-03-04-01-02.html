@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<link rel="SHORTCUT ICON" href="/images/favicon.ico">
+<title>Key&amp;Manager ver.2</title>
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/fontawesome-all.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" type="text/css" href="/css/custom.css">
+<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+<script src="/js/vendors/jquery-ui.min.js"></script>
+<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+<script src="/js/vendors/moment.js"></script>
+<script src="/js/vendors/bootstrap.min.js"></script>
+<script src="/js/vendors/bootstrap-datetimepicker.min.js"></script>
+</head>
+<body class="nav-sm modal-open">
+
+<div class="modal fade in" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4" style="display: block;">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel4">예치금 충전/환불 내역</h4>
+			</div>
+			<div class="modal-body">
+				<div class="bx-table">
+					<div class="tb-dimm"><span class="txts">Fetching data...</span></div>
+					<div class="x-scroll">
+						<table class="table">
+							<thead>
+								<tr>
+									<th scope="col">일자</th><!-- 180717_수정 [화면설계서 v3.1 수정사항 반영] -->
+									<th scope="col">Type</th>
+									<th scope="col">충전/환불 수단</th>
+									<th scope="col">금액</th>
+									<th scope="col">영수증 번호</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>06/05/2018</td>
+									<td>충전</td>
+									<td>Cash</td>
+									<td>Cash</td>
+									<td><a href="#" class="link-modal">RD000nnnn-nnnn</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="text-center">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal-backdrop fade in"></div>
+
+
+<script src="/js/custom.js"></script>
+</body>
+</html>

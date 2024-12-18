@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<link rel="SHORTCUT ICON" href="/images/favicon.ico">
+<title>Key&amp;Manager ver.2</title>
+<link rel="stylesheet" href="/css/common.css">
+<link rel="stylesheet" href="/css/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" href="/css/jquery-ui.css">
+<link rel="stylesheet" media="all and (min-width: 0) and (max-width: 1280px)" href="/css/tablet.css" />
+<link rel="stylesheet" media="all and (min-width: 0) and (max-width: 767px)" href="/css/mobile.css" />
+<script src="/js/jQuery/jquery-2.2.4.min.js"></script>
+<script src="/js/jQuery/jquery-ui.js"></script>
+<script src="/js/jQuery/jquery.mCustomScrollbar.js"></script>
+<script src="/js/common.js"></script>
+</head>
+<body>
+<div id="kmWrap">
+	<div class="login">
+		<div class="login-top">
+			<h1 class="logo"><a href="#">Key &amp; Manager</a></h1>
+		</div>
+		<div class="login-body">
+			<div class="login-cont-wrap">
+				<div class="login-cont">
+					<h2>Login</h2>
+					<div class="form-group login-btn-in">
+						<div class="user-id">
+							<label for="uid">ID</label>
+							<input type="text" id="uid" name="uid" placeholder="ID">
+						</div>
+						<div class="user-pw">
+							<label for="upw">Password</label>
+							<input type="password" id="upw" name="upw" placeholder="Password">
+						</div>
+						<div class="submit">
+							<div class="remember">
+								<span class="inp-check"><input type="checkbox" name="remember" class="icheck-me" id="remember"><label for="remember"><span class="icon"></span>Remember me</label></span>
+							</div>
+							<button type="button" class="btn">Login</button>
+						</div>
+						<!-- dev : 3회 오류시 캡챠 영역 활성화 -->
+						<div class="security-num">
+							<em>ID or password do not match</em>
+							<div class="img-sec">
+								<span><img id="captchaImg" name="captchaImg" src="/images/@captcha.png" alt="임시 이미지"></span>
+								<span class="captcha-btn">
+									<button type="button" class="ico-sound">음성듣기</button>
+									<button type="button" class="ico-refresh">새로고침</button>
+								</span>
+							</div>
+							<input type="text" placeholder="Enter the above image character (CAPTCHA)">
+						</div>
+					</div>
+					<div class="forget">
+						<a href="#"><span>Find password?</span></a>
+						<p>Please ask the administrator for the ID.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- s : kmFooter -->
+	<div id="kmFooter">
+		<div class="ft-area">
+			<span class="ft-logo">KEY &amp; MANAGER</span>
+			<p class="ft-copy">Copyright &copy; 2018 Daekyo Co., Ltd All rights reserved. For more information, contact <a href="mailto:myeyelevel@myeyelevel.com">myeyelevel@myeyelevel.com</a></p>
+			<div class="ft-site">
+				<dl>
+					<dt><a href="#class">Links</a></dt>
+					<dd>
+						<ul>
+							<li><a href="https://sites.google.com/a/myeyelevel.com/itisthekey/" target="_blank">User guide</a></li>
+							<li><a href="http://www.myeyelevel.com/Global/English/" target="_blank">Eyelevel Site</a></li>
+							<li><a href="http://www.iamthekey.com/" target="_blank">Brand Site</a></li>
+							<li><a href="http://eng.daekyo.com/En/default.aspx" target="_blank">Corporate Site</a></li>
+							<li><a href="http://elu.myeyelevel.com" target="_blank">Eye Level University</a></li>
+							<li><a href="http://email.myeyelevel.com" target="_blank">Email</a></li>
+						</ul>
+					</dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+	<!-- e : kmFooter -->
+</div>
+</body>
+</html>

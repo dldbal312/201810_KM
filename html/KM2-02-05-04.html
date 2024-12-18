@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<link rel="SHORTCUT ICON" href="/images/favicon.ico">
+<title>Key&amp;Manager ver.2</title>
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/fontawesome-all.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" type="text/css" href="/css/custom.css">
+<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+<script src="/js/vendors/jquery-ui.min.js"></script>
+<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+<script src="/js/vendors/moment.js"></script>
+<script src="/js/vendors/bootstrap.min.js"></script>
+<script src="/js/vendors/bootstrap-datetimepicker.min.js"></script>
+</head>
+<body class="nav-sm modal-open">
+
+<!-- 180717_수정 [화면설계서 v3.1 수정사항 반영 : 모달로 변경] -->
+<div class="modal fade in" id="view" tabindex="-1" role="dialog" style="display:block">
+	<div class="modal-dialog modal-wide" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title">EL MATH <small>Ken.song(k0000000038)</small></h4>
+			</div>
+			<div class="modal-body">
+				<div class="bx-table">
+					<div class="tb-dimm"><span class="txts">Fetching data...</span></div>
+					<div class="no-scroll">
+						<table class="table">
+							<colgroup>
+								<col style="width:8%">
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:8%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">No</th>
+									<th scope="col">교재</th>
+									<th scope="col">Category</th>
+									<th scope="col">정답률</th>
+									<th scope="col">Points</th>
+									<th scope="col">시간</th>
+									<th scope="col">TEST DATE</th>
+									<th scope="col">세부정보</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="parent-tr">
+									<td>2</td>
+									<td>Level 5</td>
+									<td>BTM</td>
+									<td>33/34(97%)</td>
+									<td>99점</td>
+									<td>170s/180s</td>
+									<td>13-05-2018</td>
+									<td><button type="button" class="btn-open collapsed" data-toggle="collapse" data-target="#child-tr11"><span class="sr-only">detail view</span></button></td>
+								</tr>
+								<tr class="child-tr">
+									<td colspan="8" class="left">
+										<div class="child-tr-body collapse" id="child-tr11" aria-expanded="false">
+											<div class="level-test">
+												<div class="l-group results">
+													<span class="l-group-tit">TEST RESULTS</span>
+													<div class="bx-table l-group-table">
+														<table class="table">
+															<thead>
+																<tr>
+																	<th scope="col">#Section</th>
+																	<th scope="col">Score</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td>1-8</td>
+																	<td>26 Point</td>
+																</tr>
+																<tr>
+																	<td>9-10</td>
+																	<td>2 Point</td>
+																</tr>
+																<tr>
+																	<td>11-18</td>
+																	<td>24 Point</td>
+																</tr>
+																<tr>
+																	<td>19-34</td>
+																	<td>47 Point</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+												<div class="l-group feedback">
+													<span class="l-group-tit">PERFORMANCE FEEDBACK</span>
+													<div class="l-group-box">
+														<p class="desc">This student solves problems accurately and quickly. Encourage the student to have more confidence. This student solves problems accurately and quickly. Encourage the student to have more confidence.</p>
+													</div>
+												</div>
+												<div class="l-group comments">
+													<span class="l-group-tit">TEACHER COMMENTS</span>
+													<div class="l-group-box">
+														<textarea cols="10" rows="30">This student sloves problems accuratel and quickly. Encourage the student to have more confidence.</textarea>
+													</div>
+													<div class="l-group-btn btn-group-xs">
+														<button type="button" class="btn btn-warning btn-xs">Save</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr class="parent-tr">
+									<td>1</td>
+									<td>Level 4</td>
+									<td>BTM</td>
+									<td>33/34(97%)</td>
+									<td>99점</td>
+									<td>170s/180s</td>
+									<td>13-05-2018</td>
+									<td><button type="button" class="btn-open collapsed" data-toggle="collapse" data-target="#child-tr12"><span class="sr-only">detail view</span></button></td>
+								</tr>
+								<tr class="child-tr">
+									<td colspan="8" class="left">
+										<div class="child-tr-body collapse" id="child-tr12" aria-expanded="false">
+											<div class="level-test">
+												<div class="l-group results">
+													<span class="l-group-tit">TEST RESULTS</span>
+													<div class="bx-table l-group-table">
+														<table class="table">
+															<thead>
+																<tr>
+																	<th scope="col">#Section</th>
+																	<th scope="col">Score</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td>1-8</td>
+																	<td>26 Point</td>
+																</tr>
+																<tr>
+																	<td>9-10</td>
+																	<td>2 Point</td>
+																</tr>
+																<tr>
+																	<td>11-18</td>
+																	<td>24 Point</td>
+																</tr>
+																<tr>
+																	<td>19-34</td>
+																	<td>47 Point</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+												<div class="l-group feedback">
+													<span class="l-group-tit">PERFORMANCE FEEDBACK</span>
+													<div class="l-group-box">
+														<p class="desc">This student solves problems accurately and quickly. Encourage the student to have more confidence. This student solves problems accurately and quickly. Encourage the student to have more confidence.</p>
+													</div>
+												</div>
+												<div class="l-group comments">
+													<span class="l-group-tit">TEACHER COMMENTS</span>
+													<div class="l-group-box">
+														<textarea cols="10" rows="30">This student sloves problems accuratel and quickly. Encourage the student to have more confidence.</textarea>
+													</div>
+													<div class="l-group-btn btn-group-xs">
+														<button type="button" class="btn btn-warning btn-xs">Save</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal-backdrop fade in"></div>
+
+<script src="/js/custom.js"></script>
+</body>
+</html>

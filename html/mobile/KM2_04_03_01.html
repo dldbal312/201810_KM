@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+	<link rel="SHORTCUT ICON" href="../images/favicon.ico">
+	<title>Key&amp;Manager ver.2</title>
+	<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap-datetimepicker.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendors/fontawesome-all.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendors/jquery.mCustomScrollbar.css">
+	<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+	<script src="/js/vendors/jquery-ui.min.js"></script>
+	<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+	<script src="/js/vendors/moment.js"></script>
+	<script src="/js/vendors/bootstrap.min.js"></script>
+	<script src="/js/vendors/bootstrap-datetimepicker.min.js"></script>
+	
+	<!-- mobile 추가 -->
+	<link rel="stylesheet" type="text/css" href="/css/custom-mobile.css">
+	<script src="/js/vendors/jquery.touchSwipe.min.js"></script>
+	<script src="/js/custom-mobile.js"></script>
+</head>
+<body>
+<div class="wrapper">
+	<div class="main-content" role="main" style="min-height:100vh;">
+		<div class="page-info">
+			<a href="#" class="bt-prev">Prev page</a>
+			<h1>Level Test</h1>
+			<a href="#" class="bt-close">Close</a>
+		</div>
+		<div class="progressbar size2" id="fixed">
+			<ul>
+				<li class="comp">Main test</li>
+				<li class="active">Result</li>
+			</ul>
+		</div>
+		<!-- user data -->
+		<div class="user-data">
+			<div class="row">
+				<div class="col-md-6 lists">
+					<dl>
+						<dt class="bull-list">
+							<span class="dot">Name</span>
+						</dt>
+						<dd>Ken. Song(K00000039)</dd>
+					</dl>
+				</div>
+				<div class="col-md-6 lists">
+					<dl>
+						<dt class="bull-list">
+							<span class="dot">grade</span>
+						</dt>
+						<dd>Standard primary 1</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 lists">
+					<dl>
+						<dt class="bull-list">
+							<span class="dot">Subject</span>
+						</dt>
+						<dd>EL Math</dd>
+					</dl>
+				</div>
+				<div class="col-md-6 lists">
+					<dl>
+						<dt class="bull-list">
+							<span class="dot">Test</span>
+						</dt>
+						<dd>Grade 2</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+		<!--// user data -->
+		<div class="usertest-lists cnt-box">
+			<div class="row">
+				<div class="col-md-6">
+					<h1 class="tit01">평가 결과</h1>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="pull-right mt-2">
+								Target time : 03:00
+							</div>
+							<ul class="list-inline pull-left mt-2">
+								<li class="total">Total : <span class="em01">96</span> / 100 points</li>
+							</ul>
+						</div>
+					</div>
+					<div class="bx-table size-full">
+						<div class="tb-dimm"><span class="txts">Fetching data...</span></div>
+						<div class="table">
+							<table>
+								<colgroup>
+									<col style="width:40%">
+									<col style="width:auto">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">문항 번호</th>
+										<th scope="col">점수</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>9 / 10</td>
+									</tr>
+									<tr>
+										<td>2 - 11</td>
+										<td>30 / 30</td>
+									</tr>
+									<tr>
+										<td>12 - 13</td>
+										<td>9 / 10</td>
+									</tr>
+									<tr>
+										<td>14 - 21</td>
+										<td>24 / 24</td>
+									</tr>
+									<tr>
+										<td>22</td>
+										<td>5 / 6</td>
+									</tr>
+									<tr>
+										<td>23 - 24</td>
+										<td>19 / 20</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<h1 class="tit01">Performance feedback</h1>
+					<div class="bg-box my-2">
+						<p>This student solves problems accurately and quickly. Encourage the student to have more confidence.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="btn-wrap">
+			<div class="row">
+				<!-- 비활성화 시 disabled 클래스 추가 -->
+				<div class="pull-left">
+					<a href="#" class="btn-circle prev"><i class="fas fa-chevron-left"></i></a>
+				</div>	
+				<div class="pull-right">
+					<a href="#" class="btn-circle next"><i class="fas fa-chevron-right"></i></a><!-- 180619_수정 -->
+				</div>	
+			</div>
+		</div>
+	</div>
+	<div class="slideout-overlay"></div>
+</div>
+</body>
+</html>

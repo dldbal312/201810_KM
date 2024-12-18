@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<link rel="SHORTCUT ICON" href="/images/favicon.ico">
+<title>Key&amp;Manager ver.2</title>
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/fontawesome-all.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" type="text/css" href="/css/custom.css">
+<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+<script src="/js/vendors/jquery-ui.min.js"></script>
+<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+<script src="/js/vendors/moment.js"></script>
+<script src="/js/vendors/bootstrap.min.js"></script>
+<script src="/js/vendors/bootstrap-datetimepicker.min.js"></script>
+</head>
+<body class="nav-sm modal-open">
+<div class="modal fade in" id="modal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel5" style="display: block;">
+	<div class="modal-dialog modal-wide" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel5">Enroll<!-- <small class="ml-2">SHekinah Francesca Louis (K30000718)</small> --></h4>
+			</div>
+			<div class="modal-body">
+				<div class="form_wizard_wrap">
+					<div class="form_wizard">
+						<ul class="list-unstyled wizard_steps anchor">
+							<li class="active"><a href="#step-1" role="tab" data-toggle="tab" aria-controls="step-1" aria-expanded="true"><span class="step_no">1</span><span class="step_name">회원정보 입력</span></a></li>
+							<li><a href="#step-2" role="tab" data-toggle="tab" aria-controls="step-2" aria-expanded="false"><span class="step_no">2</span><span class="step_name">학습정보 입력</span></a></li>
+						</ul>
+						<div class="stepContainer">
+							<div id="step-1" class="stepContBox fade active in" >
+								<h2 class="sr-only">Step 1 회원정보 입력</h2>
+								<form class="form-group">
+									<div class="row">
+										<div class="col-md-12">
+											<div class="col-md-3">
+												<div class="form-group">
+													<span class="lb-txt mb-1">Member</span>
+													<div class="input-group">
+														<input class="form-control input-sm clearable" type="text">
+														<div class="input-group-btn">
+															<button type="button" class="btn btn-search" data-toggle="modal" data-target="#searchMember"><span class="fas fa-search"></span><span class="hide">Search</span></button>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-3">
+												<div class="form-group">
+													<span class="lb-txt mb-1">First Name<i class="required">*</i></span>
+													<input type="text" class="form-control input-sm clearable" value="">
+												</div>
+											</div>
+											<div class="col-md-3">
+												<div class="form-group">
+													<span class="lb-txt mb-1">Middle Name</span>
+													<input type="text" class="form-control input-sm clearable" value="">
+												</div>
+											</div>
+											<div class="col-md-3">
+												<div class="form-group">
+													<span class="lb-txt mb-1">Last Name<i class="required">*</i></span>
+													<input type="text" class="form-control input-sm clearable" value="">
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group">
+													<span class="lb-txt mb-1">Grade<i class="required">*</i></span>
+													<div class="form-inline">
+														<select class="form-control input-sm">
+															<option value="7" title="Primary Standard 1" selected="selected">Primary Standard 1</option>
+														</select>
+														<span class="ico-gpm"></span>
+														<select class="form-control input-sm">
+															<option value="" title="" selected="selected">12</option>
+														</select>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="ln_dashed"></div>
+									<div class="row">
+										<div class="col-md-12">
+											<div class="col-md-3">
+												<div class="form-group">
+													<span class="lb-txt mb-1">Parent Contact 1</span>
+													<input type="text" class="form-control input-sm clearable" value="">
+												</div>
+											</div>
+											<div class="col-md-3">
+												<div class="form-group">
+													<span class="lb-txt mb-1">Parent Contact 2</span>
+													<input type="text" class="form-control input-sm clearable" value="">
+												</div>
+											</div>
+											<div class="col-md-3">
+												<div class="form-group">
+													<span class="lb-txt mb-1">Gender</span>
+													<div class="form-inline">
+														<div class="radio radio-primary radio-inline">
+															<input type="radio" id="radioInline40" value="option1" name="radioInline40" checked="checked">
+															<label for="radioInline40">Female</label>
+														</div>
+														<div class="radio radio-primary radio-inline">
+															<input type="radio" id="radioInline41" value="option1" name="radioInline40">
+															<label for="radioInline41">Male</label>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-3">
+												<div class="form-group">
+													<span class="lb-txt mb-1">Birthday</span>
+													<div class="input-group date">
+														<input type="text" class="form-control input-sm clearable datepicker" placeholder="dd/mm/yyyy" name="requestDateFrom" id="requestDateFrom" />
+														<span class="input-group-addon">
+															<span class="calendar-icon"></span>
+														</span>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-3">
+												<div class="form-group">
+													<span class="lb-txt mb-1">School</span>
+													<input type="text" class="form-control input-sm clearable" value="Daekyo">
+												</div>
+											</div>
+											<div class="col-md-3">
+												<div class="form-group">
+													<span class="lb-txt mb-1">Attendance Code</span>
+													<div class="form-inline">
+														<div class="input-group">
+															<input class="form-control input-sm clearable" type="text" value="1234">
+															<div class="input-group-btn">
+																<button type="button" class="btn btn-default btn-request">Request</button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-4">
+												<div class="form-group">
+													<span class="lb-txt mb-1">Parent E-mail</span>
+													<div class="form-inline">
+														<div class="input-group">
+															<input class="form-control input-sm clearable" type="text">
+															<div class="input-group-btn">
+																<button type="button" class="btn btn-default btn-request">Request</button><!-- <span class="verified">√ Not verified</span> -->
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="form-group">
+													<span class="lb-txt mb-1">Messenger</span>
+													<div class="form-inline">
+														<div class="radio radio-primary radio-inline">
+															<input type="radio" id="radioInline10" value="option1" name="radioInline10" checked="checked">
+															<label for="radioInline10"><span class="ico-facebook">Facebook</span></label>
+														</div>
+														<div class="radio radio-primary radio-inline mr-2">
+															<input type="radio" id="inlineRadio11" value="option1" name="radioInline10">
+															<label for="inlineRadio11"><span class="ico-wechat">Wechat</span></label>
+														</div>
+														<div class="input-group">
+															<input class="form-control input-sm clearable" type="text">
+															<div class="input-group-btn">
+																<button type="button" class="btn btn-default btn-request">Request</button><!-- <span class="verified active">√ Verified</span> -->
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="form-group">
+													<span class="lb-txt mb-1">Notice</span>
+													<div class="form-inline">
+														<div class="radio radio-primary radio-inline">
+															<input type="radio" id="radioInline20" value="option1" name="radioInline20" checked="checked">
+															<label for="radioInline20">Email</label>
+														</div>
+														<div class="radio radio-primary radio-inline">
+															<input type="radio" id="radioInline21" value="option1" name="radioInline20">
+															<label for="radioInline21">Messenger</label>
+														</div>
+														<div class="radio radio-primary radio-inline">
+															<input type="radio" id="radioInline22" value="option1" name="radioInline20">
+															<label for="radioInline22">Prefer not to receive</label>
+														</div>
+													</div>
+												</div>
+											</div>
+											
+											<div class="col-md-3">
+												<div class="form-group">
+													<span class="lb-txt mb-1">Zip Code</span>
+													<input type="text" class="form-control input-sm clearable w-" value="">
+												</div>
+											</div>
+											<div class="col-md-9">
+												<div class="form-group">
+													<span class="lb-txt mb-1">Address</span>
+													<input type="text" class="form-control input-sm clearable" value="">
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group">
+													<span class="lb-txt mb-1">Remarks</span>
+													<input type="text" class="form-control input-sm clearable" value="">
+												</div>
+											</div>
+										</div>
+									</div>
+								</form>
+								<div class="actionBar col-md-12">
+									<div class="pull-left">
+										<a href="#" class="btnPrevious btn btn-info disabled">Back</a>
+										<a href="#" class="btnNext btn btn-primary">Next</a>
+									</div>
+									<div class="pull-right">
+										<a href="#" class="btn btn-default" data-dismiss="modal" aria-label="Close">Close</a>
+									</div>
+								</div>
+							</div>
+							<div id="step-2" class="stepContBox fade ">
+								<h2 class="sr-only">Step 2 학습정보 입력</h2>
+								<form class="form-group">
+									<div class="row">
+										<div class="col-md-12">
+											<div class="col-md-3">
+												<div class=" form-group">
+													<span class="lb-txt mb-1">Subject<i class="required">*</i></span>
+													<select class="form-control input-sm">
+														<option value="" selected="selected">Select</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-md-3">
+												<div class=" form-group">
+													<span class="lb-txt mb-1">Instructor<i class="required">*</i></span>
+													<div class="input-group">
+														<input class="form-control input-sm clearable" type="text">
+														<div class="input-group-btn">
+															<button type="button" class="btn btn-search" data-toggle="modal" data-target="#searchManager"><span class="fas fa-search"></span><span class="hide">Search</span></button>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-3">
+												<div class="form-group">
+													<span class="lb-txt mb-1">Starting Point 1<i class="required">*</i></span>
+													<div class="form-inline half">
+														<select class="form-control input-sm">
+															<option value="" selected="selected">Select</option>
+														</select>
+														<select class="form-control input-sm">
+															<option value="" selected="selected">Select</option>
+														</select>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-3">
+												<div class="form-group">
+													<span class="lb-txt mb-1">Starting Point 2<i class="required">*</i></span>
+													<div class="form-inline half">
+														<select class="form-control input-sm">
+															<option value="" selected="selected">Select</option>
+														</select>
+														<select class="form-control input-sm">
+															<option value="" selected="selected">Select</option>
+														</select>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-3">
+												<div class="form-group">
+													<span class="lb-txt mb-1">Enrollment Date<i class="required">*</i></span>
+													<div class="form-inline input-group date">
+														<input class="form-control input-sm clearable datepicker" type="text" placeholder="dd/mm/yyyy">
+														<span class="input-group-addon">
+															<span class="calendar-icon"></span>
+														</span>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-3">
+												<div class="form-group">
+													<span class="lb-txt mb-1">Study Start Date<i class="required">*</i></span>
+													<div class="form-inline input-group date">
+														<input class="form-control input-sm clearable datepicker" type="text" placeholder="dd/mm/yyyy">
+														<span class="input-group-addon">
+															<span class="calendar-icon"></span>
+														</span>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class=" form-group">
+													<span class="lb-txt mb-1">Study Day<i class="required">*</i></span>
+													<div class="form-inline">
+														<select class="form-control input-sm">
+															<option value="" selected="selected">MON</option>
+														</select>
+														<select class="form-control input-sm">
+															<option value="" selected="selected">00</option>
+														</select>
+														<span class="date-period-divider">시</span>
+														<select class="form-control input-sm">
+															<option value="" selected="selected">00</option>
+														</select>
+														<span class="date-period-divider">분</span>
+														<a href="#" class="btn-list-open">Add</a>
+													</div>
+												</div>
+												<div class="edit-week">
+													<div class="edit-week-box">
+														<span class="alert alert-info" role="alert">MON 15:00<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button></span>
+														<span class="alert alert-info" role="alert">TUE 16:00<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button></span>
+														<span class="alert alert-info" role="alert">WED 17:00<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button></span>
+														<span class="alert alert-info" role="alert">THU 17:00<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button></span>
+														<span class="alert alert-info" role="alert">FRI 17:00<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button></span>
+														<span class="alert alert-info" role="alert">SAT 17:00<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button></span>
+														<span class="alert alert-info" role="alert">SUN 17:00<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button></span>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-3">
+												<div class="form-group">
+													<span class="lb-txt mb-1">Enrollment Reason<i class="required">*</i></span>
+													<input class="form-control input-sm clearable" type="text">
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="form-group">
+													<span class="lb-txt mb-1">Enrollment Channel<i class="required">*</i></span>
+													<div class="form-inline half">
+														<select class="form-control input-sm">
+															<option value="" selected="selected">Select</option>
+														</select>
+														<input class="form-control input-sm clearable" type="text">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="ln_dashed"></div>
+									<div class="row">
+										<div class="col-md-12">
+											<div class="col-md-3">
+												<div class=" form-group">
+													<span class="lb-txt mb-1">No. of Study Weeks<i class="required">*</i></span>
+													<select class="form-control input-sm">
+														<option value="" selected="selected">Select</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class=" form-group">
+													<span class="lb-txt mb-1">Tuition Type<i class="required">*</i></span>
+													<div class="form-inline half">
+														<select class="form-control input-sm">
+															<option value="" selected="selected">Select</option>
+														</select>
+														<span class="txt-box mt-2">(40.00/주 회비)</span>
+													</div>
+												</div>
+											</div>
+											<!-- 180725_수정 [Max Booklets/Wee 위치 및 고정텍스트로 변경] -->
+											<div class="col-md-3">
+												<div class=" form-group">
+													<span class="lb-txt mb-1">Max Booklets/Week</span>
+													<p class="ml-2 mt-1 tx-red underline">1</p>
+												</div>
+											</div>
+											<!-- // 180725_수정 [Max Booklets/Wee 위치 및 고정텍스트로 변경] -->
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-12">
+											<div class="col-md-3">
+												<div class="form-group">
+													<span class="lb-txt mb-1">입회비</span>
+													<input type="text" class="form-control input-sm clearable" placeholder="00.00" readonly="readonly"><!-- 180725_수정 [readonly 추가] -->
+												</div>
+											</div>
+											<div class="col-md-3">
+												<div class="form-group">
+													<span class="lb-txt mb-1">이번달 회비</span>
+													<input type="text" class="form-control input-sm clearable" placeholder="00.00" readonly="readonly"><!-- 180725_수정 [readonly 추가] -->
+												</div>
+											</div>
+											<div class="col-md-3">
+												<div class="form-group">
+													<span class="lb-txt mb-1">다음달 회비</span>
+													<input type="text" class="form-control input-sm clearable" placeholder="00.00" readonly="readonly"><!-- 180725_수정 [readonly 추가] -->
+												</div>
+											</div>
+										</div>
+									</div>
+								</form>
+								<div class="actionBar col-md-12">
+									<div class="pull-left">
+										<a href="#step-1" class="btnPrevious btn btn-info">Back</a>
+										<a href="#step-3" class="btnNext btn btn-primary disabled">Next</a>
+									</div>
+									<div class="pull-right">
+										<a href="#" class="btn btn-primary">Save</a>
+										<a href="#" class="btn btn-default" data-dismiss="modal" aria-label="Close">Close</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal-backdrop fade in"></div>
+
+<script src="/js/custom.js"></script>
+</body>
+</html>

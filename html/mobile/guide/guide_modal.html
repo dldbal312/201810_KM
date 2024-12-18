@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+	<link rel="SHORTCUT ICON" href="../images/favicon.ico">
+	<title>Key&amp;Manager ver.2</title>
+	<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap-datetimepicker.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendors/fontawesome-all.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendors/jquery.mCustomScrollbar.css">
+	<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+	<script src="/js/vendors/jquery-ui.min.js"></script>
+	<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+	<script src="/js/vendors/moment.js"></script>
+	<script src="/js/vendors/bootstrap.min.js"></script>
+	<script src="/js/vendors/bootstrap-datetimepicker.js"></script>
+	<link rel="stylesheet" type="text/css" href="/css/vendors/mobileSelect.css" />
+	<script src="/js/vendors/mobileSelect.js"></script>
+
+	<!-- mobile 추가 -->
+	<link rel="stylesheet" type="text/css" href="/css/custom-mobile.css">
+	<script src="/js/vendors/jquery.touchSwipe.min.js"></script>
+	<script src="/js/custom-mobile.js"></script>
+	<style>
+		.sp-button, a[data-toggle="modal"]{display: block;padding-left:18px;text-indent:-18px;margin:20px 0 0 20px;padding:10px;border:1px s}
+		a[data-toggle="modal"] img, .sp-button img{display: block;}
+	</style>
+</head>
+<body>
+<div class="wrapper mobile-only">
+
+	<!-- 기본 얼럿 공통 -->
+	<a href="#alert-layers" data-toggle="modal">1. 기본 얼럿 레이어팝업<img src="/images/mobile/@temp/img01.png" alt=""></a>
+
+	<!-- 기본 얼럿 타이틀 있는 경우 -->
+	<a href="#alert-layers1" data-toggle="modal">1-1. 얼럿 타이틀 있는 경우<img src="/images/mobile/@temp/img01.png" alt=""></a>
+
+	<!-- 개인정보 수집동의 확인 얼럿 -->
+	<a href="#alert-layers2" data-toggle="modal">1-2. 개인정보 수집동의 확인 얼럿<img src="/images/mobile/@temp/img10.png" alt=""></a>
+
+	<!-- 기본 컴펌 공통 -->
+	<a href="#confirm-layers" data-toggle="modal">2. 기본 컴펌 레이어팝업<img src="/images/mobile/@temp/img02.png" alt=""></a>
+
+	<!-- 기본 컴펌 타이틀 있는 경우 -->
+	<a href="#confirm-layers1" data-toggle="modal">2-1. 컴펌 타이틀 있는 경우<img src="/images/mobile/@temp/img02.png" alt=""></a>
+
+	<!--  Attendance code 중복체크 -->
+	<a href="#confirm-layers2" data-toggle="modal">2-2. Attendance code 중복체크<img src="/images/mobile/@temp/img15.png" alt=""></a>
+	<a href="#confirm-layers3" data-toggle="modal">2-3. Attendance code 중복체크 - 중복인 경우<img src="/images/mobile/@temp/img16.png" alt=""></a>
+
+
+	<!-- picker Layerpop -->
+	<div class="btns">
+		<p class="sp-button"><span id="pickerTime">3. picker-시,분 선택</span><img src="/images/mobile/@temp/img03.png" alt=""></p>
+	</div>
+	<div class="btns">
+		<p class="sp-button"><span id="pickerSP">3-1. picker-Change SP</span><img src="/images/mobile/@temp/img19.png" alt=""></p>
+	</div>
+	<div class="btns">
+		<p class="sp-button"><span id="pickerIns">3-2. picker-Instructor</span><img src="/images/mobile/@temp/img14.png" alt=""></p>
+	</div>
+	<!--// picker Layerpop -->
+
+	<!-- 서브젝트 선택 -->
+	<a href="#confirm-subject" data-toggle="modal">4. Subject 선택<img src="/images/mobile/@temp/img04.png" alt=""></a>
+
+	<!-- Radio -->
+	<a href="#confirm-radioSelect" data-toggle="modal">5. Radio button  컴펌 창<img src="/images/mobile/@temp/img05.png" alt=""></a>
+
+	<!-- check -->
+	<a href="#confirm-CheckSelect" data-toggle="modal">6. checkbox button  컴펌 창<img src="/images/mobile/@temp/img06.png" alt=""></a>
+
+
+	<a href="#monthSelect" data-toggle="modal">7. 월 선택<img src="/images/mobile/@temp/img07.png" alt=""></a>
+
+	<a href="#selectUnit" data-toggle="modal">8. 유닛 선택<img src="/images/mobile/@temp/img08.png" alt=""></a>
+
+
+	<a href="#booksSetting" data-toggle="modal">9. Booklet Setting<img src="/images/mobile/@temp/img09.png" alt=""></a>
+
+	<a href="#progressSetting" data-toggle="modal">10. Progress Setting<img src="/images/mobile/@temp/img11.png" alt=""></a>
+
+	<a href="#msgSetting" data-toggle="modal">10. message Setting<img src="/images/mobile/@temp/img12.png" alt=""></a>
+
+	<a href="#msgSort" data-toggle="modal">11. message Sorting<img src="/images/mobile/@temp/img13.png" alt=""></a>
+
+	<a href="#tuitionSetting" data-toggle="modal">12. 회비설정<img src="/images/mobile/@temp/img17.png" alt=""></a>
+
+	<a href="#selectModel" data-toggle="modal">13. select model<img src="/images/mobile/@temp/img18.png" alt=""></a>	
+
+	<a href="#selectSchedule" data-toggle="modal">14. 상담 스케쥴 취소/완료/일정 변경<img src="/images/mobile/@temp/img20.png" alt=""></a>	
+</div>
+<!-- 기본 얼럿 공통 -->
+<div class="modal fade mobile-only modules-alert" id="alert-layers">
+	<div class="modal-dialog modal-sm" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			</div>
+			<div class="modal-body">
+				<p class="al-msg">3개월 동안 로그인하지 않아서 사용이 제한되어 있습니다. 센터 관리자에게 문의하세요.</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary btn-lg">OK</button>
+			</div>
+		</div>
+		</div>
+</div>
+<!--// 기본 얼럿 공통 -->
+
+<!-- 기본 얼럿 타이틀 있는 경우 -->
+<div class="modal fade mobile-only modules-alert" id="alert-layers1">
+	<div class="modal-dialog modal-sm" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h1 class="tit">Alert Title</h1>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			</div>
+			<div class="modal-body">
+				<p class="al-msg">3개월 동안 로그인하지 않아서 사용이 제한되어 있습니다. 센터 관리자에게 문의하세요.</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary btn-lg">OK</button>
+			</div>
+		</div>
+		</div>
+</div>
+<!--// 기본 얼럿 타이틀 있는 경우 -->
+
+<!-- 개인정보 수집동의 얼럿 -->
+<div class="modal fade mobile-only modules-alert" id="alert-layers2">
+	<div class="modal-dialog modal-sm" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			</div>
+			<div class="modal-body">
+				<p class="agree-msg">Ken. Song(KS0000000081) 님은<strong>17:50 18/02/2018에</strong>개인 정보 수집 동의 하였습니다.</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary btn-lg">OK</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--// 개인정보 수집동의 얼럿 -->
+
+
+<!-- 기본 컴펌 공통 -->
+<div class="modal fade mobile-only modules-confirm" id="confirm-layers">
+	<div class="modal-dialog modal-sm" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			</div>
+			<div class="modal-body">
+				<p class="al-msg">Consultion를 My menu에 삭제 하시겠습니까?</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary btn-lg">Yes</button>
+				<button type="button" class="btn btn-info btn-lg">No</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--// 기본 컴펌 공통 -->
+
+
+<!-- 기본 컴펌 타이틀 있는 경우 -->
+<div class="modal fade mobile-only modules-confirm" id="confirm-layers1">
+	<div class="modal-dialog modal-sm" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h1 class="tit">Confirm Title</h1>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			</div>
+			<div class="modal-body">
+				<p class="al-msg">Consultion를 My menu에 삭제 하시겠습니까?</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary btn-lg">Yes</button>
+				<button type="button" class="btn btn-info btn-lg">No</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--// 기본 컴펌 타이틀 있는 경우 -->
+
+<!--  Attendance code 중복체크 -->
+<div class="modal fade mobile-only modules-confirm" id="confirm-layers2">
+	<div class="modal-dialog modal-sm" role="document">
+		<div class="modal-content change-code">
+			<div class="modal-header">
+				<h1 class="tit">Attendance code</h1>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			</div>
+			<div class="modal-body">
+				<div class="form">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group inline">
+								<span class="lb-txt mr-1">Now : </span><span class="input_txts">1234</span>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group">
+								<span class="lb-txt">Change</span>
+								<div class="input-group">
+									<input type="text" class="form-control">
+									<span class="btns">
+										<a href="#" class="btn-small">Check</a>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<p class="check-msg">It's possible to use.<br>Would yuo like to use it?</p>
+			</div>
+			<div class="modal-footer">
+				<span class="check-succese">
+					<button type="button" class="btn btn-primary btn-lg">Save</button>
+					<button type="button" class="btn btn-info btn-lg">Cancel</button>
+				</span>
+			</div>
+		</div>
+	</div>
+</div>
+<!--//  Attendance code 중복체크 -->
+
+<!--  Attendance code 중복체크 - 중복인 경우 -->
+<div class="modal fade mobile-only modules-alert" id="confirm-layers3">
+	<div class="modal-dialog modal-sm" role="document">
+		<div class="modal-content change-code">
+			<div class="modal-header">
+				<h1 class="tit">Attendance code</h1>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			</div>
+			<div class="modal-body">
+				<div class="form">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group inline">
+								<span class="lb-txt mr-1">Now : </span><span class="input_txts">1234</span>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group">
+								<span class="lb-txt">Change</span>
+								<div class="input-group">
+									<input type="text" class="form-control">
+									<span class="btns">
+										<a href="#" class="btn-small">Check</a>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<p class="check-msg"><em class="em03">5678</em> is already in use.<br>Please enter another number.</p>
+			</div>
+			<div class="modal-footer">
+				<!-- 기본, 실페 -->
+				<span class="check-default">
+					<button type="button" class="btn btn-primary btn-lg">Check</button>
+				</span>
+			</div>
+		</div>
+	</div>
+</div>
+<!--//  Attendance code 중복체크 - 중복인 경우 -->
+
+<!-- 서브젝트 선택 -->
+<div class="modal fade mobile-only modules-confirm" id="confirm-subject">
+	<div class="modal-dialog modal-md" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h1 class="tit">Subject</h1>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			</div>
+			<div class="modal-body">
+				<div class="form">
+					<div class="btn-group form-control" data-toggle="buttons">
+						<label class="btn btn-default btn-sm active">
+							<input type="radio" name="options" id="option0" autocomplete="off" checked="checked">
+							<span>All</span>
+						</label>
+						<label class="btn btn-default btn-sm active">
+							<input type="radio" name="options" id="option1" autocomplete="off">
+							<span>EL Math</span>
+						</label>
+						<label class="btn btn-default btn-sm new">
+							<input type="radio" name="options" id="option2" autocomplete="off">
+							<span>EMO</span>
+						</label>
+						<label class="btn btn-default btn-sm">
+							<input type="radio" name="options" id="option3" autocomplete="off">
+							<span>Playmath</span>
+						</label>
+						<label class="btn btn-default btn-sm">
+							<input type="radio" name="options" id="option4" autocomplete="off">
+							<span>ELE</span>
+						</label>
+						<label class="btn btn-default btn-sm">
+							<input type="radio" name="options" id="option5" autocomplete="off">
+							<span>Happy talk</span>
+						</label>
+						<label class="btn btn-default btn-sm">
+							<input type="radio" name="options" id="option6" autocomplete="off">
+							<span>NNP</span>
+						</label>
+						<label class="btn btn-default btn-sm">
+							<input type="radio" name="options" id="option7" autocomplete="off">
+							<span>Korean</span>
+						</label>
+						<label class="btn btn-default btn-sm">
+							<input type="radio" name="options" id="option8" autocomplete="off">
+							<span>Sparks</span>
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary btn-lg">Save</button>
+				<button type="button" class="btn btn-info btn-lg">Cancel</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--// 서브젝트 선택 -->
+
+
+<!-- 라디오버튼 컴펌창 -->
+<div class="modal fade mobile-only modules-confirm" id="confirm-radioSelect">
+	<div class="modal-dialog modal-sm" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h1 class="tit">SCT Page</h1>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			</div>
+			<div class="modal-body">
+				<div class="radio-group">
+					<div class="radio inline">
+						<input type="radio" id="inlineRadio1" value="option1" name="radioInline1" checked="checked">
+						<label for="inlineRadio1">Review(2P)</label>
+					</div>
+					<div class="radio inline">
+						<input type="radio" id="inlineRadio2" value="option1" name="radioInline1">
+						<label for="inlineRadio2">11-12P</label>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary btn-lg">OK</button>
+				<button type="button" class="btn btn-info btn-lg">Cancel</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--// 라디오버튼 컴펌창 -->
+
+<!-- 체크박스 컴펌창 -->
+<div class="modal fade mobile-only modules-confirm" id="confirm-CheckSelect">
+	<div class="modal-dialog modal-sm" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h1 class="tit">체크박스 용~</h1>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			</div>
+			<div class="modal-body">
+				<div class="check-group">
+					<div class="checkbox inline">
+						<input type="checkbox" id="inlineRadio1" value="option1" name="radioInline1" checked="checked">
+						<label for="inlineRadio1">Review(2P)</label>
+					</div>
+					<div class="checkbox inline">
+						<input type="checkbox" id="inlineRadio2" value="option1" name="radioInline1">
+						<label for="inlineRadio2">11-12P</label>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary btn-lg">OK</button>
+				<button type="button" class="btn btn-info btn-lg">Cancel</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--// 체크박스 컴펌창 -->
+
+<!-- 월 선택  -->
+<div class="modal fade mobile-only modules-confirm" id="monthSelect" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-sm" role="document">
+	<div class="modal-content">
+		<div class="modal-header">
+			<h1 class="tit">Progress Month</h1>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		</div>
+		<div class="modal-body">
+			<div class="select-month-wrap">
+				<div class="years">
+					<!-- 비 활성화 시 disabled 속성 추가 -->
+					<button type="button" class="prev"><i class="fas fa-caret-left"></i></button>
+					<span>2018</span>
+					<button type="button" class="next"><i class="fas fa-caret-right"></i></button>
+				</div>
+				<div class="select-numbers size04">
+					<span class="radio">
+						<input type="radio" id="month01" name="select-month">
+						<label for="month01">01</label>
+					</span>
+					<span class="radio">
+						<input type="radio" id="month02" name="select-month">
+						<label for="month02">02</label>
+					</span>
+					<span class="radio">
+						<input type="radio" id="month03" name="select-month">
+						<label for="month03">03</label>
+					</span>
+					<span class="radio">
+						<input type="radio" id="month04" name="select-month">
+						<label for="month04">04</label>
+					</span>
+					<span class="radio">
+						<input type="radio" id="month05" name="select-month">
+						<label for="month05">05</label>
+					</span>
+					<span class="radio">
+						<input type="radio" id="month06" name="select-month">
+						<label for="month06">06</label>
+					</span>
+					<span class="radio">
+						<input type="radio" id="month07" name="select-month">
+						<label for="month07">07</label>
+					</span>
+					<span class="radio">
+						<input type="radio" id="month08" name="select-month">
+						<label for="month08">08</label>
+					</span>
+					<span class="radio">
+						<input type="radio" id="month09" name="select-month">
+						<label for="month09">09</label>
+					</span>
+					<span class="radio">
+						<input type="radio" id="month10" name="select-month">
+						<label for="month10">10</label>
+					</span>
+					<span class="radio">
+						<input type="radio" id="month11" name="select-month">
+						<label for="month11">11</label>
+					</span>
+					<span class="radio">
+						<input type="radio" id="month12" name="select-month">
+						<label for="month12">12</label>
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<button type="button" class="btn btn-primary btn-lg">Save</button>
+			<button type="button" class="btn btn-info btn-lg" data-dismiss="modal">Cancel</button>
+		</div>
+	</div>
+  </div>
+</div>
+<!--// 월 선택  -->
+
+<!-- 유닛 선택 -->
+<div class="modal fade mobile-only modules-confirm" id="selectUnit" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-sm" role="document">
+	<div class="modal-content">
+		<div class="modal-header">
+			<h1 class="tit">1A UNIT</h1>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		</div>
+		<div class="modal-body">
+			<div class="select-numbers size03">
+				<span class="radio">
+					<input type="checkbox" id="unit1" name="select-unit">
+					<label for="unit1">01</label>
+				</span>
+				<span class="radio">
+					<input type="checkbox" id="unit2" name="select-unit">
+					<label for="unit2">02</label>
+				</span>
+				<span class="radio">
+					<input type="checkbox" id="unit3" name="select-unit">
+					<label for="unit3">03</label>
+				</span>
+				<span class="radio">
+					<input type="checkbox" id="unit4" name="select-unit">
+					<label for="unit4">04</label>
+				</span>
+				<span class="radio">
+					<input type="checkbox" id="unit5" name="select-unit">
+					<label for="unit5">05</label>
+				</span>
+				<span class="radio">
+					<input type="checkbox" id="unit6" name="select-unit">
+					<label for="unit6">06</label>
+				</span>
+				<span class="radio">
+					<input type="checkbox" id="unit7" name="select-unit">
+					<label for="unit7">07</label>
+				</span>
+				<span class="radio">
+					<input type="checkbox" id="unit8" name="select-unit">
+					<label for="unit8">08</label>
+				</span>
+				<span class="radio">
+					<input type="checkbox" id="unit9" name="select-unit">
+					<label for="unit9">09</label>
+				</span>
+				<span class="radio">
+					<input type="checkbox" id="unit10" name="select-unit">
+					<label for="unit10">10</label>
+				</span>
+				<span class="radio">
+					<input type="checkbox" id="unit11" name="select-unit">
+					<label for="unit11">11</label>
+				</span>
+				<span class="radio">
+					<input type="checkbox" id="unit12" name="select-unit">
+					<label for="unit12">12</label>
+				</span>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<button type="button" class="btn btn-primary btn-lg">Save</button>
+			<button type="button" class="btn btn-info btn-lg" data-dismiss="modal">Cancel</button>
+		</div>
+	</div>
+  </div>
+</div>
+<!--// 유닛 선택 -->
+
+<!-- Booklet Setting -->
+<div class="modal fade mobile-only modules-confirm" id="booksSetting" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-md" role="document">
+	<div class="modal-content">
+		<div class="modal-header">
+			<h1 class="tit">Booklet Setting</h1>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		</div>
+		<div class="books-select">
+			<div class="book-type">
+				<span class="nums"><em>5</em> /6 Max Booklets/Week</span>
+			</div>
+			<div class="selects-list">
+				<div class="inner">
+					<div class="books">
+						<span>04/06</span>
+						<span class="btn-x"><i class="fas fa-times"></i></span>
+					</div>
+					<div class="books">
+						<span>04/06</span>
+						<span class="btn-x"><i class="fas fa-times"></i></span>
+					</div>
+					<div class="books">
+						<span>04/06</span>
+						<span class="btn-x"><i class="fas fa-times"></i></span>
+					</div>
+					<div class="books">
+						<span>04/06</span>
+						<span class="btn-x"><i class="fas fa-times"></i></span>
+					</div>
+					<div class="books">
+						<span>04/06</span>
+						<span class="btn-x"><i class="fas fa-times"></i></span>
+					</div>
+					<div class="books">
+						<span>04/06</span>
+						<span class="btn-x"><i class="fas fa-times"></i></span>
+					</div>
+				</div>
+				<span class="btn-x"><i class="far fa-times-circle"></i></span>
+			</div>
+		</div>
+		<div class="modal-body">
+			<span class="radio-group">
+				<span class="radio inline">
+					<input type="radio" id="type1" value="option1" name="types" checked="checked">
+					<label for="type1">BTM</label>
+				</span>
+				<span class="radio inline">
+					<input type="radio" id="type2" value="option2" name="types">
+					<label for="type2">CTM</label>
+				</span>
+			</span>
+			<div class="levels mt-2">
+				<dl class="lists default">
+					<dt>
+						<div class="form-group">                
+							<select class="form-control">
+								<option value="">Level4 </option>
+							</select>
+						</div>
+					</dt>
+					<dd>
+						<div class="levels-list">
+							<span class="group1 active"><a href="#">01</a></span>
+							<span class="group1"><a href="#">02</a></span>
+							<span class="group1"><a href="#">03</a></span>
+							<span class="group2"><a href="#">04</a></span>
+							<span class="group1"><a href="#">05</a></span>
+							<span class="group1"><a href="#">06</a></span>
+							<span class="group1"><a href="#">07</a></span>
+							<span class="group2"><a href="#">08</a></span>
+							<span class="group2"><a href="#">09</a></span>
+							<span class="group2"><a href="#">10</a></span>
+							<span class="group1"><a href="#">11</a></span>
+							<span class="group1"><a href="#">12</a></span>
+							<span class="group1"><a href="#">13</a></span>
+							<span class="group2"><a href="#">14</a></span>
+							<span class="group1"><a href="#">15</a></span>
+							<span class="group1"><a href="#">16</a></span>
+							<span class="group1"><a href="#">17</a></span>
+							<span class="group2"><a href="#">18</a></span>
+						</div>
+					</dd>
+				</dl>
+				<div class="decs-wrap">
+					<p class="decs"> Systems of Equations(8-5) </p>
+				</div>
+				
+			</div>
+		</div>
+		<div class="modal-footer">
+			<button type="button" class="btn btn-primary btn-lg">Save</button>
+			<button type="button" class="btn btn-info btn-lg" data-dismiss="modal">Cancel</button>
+		</div>
+	</div>
+  </div>
+</div>
+<!--// Booklet Setting -->
+
+<!-- progress Setting -->
+<div class="modal fade mobile-only modules-confirm" id="progressSetting" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-md" role="document">
+	<div class="modal-content progress-modal">
+		<div class="modal-header">
+			<h1 class="tit">Progress of Ken Song(K00000038)</h1>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		</div>
+		<div class="modal-body">
+			<ul class="data-lists">
+				<li class="circle">
+					<strong>Progress Period :</strong><span class="em01 block">03/03/2018 ~ 24/03/2018</span>
+				</li>
+			</ul>
+			<span class="radio-group">
+				<span class="radio inline">
+					<input type="radio" id="type11" value="option1" name="types" checked="checked">
+					<label for="type11">Homework</label>
+				</span>
+				<span class="radio inline">
+					<input type="radio" id="type22" value="option2" name="types">
+					<label for="type22">Booklet Test</label>
+				</span>
+			</span>
+			<div class="bx-table size-full top-line">
+				<div class="table">
+					<table>
+						<colgroup>
+							<col style="width:120px">
+							<col style="width:70px">
+							<col style="width:auto">
+						</colgroup>
+						<tbody>
+							<tr class="today">
+								<th class="bg_gray" rowspan="2">0303-0403 (6/6)</th>
+								<td>BTM</td>
+								<td class="left">
+									<span class="booklet-check-group">
+										<span class="check"><input type="radio" id="ck1-1" name="group1"><label for="ck1-1">0602</label></span>
+										<span class="check"><input type="radio" id="ck1-2" name="group1"><label for="ck1-2">0603</label></span>
+										<span class="check"><input type="radio" id="ck1-3" name="group1"><label for="ck1-3">0604</label></span>
+										<span class="check"><input type="radio" id="ck1-4" name="group1"><label for="ck1-4">0608</label></span>
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<td>CTM</td>
+								<td class="left">
+									<span class="booklet-check-group">
+										<span class="check"><input type="radio" id="ck1-1-1" name="group1-1"><label for="ck1-1-1">0602</label></span>
+										<span class="check"><input type="radio" id="ck1-1-2" name="group1-1"><label for="ck1-1-2">0603</label></span>
+										<span class="check"><input type="radio" id="ck1-1-3" name="group1-1"><label for="ck1-1-3">0604</label></span>
+										<span class="check"><input type="radio" id="ck1-1-4" name="group1-1"><label for="ck1-1-4">0608</label></span>
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<th class="bg_gray" rowspan="2">0303-0403 (6/6)</th>
+								<td>BTM</td>
+								<td class="left">
+									<span class="booklet-check-group">
+										<span class="check"><input type="radio" id="ck2-1" name="group2"><label for="ck2-1">0602</label></span>
+										<span class="check"><input type="radio" id="ck2-2" name="group2"><label for="ck2-2">0603</label></span>
+										<span class="check"><input type="radio" id="ck2-3" name="group2"><label for="ck2-3">0604</label></span>
+										<span class="check"><input type="radio" id="ck2-4" name="group2"><label for="ck2-4">0608</label></span>
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<td>CTM</td>
+								<td class="left">
+									<span class="booklet-check-group">
+										<span class="check"><input type="radio" id="ck2-2-1" name="group2-1"><label for="ck2-2-1">0602</label></span>
+										<span class="check"><input type="radio" id="ck2-2-2" name="group2-1"><label for="ck2-2-2">0603</label></span>
+										<span class="check"><input type="radio" id="ck2-2-3" name="group2-1"><label for="ck2-2-3">0604</label></span>
+										<span class="check"><input type="radio" id="ck2-2-4" name="group2-1"><label for="ck2-2-4">0608</label></span>
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<th class="bg_gray" rowspan="2">0303-0403 (6/6)</th>
+								<td>BTM</td>
+								<td class="left">
+									<span class="booklet-check-group">
+										<span class="check"><input type="radio" id="ck3-1" name="group3"><label for="ck3-1">0602</label></span>
+										<span class="check"><input type="radio" id="ck3-2" name="group3"><label for="ck3-2">0603</label></span>
+										<span class="check"><input type="radio" id="ck3-3" name="group3"><label for="ck3-3">0604</label></span>
+										<span class="check"><input type="radio" id="ck3-4" name="group3"><label for="ck3-4">0608</label></span>
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<td>CTM</td>
+								<td class="left">
+									<span class="booklet-check-group">
+										<span class="check"><input type="radio" id="ck3-3-1" name="group3-1"><label for="ck3-3-1">0602</label></span>
+										<span class="check"><input type="radio" id="ck3-3-2" name="group3-1"><label for="ck3-3-2">0603</label></span>
+										<span class="check"><input type="radio" id="ck3-3-3" name="group3-1"><label for="ck3-3-3">0604</label></span>
+										<span class="check"><input type="radio" id="ck3-3-4" name="group3-1"><label for="ck3-3-4">0608</label></span>
+									</span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="table-bottom">
+					<p class="decs">Please tap the homework book.</p>
+				</div>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<button type="button" class="btn btn-primary btn-lg">Save</button>
+			<button type="button" class="btn btn-info btn-lg" data-dismiss="modal">Cancel</button>
+		</div>
+	</div>
+  </div>
+</div>
+<!--// progress Setting -->
+
+<!-- message Setting -->
+<div class="modal fade mobile-only modules-confirm" id="msgSetting" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-md" role="document">
+	<div class="modal-content message-modal">
+		<div class="modal-header">
+			<h1 class="tit">Message</h1>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		</div>
+		<div class="modal-body">
+			<span class="radio-group">
+				<span class="radio inline type1">
+					<input type="radio" id="type111" value="option1" name="types" checked="checked">
+					<label for="type111">Tuition</label>
+				</span>
+				<span class="radio inline type2">
+					<input type="radio" id="type222" value="option2" name="types">
+					<label for="type222">Learning</label>
+				</span>
+				<span class="radio inline type3">
+					<input type="radio" id="type333" value="option2" name="types">
+					<label for="type333">Attendance</label>
+				</span>
+				<span class="radio inline type4">
+					<input type="radio" id="type444" value="option2" name="types">
+					<label for="type444">Etc</label>
+				</span>
+			</span>
+			<div class="txt-form">
+				<div class="tit">
+					<span class="form-group has-feedback">
+						<input type="text" class="form-control" placeholder="Title">
+					</span>
+				</div>
+				<div class="txt-body">
+					<textarea name="textarea" placeholder="Enter the Contents" class="form-control"></textarea>
+				</div>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<button type="button" class="btn btn-primary btn-lg">Save</button>
+			<button type="button" class="btn btn-info btn-lg" data-dismiss="modal">Cancel</button>
+		</div>
+	</div>
+  </div>
+</div>
+<!--// message Setting -->
+
+<!-- message sorting -->
+<div class="modal fade mobile-only modules-alert" id="msgSort" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-md" role="document">
+	<div class="modal-content message-modal">
+		<div class="modal-header">
+			<h1 class="tit">CATERGORY</h1>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		</div>
+		<div class="modal-body">
+			<span class="check-group">
+				<span class="checkbox inline type0">
+					<input type="checkbox" id="type0000" value="option1" name="types1" checked="checked">
+					<label for="type0000">All</label>
+				</span>
+				<span class="checkbox inline type1">
+					<input type="checkbox" id="type1111" value="option1" name="types1">
+					<label for="type1111">Tuition</label>
+				</span>
+				<span class="checkbox inline type2">
+					<input type="checkbox" id="type2222" value="option2" name="types1">
+					<label for="type2222">Learning</label>
+				</span>
+				<span class="checkbox inline type3">
+					<input type="checkbox" id="type3333" value="option2" name="types1">
+					<label for="type3333">Attendance</label>
+				</span>
+				<span class="checkbox inline type4">
+					<input type="checkbox" id="type4444" value="option2" name="types1">
+					<label for="type4444">Etc</label>
+				</span>
+			</span>
+		</div>
+		<div class="modal-footer">
+			<button type="button" class="btn btn-primary btn-lg">OK</button>
+		</div>
+	</div>
+  </div>
+</div>
+<!--// message Setting -->
+
+<!-- tuition Setting -->
+<div class="modal fade mobile-only modules-confirm" id="tuitionSetting" tabindex="-1" role="dialog">
+	<div class="modal-dialog modal-sm" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h1 class="tit">회비설정</h1>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			</div>
+			<div class="modal-body">
+				<div class="form">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group">
+								<span class="lb-txt">회비적용일</span>
+								<div class="input-group date">
+									<input type="text" class="form-control input-sm clearable" placeholder="21/03/2018">
+									<span class="input-group-addon">
+										<i class="fas fa-calendar-alt"></i>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group inline search">
+								<span class="lb-txt">Tuition Type</span>
+								<div class="select-group">
+									<select class="form-control input-sm">
+										<option value="" title="" selected="selected">KK0002801</option>
+									</select>
+									<span>만료예정일 : 11/01/2020</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group inline">
+								<span class="lb-txt">Charge amount</span>
+								<div class="input-group">
+									<input type="text" class="form-control input-sm clearable" placeholder="300">
+									<span>Unit price : 10.00</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group inline">
+								<span class="lb-txt">No. of Charges</span>
+								<div class="input-group">
+									<input type="text" class="form-control input-sm clearable" placeholder="30">
+									<span>Used 0, Remain <i class="tx-blue">30</i></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group inline">
+								<span class="lb-txt">Booklets per Week</span>
+								<div class="arr-r select">
+									<span class="input_txts em03 bold">06</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary btn-lg">Save</button>
+				<button type="button" class="btn btn-info btn-lg" data-dismiss="modal">Cancel</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- tuition Setting -->
+
+<!-- select Model  -->
+<div class="modal fade mobile-only modules-confirm" id="selectModel" tabindex="-1" role="dialog">
+	<div class="modal-dialog modal-md" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h1 class="tit">Select Model</h1>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			</div>
+			<div class="modal-body">
+				<ul class="data-lists">
+					<li class="circle">
+						<strong>Model name  :</strong>
+						<span class="em01 block">0EE1MB01011a</span>
+					</li>
+					<li class="circle">
+						<strong>Model</strong>
+						<div>
+							<span class="radio-group">
+								<span class="radio inline">
+									<input type="radio" id="type111" name="types111" checked="checked">
+									<label for="type111">5 type model</label>
+								</span>
+								<span class="radio inline">
+									<input type="radio" id="type222" name="types111">
+									<label for="type222">Custom model</label>
+								</span>
+								<span class="radio inline">
+									<input type="radio" id="type333" name="types111">
+									<label for="type333">Custom model</label>
+								</span>
+								<span class="radio inline">
+									<input type="radio" id="type444" \name="types111">
+									<label for="type444">Custom model</label>
+								</span>
+							</span>
+						</div>
+					</li>
+					<li class="circle">
+						<strong>No of BTM booklets</strong>
+						<span class="form-inline ml-1">                
+							<select class="form-control">
+								<option value="">1 </option>
+							</select>
+						</span>
+					</li>
+					<li class="circle">
+						<strong>Type</strong>
+					</li>
+					<li>
+						<div class="bx-table size-full top-line">
+							<div class="table">
+								<table>
+									<colgroup>
+										<col style="width:auto">
+										<col style="width:auto">
+										<col style="width:60%">
+									</colgroup>
+									<thead>
+										<tr>
+											<th>No</th>
+											<th>Model name</th>
+											<th>Description</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr class="today">
+											<td class="left">
+												<span class="booklet-check-group">
+													<span class="check"><input type="radio" id="ck1-1" name="group1"><label for="ck1-1">0602</label></span>
+												</span>
+											</td>
+											<td>0EE1MB01011a</td>
+											<td>T25:SET-Most repetive</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary btn-lg">Save</button>
+				<button type="button" class="btn btn-info btn-lg" data-dismiss="modal">Cancel</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- select Model  -->
+
+
+
+
+
+
+
+
+<!-- Schedule Setting -->
+<div class="modal fade mobile-only modules-confirm" id="selectSchedule" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-md" role="document">
+	<div class="modal-content set-schedule">
+		<div class="modal-header">
+			<h1 class="tit">Schedule</h1>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		</div>
+		<div class="modal-body">
+			<span class="radio-group type-select">
+				<span class="radio inline type1">
+					<input type="radio" id="sc-01" value="option1" name="sc-" checked="checked">
+					<label for="sc-01">상담완료</label>
+				</span>
+				<span class="radio inline type2">
+					<input type="radio" id="sc-02" value="option2" name="sc-">
+					<label for="sc-02">일정변경</label>
+				</span>
+				<span class="radio inline type3">
+					<input type="radio" id="sc-03" value="option2" name="sc-">
+					<label for="sc-03">상담취소</label>
+				</span>
+			</span>
+			<div>
+				<ul class="data-lists">
+					<li class="circle form-label">
+						<strong>상담내용</strong>
+						<span class="byte">(14/500)</span>
+					</li>
+					<li>
+						<div class="txt-form">
+							<div class="txt-body">
+								<textarea name="textarea" placeholder="Enter the Contents" class="form-control"></textarea>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="form-group">
+							<!-- <span class="lb-txt">Change Study Day</span> -->
+							<div class="inline-calendar">
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<div id="datetimepicker12"></div>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<dl class="time-select">
+											<dt>Time</dt>
+											<dd>
+												<select class="form-control">
+													<option value="" selected="">13</option>
+													<option value="">14</option>
+												</select>
+												<select class="form-control">
+													<option value="" selected="">50</option>
+													<option value="">55</option>
+												</select>
+											</dd>
+										</dl>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<script type="text/javascript">
+						$(function () {
+							$('#datetimepicker12').datetimepicker({
+								inline: true,
+								sideBySide: true,
+								timePickerShow:false
+							});
+						});
+					</script>
+				</div>
+			</div>
+			<div>
+				<p class="cancel-schedule">상담을 취소시겠습니까?</p>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<button type="button" class="btn btn-primary btn-lg">Save</button>
+			<button type="button" class="btn btn-info btn-lg" data-dismiss="modal">Cancel</button>
+		</div>
+	</div>
+  </div>
+</div>
+<!--// Schedule Setting -->
+
+
+
+
+
+
+<script>
+var mobileSelect1 = new MobileSelect({
+  trigger: '#pickerTime',
+  title: 'THU, 13 : 15',
+  wheels: [
+			  {data : [
+				{id: '00', value: '00'},
+				{id: '01', value: '01'},
+				{id: '02', value: '02'},
+				{id: '03', value: '03'},
+				{id: '04', value: '04'},
+				{id: '05', value: '05'},
+				{id: '06', value: '06'},
+			  ]},
+			  {data : [
+				{id: '00', value: '00'},
+				{id: '01', value: '01'},
+				{id: '02', value: '02'},
+				{id: '03', value: '03'},
+				{id: '04', value: '04'},
+				{id: '05', value: '05'},
+				{id: '06', value: '06'},
+			   ]},
+		  ],
+	transitionEnd:function(indexArr, data){
+		console.log(data);
+	},
+	callback:function(indexArr, data){
+		console.log(data);
+	},
+	cancelBtnText: 'Cancel',
+	ensureBtnText: 'Save',
+});
+
+var mobileSelect2 = new MobileSelect({
+  trigger: '#pickerSP',
+  title: 'Change NSP',
+  wheels: [
+			  {data : [
+				  {id: 'A', value: 'A'},
+				  {id: 'B', value: 'B'},
+				  {id: 'C', value: 'C'},
+				  {id: 'D', value: 'D'},
+				  {id: 'E', value: 'E'},
+			  ]},
+			  {data : [
+					 {id: '01', value: '01'},
+					 {id: '02', value: '02'},
+					 {id: '03', value: '03'},
+					 {id: '04', value: '04'},
+				 ]},
+			  {data : [
+					 {id: 'Y', value: 'Repeat'},
+					 {id: 'N', value: 'No Repeat'},
+				 ]},
+		  ],
+  transitionEnd: function(indexArr, data){
+	  console.log('transitionEnd1', indexArr);
+	  console.log('transitionEnd2', data);
+  },
+  callback: function(indexArr, data){
+	  console.log('callback1', indexArr);
+	  console.log('callback2', data);
+  },
+	cancelBtnText: 'Cancel',
+	ensureBtnText: 'Save',
+});
+var mobileSelect3 = new MobileSelect({
+  trigger: '#pickerIns',
+  title: 'Instructor',
+  wheels: [
+			  {data : [
+				  {id: 'K00200361(Kim.ok)', value: 'K00200361(Kim.ok)'},
+				  {id: 'FC0000008A(Sunny. Ko)', value: 'FC0000008A(Sunny. Ko)'},
+				  {id: 'K00200363(Dane William DeHaan)', value: 'K00200363(Dane William DeHaan)'},
+				  {id: 'K10200361(Kim.ok)', value: 'K10200361(Kim.ok)'},
+				  {id: 'K20200361(Kim.ok)', value: 'K20200361(Kim.ok)'},
+				  {id: 'K30200361(Kim.ok)', value: 'K30200361(Kim.ok)'},
+				  {id: 'K40200361(Kim.ok)', value: 'K40200361(Kim.ok)'},
+				  {id: 'K50200361(Kim.ok)', value: 'K50200361(Kim.ok)'},
+			  ]},
+		  ],
+  transitionEnd:function(indexArr, data){
+		console.log(data);
+	},
+	callback:function(indexArr, data){
+		console.log(data);
+	},
+	cancelBtnText: 'Cancel',
+	ensureBtnText: 'Save',
+});
+
+</script>
+</body>
+</html>

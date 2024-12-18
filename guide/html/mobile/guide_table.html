@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Pragma" content="no-cache">
+	<title>K&amp;M2 테이블 가이드</title>
+	<link rel="SHORTCUT ICON" href="/images/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="/guide/base.css">
+	<link rel="stylesheet" type="text/css" href="/guide/shCoreDefault.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap-datetimepicker.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendors/fontawesome-all.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendors/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" type="text/css" href="/css/custom-mobile.css">
+	<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+	<script src="/js/vendors/jquery-ui.min.js"></script>
+	<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+	<script src="/js/vendors/moment.js"></script>
+	<script src="/js/vendors/bootstrap.min.js"></script>
+	<script src="/js/vendors/bootstrap-datetimepicker.min.js"></script>
+	<script src="/guide/shCore.js"></script>
+	<script src="/guide/shBrushXml.js"></script>
+	<script src="/guide/shBrushCss.js"></script>
+	<script src="/guide/shBrushJScript.js"></script>
+	<script type="text/javascript">SyntaxHighlighter.all();</script>	
+</head>
+</head>
+<body>
+<div id="wrap" class="coding_guide">
+	<h1 class="h1_guide">테이블 가이드</h1>
+<pre class="brush: xml;">
+<div class="bx-table">
+	<div class="tb-dimm"><span class="txts">Fetching data...</span></div>
+	<!-- 
+		가로 스크롤 : x-scroll  
+		세로 스크롤 : y-scroll (기본 설정 높이는 350px / 높이 h300~ h700 으로 추가 기입)
+		스크롤 없는 테이블 :  no-scroll
+	-->
+	<div class="x-scroll">
+		<!-- 
+			기본 : table 
+			정렬 : table table-sort
+			
+		-->
+		<div class="table">
+			<table>
+				<thead>
+					<tr>
+						<!-- 
+							기본 : sorting
+							오름차순 : sorting asc
+							내림차순 : sorting desc
+						-->
+						<th scope="col">No</th>
+						<th scope="col">Date</th>
+						<th scope="col">Member ID</th>
+						<th scope="col">Grade</th>
+						<th scope="col">Enroll</th>
+					</tr>
+				</thead>
+				<tbody>
+					<!-- 
+						배경색상 구분 : bg-color
+						체크 상태 : check
+					-->
+					<tr>
+						<!-- 
+							- td 추가  class명 : 
+								왼쪽정렬 : left
+								오른쪽정렬 : right
+								데이터 없음 : tb-no-data
+							- a 추가  class명 :
+								링크(모달); link-modal
+								링크(페이지이동) : link-blank
+							- span 추가 class명
+								텍스트 들여쓰기 : indent1, indent2, indent3 
+						-->
+						<td>1</td>
+						<td>25/04/2018</td>
+						<td><a href="#">K0000000291</a></td>
+						<td>Age 0~1</td>
+						<td><a href="#" class="ico-enroll">enroll</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+</pre>
+	
+	<div class="dscBox">
+		<div class="dscImg">
+			<div class="bx-table">
+				<div class="tb-dimm"><span class="txts">Fetching data...</span></div>
+				<div class="x-scroll">
+					<div class="table">
+						<table>
+							<thead>
+								<tr>
+									<th scope="col">No</th>
+									<th scope="col">Date</th>
+									<th scope="col">Member ID</th>
+									<th scope="col">Grade</th>
+									<th scope="col">Enroll</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>25/04/2018</td>
+									<td><a href="#">K0000000291</a></td>
+									<td>Age 0 ~ 1</td>
+									<td><a href="#" class="ico-enroll">enroll</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+<pre class="brush: xml;">
+<div class="bx-table">
+	<div class="tb-dimm"><span class="txts">Fetching data...</span></div>
+	<div class="x-scroll">
+		<div class="table">
+			<table>
+				<thead>
+					<tr>
+						<th scope="col">No</th>
+						<th scope="col">Date</th>
+						<th scope="col">Member ID</th>
+						<th scope="col">Grade</th>
+						<th scope="col">Enroll</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>25/04/2018</td>
+						<td><a href="#">K0000000291</a></td>
+						<td>Age 0~1</td>
+						<td><a href="#" class="ico-enroll">enroll</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+</pre>
+	</div>
+</div>
+</body>
+</html>

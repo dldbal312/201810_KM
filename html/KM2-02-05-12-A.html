@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<link rel="SHORTCUT ICON" href="/images/favicon.ico">
+<title>Key&amp;Manager ver.2</title>
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/fontawesome-all.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" type="text/css" href="/css/custom.css">
+<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+<script src="/js/vendors/jquery-ui.min.js"></script>
+<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+<script src="/js/vendors/moment.js"></script>
+<script src="/js/vendors/bootstrap.min.js"></script>
+<script src="/js/vendors/bootstrap-datetimepicker.min.js"></script>
+<script src="/js/vendors/jquery.easypiechart.min.js"></script>
+<script>
+$(function() {
+	$('.chart-div').easyPieChart({
+		scaleColor: false,
+		trackColor: '#e0e0e0',
+		lineCap: 'round',
+		lineWidth: 6,
+		size: 120,
+		animate: 1000
+	});  
+});
+</script>
+</head>
+<body class="nav-sm modal-open">
+
+<!-- Modal -->
+<div class="modal fade in print" id="studentInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4" style="display:block">
+	<div class="modal-dialog modal-wide" role="document"  id="printableArea">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close hidden-print" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h1 class="modal-title" id="myModalLabel4"> Eye Level Math Monthly Report</h1>
+			</div>
+			<div class="modal-body">
+				<div class="px-3">
+					<div class="row test-date">
+						<div class="pull-left col-md-6">
+							Lanah Moon(K0000038)
+						</div>
+						<div class="pull-right col-md-6 text-right">
+							Test Month : 2018.03
+						</div>
+					</div>
+					<h2 class="cm-h4">TEST RESULT</h2>
+					<p class="decs">Eye Level Learning Center에서 수학실력과 공부습관을 길러갑니다. 한 달 동안 열심히 노력한 <span class="tx-blue bold">LAHAN</span>에게 칭찬해 주세요.</p>
+					<div class="test-result">
+						<div class="box col2">
+							<h3 class="fs14 text-center">Target Learning Quantity</h3>
+ 							<div class="chart-wrap">
+								<div class="chart-inner">
+									<h4 class="fs12">Textbook Num</h4>
+									<div class="bg-box textbook">
+										20
+									</div>
+								</div>
+								<div class="chart-inner">
+									<h4 class="fs12">Question Num</h4>
+									<div class="bg-box question">
+										1230
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="box col3">
+							<h3 class="fs14 text-center">Thinking Math Result</h3>
+ 							<div class="chart-wrap">
+								<div class="chart-inner">
+									<h4 class="fs12">Accuracy</h4>
+									<div class="chart">
+										<div class="chart-div" data-percent="95" data-bar-color="#0f8ce4"><span>95</span>%</div>
+										<span class="labels"><em>1195</em>/<em>1230</em></span>
+									</div>
+								</div>
+								<div class="chart-inner">
+									<h4 class="fs12">SAR</h4>
+									<div class="chart">
+										<div class="chart-div" data-percent="88" data-bar-color="#3ecfc0"><span>88</span>%</div>
+										<span class="labels"><em>35</em>/<em>40</em></span>
+									</div>
+								</div>
+								<div class="chart-inner">
+									<h4 class="fs12">Attendence</h4>
+									<div class="chart">
+										<div class="chart-div" data-percent="80" data-bar-color="#ff9600"><span>80</span>%</div>
+										<span class="labels"><em>6</em>/<em>8</em></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="test-result">
+						<p class="decs">목표한 학습량을 성실히 학습해서 전체 문항 수문항을 풀었고 맞춘 문항 수문제를 맞췄습니다. 연산 학습에서는 오답 없이 푼 페이지가 SAR률%입니다. 조금 더 노력하여 정확도를 더 높이고, 신속성도 높이면  다음 레벨 학습이 훨씬 쉬워질 것입니다. 센터에 정해진 시간에 출석하면서 시간관리 능력이 길러 집니다. 센터에 약속한 시간에 오도록 노력해 주세요.</p>
+					</div>
+					
+
+					<h2 class="cm-h4"><strong class="tx-blue">LAHAN'</strong>s Leraning Content (BASIC THINKING MATH)</h2>
+					<div class="leraning-content">
+						<div class="bx-table">
+							<table class="table">
+								<colgroup>
+									<col style="width:10%">
+									<col style="width:5%">
+									<col style="width:5%">
+									<col style="width:5%">
+									<col style="width:5%">
+									<col style="width:5%">
+									<col style="width:5%">
+									<col style="width:5%">
+									<col style="width:5%">
+									<col style="width:5%">
+									<col style="width:5%">
+									<col style="width:5%">
+									<col style="width:5%">
+									<col style="width:5%">
+									<col style="width:5%">
+									<col style="width:5%">
+									<col style="width:5%">
+									<col style="width:5%">
+									<col style="width:5%">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">Set</th>
+										<th scope="col">1</th>
+										<th scope="col">2</th>
+										<th scope="col">3</th>
+										<th scope="col">4</th>
+										<th scope="col">5</th>
+										<th scope="col">6</th>
+										<th scope="col">7</th>
+										<th scope="col">8</th>
+										<th scope="col">9</th>
+										<th scope="col">10</th>
+										<th scope="col">11</th>
+										<th scope="col">12</th>
+										<th scope="col">13</th>
+										<th scope="col">14</th>
+										<th scope="col">15</th>
+										<th scope="col">16</th>
+										<th scope="col">17</th>
+										<th scope="col">18</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">Level 3</th>
+										<td colspan="4" data-toggle="tooltip" data-placement="top" title="Understanding Numbers"><span class="f-resize">Understanding Numbers</span></td>
+										<td colspan="3" data-toggle="tooltip" data-placement="top" title="Adding 1"><span class="f-resize">Adding 1</span></td>
+										<td colspan="3" data-toggle="tooltip" data-placement="top" title="Adding 2"><span class="f-resize">Adding 2</span></td>
+										<td colspan="3" data-toggle="tooltip" data-placement="top" title="Adding 3"><span class="f-resize">Adding 3</span></td>
+										<td colspan="5" data-toggle="tooltip" data-placement="top" title="Understanding NumbersPracticing Adding 1, 2, and 3 ①"><span class="f-resize">Practicing Adding 1, 2, and 3 ①</span></td>
+									</tr>
+									<tr>
+										<th scope="row">Level 4</th>
+										<td colspan="12" data-toggle="tooltip" data-placement="top" title="Practicing Adding 1, 2, and 3 ①"><span class="f-resize">Practicing Adding 1, 2, and 3 ①</span></td>
+										<td data-toggle="tooltip" data-placement="top" title="Subtracting 1"><span class="f-resize">Subtracting 1</span></td>
+										<td data-toggle="tooltip" data-placement="top" title="Subtracting 2"><span class="f-resize">Subtracting 2</span></td>
+										<td data-toggle="tooltip" data-placement="top" title="Subtracting 3"><span class="f-resize">Subtracting 3</span></td>
+										<td colspan="3" data-toggle="tooltip" data-placement="top" title="Practicing Subtracting 1, 2, and 3"><span class="f-resize">Practicing Subtracting 1, 2, and 3</span></td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="imgs">
+								<img src="../images/@img4.png" alt="">
+							</div>
+						</div>
+						<p class="decs"><strong class="tx-blue">LAHAN'</strong>는 이제 받아 올림이 2회 있는 두자리 수의 덧셈을 잘 할 수 있습니다.</p>
+					</div>
+
+					<h2 class="cm-h4"><strong class="tx-blue">LAHAN'</strong>s Leraning Content (CRITICAL THINKING MATH)</h2>
+					<div class="leraning-content">
+						<div class="bx-table">
+							<table class="table">
+								<colgroup>
+									<col style="width:10%">
+									<col style="width:7.5%">
+									<col style="width:7.5%">
+									<col style="width:7.5%">
+									<col style="width:7.5%">
+									<col style="width:7.5%">
+									<col style="width:7.5%">
+									<col style="width:7.5%">
+									<col style="width:7.5%">
+									<col style="width:7.5%">
+									<col style="width:7.5%">
+									<col style="width:7.5%">
+									<col style="width:7.5%">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">Set</th>
+										<th scope="col">19</th>
+										<th scope="col">20</th>
+										<th scope="col">21</th>
+										<th scope="col">22</th>
+										<th scope="col">23</th>
+										<th scope="col">24</th>
+										<th scope="col">25</th>
+										<th scope="col">26</th>
+										<th scope="col">27</th>
+										<th scope="col">28</th>
+										<th scope="col">29</th>
+										<th scope="col">30</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">Level 3</th>
+										<td colspan="4" data-toggle="tooltip" data-placement="top" title="Repeating Patterns Ⅲ"><span class="f-resize">Repeating Patterns Ⅲ</span></td>
+										<td data-toggle="tooltip" data-placement="top" title="RecognizingShapes Ⅲ"><span class="f-resize">RecognizingShapes Ⅲ</span></td>
+										<td data-toggle="tooltip" data-placement="top" title="Drawing Figure on Dot Paper Ⅲ"><span class="f-resize">Drawing Figure on Dot Paper Ⅲ</span></td>
+										<td data-toggle="tooltip" data-placement="top" title="Drawing Figures on Grids Ⅱ"><span class="f-resize">Drawing Figures on Grids Ⅱ</span></td>
+										<td data-toggle="tooltip" data-placement="top" title=">Understanding Combined Shapes Ⅰ"><span class="f-resize">Understanding Combined Shapes Ⅰ</span></td>
+										<td data-toggle="tooltip" data-placement="top" title="Combining Shapes Ⅱ"><span class="f-resize">Combining Shapes Ⅱ</span></td>
+										<td data-toggle="tooltip" data-placement="top" title="Dividing Shapes Ⅱ"><span class="f-resize">Dividing Shapes Ⅱ</span></td>
+										<td data-toggle="tooltip" data-placement="top" title="Comparisons Ⅲ"><span class="f-resize">Comparisons Ⅲ</span></td>
+										<td data-toggle="tooltip" data-placement="top" title="Matching Ⅲ"><span class="f-resize">Matching Ⅲ</span></td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="imgs">
+								<img src="../images/@img5.png" alt="">
+							</div>
+						</div>
+						<p class="decs"><strong class="tx-blue">LAHAN'</strong>는 이제 받아 올림이 2회 있는 두자리 수의 덧셈을 잘 할 수 있습니다.</p>
+					</div>
+
+					<div class="cmt-write-wrap">
+						<h2 class="tit-cmts">Instructor Comments</h2>
+						<div class="cmt-wrap">
+							<div class="write"><textarea name="" id="" cols="30" rows="5"></textarea></div>
+						</div>
+						<button type="button" class="btn-save"><span>Save</button>
+					</div>
+					<div class="text-center btn-wrap mb-3">
+						<button type="button" class="btn btn-primary">Pdf file Download</button>
+						<button type="button" class="btn btn-info">Cancel</button>
+						<dl class="btns-share" data-toggleClass="on, off" data-active="off">
+							<dt><button type="button">share</button></dt>
+							<dd>
+								<div>
+									<a href="#">Email</a>
+									<a href="#">Messenger</a>
+									<a href="#">url copy</a>
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+			<span class="paper"><img src="/images/bg_paper.png" alt=""></span>
+		</div>
+	</div>
+</div>
+<div class="modal-backdrop fade in"></div>
+
+<script src="/js/custom.js"></script>
+</body>
+</html>

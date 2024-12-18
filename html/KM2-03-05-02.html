@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<link rel="SHORTCUT ICON" href="/images/favicon.ico">
+<title>Key&amp;Manager ver.2</title>
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/fontawesome-all.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" type="text/css" href="/css/custom.css">
+<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+<script src="/js/vendors/jquery-ui.min.js"></script>
+<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+<script src="/js/vendors/moment.js"></script>
+<script src="/js/vendors/bootstrap.min.js"></script>
+<script src="/js/vendors/bootstrap-datetimepicker.min.js"></script>
+</head>
+<body class="nav-sm modal-open">
+
+<div class="modal fade in" id="create" tabindex="-1" role="dialog" style="display:block">
+	<div class="modal-dialog modal-wide" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title">Create Tuition Type</h4>
+			</div>
+			<div class="modal-body">
+				<!-- 180717_수정 [화면설계서 v3.1 수정사항 반영] -->
+				<div class="row">
+					<form class="form-group col-md-12">
+						<div class="col-md-3">
+							<div class="form-group">
+								<span class="lb-txt mb-1">Corporation<i class="required">*</i></span>
+								<input type="text" class="form-control input-sm clearable" placeholder="Daekyo Malaysia" readonly="readonly">
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="form-group">
+								<span class="lb-txt mb-1">Area<i class="required">*</i></span>
+								<input type="text" class="form-control input-sm clearable" placeholder="Group A(Normal)" readonly="readonly">
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="form-group">
+								<span class="lb-txt mb-1">Center<i class="required">*</i></span>
+								<input type="text" class="form-control input-sm clearable" placeholder="Bukit Damansara" readonly="readonly">
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="form-group">
+								<span class="lb-txt mb-1">Apply Type<i class="required">*</i></span>
+								<input type="text" class="form-control input-sm clearable" placeholder="Center" readonly="readonly">
+							</div>
+						</div>	
+						<div class="col-md-3">
+							<div class="form-group">
+								<span class="lb-txt mb-1">Subject<i class="required">*</i></span>
+								<input type="text" class="form-control input-sm clearable" placeholder="EL Math" readonly="readonly">
+							</div>
+						</div>		
+						<div class="col-md-3">
+							<div class="form-group">
+								<span class="lb-txt mb-1">Applied<i class="required">*</i></span>
+								<div class="form-inline input-group month">
+									<input class="form-control input-sm clearable" type="text" placeholder="05/2018">
+									<span class="input-group-addon">
+										<span class="calendar-icon"></span>
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="form-group">
+								<span class="lb-txt mb-1">Tuition Type Code<i class="required">*</i></span>
+								<input type="text" class="form-control input-sm clearable" placeholder="S05">
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="form-group">
+								<span class="lb-txt mb-1">Tuition Type Name<i class="required">*</i></span>
+								<input type="text" class="form-control input-sm clearable" placeholder="Flagship LC">
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="form-group">
+								<span class="lb-txt mb-1">Maximum No. of Booklets Allowed<i class="required">*</i></span>
+								<input type="text" class="form-control input-sm clearable" placeholder="6"  readonly="readonly">
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="form-group">
+								<span class="lb-txt mb-1">Enrollment Fee<i class="required">*</i></span>
+								<input type="text" class="form-control input-sm clearable" placeholder="30">
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="form-group">
+								<span class="lb-txt mb-1">Monthly Tuition<i class="required">*</i></span>
+								<input type="text" class="form-control input-sm clearable" placeholder="100">
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="form-group">
+								<span class="lb-txt mb-1">Remarks</span>
+								<input type="text" class="form-control input-sm clearable" placeholder="">
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="row">
+								<div class="col-md-2">
+									<span class="lb-txt">Weekly Tuition<i class="required">*</i></span><!-- 180725_수정 [class 삭제] -->
+								</div>
+								<div class="col-md-10">
+									<div class="row">
+										<div class="col-md-3 mb-1 col-xs-6"><!-- 180725_수정 [class 추가] -->
+											<div class="form-inline">
+												<span class="mr-1">W1</span><!-- 180725_수정 [class, 텍스트 변경] -->
+												<input type="text" class="form-control input-sm clearable" placeholder="25.00">
+											</div>
+										</div>
+										<div class="col-md-3 mb-1 col-xs-6"><!-- 180725_수정 [class 추가] -->
+											<div class="form-inline">
+												<span class="mr-1">W2</span><!-- 180725_수정 [class, 텍스트 변경] -->
+												<input type="text" class="form-control input-sm clearable" placeholder="50.00">
+											</div>
+										</div>
+										<div class="col-md-3 mb-1 col-xs-6"><!-- 180725_수정 [class 추가] -->
+											<div class="form-inline">
+												<span class="mr-1">W3</span><!-- 180725_수정 [class, 텍스트 변경] -->
+												<input type="text" class="form-control input-sm clearable" placeholder="75.00">
+											</div>
+										</div>
+										<div class="col-md-3 mb-1 col-xs-6"><!-- 180725_수정 [class 추가] -->
+											<div class="form-inline">
+												<span class="mr-1">W4</span><!-- 180725_수정 [class, 텍스트 변경] -->
+												<input type="text" class="form-control input-sm clearable" placeholder="100.00">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<!-- // 180717_수정 [화면설계서 v3.1 수정사항 반영] -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="col-md-12">
+							<div class="bx-table">
+								<div class="tb-dimm"><span class="txts">Fetching data...</span></div>
+								<div class="y-scroll h300">
+									<table class="table">
+										<thead>
+											<tr>
+												<th scope="col">Corporation</th>
+												<th scope="col">Area Name</th>
+												<th scope="col">Fee Type Code</th>
+												<th scope="col">Fee Type Name</th>
+												<th scope="col">Type Created</th>
+												<th scope="col">Subject</th>
+												<th scope="col">Maximum No. of Booklets Allowed</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Deakyo America</td>
+												<td>Group B</td>
+												<td>K01</td>
+												<td>Math</td>
+												<td>05/2014</td>
+												<td>EL Math</td>
+												<td>6</td>
+											</tr>
+											<tr>
+												<td>Deakyo America</td>
+												<td>Group B</td>
+												<td>K01</td>
+												<td>Math</td>
+												<td>05/2014</td>
+												<td>EL Math</td>
+												<td>6</td>
+											</tr>
+											<tr>
+												<td>Deakyo America</td>
+												<td>Group B</td>
+												<td>K01</td>
+												<td>Math</td>
+												<td>05/2014</td>
+												<td>EL Math</td>
+												<td>6</td>
+											</tr>
+											<tr>
+												<td>Deakyo America</td>
+												<td>Group B</td>
+												<td>K01</td>
+												<td>Math</td>
+												<td>05/2014</td>
+												<td>EL Math</td>
+												<td>6</td>
+											</tr>
+											<tr>
+												<td>Deakyo America</td>
+												<td>Group B</td>
+												<td>K01</td>
+												<td>Math</td>
+												<td>05/2014</td>
+												<td>EL Math</td>
+												<td>6</td>
+											</tr>
+											<tr>
+												<td>Deakyo America</td>
+												<td>Group B</td>
+												<td>K01</td>
+												<td>Math</td>
+												<td>05/2014</td>
+												<td>EL Math</td>
+												<td>6</td>
+											</tr>
+											<tr>
+												<td>Deakyo America</td>
+												<td>Group B</td>
+												<td>K01</td>
+												<td>Math</td>
+												<td>05/2014</td>
+												<td>EL Math</td>
+												<td>6</td>
+											</tr>
+											<tr>
+												<td>Deakyo America</td>
+												<td>Group B</td>
+												<td>K01</td>
+												<td>Math</td>
+												<td>05/2014</td>
+												<td>EL Math</td>
+												<td>6</td>
+											</tr>
+											<tr>
+												<td>Deakyo America</td>
+												<td>Group B</td>
+												<td>K01</td>
+												<td>Math</td>
+												<td>05/2014</td>
+												<td>EL Math</td>
+												<td>6</td>
+											</tr>
+											<tr>
+												<td>Deakyo America</td>
+												<td>Group B</td>
+												<td>K01</td>
+												<td>Math</td>
+												<td>05/2014</td>
+												<td>EL Math</td>
+												<td>6</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 180717_수정 [화면설계서 v3.1 수정사항 반영] -->
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary">Save</button>
+				<button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+			</div>
+			<!-- // 180717_수정 [화면설계서 v3.1 수정사항 반영] -->
+		</div>
+	</div>
+</div>
+
+<div class="modal-backdrop fade in"></div>
+
+
+<script src="/js/custom.js"></script>
+</body>
+</html>

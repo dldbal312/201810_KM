@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+	<link rel="SHORTCUT ICON" href="../images/favicon.ico">
+	<title>Key&amp;Manager ver.2</title>
+	<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap-datetimepicker.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendors/fontawesome-all.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendors/jquery.mCustomScrollbar.css">
+	<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+	<script src="/js/vendors/jquery-ui.min.js"></script>
+	<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+	<script src="/js/vendors/moment.js"></script>
+	<script src="/js/vendors/bootstrap.min.js"></script>
+	<script src="/js/vendors/bootstrap-datetimepicker.min.js"></script>
+
+
+	<!-- mobile 추가 -->
+	<link rel="stylesheet" type="text/css" href="/css/custom-mobile.css">
+	<script src="/js/vendors/jquery.touchSwipe.min.js"></script>
+	<script src="/js/custom-mobile.js"></script>
+
+	
+</head>
+<body>
+<div class="wrapper">
+	<div class="main-content" role="main" style="min-height:100vh;">
+		<div class="page-info">
+			<a href="#" class="bt-prev">Prev page</a>
+			<h1>Enrollment</h1>
+			<a href="#" class="bt-close">Close</a>
+		</div>
+		<div class="user_name">
+			<p>Ken.song<small>(KS00000081)</small></p>
+		</div>
+		<div class="cnt-box form">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<span class="lb-txt">Parent email</span>
+						<div class="input-group">
+							<input type="text" class="form-control" >
+							<span class="btns validate">
+								<!-- 인증완료 전 -->
+								<!-- <i class="fail">Not verifed</i> -->
+								<!-- 인증완료 후 -->
+								<!-- <i class="succese">verifed</i> -->
+								<a href="#" class="btn-small">Request</a>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<span class="lb-txt">Attendance code</span>
+						<div class="input-group size-s">
+							<input type="text" class="form-control" >
+							<span class="btns">
+								<a href="#" class="btn-small">check</a>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<span class="lb-txt">Birthday</span>
+						<div class="input-group date">
+							<input type="text" class="form-control input-sm clearable" placeholder="dd/mm/yyyy">
+							<span class="input-group-addon">
+								<span class="calendar-icon"></span>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cnt-box form">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="form-group">
+						<span class="lb-txt">Subject</span>
+						<div class="btn-group form-control" data-toggle="buttons">
+							<label class="btn btn-default btn-sm active">
+								<input type="radio" name="options" id="option1" autocomplete="off" checked="checked">
+								<span>EL Math</span>
+								<span class="flag now">Studying</span>
+							</label>
+							<label class="btn btn-default btn-sm">
+								<input type="radio" name="options" id="option2" autocomplete="off">
+								<span>EMO</span>
+							</label>
+							<label class="btn btn-default btn-sm">
+								<input type="radio" name="options" id="option3" autocomplete="off">
+								<span>Playmath</span>
+							</label>
+							<label class="btn btn-default btn-sm">
+								<input type="radio" name="options" id="option4" autocomplete="off">
+								<span>ELE</span>
+							</label>
+							<label class="btn btn-default btn-sm">
+								<input type="radio" name="options" id="option5" autocomplete="off">
+								<span>Happy talk</span>
+							</label>
+							<label class="btn btn-default btn-sm">
+								<input type="radio" name="options" id="option6" autocomplete="off">
+								<span>NNP</span>
+							</label>
+							<label class="btn btn-default btn-sm">
+								<input type="radio" name="options" id="option7" autocomplete="off">
+								<span>Korean</span>
+							</label>
+							<label class="btn btn-default btn-sm">
+								<input type="radio" name="options" id="option8" autocomplete="off">
+								<span>Sparks</span>
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group inline search">
+						<span class="lb-txt">Instructor</span>
+						<div class="arr-r txt">
+							<span class="input_txts sp-text">Sunny. Ko(FC0000008A)</span>
+							<button type="button" class="search sp-button"><i class="fas fa-search"></i></button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group inline">
+						<span class="lb-txt">Starting Point 1(BTM)</span>
+						<div class="arr-r select">
+							<select class="form-control input-sm">
+								<option value="" title="" selected="selected">03</option>
+							</select>
+							<select class="form-control input-sm">
+								<option value="" title="" selected="selected">03</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group inline">
+						<span class="lb-txt">Starting Point 1(CTM)</span>
+						<div class="arr-r select">
+							<select class="form-control input-sm">
+								<option value="" title="" selected="selected">03</option>
+							</select>
+							<select class="form-control input-sm">
+								<option value="" title="" selected="selected">03</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group inline">
+						<span class="lb-txt">Enroll Date</span>
+						<div class="arr-r date">
+							<span class="input_txts">23/04/2018</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group inline">
+						<span class="lb-txt">Study Start Date</span>
+						<div class="arr-r date">
+							<span class="input-group date">
+								<input type="text" class="form-control input-sm clearable" placeholder="dd/mm/yyyy" />
+								<span class="input-group-addon">
+									<i class="fas fa-calendar-alt"></i>
+								</span>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="form-group set-study-date-wrap">
+						<span class="lb-txt">Study Day</span>
+						<div class="set-study-date">
+							<span class="select-btn">
+								<select class="form-control input-sm inline">
+									<option selected="selected">Mon</option>
+								</select>
+								<select class="form-control input-sm inline">
+									<option selected="selected">09:00</option>
+								</select>
+								<a href="#" class="btn-circle plus"><i class="fas fa-plus"></i></a>
+							</span>
+						</div>
+						<div class="edit-week">
+							<div class="edit-week-box">
+								<span class="alert alert-info" role="alert">MON 15:00<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button></span>
+								<span class="alert alert-info" role="alert">TUE 16:00<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button></span>
+								<span class="alert alert-info" role="alert">WED 17:00<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group inline">
+						<span class="lb-txt">Enrollment Channel</span>
+						<div class="arr-r select">
+							<select class="form-control input-sm">
+								<option value="" title="" selected="selected">select</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group inline">
+						<span class="lb-txt">Enrollment Reason</span>
+						<div class="arr-r select">
+							<select class="form-control input-sm">
+								<option value="" title="" selected="selected">select</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cnt-box form">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group inline">
+						<span class="lb-txt">Tuition</span>
+						<div class="arr-r date">
+							<span class="input_txts">Monthly fee</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group inline search">
+						<span class="lb-txt">Tuition Type</span>
+						<div class="arr-r select">
+							<select class="form-control input-sm">
+								<option value="" title="" selected="selected">select</option>
+							</select>
+							<span class="input_txts tuition">$0.00</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group inline">
+						<span class="lb-txt">This month fee</span>
+						<div class="arr-r select">
+							<span class="input_txts tuition">$0.00</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group inline">
+						<span class="lb-txt">Enroll fee</span>
+						<div class="arr-r select">
+							<input type="text" class="form-control input-sm clearable" placeholder="">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group inline">
+						<span class="lb-txt">No. of Study Weeks</span>
+						<div class="arr-r btns">
+							<div class="btn-type">
+								<span class="check-wrap">
+									<input type="radio" id="check1" name="study-week" checked="checked">
+									<label for="check1">1</label>
+								</span>
+								<span class="check-wrap">
+									<input type="radio" id="check2" name="study-week">
+									<label for="check2">2</label>
+								</span>
+								<span class="check-wrap">
+									<input type="radio" id="check3" name="study-week">
+									<label for="check3">3</label>
+								</span>
+								<span class="check-wrap">
+									<input type="radio" id="check4" name="study-week">
+									<label for="check4">4</label>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group inline">
+						<span class="lb-txt">Booklets per Week</span>
+						<div class="arr-r select">
+							<span class="input_txts em03 bold">12</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="btn-wrap">
+			<div class="row">
+				<div class="pull-right">
+					<button type="button" class="btn btn-success">Save</button>
+					<button type="button" class="btn btn-info">Cancel</button>
+				</div>	
+			</div>
+		</div>
+	</div>
+	<div class="slideout-overlay"></div>
+</div>
+
+<script type="text/javascript">
+	var apo = this, sOut;
+	var io18n = {
+		headerTitle: "Instructor"
+	}
+	var oArrComponents = [
+		{
+			component: 0,
+			name: "sp1",
+			label: "sp1",
+			width: "50%",
+			textAlign: "center"
+		}
+	],
+		oArrDataSource = [
+			{
+			component: 0,
+			data: [
+				{
+					val: "K00200361(Kim.ok)",
+					label: "K00200361(Kim.ok)"
+				},
+				{
+					val: "FC0000008A(Sunny. Ko)",
+					label: "FC0000008A(Sunny. Ko)"
+				},
+				{
+					val: "K00200363(Dane William DeHaan)",
+					label: "K00200363(Dane William DeHaan)"
+				}
+			]						
+		}
+	];
+
+	$(document).ready(function()
+	{
+		$(".sp-text").AnyPicker(
+		{
+			onInit: function()
+			{
+				apo = this;
+			},
+			mode: "select",
+			i18n: io18n,
+			actionMode: "both",
+			showComponentLabel: false,
+			components: oArrComponents,
+			dataSource: oArrDataSource,
+			onSetOutput: function(sOutput, oArrSelectedValues)
+			{
+				sOut = sOutput;
+			}
+		});
+		$(".sp-button").click(function()
+		{
+			apo.showOrHidePicker(sOut);
+		});
+
+	});
+
+</script>
+
+
+</body>
+</html>

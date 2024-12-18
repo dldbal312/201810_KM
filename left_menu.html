@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<title>K&amp;M2 Publising 코딩진행표</title>
+<link rel="stylesheet" href="/guide/base.css">
+<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+<script src="/guide/dtree.js"></script>
+</head>
+<body>
+<div id="wrap">
+	<h1 class="titH1"><span>K&amp;M2</span></h1>
+
+	<div class="status">
+		<h2>페이지 작업 상태</h2>
+		<ol>
+			<li><span class="t-ing">작업중</span></li>
+			<li><span class="t-modify">수정</span></li>
+			<li><span class="t-confirm">완료(개발가능)</span></li>
+		</ol>
+	</div>
+	<div class="dtree-wrap">
+		<p><a href="javascript: a.openAll();"><img src="/guide/images/btn_expand.gif" alt="Expand All" /></a> <a href="javascript: a.closeAll();"><img src="/guide/images/btn_collapse.gif" alt="Collapse All" /></a></p>
+		<script type="text/javascript">
+			var tree = {
+				'WSG': {
+					'업무 가이드': {
+						'기본가이드': ['/guide/html/guide.html', '', 'mainFrame'],
+						'상세규칙': ['/guide/html/guide_markup.html', '', 'mainFrame'],
+					},
+					'퍼블리싱 가이드': {
+						'PC_폰트': ['/guide/html/guide_font.html', '', 'mainFrame'],
+						'PC_박스형태': ['/guide/html/guide_box.html', '', 'mainFrame'],
+						'PC_버튼 / 탭': ['/guide/html/guide_btn.html', '', 'mainFrame'],
+						'PC_입력서식': ['/guide/html/guide_form.html', '', 'mainFrame'],
+						'PC_테이블': ['/guide/html/guide_table.html', '', 'mainFrame'],
+						'PC_알림 / 확인 메세지': ['/guide/html/guide_msg.html', '', 'mainFrame'],
+						'PC_기타': ['/guide/html/guide_etc.html', '', 'mainFrame'],
+						//'PC_레이아웃': ['/guide/html/guide_layout.html', '', 'mainFrame'],
+						'PC_공통': ['/guide/html/guide_common.html', '수정', 'mainFrame'],
+						'Mobile_폰트': ['/guide/html/mobile/guide_font.html', '', 'mainFrame'],
+						'Mobile_버튼 / 탭': ['/guide/html/mobile/guide_btn.html', '', 'mainFrame'],
+						'Mobile_입력서식': ['/guide/html/mobile/guide_form.html', '', 'mainFrame'],
+						'Mobile_테이블': ['/guide/html/mobile/guide_table.html', '', 'mainFrame']
+					}
+				}
+			};
+
+			var a = new dTree('a', tree);
+			document.write(a);
+		</script>
+		
+		<p><a href="javascript: b.openAll();"><img src="/guide/images/btn_expand.gif" alt="Expand All" /></a> <a href="javascript: b.closeAll();"><img src="/guide/images/btn_collapse.gif" alt="Collapse All" /></a></p>
+		<script type="text/javascript">
+			var tree2 = {
+				'페이지 작업': {
+					'PC': {
+						'공통' : {
+							'KM2-PC 공통 레이아웃': ['/html/KM2-common_layout.html', '완료', 'mainFrame'],
+							'KM2-PUB-01_회원검색': ['/html/KM2-PUB-01.html', '완료', 'mainFrame'],
+							'KM2-PUB-01_교사검색': ['/html/KM2-PUB-01-01.html', '완료', 'mainFrame'],
+							'KM2-PUB-02_회원등록': ['/html/KM2-PUB-02.html', '완료', 'mainFrame'],
+							'KM2-PUB-03-A-1_회원상세': ['/html/KM2-PUB-03-A-1.html', '완료', 'mainFrame']
+						},
+						'KM2-mypage_MyPage': ['/html/KM2-mypage.html', '완료', 'mainFrame'],
+						'KM2-Login-01_로그인-일반로그인': ['/html/login.html', '완료', 'mainFrame'],
+						'KM2-Login-03_로그인-비밀번호변경알림': ['/html/changePassword.html', '완료', 'mainFrame'],
+						'KM2-Login-04_로그인-초기비밀번호변경': ['/html/initialPassword.html', '완료', 'mainFrame'],
+						'KM2-KEY-01_출결키패드': ['/html/attendance.html', '완료', 'mainFrame'],
+						'관리자사이트' : {
+							'KM2_Admin-01_공통코드관리': ['/html/codeManagement.html', '완료', 'mainFrame'],
+							'KM2_Admin_02_메뉴관리': ['/html/menuManagement.html', '완료', 'mainFrame'],
+							'KM2_Admin_03-01_권한-롤(패턴)관리': ['/html/roleManagement.html', '완료', 'mainFrame'],
+							'KM2_Admin_03-02_권한-권한 상세 관리': ['/html/authManagement.html', '완료', 'mainFrame'],
+							'KM2_Admin_04-01_로그-개인정보 접근': ['/html/log1.html', '완료', 'mainFrame'],
+							'KM2_Admin_04-02_로그-페이지 접근': ['/html/log2.html', '완료', 'mainFrame'],
+							'KM2_Admin_04-03_로그-접속': ['/html/log3.html', '완료', 'mainFrame'],
+							'KM2_Admin_04-04_로그-서비스 이용': ['/html/log4.html', '완료', 'mainFrame'],
+							'KM2_Admin_04-05_로그-권한 부여': ['/html/log5.html', '완료', 'mainFrame'],
+							'무료체험 과목 세팅': ['/html/freeTrialSetting.html', '완료', 'mainFrame'],
+							'법인환경설정(취급과목)': ['/html/corporateSetting.html', '완료', 'mainFrame'],
+							'시스템 관리자': ['/html/systemManager.html', '완료', 'mainFrame']
+						},
+						'고객관리' : {
+							'KM2-01-00_고객관리_대시보드':['/html/KM2-01-00.html', '완료', 'mainFrame'],
+							'KM2-01-01_가망고객관리': ['/html/memberLead.html', '완료', 'mainFrame'],
+							'KM2-01-02-01_상담관리': ['/html/consultation.html', '완료', 'mainFrame'],
+							'KM2-01-02-02_상담예약 등록': ['/html/KM2-01-02-02.html', '완료', 'mainFrame'],
+							'KM2-01-02-03_상담예약 상세(미완료)': ['/html/KM2-01-02-03-A.html', '완료', 'mainFrame'],
+							'KM2-01-02-03_상담예약 상세': ['/html/KM2-01-02-03.html', '완료', 'mainFrame'],
+							'KM2-01-02-07_회원상담': ['/html/memberConsultation.html', 'delete', 'mainFrame'],
+							'KM2-01-03-01_회원조회': ['/html/member.html', '완료', 'mainFrame'],
+							'KM2-01-03-05_무료체험 등록_Trial Week':['/html/KM2-01-03-05.html', '완료', 'mainFrame'],
+							'KM2-01-03-05_무료체험 등록_교재설정':['/html/KM2-01-03-05-01.html', '완료', 'mainFrame'],
+							'KM2-01-03-05_무료체험 등록_방문횟수충전방식':['/html/KM2-01-03-05-02.html', '완료', 'mainFrame'],
+							'KM2-01-03-07_입회 등록':['/html/KM2-01-03-07.html', '완료', 'mainFrame'],
+							'KM2-01-03-07-A_입회 수정':['/html/KM2-01-03-07-A.html', '완료', 'mainFrame'],
+							'KM2-01-03-10_퇴회(복회가능성 hight)':['/html/KM2-01-03-10.html', '완료', 'mainFrame'],
+							'KM2-01-03-11_퇴회(복회가능성 middle, low)':['/html/KM2-01-03-11.html', '완료', 'mainFrame'],
+							'KM2-01-03-13_복회(일반/월회비)':['/html/KM2-01-03-13.html', '완료', 'mainFrame'],
+							'KM2-01-03-14_복회(일반/방문횟수충전)':['/html/KM2-01-03-14.html', '완료', 'mainFrame'],
+							'KM2-01-03-15_복회(타센터)':['/html/KM2-01-03-15.html', '완료', 'mainFrame'],
+							'KM2-01-03-18_과목전환(월회비)':['/html/KM2-01-03-18.html', '완료', 'mainFrame'],
+							'KM2-01-03-19_과목전환(방문횟수충전)':['/html/KM2-01-03-19.html', '완료', 'mainFrame'],
+							'KM2-01-03-20_메시지 발송': ['/html/KM2-01-03-20.html', '완료', 'mainFrame'],
+							'KM2-01-03-21_메시지 발송(전체메시지발송)': ['/html/KM2-01-03-21.html', '완료', 'mainFrame'],
+							'KM2-01-04-01_메시지 관리': ['/html/KM2-01-04-01.html', '완료', 'mainFrame'],
+							'KM2-01-04-01-01_메시지 관리 생성': ['/html/KM2-01-04-01-01.html', '완료', 'mainFrame'],
+						},
+						'학습운영관리' : {
+							'KM2-02-00_학습운영관리_대시보드':['/html/KM2-02-00.html', '완료', 'mainFrame'],
+							'KM2-02-01-01_스케쥴(일간)':['/html/KM2-02-01-01.html', '완료', 'mainFrame'],
+							// 'KM2-02-01-04_일간스케쥴':['/html/KM2-02-01-04.html', '', 'mainFrame'],
+							'KM2-02-01-06_스케쥴(주간)':['/html/KM2-02-01-06.html', '완료', 'mainFrame'],
+							// 'KM2-02-01-09_주간스케쥴(센터장)':['/html/KM2-02-01-09.html', '', 'mainFrame'],
+							'KM2-02-01-10_스케쥴(월간)':['/html/KM2-02-01-10.html', '완료', 'mainFrame'],
+							// 'KM2-02-01-12_월간스케쥴(센터장)':['/html/KM2-02-01-12.html', '', 'mainFrame'],
+							'KM2-02-01-13_일정추가':['/html/KM2-02-01-13.html', '완료', 'mainFrame'],
+							'KM2-02-01-13-01_수업일정변경':['/html/KM2-02-01-13-01.html', '완료', 'mainFrame'],
+							'KM2-02-01-13-02_변경버튼':['/html/KM2-02-01-13-02.html', '완료', 'mainFrame'],
+							'KM2-02-02-01_출석부': ['/html/KM2-02-02-01.html', '완료', 'mainFrame'],
+							//'KM2-02-03-01_진도 리스트': ['/html/KM2-02-03-01.html', '작업중', 'mainFrame'],
+							'KM2-02-03-02_진도 상세': ['/html/KM2-02-03-02.html', '완료', 'mainFrame'],
+							// 'KM2-02-03-04_진도 SP 수정': ['/html/KM2-02-03-04.html', '작업중', 'mainFrame'],
+							// 'KM2-02-03-07_진도 수동모델에서 자동모델 변경': ['/html/KM2-02-03-07.html', '작업중', 'mainFrame'],
+							// 'KM2-02-03-08_진도 Test Result History': ['/html/KM2-02-03-08.html', '작업중', 'mainFrame'],
+							// 'KM2-02-03-09_진도 모델 타입 변경': ['/html/KM2-02-03-09.html', '작업중', 'mainFrame'],
+							'KM2-02-04-01_DT학습상담서': ['/html/KM2-02-04-01.html', '완료', 'mainFrame'],
+							'KM2-02-04-05_DT결과 상세': ['/html/KM2-02-04-05.html', '완료', 'mainFrame'],
+							'KM2-02-04-02-A_평가결과-수학': ['/html/KM2-02-04-02-A.html', '완료', 'mainFrame'],
+							'KM2-02-04-03-A_평가결과-영어(미국)': ['/html/KM2-02-04-03-A.html', '완료', 'mainFrame'],
+							'KM2-02-04-04-A_평가결과-영어(영국)': ['/html/KM2-02-04-04-A.html', '완료', 'mainFrame'],
+							'KM2-02-05-01_학습결과 리스트': ['/html/KM2-02-05-01.html', '완료', 'mainFrame'],
+							'KM2-02-05-02_교재학습결과-수학': ['/html/KM2-02-05-02.html', '완료', 'mainFrame'],
+							'KM2-02-05-03_교재학습결과-영어': ['/html/KM2-02-05-03.html', '완료', 'mainFrame'],
+							'KM2-02-05-06_세부 채점 결과_수학의 BTM이외 교재': ['/html/KM2-02-05-06.html', '완료', 'mainFrame'],
+							'KM2-02-05-06_세부 채점 결과_수학의 BTM_SCT산정': ['/html/KM2-02-05-06-01.html', '완료', 'mainFrame'],
+							'KM2-02-05-06_채점 없는 페이지 CASE': ['/html/KM2-02-05-06-02.html', '완료', 'mainFrame'],
+							'KM2-02-05-04-A_레벨 테스트 리스트': ['/html/KM2-02-05-04-A.html', '완료', 'mainFrame'],
+							'KM2-02-05-04_개인(과목)별 학습결과': ['/html/KM2-02-05-04.html', '완료', 'mainFrame'],
+							'KM2-02-05-05_레벨테스트결과-영어': ['/html/KM2-02-05-05.html', 'delete', 'mainFrame'],
+							'KM2-02-05-08_학습계획 리스트': ['/html/learningMonitoring.html', 'delete', 'mainFrame'],
+							'KM2-02-05-09_해답지': ['/html/answerSheet.html', '완료', 'mainFrame'],
+							'KM2-02-05-10_학습 상담 리포트': ['/html/KM2-02-05-10.html', '완료', 'mainFrame'],
+							'KM2-02-05-12-A_학습상담 리포트-Monthly 수학': ['/html/KM2-02-05-12-A.html', '완료', 'mainFrame'],
+							'KM2-02-05-13-A_학습상담 리포트-Quarterly 수학': ['/html/KM2-02-05-13-A.html', '완료', 'mainFrame'],
+							'KM2-02-05-14-A_학습상담 리포트-Monthly 영어': ['/html/KM2-02-05-14-A.html', '완료', 'mainFrame'],
+							'KM2-02-05-15-A_학습상담 리포트-Quarterly 영어': ['/html/KM2-02-05-15-A.html', '완료', 'mainFrame']
+						},
+						'재무영업관리' : {
+							'KM2-03-00_재무영업관리_대시보드':['/html/KM2-03-00.html', '완료', 'mainFrame'],
+							'KM2-03-00-A_재무영업관리(월회비방식)_대시보드':['/html/KM2-03-00-A.html', '완료', 'mainFrame'],
+							'회비납부': ['/html/feePayment.html', 'delete', 'mainFrame'],
+							'KM2-03-01-01_회비납부': ['/html/KM2-03-01-01.html', '완료', 'mainFrame'],
+							'KM2-03-01-03_Payment': ['/html/KM2-03-01-03.html', '완료', 'mainFrame'],
+							'KM2-03-02-01_STATEMENT': ['/html/KM2-03-02-01.html', '완료', 'mainFrame'],
+							'KM2-03-02-02_STATEMENT상세': ['/html/KM2-03-02-02.html', 'delete', 'mainFrame'],
+							'KM2-03-02-03_STATEMENT선택과목환불': ['/html/KM2-03-02-03.html', '완료', 'mainFrame'],
+							'KM2-03-02-05_STATEMENT금액조정': ['/html/KM2-03-02-05.html', '완료', 'mainFrame'],
+							'KM2-03-02-06_STATEMENT청구서': ['/html/KM2-03-02-06.html', '완료', 'mainFrame'],
+							'KM2-03-02-09_STATEMENT영수증': ['/html/KM2-03-02-09.html', '완료', 'mainFrame'],
+							'KM2-03-03-01_충전횟수관리': ['/html/numberOfCharge.html', '완료', 'mainFrame'],
+							'KM2-03-03-01_방문횟수변경': ['/html/KM2-03-03-01-01.html', '완료', 'mainFrame'],
+							'KM2-03-03-02_남은충전금액환불': ['/html/KM2-03-03-02.html', '완료', 'mainFrame'],
+							'KM2-03-03-03_변경이력리스트': ['/html/KM2-03-03-03.html', '완료', 'mainFrame'],
+							'KM2-03-03-03_재계약(회비설정)': ['/html/KM2-03-03-03-01.html', '완료', 'mainFrame'],
+							'KM2-03-04-01_예치금관리': ['/html/KM2-03-04-01.html', '완료', 'mainFrame'],
+							'KM2-03-04-01_충전/환불내역 레이어': ['/html/KM2-03-04-01-02.html', '완료', 'mainFrame'],
+							'KM2-03-04-02_예치금 등록 레이어': ['/html/KM2-03-04-02.html', '완료', 'mainFrame'],
+							'KM2-03-04-02_예치금 환불 레이어': ['/html/KM2-03-04-02-01.html', '완료', 'mainFrame'],
+							'KM2-03-05-01_회비타입관리': ['/html/tuitionTypeSetting.html', '완료', 'mainFrame'],
+							'KM2-03-05-02_회비타입생성': ['/html/KM2-03-05-02.html', '완료', 'mainFrame'],
+							'KM2-03-05-02_회비타입수정': ['/html/KM2-03-05-02-01.html', '완료', 'mainFrame'],
+							'KM2-03-07-01_스페셜오더': ['/html/special-order.html', '완료', 'mainFrame'],
+							'KM2-03-08-01_회비타입변경': ['/html/KM2-03-08-01.html', '완료', 'mainFrame'],
+							'KM2-03-08-03_회비타입변경 modal': ['/html/KM2-03-08-03.html', '완료', 'mainFrame'],
+							'KM2-03-09-02_양식관리': ['/html/KM2-03-09-02.html', '완료', 'mainFrame']
+						},
+						'센터운영' : {
+							'KM2-04-00_Centet운영_대시보드':['/html/KM2-04-00.html', '완료', 'mainFrame'],
+							'KM2-04-01-A_센터환경 설정': ['/html/centerSetting.html', '완료', 'mainFrame'],
+							'KM2-04-02-01_계정관리(센터)': ['/html/staffManagement.html', '완료', 'mainFrame'],
+							'KM2-04-02-04_계정관리(ADMIN)': ['/html/staffManagement-Admin.html', '완료', 'mainFrame'],
+							'KM2-04-02-07_교사정보관리': ['/html/managerManagement.html', '완료', 'mainFrame'],
+							'KM2-04-02-09_계정권한관리': ['/html/accountManagement.html', '완료', 'mainFrame'],
+							'KM2-04-02-10_계정권한관리-상세': ['/html/KM2-04-02-10.html', '완료', 'mainFrame'],
+							'KM2-04-03-01_리포트-보급현황': ['/html/statusReport1.html', '완료', 'mainFrame'],
+							'KM2-04-03-02_리포트-No. of Subjects': ['/html/statusReport2.html', '완료', 'mainFrame'],
+							'KM2-04-03-03_리포트-학생리스트': ['/html/statusReport3.html', '완료', 'mainFrame'],
+							'KM2-04-03-04_리포트-학생리스트(월별)': ['/html/KM2-04-03-04.html', '완료', 'mainFrame'],
+							'KM2-04-03-05_리포트-입회/퇴회/과목전환': ['/html/statusReport4.html', '완료', 'mainFrame'],
+							'KM2-04-03-06-A_리포트-출석현황': ['/html/statusReport5.html', '완료', 'mainFrame'],
+							'KM2-04-03-07-A_리포트-진도결정현황': ['/html/KM2-04-03-07.html', '완료', 'mainFrame'],
+							'KM2-04-03-07B_Determined Progress Status': ['/html/KM2-04-03-07B.html', '완료', 'mainFrame'],
+							'KM2-04-03-07A_진도 수정 이력': ['/html/KM2-04-03-07A.html', '완료', 'mainFrame'],
+							'KM2-04-03-08-A_리포트-월 회비수납리포트': ['/html/KM2-04-03-08.html', '완료', 'mainFrame'],
+							'KM2-04-03-08-C_리포트-월 방문횟수 차감 매출리포트': ['/html/KM2-04-03-08-C.html', '완료', 'mainFrame'],
+							'KM2-04-03-09_리포트-회비납부 현황': ['/html/KM2-04-03-09.html', '완료', 'mainFrame'],
+							'KM2-04-03-10_리포트-회비청구 현황': ['/html/KM2-04-03-10.html', '완료', 'mainFrame'],
+							'KM2-04-03-11_리포트-교재주문현황': ['/html/KM2-04-03-11.html', '완료', 'mainFrame'],
+							'KM2-04-03-12-A_리포트-진도수정 주문현황': ['/html/KM2-04-03-12.html', 'delete', 'mainFrame'],
+							'KM2-04-03-13_리포트-진도수정 주문현황(학생별)': ['/html/KM2-04-03-13.html', 'delete', 'mainFrame'],
+							'KM2-04-03-14-A_리포트-스페셜오더 주문현황': ['/html/KM2-04-03-14.html', '완료', 'mainFrame'],
+							'KM2-04-03-15_리포트-무료체험신청리스트': ['/html/KM2-04-03-15.html', '완료', 'mainFrame'],
+							'KM2-04-03-16_리포트-충전횟수 차감내역': ['/html/KM2-04-03-16.html', '완료', 'mainFrame']
+							
+						}
+					},
+					'Mobile': {
+						'공통' : {
+							'Layout' : ['/html/mobile/guide/guide_layout.html', '완료', 'mainFrame'],
+							'LayerPopup' : ['/html/mobile/guide/guide_modal.html', '완료', 'mainFrame'],
+							'페이지 로딩' : ['/html/mobile/guide/guide_loading.html', '완료', 'mainFrame'],
+							'페이지 로딩_레이어팝업' : ['/html/mobile/guide/guide_loading2.html', '완료', 'mainFrame']
+						},
+						'KM2_mypage_마이페이지' : {
+							'KM2_mypage': ['/html/mobile/KM2_mypage.html', '완료', 'mainFrame'],
+						},
+						'KM2_01_회원(가망/입회/퇴회/무료)' : {
+							'KM2_01_01_01_멤버리스트': ['/html/mobile/KM2_01_01_01.html', '완료', 'mainFrame'],
+							'KM2_01_01_02_회원등록': ['/html/mobile/KM2_01_01_02.html', '완료', 'mainFrame'],
+							'KM2_01_01_04_입회(월회비)': ['/html/mobile/KM2_01_01_04.html', '완료', 'mainFrame'],
+							'KM2_01_01_04_입회(충전차감)': ['/html/mobile/KM2_01_01_04_01.html', '완료', 'mainFrame'],
+							'KM2_01_01_05_DT없이 무료체험': ['/html/mobile/KM2_01_01_05.html', '완료', 'mainFrame'],
+							'KM2_01_01_06_DT후 무료체험': ['/html/mobile/KM2_01_01_06.html', '완료', 'mainFrame'],
+							'KM2_01_01_07_다른과목수업이력있는 회원': ['/html/mobile/KM2_01_01_07.html', '완료', 'mainFrame'],
+							'KM2_01_01_08_무료체험선택 및 교재설정': ['/html/mobile/KM2_01_01_08.html', '완료', 'mainFrame'],
+							'KM2_01_01_10_중국센터무료체험신청': ['/html/mobile/KM2_01_01_10.html', '완료', 'mainFrame'],
+							'KM2_01_02_01_회원상세 리스트': ['/html/mobile/KM2_01_02_01.html', '완료', 'mainFrame'],
+							'KM2_01_02_02_회원상세(basic)': ['/html/mobile/KM2_01_02_02.html', '완료', 'mainFrame'],
+							'KM2_01_02_04_회원상세(Subject)': ['/html/mobile/KM2_01_02_04.html', '완료', 'mainFrame'],
+							'KM2_01_02_08_다른 과목 입회(월회비)': ['/html/mobile/KM2_01_02_08.html', '완료', 'mainFrame'],
+							'KM2_01_02_08_다른 과목 입회(충전차감)': ['/html/mobile/KM2_01_02_08_01.html', '완료', 'mainFrame'],
+							'KM2_01_02_09_회원상세 복회(월회비)': ['/html/mobile/KM2_01_02_09.html', '완료', 'mainFrame'],
+							'KM2_01_02_09_회원상세 복회(충전차감)': ['/html/mobile/KM2_01_02_09_01.html', '완료', 'mainFrame'],
+							'KM2_01_02_10_회원상세 퇴회(복회가능성 high)': ['/html/mobile/KM2_01_02_10.html', '완료', 'mainFrame'],
+							'KM2_01_02_10_회원상세 퇴회(복회가능성 middle, low)': ['/html/mobile/KM2_01_02_10_01.html', '완료', 'mainFrame'],
+							'KM2_01_02_12_회원상세 과목전환(월회비방식)': ['/html/mobile/KM2_01_02_12.html', '완료', 'mainFrame'],
+							'KM2_01_02_13_회원상세 과목전환(충전방식)': ['/html/mobile/KM2_01_02_13.html', '완료', 'mainFrame'],
+							'KM2_01_02_14_회원상세(Progress)': ['/html/mobile/KM2_01_02_14.html', '완료', 'mainFrame'],
+							'KM2_01_02_15_회원상세(Learning)': ['/html/mobile/KM2_01_02_15.html', '완료', 'mainFrame'],
+							'KM2_01_02_16_회원상세(Consultation)': ['/html/mobile/KM2_01_02_16.html', '완료', 'mainFrame'],
+							'KM2_01_02_17_회원상세(Payment)': ['/html/mobile/KM2_01_02_17.html', '완료', 'mainFrame'],
+							'KM2_01_02_17_납부하기': ['/html/mobile/KM2_01_02_17_01.html', '완료', 'mainFrame'],
+							'KM2_01_02_17_회원상세(Payment-방문횟수)': ['/html/mobile/KM2_01_02_17_02.html', '완료', 'mainFrame'],
+							'KM2_01_02_18_회원상세(Change history)': ['/html/mobile/KM2_01_02_18.html', '완료', 'mainFrame'],
+							'KM2_01_03_01_message(교사)': ['/html/mobile/KM2_01_03_01.html', '완료', 'mainFrame'],
+							'KM2_01_03_02_message(센터장)': ['/html/mobile/KM2_01_03_02.html', '완료', 'mainFrame']
+						},
+						'KM2_02_스케줄(리스트, 등록, 변경)' : {
+							'KM2_02_01_01_스케쥴 주단위 요일': ['/html/mobile/KM2_02_01_01.html', '완료', 'mainFrame'],
+							'KM2_02_01_06_수업일정 변경_기본': ['/html/mobile/KM2_02_01_06.html', '완료', 'mainFrame'],
+							'KM2_02_01_06_수업일정 변경_달력 활성화': ['/html/mobile/KM2_02_01_06_01.html', '완료', 'mainFrame'],
+							'KM2_02_01_08_상담 스케쥴 취소/완료/일정 변경': ['/html/mobile/KM2_02_01_08.html', '완료', 'mainFrame'],
+							'KM2_02_01_09_신규 상담  스케쥴 등록': ['/html/mobile/KM2_02_01_09.html', '완료', 'mainFrame'],
+							'KM2_02_01_10_기존 학생  상담  스케쥴 등록': ['/html/mobile/KM2_02_01_10.html', '완료', 'mainFrame'],
+						},
+						'KM2_03_진도': {
+							'KM2_03_01_00_진도 화면 리스트': ['/html/mobile/KM2_03_01_00.html', '완료', 'mainFrame'],
+							'KM2_03_01_01_진도 화면': ['/html/mobile/KM2_03_01_01.html', '완료', 'mainFrame'],
+							'KM2_03_01_02_진도 화면_공통_Test result': ['/html/mobile/KM2_03_01_02.html', '완료', 'mainFrame'],
+							'KM2_03_01_03_수동 진도 시 교재 세팅': ['/html/mobile/KM2_03_01_03.html', '완료', 'mainFrame'],
+							'KM2_03_01_08_진도 화면(표준진도_영어_신 교재_부교재 사용)': ['/html/mobile/KM2_03_01_08.html', '완료', 'mainFrame']
+						},
+						'KM2_04_DT' : {
+							'KM2_04_01_01_Test 리스트': ['/html/mobile/KM2_04_01_01.html', '완료', 'mainFrame'],
+							'KM2_04_01_02_DT 리스트': ['/html/mobile/KM2_04_01_02.html', '완료', 'mainFrame'],
+							'KM2_04_01_03_레벨 리스트': ['/html/mobile/KM2_04_01_03.html', '완료', 'mainFrame'],
+							'KM2_04_01_04_레벨 리스트': ['/html/mobile/KM2_04_01_04.html', '완료', 'mainFrame'],
+							// ' TEST LIST - DT': ['/html/mobile/testListDt.html', '작업중', 'mainFrame'],
+							// ' TEST LIST - LT,채점': ['/html/mobile/testListLt.html', '작업중', 'mainFrame'],
+							'KM2_04_02_01_DT 회원 추가': ['/html/mobile/KM2_04_02_01.html', '완료', 'mainFrame'],
+							'KM2_04_02_01_DT (특정)회원 추가': ['/html/mobile/KM2_04_02_01_01.html', '완료', 'mainFrame'],
+							'KM2_04_02_02_특정회원  Level Test/ 채점': ['/html/mobile/KM2_04_02_02.html', '완료', 'mainFrame'],
+							'KM2_04_02_03_DT(페이지 삭제)': ['/html/mobile/KM2_04_02_03.html', 'delete', 'mainFrame'],
+							'KM2_04_02_06_DT BTM영역': ['/html/mobile/KM2_04_02_06.html', '완료', 'mainFrame'],
+							'KM2_04_02_10_DT WP영역': ['/html/mobile/KM2_04_02_10.html', '완료', 'mainFrame'],
+							'KM2_04_02_10_DT CTM영역': ['/html/mobile/KM2_04_02_10_01.html', '완료', 'mainFrame'],
+							'KM2_04_02_11_정성평가': ['/html/mobile/KM2_04_02_11.html', '완료', 'mainFrame'],
+							'KM2_04_02_12_DT 결과': ['/html/mobile/KM2_04_02_12.html', '완료', 'mainFrame'],
+							'KM2_04_02_13_DT 결과 영국영어': ['/html/mobile/KM2_04_02_13.html', '완료', 'mainFrame'],
+							'KM2_04_02_13_DT 결과 미국영어': ['/html/mobile/KM2_04_02_13_01.html', '완료', 'mainFrame'],
+							'KM2_04_02_14_DT 결과2': ['/html/mobile/KM2_04_02_14.html', '완료', 'mainFrame'],
+							'KM2_04_02_15_영어_WCPM': ['/html/mobile/KM2_04_02_15.html', '완료', 'mainFrame'],
+							'KM2_04_03_01_LT 결과_수학': ['/html/mobile/KM2_04_03_01.html', '완료', 'mainFrame'],
+							'KM2_04_03_02_LT 결과_수학 정성평가': ['/html/mobile/KM2_04_03_02.html', '완료', 'mainFrame'],
+							'KM2_04_03_03_LT 결과_영어': ['/html/mobile/KM2_04_03_03.html', '완료', 'mainFrame'],
+							'KM2_04_03_04_이미 완료한 테스트 결과1': ['/html/mobile/KM2_04_03_04.html', '완료', 'mainFrame'],
+							'KM2_04_03_05_이미 완료한 테스트 결과2': ['/html/mobile/KM2_04_03_05.html', '완료', 'mainFrame'],
+							'KM2_04_04_01_교재 채점_학습 관리 팁': ['/html/mobile/KM2_04_04_01.html', '완료', 'mainFrame'],
+							'KM2_04_04_02_교재 채점': ['/html/mobile/KM2_04_04_02.html', '완료', 'mainFrame'],
+							'KM2_04_04_03_영어 교재 채점_정성평가_case01': ['/html/mobile/KM2_04_04_03.html', '완료', 'mainFrame'],
+							'KM2_04_04_03_영어 교재 채점_정성평가_case02': ['/html/mobile/KM2_04_04_03_01.html', '완료', 'mainFrame'],
+							'KM2_04_04_04_교재 채점_HTT': ['/html/mobile/KM2_04_04_04.html', '완료', 'mainFrame'],
+							'KM2_04_04_05_교재 채점 결과': ['/html/mobile/KM2_04_04_05.html', '완료', 'mainFrame']
+							// ' 테스트 전 확인': ['/html/mobile/text	Check.html', '작업중', 'mainFrame'],
+							// ' TEST LIST - BTM': ['/html/mobile/testBTM.html', '작업중', 'mainFrame']
+						},
+						'KM2_05_해답지' : {
+							'KM2_05_01_01_해답지 보기 리스트': ['/html/mobile/KM2_05_01_01.html', '완료', 'mainFrame'],
+							'KM2_05_02_01_특정 레벨 해답지 보기': ['/html/mobile/KM2_05_02_01.html', '완료', 'mainFrame'],
+							'KM2_05_02_02_특정 레벨 TIPS': ['/html/mobile/KM2_05_02_02.html', '완료', 'mainFrame']
+						},
+						'KM2_06_센터장권한' : {
+							'KM2_06_01_staff info': ['/html/mobile/KM2_06_01.html', '', 'mainFrame']
+						}
+
+					},
+					'tablet': {
+						'진도 목록': ['/html/mobile/tablet3.html', '', 'mainFrame'],
+						'진도 상세': ['/html/mobile/tablet.html', '', 'mainFrame'],
+						'보급현황': ['/html/mobile/tablet2.html', '', 'mainFrame'],
+						'KM2-01-00_고객관리_대시보드':['/html/tablet/KM2-01-00.html', '완료', 'mainFrame'],
+						'KM2-02-00_학습운영관리_대시보드':['/html/tablet/KM2-02-00.html', '완료', 'mainFrame']
+					}
+				} 
+			};
+
+			var b = new dTree('b', tree2);
+			document.write(b);
+		</script>
+	</div>
+</div>
+</body>
+</html>
+
+

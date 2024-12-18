@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+	<link rel="SHORTCUT ICON" href="/images/favicon.ico">
+	<title>Key&amp;Manager ver.2</title>
+	<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap-datetimepicker.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendors/fontawesome-all.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendors/jquery.mCustomScrollbar.css">
+	<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+	<script src="/js/vendors/jquery-ui.min.js"></script>
+	<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+	<script src="/js/vendors/moment.js"></script>
+	<script src="/js/vendors/bootstrap.min.js"></script>
+	<script src="/js/vendors/bootstrap-datetimepicker.min.js"></script>
+	
+	<!-- mobile 추가 -->
+	<link rel="stylesheet" type="text/css" href="/css/mobile-layout.css">
+	<link rel="stylesheet" type="text/css" href="/css/custom.css">
+	<script src="/js/vendors/jquery.touchSwipe.min.js"></script>
+	<script src="/js/custom-mobile.js"></script>
+	<script src="/js/custom.js"></script>
+</head>
+<body>
+<div class="wrapper">
+	<!-- menu bar -->
+	<div class="mHeader">
+		<div class="mHeader-contents-wrap">
+			<div class="mHeader-btn mHeader-allmenu">
+				<a href="#" class="slideout-button" data-selector="allMenu">ALL MENU</a>
+			</div>
+			<div class="mHeader-contents">
+				<div class="mHeader-btn mHeader-mymenu">
+					<a href="#" class="hidden-tablet no-link" data-selector="myMenu">MY MENU</a>
+				</div>
+				<div class="mHeader-btn mHeader-search">
+					<a href="#" class="hidden-desktop no-link" data-selector="search">SEARCH</a>
+				</div>
+			</div>
+			<div class="mHeader-btn mHeader-studentList">
+				<a href="#" class="slideout-button" data-selector="studentList">STUDENT LIST</a>
+			</div>
+		</div>
+	</div>
+	
+	<!-- my menu, search -->
+	<div class="mHeader-sub-wrap">
+		<div class="mHeader-sub-menu mymenu-slideout closed">
+			<div class="slideout-info-area">
+				<a href="#" class="slideout-btn bt-close">닫기</a>
+				<div class="user-info pl-0">
+					<span class="user-name">My menu<em class="ico-count ml-3">4</em></span>
+				</div>
+			</div>
+			<div class="box">
+				<ul class="list-custom btn-in">
+					<li><a href="#">Consultation</a><a href="#" class="ico-delete"><span class="sr-only">Delete</span></a></li>
+					<li><a href="#">Attendance</a><a href="#" class="ico-delete"><span class="sr-only">Delete</span></a></li>
+					<li><a href="#">Member</a><a href="#" class="ico-delete"><span class="sr-only">Delete</span></a></li>
+					<li><a href="#">Diagnostic test</a><a href="#" class="ico-delete"><span class="sr-only">Delete</span></a></li>
+				</ul>
+				<div class="recently-menu">
+					<div class="box">
+						<span class="tit">Recently used menu</span>
+						<ul class="list-custom list-inline btn-in">
+							<li><a href="">Answer book</a><a href="#" class="ico-add"><span class="sr-only">Add</span></a></li>
+							<li><a href="">Staff info </a><a href="#" class="ico-add"><span class="sr-only">Add</span></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="allmenu-list myMenuAdd-list">
+					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+						<div class="panel">
+							<div class="panel-heading" role="tab" id="headingMenuAdd">
+								<span class="panel-title"><a class="collapsed"><i class="ico-count cl-gray mr-3"></i>My menu add</a></span>
+							</div>
+							<div class="panel-collapse">
+								<div class="panel-body">
+									<ul class="list-custom btn-in">
+										<li><a href="#">Lead</a><a href="#" class="ico-add"><span class="sr-only">Add</span></a></li>
+										<li><a href="#">Progress</a><a href="#" class="ico-add"><span class="sr-only">Add</span></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="mHeader-sub-menu search-slideout closed">
+			<div class="search-form ">
+				<form class="form-group">
+					<input type="text" class="form-text"  placeholder="Search" id="tags" >
+					<a href="#" class="form-submit  bt-search">검색</a>
+					<a href="#" class="slideout-btn bt-close">닫기</a>
+				</form>
+			</div>
+			<div class="">
+				<div class="student-list">
+					<ul>
+						<li>
+							<span class="student-type enroll">입회</span>
+							<span class="student-name">HANHAN HAN(G00200365)</span>
+							<a class="student-menu" data-toggle="collapse" data-parent="#accordion" href="#st1" aria-expanded="false" aria-controls="st1"><i class="fas fa-caret-down"></i><span class="sr-only">menu</span></a>
+							<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+							<div id="st1" class="panel-collapse collapse" role="tabpanel">
+								<ul class="list-menu">
+									<li><a href="#">Consultation</a></li>
+									<li><a href="#">Trial</a></li>
+									<li><a href="#">DT</a></li>
+									<li><a href="#">Enroll</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<span class="student-type lead">가망</span>
+							<span class="student-name">HANHAN HAN(G00200365)</span>
+							<a class="student-menu" data-toggle="collapse" data-parent="#accordion" href="#st2" aria-expanded="false" aria-controls="st2"><i class="fas fa-caret-down"></i><span class="sr-only">menu</span></a>
+							<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+							<div id="st2" class="panel-collapse collapse" role="tabpanel">
+								<ul class="list-menu">
+									<li><a href="#">Consultation</a></li>
+									<li><a href="#">Trial</a></li>
+									<li><a href="#">DT</a></li>
+									<li><a href="#">Enroll</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- all menu -->
+	<div class="allmenu-slideout slideout">
+		<div class="slideout-info-area">
+			<a href="#" class="slideout-btn bt-close">닫기</a>
+			<a href="#" class="slideout-btn bt-prev-small">닫기</a>
+			<div class="user-info-wrap">
+				<div class="user-info">
+					<span class="user-name">Nebula, Karen Gillan</span>
+					<span class="user-code">(CN00000039)</span>
+				</div>
+				<div class="half-group">
+					<span class="left"><a href="#" class="bt-mypage">My page</a></span>
+					<span class="right"><a href="#" class="bt-logout">log-out</a></span>
+				</div>
+			</div>
+		</div>
+		<div class="allmenu-list">
+			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+			  <div class="panel">
+				<div class="panel-heading" role="tab" id="headingOne">
+				  <span class="panel-title member"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseMember" aria-expanded="false" aria-controls="collapseMember">Member</a></span>
+				</div>
+				<div id="collapseMember" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+				  <div class="panel-body">
+					<ul class="list-custom">
+						<li><a href="#">Lead</a></li>
+						<li><a href="#">Consultation</a></li>
+						<li><a href="#">Member</a></li>
+					</ul>
+				  </div>
+				</div>
+			  </div>
+			  <div class="panel">
+				<div class="panel-heading" role="tab" id="headingTwo">
+				  <span class="panel-title learning"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseLearning" aria-expanded="false" aria-controls="collapseLearning">Learning</a></span>
+				</div>
+				<div id="collapseLearning" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+				  <div class="panel-body">
+					<ul class="list-custom">
+						<li><a href="#">Schedule</a></li>
+						<li><a href="#">Attendance</a></li>
+						<li><a href="#">Progress</a></li>
+						<li><a href="#">Diagnostic Test</a></li>
+						<li><a href="#">Test result</a></li>
+						<li><a href="#">Booklet management</a></li>
+					</ul>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- my student -->
+	<div  class="studentList-slideout slideout">
+		<div class="slideout-info-area">
+			<a href="#" class="slideout-btn bt-prev-small">닫기</a>
+			<a href="#" class="slideout-btn bt-close">닫기</a>
+			<div class="user-info">
+				<span class="user-name">My student</span>
+			</div>
+		</div>
+		<div class="col-md-12 py-2">
+			<div class="pull-left total">
+				Total 20
+			</div>
+			<div class="pull-right form-inline ">
+				<select class="form-control ">
+					<option value="" selected>Name</option>
+				</select>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+		<div class="student-list">
+			<ul>
+				<li>
+					<span class="student-name">
+						HANHAN HAN(G00200365)
+					</span>
+					<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+				</li>
+				<li>
+					<span class="student-name">
+						HANHAN HAN(G00200365)
+					</span>
+					<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+				</li>
+				<li>
+					<span class="student-name">
+						HANHAN HAN(G00200365)
+					</span>
+					<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+				</li>
+				<li>
+					<span class="student-name">
+						HANHAN HAN(G00200365)
+					</span>
+					<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="main-content" role="main">
+		<div class="page-info center">
+			<h1>PROGRESS</h1>
+		</div>
+		<div class="pc-data">
+			<div class="container-fluid">
+				<div class="col-md-12">
+					<div class="row btn-in">
+						<div class="mt-2">
+							<div class="col-md-12 form-tit">
+								<h4 class="tit">Center Info</h4>
+								<div class="info">
+									<ul class="breadcrumb">
+										<li id="breadcrumb-company">Daekyo Malaysia</li>
+										<li id="breadcrumb-division">Daekyo Malaysia</li>
+										<li id="breadcrumb-center">Bukit Damansara</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-11 bx-search">
+							<form class="form-inline">
+								<div class="row">
+									<div class="col-md-12">
+										<div class="form-group mr-2">
+											<span class="lb-txt st1">Manager</span>
+											<div class="input-group">
+												<input type="text" name="ins" id="searchIns" value="" class="form-control input-sm clearable">
+												<div class="input-group-btn">
+													<button type="button" class="btn btn-search" data-toggle="modal" data-target="#searchInstructorModal"><span class="fas fa-search"></span><span class="hide">Search</span></button>
+												</div>
+											</div>
+										</div>
+										<div class="form-group mr-2">
+											<span class="lb-txt st1">Member</span>
+											<div class="input-group">
+												<input type="text" name="mem" id="searchMem" value="" class="form-control input-sm clearable">
+												<div class="input-group-btn">
+													<button type="button" class="btn btn-search" data-toggle="modal" data-target="#searchMemberModal"><span class="fas fa-search"></span><span class="hide">Search</span></button>
+												</div>
+											</div>
+										</div>
+										<div class="form-group mr-2">
+											<span class="lb-txt st1">Subject</span>
+											<select name="subjCd" id="searchSubjCd" class="form-control input-sm">
+												<option value="">- Subject</option>
+												<option value="09">EL Math</option>
+												<option value="W1">EL Eng</option>
+												<option value="P9">EL Play Math</option>
+												<option value="Y">EL Kor</option>
+												<option value="E1">EL Eng Sparks</option>
+												<option value="K">NNP Kor</option>
+												<option value="NSH">NNP Mid. Society</option>
+												<option value="L">NNP Infant Kor</option>
+												<option value="J">NNP WebPlus Mid. Kor</option>
+												<option value="Q">NNP Thinking P. Math</option>
+												<option value="D">NNP Infant Math</option>
+												<option value="E">NNP Eng</option>
+												<option value="A">Super Talk Talk</option>
+												<option value="H">NNP Chinese Char.</option>
+												<option value="NJ">NNP Japanese</option>
+												<option value="NS">NNP Social Study</option>
+												<option value="S">NNP Science</option>
+												<option value="CH">CH Chinese</option>
+												<option value="B">NNP Baby</option>
+												<option value="CI">Inopi</option>
+												<option value="EC">EL Chinese.J</option>
+												<option value="EHT">EL HappyTalk</option>
+												<option value="EMO">EL Math Online</option>
+												<option value="CK">NNP Clinic Kor</option>
+											</select>
+										</div>
+										<div class="form-group mr-2">
+											<span class="lb-txt st1">Study Status</span>
+											<select name="stdyStsCd" id="stdyStsCd" class="form-control input-sm">
+												<option value="">- All</option>
+												<option value="01" selected="selected">study</option>
+												<option value="02">Drop</option>
+												<option value="03">Wait</option>
+												<option value="04">Free Trial</option>
+												<option value="05">Free Trial(END)</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="col-md-1 btn-area">
+							<a href="#" class="btn btn-primary"data-toggle="modal" data-target="#info">Search</a>
+						</div>
+					</div>
+					<div class="ln_solid"></div>
+					<div class="bx-cont">
+						<div class="row">
+							<div class="col-md-12">
+								<ul class="list-inline pull-left mt-2">
+									<li class="total">Total : <span id="progress_counts_total">91</span></li>
+								</ul>
+							</div>
+						</div>
+						<div id="progress" class="bx-table">
+							<div class="tb-dimm" style="display: none;">
+								<span class="txts">Fetching data...</span>
+							</div>
+							<div class="x-scroll">
+								<table class="table table-sort list">
+									<thead>
+										<tr>
+											<th scope="col">No.</th>
+											<th scope="col"><a role="button" data-col="insNm" data-col-order="" data-form="progress" class="sorting">Manager</a></th>
+											<th scope="col"><a role="button" data-col="stdyStsNm" data-col-order="" data-form="progress" class="sorting">Status</a></th>
+											<th scope="col"><a role="button" data-col="subjNm" data-col-order="" data-form="progress" class="sorting">Subject</a></th>
+											<th scope="col"><a role="button" data-col="memId" data-col-order="" data-form="progress" class="sorting">MemberID</a></th>
+											<th scope="col"><a role="button" data-col="memNm" data-col-order="" data-form="progress" class="sorting">Member Name</a></th>
+											<th scope="col"><a role="button" data-col="grdNm" data-col-order="" data-form="progress" class="sorting">Grade</a></th>
+											<th scope="col"><a role="button" data-col="stdyMonths" data-col-order="" data-form="progress" class="sorting">Study Months</a></th>
+											<th scope="col"><a role="button" data-col="stdySetCnt" data-col-order="" data-form="progress" class="sorting">Max Booklets/Wk</a></th>
+											<th scope="col"><a role="button" data-col="pgrModeCd" data-col-order="" data-form="progress" class="sorting">Standard Model</a></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td class="left">Bukit Damansara</td>
+											<td class="left">study</td>
+											<td class="left"><a href="view.do?memId=G00079165&amp;subjCd=09" class="link-modal">EL Math</a></td>
+											<td><a role="button" onclick="$.km.alert('Under development')" class="link-modal">G00079165</a></td>
+											<td class="left">Ahmad Jaris</td>
+											<td class="left">Primary Standard 6</td>
+											<td>67</td>
+											<td>4</td>
+											<td>Standard</td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td class="left">Bukit Damansara</td>
+											<td class="left">study</td>
+											<td class="left"><a href="view.do?memId=G00054451&amp;subjCd=09" class="link-modal">EL Math</a></td>
+											<td><a role="button" onclick="$.km.alert('Under development')" class="link-modal">G00054451</a></td>
+											<td class="left">Aidan James Wong</td>
+											<td class="left">Primary Standard 6</td>
+											<td>78</td>
+											<td>6</td>
+											<td>Standard</td>
+										</tr>
+										<tr>
+											<td>3</td>
+											<td class="left">Bukit Damansara</td>
+											<td class="left">study</td>
+											<td class="left"><a href="view.do?memId=G00071889&amp;subjCd=09" class="link-modal">EL Math</a></td>
+											<td><a role="button" onclick="$.km.alert('Under development')" class="link-modal">G00071889</a></td>
+											<td class="left">Alexa Tan</td>
+											<td class="left">Primary Standard 5</td>
+											<td>26</td>
+											<td>4</td>
+											<td>Standard</td>
+										</tr>
+										<tr>
+											<td>4</td>
+											<td class="left">Bukit Damansara</td>
+											<td class="left">study</td>
+											<td class="left"><a href="view.do?memId=K30015257&amp;subjCd=09" class="link-modal">EL Math</a></td>
+											<td><a role="button" onclick="$.km.alert('Under development')" class="link-modal">K30015257</a></td>
+											<td class="left">Alexandra Hui Xia Cheah</td>
+											<td class="left">Primary Standard 5</td>
+											<td>5</td>
+											<td>6</td>
+											<td>Standard</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<nav id="progress_pagination" class="text-center">
+							<ul class="pagination">
+								<li class="disabled"><a role="button" aria-label="First"><i class="fas fa-angle-double-left"></i></a></li>
+								<li class="disabled"><a role="button" aria-label="Previous"><i class="fas fa-angle-left"></i></a></li>
+								<li class="active"><a role="button" onclick="$('#progress').goPage(tableSettings, 1)">1<span class="sr-only">(current)</span></a></li>
+								<li><a role="button" onclick="$('#progress').goPage(tableSettings, 2)">2</a></li>
+								<li><a role="button" onclick="$('#progress').goPage(tableSettings, 3)">3</a></li>
+								<li><a role="button" onclick="$('#progress').goPage(tableSettings, 4)">4</a></li>
+								<li><a role="button" onclick="$('#progress').goPage(tableSettings, 5)">5</a></li>
+								<li class="disabled"><a role="button" aria-label="Next"><i class="fas fa-angle-right"></i></a></li>
+								<li><a role="button" onclick="$('#progress').goPage(tableSettings, 5)" aria-label="First"><i class="fas fa-angle-double-right"></i></a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="slideout-overlay"></div>
+</div>
+
+<div class="modal fade mobile-only" id="myStudentModal" tabindex="-1" role="dialog">
+	<div class="modal-dialog modal-sm" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			</div>
+			<div class="modal-body">
+				<ul class="list-custom before-none ml-3">
+					<li><a href="#">info</a></li>
+					<li><a href="#">Register Schedule</a></li>
+					<li><a href="#">채점</a></li>
+					<li><a href="#">Payment</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="info" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel5">INFO</h4>
+            </div>
+            <div class="modal-body">
+                <p>Ken. Song(KS00000081) 님</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="searchMemberModal" tabindex="-1" role="dialog">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+				<h4 class="modal-title">Search Member</h4>
+			</div>
+			<div class="modal-body">
+				<form class="form-horizontal form-label-left">
+					<div class="form-group">
+						<div class="col-md-8 col-md-offset-2">
+							<label class="control-label col-md-4" for="member-id">Member ID</label>
+							<div class="col-md-8">
+								<input type="text" id="member-id" class="form-control input-sm clearable col-md-12">
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-md-8 col-md-offset-2">
+							<label class="control-label col-md-4" for="member-name">Name</label>
+							<div class="col-md-8">
+								<input type="text" id="member-name" name="member-name" class="form-control input-sm clearable col-md-12">
+							</div>	
+						</div>
+					</div>
+					<div class="form-group text-center">
+						<a href="#" class="btn btn-primary">조회</a>
+					</div>
+				</form>
+				<div class="bx-table">
+					<div class="tb-dimm"><span class="txts">Fetching data...</span></div>
+					<table class="table tb-check">
+						<colgroup>
+							<col style="width:30%">
+							<col style="width:40%">
+							<col style="width:30%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">Name</th>
+								<th scope="col">Member ID</th>
+								<th scope="col">Birthday</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><a href="#">Brandon Tan</a></td>
+								<td><a href="#">G00204614</a></td>
+								<td><a href="#">02/03/2013</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary">계속</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="modal fade" id="searchInstructorModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">Search Instructor</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal form-label-left">
+                    <div class="form-group">
+                        <div class="col-md-8 col-md-offset-2">
+                            <label class="control-label col-md-4" for="first-name">Instructor ID</label>
+                            <div class="col-md-8">
+                                <input type="text" id="manager-id" class="form-control input-sm clearable col-md-12">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-8 col-md-offset-2">
+                            <label class="control-label col-md-4" for="member-name">Name</label>
+                            <div class="col-md-8">
+                                <input type="text" id="member-name" class="form-control input-sm clearable col-md-12">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group text-center">
+                        <a href="#" class="btn btn-primary">조회</a>
+                    </div>
+                </form>
+                <div class="bx-table">
+                    <div class="tb-dimm"><span class="txts">Fetching data...</span></div>
+                    <table class="table tb-check">
+                        <colgroup>
+                            <col style="width:30%">
+                            <col style="width:70%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">Instructor ID</th>
+                                <th scope="col">Name</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="#">K30001134</a></td>
+                                <td><a href="#">hwkim hwkim</a></td>
+                            </tr>
+							<tr>
+                                <td><a href="#">K30001134</a></td>
+                                <td><a href="#">hwkim hwkim</a></td>
+                            </tr>
+							<tr>
+                                <td><a href="#">K30001134</a></td>
+                                <td><a href="#">hwkim hwkim</a></td>
+                            </tr>
+							<tr>
+                                <td><a href="#">K30001134</a></td>
+                                <td><a href="#">hwkim hwkim</a></td>
+                            </tr>
+							<tr>
+                                <td><a href="#">K30001134</a></td>
+                                <td><a href="#">hwkim hwkim</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">계속</button>
+                <!-- <button type="button" class="btn btn-info" data-dismiss="modal">Close</button> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

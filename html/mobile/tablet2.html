@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+	<link rel="SHORTCUT ICON" href="/images/favicon.ico">
+	<title>Key&amp;Manager ver.2</title>
+	<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap-datetimepicker.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendors/fontawesome-all.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendors/jquery.mCustomScrollbar.css">
+	<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+	<script src="/js/vendors/jquery-ui.min.js"></script>
+	<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+	<script src="/js/vendors/moment.js"></script>
+	<script src="/js/vendors/bootstrap.min.js"></script>
+	<script src="/js/vendors/bootstrap-datetimepicker.min.js"></script>
+	
+	<!-- mobile 추가 -->
+	<link rel="stylesheet" type="text/css" href="/css/mobile-layout.css">
+	<link rel="stylesheet" type="text/css" href="/css/custom.css">
+	<script src="/js/vendors/jquery.touchSwipe.min.js"></script>
+	<script src="/js/custom-mobile.js"></script>
+	<script src="/js/custom.js"></script>
+</head>
+<body>
+<div class="wrapper mobile-only">
+	<!-- menu bar -->
+	<div class="mHeader">
+		<div class="mHeader-contents-wrap">
+			<div class="mHeader-btn mHeader-allmenu">
+				<a href="#" class="slideout-button" data-selector="allMenu">ALL MENU</a>
+			</div>
+			<div class="mHeader-contents">
+				<div class="mHeader-btn mHeader-mymenu">
+					<a href="#" class="hidden-tablet no-link" data-selector="myMenu">MY MENU</a>
+				</div>
+				<div class="mHeader-btn mHeader-search">
+					<a href="#" class="hidden-desktop no-link" data-selector="search">SEARCH</a>
+				</div>
+			</div>
+			<div class="mHeader-btn mHeader-studentList">
+				<a href="#" class="slideout-button" data-selector="studentList">STUDENT LIST</a>
+			</div>
+		</div>
+	</div>
+	
+	<!-- my menu, search -->
+	<div class="mHeader-sub-wrap">
+		<div class="mHeader-sub-menu mymenu-slideout closed">
+			<div class="slideout-info-area">
+				<a href="#" class="slideout-btn bt-close">닫기</a>
+				<div class="user-info pl-0">
+					<span class="user-name">My menu<em class="ico-count ml-3">4</em></span>
+				</div>
+			</div>
+			<div class="box">
+				<ul class="list-custom btn-in">
+					<li><a href="#">Consultation</a><a href="#" class="ico-delete"><span class="sr-only">Delete</span></a></li>
+					<li><a href="#">Attendance</a><a href="#" class="ico-delete"><span class="sr-only">Delete</span></a></li>
+					<li><a href="#">Member</a><a href="#" class="ico-delete"><span class="sr-only">Delete</span></a></li>
+					<li><a href="#">Diagnostic test</a><a href="#" class="ico-delete"><span class="sr-only">Delete</span></a></li>
+				</ul>
+				<div class="recently-menu">
+					<div class="box">
+						<span class="tit">Recently used menu</span>
+						<ul class="list-custom list-inline btn-in">
+							<li><a href="">Answer book</a><a href="#" class="ico-add"><span class="sr-only">Add</span></a></li>
+							<li><a href="">Staff info </a><a href="#" class="ico-add"><span class="sr-only">Add</span></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="allmenu-list myMenuAdd-list">
+					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+						<div class="panel">
+							<div class="panel-heading" role="tab" id="headingMenuAdd">
+								<span class="panel-title"><a class="collapsed"><i class="ico-count cl-gray mr-3"></i>My menu add</a></span>
+							</div>
+							<div class="panel-collapse">
+								<div class="panel-body">
+									<ul class="list-custom btn-in">
+										<li><a href="#">Lead</a><a href="#" class="ico-add"><span class="sr-only">Add</span></a></li>
+										<li><a href="#">Progress</a><a href="#" class="ico-add"><span class="sr-only">Add</span></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="mHeader-sub-menu search-slideout closed">
+			<div class="search-form ">
+				<form class="form-group">
+					<input type="text" class="form-text"  placeholder="Search" id="tags" >
+					<a href="#" class="form-submit  bt-search">검색</a>
+					<a href="#" class="slideout-btn bt-close">닫기</a>
+				</form>
+			</div>
+			<div class="">
+				<div class="student-list">
+					<ul>
+						<li>
+							<span class="student-type enroll">입회</span>
+							<span class="student-name">HANHAN HAN(G00200365)</span>
+							<a class="student-menu" data-toggle="collapse" data-parent="#accordion" href="#st1" aria-expanded="false" aria-controls="st1"><i class="fas fa-caret-down"></i><span class="sr-only">menu</span></a>
+							<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+							<div id="st1" class="panel-collapse collapse" role="tabpanel">
+								<ul class="list-menu">
+									<li><a href="#">Consultation</a></li>
+									<li><a href="#">Trial</a></li>
+									<li><a href="#">DT</a></li>
+									<li><a href="#">Enroll</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<span class="student-type lead">가망</span>
+							<span class="student-name">HANHAN HAN(G00200365)</span>
+							<a class="student-menu" data-toggle="collapse" data-parent="#accordion" href="#st2" aria-expanded="false" aria-controls="st2"><i class="fas fa-caret-down"></i><span class="sr-only">menu</span></a>
+							<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+							<div id="st2" class="panel-collapse collapse" role="tabpanel">
+								<ul class="list-menu">
+									<li><a href="#">Consultation</a></li>
+									<li><a href="#">Trial</a></li>
+									<li><a href="#">DT</a></li>
+									<li><a href="#">Enroll</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- all menu -->
+	<div class="allmenu-slideout slideout">
+		<div class="slideout-info-area">
+			<a href="#" class="slideout-btn bt-close">닫기</a>
+			<a href="#" class="slideout-btn bt-prev-small">닫기</a>
+			<div class="user-info-wrap">
+				<div class="user-info">
+					<span class="user-name">Nebula, Karen Gillan</span>
+					<span class="user-code">(CN00000039)</span>
+				</div>
+				<div class="half-group">
+					<span class="left"><a href="#" class="bt-mypage">My page</a></span>
+					<span class="right"><a href="#" class="bt-logout">log-out</a></span>
+				</div>
+			</div>
+		</div>
+		<div class="allmenu-list">
+			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+			  <div class="panel">
+				<div class="panel-heading" role="tab" id="headingOne">
+				  <span class="panel-title member"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseMember" aria-expanded="false" aria-controls="collapseMember">Member</a></span>
+				</div>
+				<div id="collapseMember" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+				  <div class="panel-body">
+					<ul class="list-custom">
+						<li><a href="#">Lead</a></li>
+						<li><a href="#">Consultation</a></li>
+						<li><a href="#">Member</a></li>
+					</ul>
+				  </div>
+				</div>
+			  </div>
+			  <div class="panel">
+				<div class="panel-heading" role="tab" id="headingTwo">
+				  <span class="panel-title learning"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseLearning" aria-expanded="false" aria-controls="collapseLearning">Learning</a></span>
+				</div>
+				<div id="collapseLearning" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+				  <div class="panel-body">
+					<ul class="list-custom">
+						<li><a href="#">Schedule</a></li>
+						<li><a href="#">Attendance</a></li>
+						<li><a href="#">Progress</a></li>
+						<li><a href="#">Diagnostic Test</a></li>
+						<li><a href="#">Test result</a></li>
+						<li><a href="#">Booklet management</a></li>
+					</ul>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- my student -->
+	<div  class="studentList-slideout slideout">
+		<div class="slideout-info-area">
+			<a href="#" class="slideout-btn bt-prev-small">닫기</a>
+			<a href="#" class="slideout-btn bt-close">닫기</a>
+			<div class="user-info">
+				<span class="user-name">My student</span>
+			</div>
+		</div>
+		<div class="col-md-12 py-2">
+			<div class="pull-left total">
+				Total 20
+			</div>
+			<div class="pull-right form-inline ">
+				<select class="form-control ">
+					<option value="" selected>Name</option>
+				</select>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+		<div class="student-list">
+			<ul>
+				<li>
+					<span class="student-name">
+						HANHAN HAN(G00200365)
+					</span>
+					<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+				</li>
+				<li>
+					<span class="student-name">
+						HANHAN HAN(G00200365)
+					</span>
+					<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+				</li>
+				<li>
+					<span class="student-name">
+						HANHAN HAN(G00200365)
+					</span>
+					<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+				</li>
+				<li>
+					<span class="student-name">
+						HANHAN HAN(G00200365)
+					</span>
+					<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="main-content" role="main">
+		<div class="page-info center">
+			<h1>PROGRESS</h1>
+		</div>
+		<div class="pc-data">
+			<div class="container-fluid">
+				<div class="col-md-12">
+					<h3>보급현황</h3>
+					<div class="row btn-in">
+						<div class="col-md-12 form-tit">
+							<h4 class="tit">Center Info</h4>
+							<div class="info">
+								<ul class="breadcrumb">
+									<li>Daekyo Malaysia</li>
+									<li>Daekyo Malaysia</li>
+									<li>Bukit Damansara</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-11 bx-search">
+							<form class="form-inline">
+								<div class="row">
+									<div class="col-md-12">
+										<div class=" form-group mt-2 mr-2">
+											<span class="lb-txt st1">Subject</span>
+											<select class="form-control input-sm">
+												<option value="" selected="selected">All</option>
+											</select>
+										</div>
+										<div class="form-group mt-2 mr-2">
+											<span class="lb-txt st1">Date of Inquiry</span>
+											<div class="form-group">
+												<div class="input-group date">
+													<input type="text" class="form-control input-sm clearable datepicker" placeholder="dd/mm/yyyy">
+													<span class="input-group-addon">
+														<span class="calendar-icon"></span>
+													</span>
+												</div>
+											</div>
+										</div>
+										<div class=" form-group mt-2">
+											<span class="lb-txt st1">Center Type</span>
+											<select class="form-control input-sm">
+												<option value="" selected="selected">All</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="btn-area col-md-1">
+							<a class="btn btn-primary" onclick="searchList('specialOrders')">Search</a>
+						</div>
+					</div>
+					<div class="ln_solid"></div>
+
+					<div class="row">
+						<div class="col-md-12">
+							<div class="pull-right">
+								<a href="#" class="btn btn-default"><i class="far fa-file-pdf"></i> PDF</a><!-- 180724_수정 [버튼명칭 수정] -->
+								<a href="#" class="btn btn-default"><i class="far fa-file-excel"></i> Excel</a><!-- 180724_수정 [버튼명칭 수정] -->
+							</div>
+							<ul class="list-inline pull-left mt-2">
+								<li class="total">Total : <span>0</span></li>
+							</ul>
+						</div>
+						<div class="col-md-12 col-sm-12 mt-1">
+							<div class="bx-table">
+								<div class="tb-dimm"><span class="txts">Fetching data...</span></div>
+								<div class="x-scroll">
+									<table class="table table-sort">
+										<thead>
+											<tr>
+												<th scope="col"><a href="#" class="sorting">Organization</a></th>
+												<th scope="col"><a href="#" class="sorting">Center Code</a></th>
+												<th scope="col"><a href="#" class="sorting">Beginning (Month)</a></th>
+												<th scope="col"><a href="#" class="sorting">Enrollment (Month)</a></th>
+												<th scope="col"><a href="#" class="sorting">Drop (Month)</a></th>
+												<th scope="col"><a href="#" class="sorting">Subject Transfer (Enroll)</a></th>
+												<th scope="col"><a href="#" class="sorting">Subject Transfer (Drop)</a></th>
+												<th scope="col"><a href="#" class="sorting">Enrollment (Day)</a></th>
+												<th scope="col"><a href="#" class="sorting">Drop (Day)</a></th>
+												<th scope="col"><a href="#" class="sorting">Net Increase</a></th>
+												<th scope="col"><a href="#" class="sorting">Current No.</a></th>
+												<th scope="col"><a href="#" class="sorting">Free Trial (Month)</a></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="left"><span class="text-primary">Total</span></td>
+												<td class="right"></td>
+												<td class="right">85</td>
+												<td class="right">9</td>
+												<td class="right">3</td>
+												<td class="right">7</td>
+												<td class="right">7</td>
+												<td class="right">0</td>
+												<td class="right">0</td>
+												<td class="right">6</td>
+												<td class="right">91</td>
+												<td class="right">7</td>
+											</tr>
+											<tr>
+												<td class="left"><span class="text-primary indent1">Daekyo Malaysia TOTAL</span></td>
+												<td></td>
+												<td class="right">85</td>
+												<td class="right">9</td>
+												<td class="right">3</td>
+												<td class="right">7</td>
+												<td class="right">7</td>
+												<td class="right">0</td>
+												<td class="right">0</td>
+												<td class="right">6</td>
+												<td class="right">91</td>
+												<td class="right">7</td>
+											</tr>
+											<tr>
+												<td class="left"><span class="indent2">Daekyo Malaysia TOTAL</span></td>
+												<td></td>
+												<td class="right">85</td>
+												<td class="right">9</td>
+												<td class="right">3</td>
+												<td class="right">7</td>
+												<td class="right">7</td>
+												<td class="right">0</td>
+												<td class="right">0</td>
+												<td class="right">6</td>
+												<td class="right">91</td>
+												<td class="right">7</td>
+											</tr>
+											<tr>
+												<td class="left"><span class="indent3">Bukit Damansara</span></td>
+												<td>CN00000028</td>
+												<td class="right">85</td>
+												<td class="right">9</td>
+												<td class="right">3</td>
+												<td class="right">7</td>
+												<td class="right">7</td>
+												<td class="right">0</td>
+												<td class="right">0</td>
+												<td class="right">6</td>
+												<td class="right">91</td>
+												<td class="right">7</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+	</div>
+	<div class="slideout-overlay"></div>
+</div>
+
+<div class="modal fade  mobile-only" id="myStudentModal" tabindex="-1" role="dialog">
+	<div class="modal-dialog modal-sm" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			</div>
+			<div class="modal-body">
+				<ul class="list-custom before-none ml-3">
+					<li><a href="#">info</a></li>
+					<li><a href="#">Register Schedule</a></li>
+					<li><a href="#">채점</a></li>
+					<li><a href="#">Payment</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

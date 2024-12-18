@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<link rel="SHORTCUT ICON" href="/images/favicon.ico">
+<title>Key&amp;Manager ver.2</title>
+<link rel="stylesheet" href="/css/common.css">
+<link rel="stylesheet" href="/css/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" href="/css/jquery-ui.css">
+<link rel="stylesheet" media="all and (min-width: 0) and (max-width: 1280px)" href="/css/tablet.css" />
+<link rel="stylesheet" media="all and (min-width: 0) and (max-width: 767px)" href="/css/mobile.css" />
+<script src="/js/jQuery/jquery-2.2.4.min.js"></script>
+<script src="/js/jQuery/jquery-ui.js"></script>
+<script src="/js/jQuery/jquery.mCustomScrollbar.js"></script>
+<script src="/js/common.js"></script>
+</head>
+<body>
+<div id="kmWrap">
+	<!-- s : mobile only -->
+	<div id="kmBtn" class="mobile-only">
+		<button class="ctrl-favorite"><span>favorite</span></button>
+		<button class="ctrl-search"><span>search</span></button>
+		<button class="ctrl-mystudent"><span>mystudent</span></button>
+	</div>
+	<!-- // e : mobile only -->
+	
+	<!-- s : kmNavi -->
+	<div id="kmNavi">
+		<button class="ctrl-nav"><span class="nav-ico"></span><span class="nav-txt">Close</span></button>
+		<div class="nav-list">
+			<div class="mobile-only">
+				<!-- 모바일 내용 추가 예정 -->
+			</div>
+			<ul>
+				<li class="no-children"><a href="#"><span class="nav-txt">Schedule</span></a></li> 
+				<li class="has-children"><a href="#"><span class="nav-txt">Member</span></a>
+					<ul class="depth2">
+						<li><a href="#">Member</a></li>
+						<li><a href="#">Attendance</a></li> 
+						<li><a href="#">Subject Transfer</a></li>
+						<li><a href="#">Learning</a></li> 
+						<li><a href="#">Attendance</a></li> 
+					</ul>
+				</li>
+				<li class="has-children"><a href="#"><span class="nav-txt">Learning</span></a>
+					<ul class="depth2">
+						<li><a href="#">Learning</a></li> 
+						<li><a href="#">Attendance</a></li> 
+						<li><a href="#">Progress</a></li> 
+						<li><a href="#">Diagnostic test</a></li> 
+						<li><a href="#">Material</a></li> 
+					</ul>
+				</li>
+				<li class="has-children"><a href="#"><span class="nav-txt">Finance</span></a>
+					<ul class="depth2">
+						<li><a href="#">Deposit Management</a></li>
+						<li><a href="#">Learning</a></li> 
+						<li><a href="#">Attendance</a></li> 
+						<li><a href="#">Progress</a></li> 
+						<li><a href="#">Diagnostic test</a></li> 
+						<li><a href="#">Material</a></li> 
+					</ul>
+				</li>
+				<li class="has-children"><a href="#"><span class="nav-txt">Center</span></a>
+					<ul class="depth2">
+						<li><a href="#">Organization Info</a></li>
+						<li><a href="#">Learning</a></li> 
+						<li><a href="#">Attendance</a></li> 
+						<li><a href="#">Progress</a></li> 
+						<li><a href="#">Diagnostic test</a></li> 
+						<li><a href="#">Material</a></li> 
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- e : kmNavi -->
+
+	<!-- s : kmContainer -->
+	<div id="kmContainer">
+		<!-- s : kmHeader -->	
+		<div id="kmHeader">
+			<div class="head-favorite">
+				<div class="favorite-list">
+					<a href="#">Create member</a>
+					<a href="#">Payment</a>
+					<a href="#">My student</a>
+				</div>
+				<a href="#" class="favorite-set" title="favorite">favorite list</a>
+			</div>
+			<div class="head-user-info">
+				<a href="#" class="head-logout">Logout</a>
+				<span class="head-name">Tony tony chopa (FC0001S)</span>
+				<a href="#" class="head-mypage">My page</a>
+			</div>
+			<div class="head-search mobile-only">
+				<form action="" method="" class="search-form">
+					<div class="search-panel">
+						<input type="text" name="search" placeholder="Search here..." title="search">
+						<button type="submit"><span class="">검색</span></button>
+					</div>
+					<div class="">
+						<!-- 모바일 내용 추가 예정 : 검색결과 리스트 -->
+					</div>
+				</form>
+			</div>
+			<div class="head-mystudent mobile-only">
+				<!-- 모바일 내용 추가 예정 -->
+			</div>
+		</div>
+		<!-- e : kmHeader -->
+		
+		<!-- s : kmConts -->
+		<div id="kmConts">
+			<div class="page-info">
+				<div class="location">
+					<span class="home"><a href="#">home</a></span>
+					<span><a href="#">location 1depth</a></span>
+				</div>
+				<h2 class="page-tit">해답지</h2>
+			</div>
+			<div class="bx-cont">
+				<div class="form-search btn-in">
+					<div class="row">
+						<div class="form-th">
+							<span class="label-txt">해답지구분</span>
+						</div>
+						<div class="form-td">
+							<span class="select">
+								<select name="">
+									<option value="" selected>DT TEST</option>
+									<option value="">학습교재</option>
+									<option value="">Level 테스트</option>
+								</select>
+							</span>
+						</div>
+						<div class="form-th">
+							<span class="label-txt">과목</span>
+						</div>
+						<div class="form-td">
+							<span class="select">
+								<select name="">
+									<option value="" selected>EL Math</option>
+								</select>
+							</span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-th">
+							<span class="label-txt">Level</span>
+						</div>
+						<div class="form-td">
+							<span class="select">
+								<select name="">
+									<option value="" selected>GRADE 1</option>
+								</select>
+							</span>
+						</div>
+						<div class="form-th">
+							<span class="label-txt">Set</span>
+						</div>
+						<div class="form-td">
+							<span class="select">
+								<select name="">
+									<option value="" selected>1</option>
+								</select>
+							</span>
+						</div>
+					</div>
+					<div class="bx-btn">
+						<a href="#" class="btn">Search</a>
+					</div>
+				</div>
+			</div>
+			<div class="bx-cont">
+				<div class="bx-table">
+					<div class="tb-dimm"><span class="txts">Fetching data...</span></div>
+					<div class="y-scroll">
+						<table class="tb-col sort-in">
+							<colgroup>
+								<col style="width:50px">
+								<col style="width:auto">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col"><a href="#" class="sorting">Page</a></th>
+									<th scope="col"><a href="#" class="sorting">해답 내용</a></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td class="al-left">
+										<ul class="ans-list">
+											<li><span class="ans-num">1</span><span class="ans-a">7</span></li>
+											<li><span class="ans-num">2</span><span class="ans-a">8</span></li>
+											<li><span class="ans-num">3</span><span class="ans-a">12</span></li>
+											<li><span class="ans-num">4</span><span class="ans-a">9</span></li>
+											<li><span class="ans-num">5</span><span class="ans-a">4</span></li>
+											<li><span class="ans-num">6</span><span class="ans-a">17</span></li>
+											<li><span class="ans-num">7</span><span class="ans-a">a</span></li>
+											<li><span class="ans-num">8</span><span class="ans-a">b</span></li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td class="al-left">
+										<ul class="ans-list">
+											<li><span class="ans-num">9</span><span class="ans-a">6</span></li>
+											<li><span class="ans-num">10</span><span class="ans-a">17</span></li>
+											<li><span class="ans-num">11</span><span class="ans-a">27</span></li>
+											<li><span class="ans-num">12</span><span class="ans-a">60</span></li>
+											<li><span class="ans-num">13</span><span class="ans-a">10</span></li>
+											<li><span class="ans-num">14</span><span class="ans-a">20</span></li>
+											<li><span class="ans-num">15</span><span class="ans-a">26</span></li>
+											<li><span class="ans-num">16</span><span class="ans-a">31</span></li>
+											<li><span class="ans-num">17</span><span class="ans-a">12</span></li>
+											<li><span class="ans-num">18</span><span class="ans-a">21</span></li>
+											<li><span class="ans-num">19</span><span class="ans-a">26</span></li>
+											<li><span class="ans-num">20</span><span class="ans-a">30</span></li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td class="al-left">
+										<ul class="ans-list">
+											<li><span class="ans-num">21</span><span class="ans-a"><img src="../images/@img1.png" alt=""></span></li>
+											<li><span class="ans-num">22</span><span class="ans-a">1,2</span></li>
+											<li><span class="ans-num">23</span><span class="ans-a">12</span></li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td class="al-left">
+										<ul class="ans-list">
+											<li><span class="ans-num">24</span><span class="ans-a"><img src="../images/@img2.png" alt=""></span></li>
+											<li><span class="ans-num">25</span><span class="ans-a"><img src="../images/@img3.png" alt=""></span></li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<td>5</td>
+									<td class="al-left">
+										<ul class="ans-list">
+											<li><span class="ans-num">26</span><span class="ans-a"><img src="../images/@img1.png" alt=""></span></li>
+											<li><span class="ans-num">27</span><span class="ans-a"><img src="../images/@img1.png" alt=""></span></li>
+											<li><span class="ans-num">28</span><span class="ans-a"><img src="../images/@img1.png" alt=""></span></li>
+											<li><span class="ans-num">29</span><span class="ans-a"><img src="../images/@img2.png" alt=""></span></li>
+											<li><span class="ans-num">30</span><span class="ans-a"><img src="../images/@img2.png" alt=""></span></li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<td>6</td>
+									<td class="al-left">
+										<ul class="ans-list">
+											<li><span class="ans-num">1</span><span class="ans-a">7</span></li>
+											<li><span class="ans-num">2</span><span class="ans-a">8</span></li>
+											<li><span class="ans-num">3</span><span class="ans-a">12</span></li>
+											<li><span class="ans-num">4</span><span class="ans-a">9</span></li>
+											<li><span class="ans-num">5</span><span class="ans-a">4</span></li>
+											<li><span class="ans-num">6</span><span class="ans-a">17</span></li>
+											<li><span class="ans-num">7</span><span class="ans-a">a</span></li>
+											<li><span class="ans-num">8</span><span class="ans-a">b</span></li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<td>7</td>
+									<td class="al-left">
+										<ul class="ans-list">
+											<li><span class="ans-num">9</span><span class="ans-a">6</span></li>
+											<li><span class="ans-num">10</span><span class="ans-a">17</span></li>
+											<li><span class="ans-num">11</span><span class="ans-a">27</span></li>
+											<li><span class="ans-num">12</span><span class="ans-a">60</span></li>
+											<li><span class="ans-num">13</span><span class="ans-a">10</span></li>
+											<li><span class="ans-num">14</span><span class="ans-a">20</span></li>
+											<li><span class="ans-num">15</span><span class="ans-a">26</span></li>
+											<li><span class="ans-num">16</span><span class="ans-a">31</span></li>
+											<li><span class="ans-num">17</span><span class="ans-a">12</span></li>
+											<li><span class="ans-num">18</span><span class="ans-a">21</span></li>
+											<li><span class="ans-num">19</span><span class="ans-a">26</span></li>
+											<li><span class="ans-num">20</span><span class="ans-a">30</span></li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<td>8</td>
+									<td class="al-left">
+										<ul class="ans-list">
+											<li><span class="ans-num">21</span><span class="ans-a"><img src="../images/@img1.png" alt=""></span></li>
+											<li><span class="ans-num">22</span><span class="ans-a">1,2</span></li>
+											<li><span class="ans-num">23</span><span class="ans-a">12</span></li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<td>9</td>
+									<td class="al-left">
+										<ul class="ans-list">
+											<li><span class="ans-num">24</span><span class="ans-a"><img src="../images/@img2.png" alt=""></span></li>
+											<li><span class="ans-num">25</span><span class="ans-a"><img src="../images/@img3.png" alt=""></span></li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<td>10</td>
+									<td class="al-left">
+										<ul class="ans-list">
+											<li><span class="ans-num">26</span><span class="ans-a"><img src="../images/@img1.png" alt=""></span></li>
+											<li><span class="ans-num">27</span><span class="ans-a"><img src="../images/@img1.png" alt=""></span></li>
+											<li><span class="ans-num">28</span><span class="ans-a"><img src="../images/@img1.png" alt=""></span></li>
+											<li><span class="ans-num">29</span><span class="ans-a"><img src="../images/@img2.png" alt=""></span></li>
+											<li><span class="ans-num">30</span><span class="ans-a"><img src="../images/@img2.png" alt=""></span></li>
+										</ul>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- e : kmConts -->
+		
+		<!-- s : kmFooter -->	
+		<div id="kmFooter">
+			<div class="ft-area">
+				<span class="ft-logo">KEY &amp; MANAGER</span>
+				<p class="ft-copy">Copyright &copy; 2018 Daekyo Co., Ltd All rights reserved. For more information, contact <a href="mailto:myeyelevel@myeyelevel.com">myeyelevel@myeyelevel.com</a></p>
+				<div class="ft-site">
+					<dl>
+						<dt><a href="#class">Links</a></dt>
+						<dd>
+							<ul>
+								<li><a href="https://sites.google.com/a/myeyelevel.com/itisthekey/" target="_blank">User guide</a></li>
+								<li><a href="http://www.myeyelevel.com/Global/English/" target="_blank">Eyelevel Site</a></li>
+								<li><a href="http://www.iamthekey.com/" target="_blank">Brand Site</a></li>
+								<li><a href="http://eng.daekyo.com/En/default.aspx" target="_blank">Corporate Site</a></li>
+								<li><a href="http://elu.myeyelevel.com" target="_blank">Eye Level University</a></li>
+								<li><a href="http://email.myeyelevel.com" target="_blank">Email</a></li>
+							</ul>
+						</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+		<!-- e : kmFooter -->
+	</div>
+	<!-- e : kmContainer -->
+</div>
+
+<div class="dimm"></div>
+<div id="layer1" class="layer layer-s">
+	<div class="layer-tit">
+		<h3 class="ico-per">Search Member</h3>
+		<a href="#" class="btn-layer-close"><span>닫기</span></a>
+	</div>
+	<div class="layer-con">
+		<div class="bx-cont">
+			<form id="frm" name="frm" action="">
+				<div class="bx-form">
+					<ul class="frm-list">
+						<li class="textbox"><label for="inp1-1">Member ID</label><input type="text" id="inp1-1"></li>
+						<li class="textbox"><label for="inp1-2">Name</label><input type="text" id="inp1-2"></li>
+					</ul>
+				</div>		
+				<div class="bx-btn">
+					<a href="#" class="btn">조회</a>
+				</div>
+			</form>
+		</div>
+		<div class="bx-cont">
+			<table class="tb-col">
+				<colgroup>
+					<col style="width:30%">
+					<col style="width:40%">
+					<col style="width:30%">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">Member ID</th>
+						<th scope="col">Name</th>
+						<th scope="col">Birthday</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><a href="#">G00204614</a></td>
+						<td><a href="#">Brandon Tan</a></td>
+						<td><a href="#">02/03/2013</a></td>
+					</tr>
+					<tr>
+						<td><a href="#">K30001494</a></td>
+						<td><a href="#">chulhee</a></td>
+						<td><a href="#">22/09/2015</a></td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="bx-btn">
+				<a href="#" class="btn">계속</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="layer2" class="layer layer-l">
+	<div class="layer-tit">
+		<h3 class="ico-member">Add Student</h3>
+		<a href="#" class="btn-layer-close"><span>닫기</span></a>
+	</div>
+	<div class="layer-con">
+		<div class="tab-content" id="formDefault">
+			<h4 class="h4-tit">회원정보입력</h4>
+			<div class="bx-form bx-cols2">
+				<span class="form-th"><label for="inp3-1">* First Name</span>
+				<span class="form-td"><input type="text" id="inp3-1"></span>
+				<span class="form-th"><label for="inp3-2">* Last Name</span>
+				<span class="form-td"><input type="text" id="inp3-2"></span>
+			</div>
+			<div class="bx-form bx-cols2">
+				<span class="form-th"><label for="inp3-3">Middle Name</span>
+				<span class="form-td"><input type="text" id="inp3-3"></span>
+				<span class="form-th"><label for="inp3-4">* Grade</span>
+				<div class="form-td">
+					<span class="select">
+						<select id="inp3-4">
+							<option value="1" title="Age 0~1">Age 0~1</option>
+							<option value="2" title="Age 1~2">Age 1~2</option>
+							<option value="3" title="Age 2~3">Age 2~3</option>
+							<option value="4" title="Age 3~4">Age 3~4</option>
+							<option value="5" title="Age 4~5">Age 4~5</option>
+							<option value="6" title="Age 5~6">Age 5~6</option>
+							<option value="7" title="Primary Standard 1">Primary Standard 1</option>
+							<option value="8" title="Primary Standard 2">Primary Standard 2</option>
+							<option value="9" title="Primary Standard 3">Primary Standard 3</option>
+							<option value="10" title="Primary Standard 4">Primary Standard 4</option>
+							<option value="11" title="Primary Standard 5">Primary Standard 5</option>
+							<option value="12" title="Primary Standard 6">Primary Standard 6</option>
+							<option value="13" title="Secondary Form 1">Secondary Form 1</option>
+							<option value="14" title="Secondary Form 2">Secondary Form 2</option>
+							<option value="15" title="Secondary Form 3">Secondary Form 3</option>
+							<option value="16" title="Secondary Form 4">Secondary Form 4</option>
+							<option value="17" title="Secondary Form 5">Secondary Form 5</option>
+							<option value="18" title="Secondary Form 6">Secondary Form 6</option>
+						</select>
+					</span>
+				</div>
+			</div>
+			<div class="bx-btn">
+				<div class="right">
+					<a href="#" class="btn btn-gray nextBtn">Next</a>
+					<a href="#" class="btn">Save</a>
+				</div>
+			</div>
+		</div>
+		<div class="tab-content" id="formDetail">
+			<h4 class="h4-tit">추가정보입력</h4>
+			<div class="bx-form bx-cols3">
+				<span class="form-th">Phone</span>
+				<span class="form-td"><input type="text" id=""></span>
+				<span class="form-th">Parent Contact</span>
+				<span class="form-td"><input type="text" id=""></span>
+				<span class="form-th">Parent E-mail</span>
+				<span class="form-td btn-in"><input type="text" id=""><button type="button" class="btn">Request</button></span>
+			</div>
+			<div class="bx-form bx-cols3">
+				<span class="form-th">Gender</span>
+				<span class="form-td">
+					<input type="radio" id="radio3-1" name="radio3" checked="checked">
+					<label for="radio3-1"><span class="icon"></span>Female</label>
+					<input type="radio" id="radio3-2" name="radio3">
+					<label for="radio3-2"><span class="icon"></span>Male</label>
+				</span>
+				<span class="form-th">School</span>
+				<span class="form-td"><input type="text" id=""></span>
+				<span class="form-th">Messenger</span>
+				<span class="form-td btn-in certify"><input type="text" id=""><span class="ico-certify">인증</span><button type="button" class="btn">Request</button></span>
+			</div>
+			<div class="bx-form bx-cols3">
+				<span class="form-th"><label for="inp3-4">Notice</span>
+				<span class="form-td">
+					<span class="select">
+						<select id="inp3-4">
+							<option value="1">Email</option>
+							<option value="2">Messenger</option>
+							<option value="3">Prefer not to receive</option>
+						</select>
+					</span>
+				</span>
+				<span class="form-th">Date of Birth</span>
+				<span class="form-td"><input type="text" id=""></span>
+				<span class="form-th">Attendance Code</span>
+				<span class="form-td btn-in certify"><input type="text" id=""><span class="ico-certify active">인증 완료</span><button type="button" class="btn">Check</button></span>
+			</div>
+			<div class="bx-form bx-cols3">
+				<span class="form-th"><label for="inp3-4">* Grade Promotion Month</span>
+				<span class="form-td">
+					<span class="select">
+						<select id="inp3-4">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+						</select>
+					</span>
+				</span>
+				<span class="form-th">Remarks</span>
+				<span class="form-td"><input type="text" id=""></span>
+				<span class="form-th">개인정보 활용 동의서 수집 여부</span>
+				<span class="form-td">
+					<input type="radio" id="radio4-1" name="radio4" checked="checked">
+					<label for="radio4-1"><span class="icon"></span>YES</label>
+					<input type="radio" id="radio4-2" name="radio4">
+					<label for="radio4-2"><span class="icon"></span>NO</label>
+				</span>
+			</div>
+			<div class="bx-form bx-cols3">
+				<span class="form-th">Address</span>
+				<span class="form-td colspan3"><input type="text" id=""></span>
+				<span class="form-th">Zip Code</span>
+				<span class="form-td"><input type="text" id=""></span>
+			</div>
+			<div class="bx-btn">
+				<div class="right">
+					<a href="#" class="btn btn-gray backBtn">Back</a>
+					<a href="#" class="btn">Save</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

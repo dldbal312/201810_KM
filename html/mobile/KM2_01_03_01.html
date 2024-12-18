@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+	<link rel="SHORTCUT ICON" href="../images/favicon.ico">
+	<title>Key&amp;Manager ver.2</title>
+	<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap-datetimepicker.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendors/fontawesome-all.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendors/jquery.mCustomScrollbar.css">
+	<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+	<script src="/js/vendors/jquery-ui.min.js"></script>
+	<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+	<script src="/js/vendors/moment.js"></script>
+	<script src="/js/vendors/bootstrap.min.js"></script>
+	<script src="/js/vendors/bootstrap-datetimepicker.min.js"></script>
+	
+	<!-- mobile 추가 -->
+	<link rel="stylesheet" type="text/css" href="/css/custom-mobile.css">
+	<script src="/js/vendors/jquery.touchSwipe.min.js"></script>
+	<script src="/js/custom-mobile.js"></script>
+</head>
+<body>
+<div class="wrapper">
+	<!-- menu bar -->
+	<div class="mHeader">
+		<div class="mHeader-contents-wrap">
+			<div class="mHeader-btn mHeader-allmenu">
+				<a href="#" class="slideout-button" data-selector="allMenu">ALL MENU</a>
+			</div>
+			<div class="mHeader-contents">
+				<div class="mHeader-btn mHeader-mymenu">
+					<a href="#" class="hidden-tablet no-link" data-selector="myMenu">MY MENU</a>
+				</div>
+				<div class="mHeader-btn mHeader-search">
+					<a href="#" class="hidden-desktop no-link" data-selector="search">SEARCH</a>
+				</div>
+			</div>
+			<div class="mHeader-btn mHeader-studentList">
+				<a href="#" class="slideout-button" data-selector="studentList">STUDENT LIST</a>
+			</div>
+		</div>
+	</div>
+	
+	<!-- my menu, search -->
+	<div class="mHeader-sub-wrap">
+		<div class="mHeader-sub-menu mymenu-slideout closed">
+			<div class="slideout-info-area">
+				<a href="#" class="slideout-btn bt-close">닫기</a>
+				<div class="user-info pl-0">
+					<span class="user-name">My menu<em class="ico-count ml-3">4</em></span>
+				</div>
+			</div>
+			<div class="box">
+				<ul class="list-custom btn-in">
+					<li><a href="#">Consultation</a><a href="#" class="ico-delete"><span class="sr-only">Delete</span></a></li>
+					<li><a href="#">Attendance</a><a href="#" class="ico-delete"><span class="sr-only">Delete</span></a></li>
+					<li><a href="#">Member</a><a href="#" class="ico-delete"><span class="sr-only">Delete</span></a></li>
+					<li><a href="#">Diagnostic test</a><a href="#" class="ico-delete"><span class="sr-only">Delete</span></a></li>
+				</ul>
+				<div class="recently-menu">
+					<div class="box">
+						<span class="tit">Recently used menu</span>
+						<ul class="list-custom list-inline btn-in">
+							<li><a href="">Answer book</a><a href="#" class="ico-add"><span class="sr-only">Add</span></a></li>
+							<li><a href="">Staff info </a><a href="#" class="ico-add"><span class="sr-only">Add</span></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="allmenu-list myMenuAdd-list">
+					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+						<div class="panel">
+							<div class="panel-heading" role="tab" id="headingMenuAdd">
+								<span class="panel-title"><a class="collapsed"><i class="ico-count cl-gray mr-3"></i>My menu add</a></span>
+							</div>
+							<div class="panel-collapse">
+								<div class="panel-body">
+									<ul class="list-custom btn-in">
+										<li><a href="#">Lead</a><a href="#" class="ico-add"><span class="sr-only">Add</span></a></li>
+										<li><a href="#">Progress</a><a href="#" class="ico-add"><span class="sr-only">Add</span></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="mHeader-sub-menu search-slideout closed">
+			<div class="search-form ">
+				<form class="form-group">
+					<input type="text" class="form-text"  placeholder="Search" id="tags" >
+					<a href="#" class="form-submit  bt-search">검색</a>
+					<a href="#" class="slideout-btn bt-close">닫기</a>
+				</form>
+			</div>
+			<div class="">
+				<div class="student-list">
+					<ul>
+						<li>
+							<span class="student-type enroll">입회</span>
+							<span class="student-name">HANHAN HAN(G00200365)</span>
+							<a class="student-menu collapsed" data-toggle="collapse" data-parent="#accordion" href="#st1" aria-expanded="false" aria-controls="st1"><i class="fas fa-caret-down"></i><span class="sr-only">menu</span></a>
+							<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+							<div id="st1" class="panel-collapse collapse" role="tabpanel">
+								<ul class="list-menu">
+									<li><a href="#">Consultation</a></li>
+									<li><a href="#">Trial</a></li>
+									<li><a href="#">DT</a></li>
+									<li><a href="#">Enroll</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<span class="student-type lead">가망</span>
+							<span class="student-name">HANHAN HAN(G00200365)</span>
+							<a class="student-menu collapsed" data-toggle="collapse" data-parent="#accordion" href="#st2" aria-expanded="false" aria-controls="st2"><i class="fas fa-caret-down"></i><span class="sr-only">menu</span></a>
+							<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+							<div id="st2" class="panel-collapse collapse" role="tabpanel">
+								<ul class="list-menu">
+									<li><a href="#">Consultation</a></li>
+									<li><a href="#">Trial</a></li>
+									<li><a href="#">DT</a></li>
+									<li><a href="#">Enroll</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- all menu -->
+	<div class="allmenu-slideout slideout">
+		<div class="slideout-info-area">
+			<a href="#" class="slideout-btn bt-close">닫기</a>
+			<a href="#" class="slideout-btn bt-prev-small">닫기</a>
+			<div class="user-info-wrap">
+				<div class="user-info">
+					<span class="user-name">Nebula, Karen Gillan</span>
+					<span class="user-code">(CN00000039)</span>
+				</div>
+				<div class="half-group">
+					<span class="left"><a href="#" class="bt-mypage">My page</a></span>
+					<span class="right"><a href="#" class="bt-logout">log-out</a></span>
+				</div>
+			</div>
+		</div>
+		<div class="allmenu-list">
+			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+			  <div class="panel">
+				<div class="panel-heading" role="tab" id="headingOne">
+				  <span class="panel-title member"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseMember" aria-expanded="false" aria-controls="collapseMember">Member</a></span>
+				</div>
+				<div id="collapseMember" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+				  <div class="panel-body">
+					<ul class="list-custom">
+						<li><a href="#">Lead</a></li>
+						<li><a href="#">Consultation</a></li>
+						<li><a href="#">Member</a></li>
+					</ul>
+				  </div>
+				</div>
+			  </div>
+			  <div class="panel">
+				<div class="panel-heading" role="tab" id="headingTwo">
+				  <span class="panel-title learning"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseLearning" aria-expanded="false" aria-controls="collapseLearning">Learning</a></span>
+				</div>
+				<div id="collapseLearning" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+				  <div class="panel-body">
+					<ul class="list-custom">
+						<li><a href="#">Schedule</a></li>
+						<li><a href="#">Attendance</a></li>
+						<li><a href="#">Progress</a></li>
+						<li><a href="#">Diagnostic Test</a></li>
+						<li><a href="#">Test result</a></li>
+						<li><a href="#">Booklet management</a></li>
+					</ul>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- my student -->
+	<div  class="studentList-slideout slideout">
+		<div class="slideout-info-area">
+			<a href="#" class="slideout-btn bt-prev-small">닫기</a>
+			<a href="#" class="slideout-btn bt-close">닫기</a>
+			<div class="user-info">
+				<span class="user-name">My student</span>
+			</div>
+		</div>
+		<div class="col-md-12 py-2">
+			<div class="pull-left total">
+				Total 20
+			</div>
+			<div class="pull-right form-inline ">
+				<select class="form-control ">
+					<option value="" selected>Name</option>
+				</select>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+		<div class="student-list">
+			<ul>
+				<li>
+					<span class="student-name">
+						HANHAN HAN(G00200365)
+					</span>
+					<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+				</li>
+				<li>
+					<span class="student-name">
+						HANHAN HAN(G00200365)
+					</span>
+					<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+				</li>
+				<li>
+					<span class="student-name">
+						HANHAN HAN(G00200365)
+					</span>
+					<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+				</li>
+				<li>
+					<span class="student-name">
+						HANHAN HAN(G00200365)
+					</span>
+					<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="main-content" role="main">
+		<div class="page-info left">
+			<h1>Message</h1>
+		</div>
+		<div class="menu-sub  sizefixed-3">
+			<ul>
+				<li class="all active"><a href="#"><span class="ico all"></span>All</a></li>
+				<li class="favorite"><a href="#"><span class="ico favorite"></span>Favorite</a></li>
+				<li class="recent"><a href="#"><span class="ico recent"></span>Recent</a></li>
+			</ul>
+		</div>
+		<div class="message-wrap leader">
+			<div class="top-btns">
+				<a href="#msgSort" data-toggle="modal" class="btn btn-default btn-sm round"><i class="fas fa-filter"></i>Category</a>
+			</div>
+			<div class="message-list">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="lists">
+							<dl class="type1">
+								<dt>Result of Learning 01</dt>
+								<dd>
+									<div>
+										Hello, Eye Level English. It is the result of your study on March 3.
+									</div>
+								</dd>
+							</dl>
+							<div class="top">
+								<button class="bookmark" type="button"><i class="fas fa-star"></i><i class="far fa-star"></i></button>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="lists">
+							<dl class="type2">
+								<dt>Result of Learning 01</dt>
+								<dd>
+									<div>
+										Hello, Eye Level English. It is the result of your study on March 3.
+									</div>
+								</dd>
+							</dl>
+							<div class="top">
+								<button class="bookmark" type="button"><i class="fas fa-star"></i><i class="far fa-star"></i></button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="lists">
+							<dl class="type3">
+								<dt>Result of Learning 01</dt>
+								<dd>
+									<div>
+										Hello, Eye Level English. It is the result of your study on March 3.
+									</div>
+								</dd>
+							</dl>
+							<div class="top">
+								<button class="bookmark" type="button"><i class="fas fa-star"></i><i class="far fa-star"></i></button>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="lists">
+							<dl class="type4">
+								<dt>Result of Learning 01</dt>
+								<dd>
+									<div>
+										Hello, Eye Level English. It is the result of your study on March 3.
+									</div>
+								</dd>
+							</dl>
+							<div class="top">
+								<button class="bookmark" type="button"><i class="fas fa-star"></i><i class="far fa-star"></i></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+	</div>
+
+	<div class="slideout-overlay"></div>
+</div>
+<!-- message sorting -->
+<div class="modal fade mobile-only modules-alert" id="msgSort" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-md" role="document">
+	<div class="modal-content message-modal">
+		<div class="modal-header">
+			<h1 class="tit">CATERGORY</h1>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		</div>
+		<div class="modal-body">
+			<span class="check-group">
+				<span class="checkbox inline type0">
+					<input type="checkbox" id="type0000" value="option1" name="types1" checked="checked">
+					<label for="type0000">All</label>
+				</span>
+				<span class="checkbox inline type1">
+					<input type="checkbox" id="type1111" value="option1" name="types1">
+					<label for="type1111">Tuition</label>
+				</span>
+				<span class="checkbox inline type2">
+					<input type="checkbox" id="type2222" value="option2" name="types1">
+					<label for="type2222">Learning</label>
+				</span>
+				<span class="checkbox inline type3">
+					<input type="checkbox" id="type3333" value="option2" name="types1">
+					<label for="type3333">Attendance</label>
+				</span>
+				<span class="checkbox inline type4">
+					<input type="checkbox" id="type4444" value="option2" name="types1">
+					<label for="type4444">Etc</label>
+				</span>
+			</span>
+		</div>
+		<div class="modal-footer">
+			<button type="button" class="btn btn-primary btn-lg">OK</button>
+		</div>
+	</div>
+  </div>
+</div>
+<!--// progress Setting -->
+</body>
+</html>

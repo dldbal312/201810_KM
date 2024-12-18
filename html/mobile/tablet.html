@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+	<link rel="SHORTCUT ICON" href="/images/favicon.ico">
+	<title>Key&amp;Manager ver.2</title>
+	<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap-datetimepicker.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendors/fontawesome-all.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendors/jquery.mCustomScrollbar.css">
+	<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+	<script src="/js/vendors/jquery-ui.min.js"></script>
+	<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+	<script src="/js/vendors/moment.js"></script>
+	<script src="/js/vendors/bootstrap.min.js"></script>
+	<script src="/js/vendors/bootstrap-datetimepicker.min.js"></script>
+	
+	<!-- mobile 추가 -->
+	<link rel="stylesheet" type="text/css" href="/css/mobile-layout.css">
+	<link rel="stylesheet" type="text/css" href="/css/custom.css">
+	<script src="/js/vendors/jquery.touchSwipe.min.js"></script>
+	<script src="/js/custom-mobile.js"></script>
+	<script src="/js/custom.js"></script>
+</head>
+<body>
+<div class="wrapper">
+	<!-- menu bar -->
+	<div class="mHeader">
+		<div class="mHeader-contents-wrap">
+			<div class="mHeader-btn mHeader-allmenu">
+				<a href="#" class="slideout-button" data-selector="allMenu">ALL MENU</a>
+			</div>
+			<div class="mHeader-contents">
+				<div class="mHeader-btn mHeader-mymenu">
+					<a href="#" class="hidden-tablet no-link" data-selector="myMenu">MY MENU</a>
+				</div>
+				<div class="mHeader-btn mHeader-search">
+					<a href="#" class="hidden-desktop no-link" data-selector="search">SEARCH</a>
+				</div>
+			</div>
+			<div class="mHeader-btn mHeader-studentList">
+				<a href="#" class="slideout-button" data-selector="studentList">STUDENT LIST</a>
+			</div>
+		</div>
+	</div>
+	
+	<!-- my menu, search -->
+	<div class="mHeader-sub-wrap">
+		<div class="mHeader-sub-menu mymenu-slideout closed">
+			<div class="slideout-info-area">
+				<a href="#" class="slideout-btn bt-close">닫기</a>
+				<div class="user-info pl-0">
+					<span class="user-name">My menu<em class="ico-count ml-3">4</em></span>
+				</div>
+			</div>
+			<div class="box">
+				<ul class="list-custom btn-in">
+					<li><a href="#">Consultation</a><a href="#" class="ico-delete"><span class="sr-only">Delete</span></a></li>
+					<li><a href="#">Attendance</a><a href="#" class="ico-delete"><span class="sr-only">Delete</span></a></li>
+					<li><a href="#">Member</a><a href="#" class="ico-delete"><span class="sr-only">Delete</span></a></li>
+					<li><a href="#">Diagnostic test</a><a href="#" class="ico-delete"><span class="sr-only">Delete</span></a></li>
+				</ul>
+				<div class="recently-menu">
+					<div class="box">
+						<span class="tit">Recently used menu</span>
+						<ul class="list-custom list-inline btn-in">
+							<li><a href="">Answer book</a><a href="#" class="ico-add"><span class="sr-only">Add</span></a></li>
+							<li><a href="">Staff info </a><a href="#" class="ico-add"><span class="sr-only">Add</span></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="allmenu-list myMenuAdd-list">
+					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+						<div class="panel">
+							<div class="panel-heading" role="tab" id="headingMenuAdd">
+								<span class="panel-title"><a class="collapsed"><i class="ico-count cl-gray mr-3"></i>My menu add</a></span>
+							</div>
+							<div class="panel-collapse">
+								<div class="panel-body">
+									<ul class="list-custom btn-in">
+										<li><a href="#">Lead</a><a href="#" class="ico-add"><span class="sr-only">Add</span></a></li>
+										<li><a href="#">Progress</a><a href="#" class="ico-add"><span class="sr-only">Add</span></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="mHeader-sub-menu search-slideout closed">
+			<div class="search-form ">
+				<form class="form-group">
+					<input type="text" class="form-text"  placeholder="Search" id="tags" >
+					<a href="#" class="form-submit  bt-search">검색</a>
+					<a href="#" class="slideout-btn bt-close">닫기</a>
+				</form>
+			</div>
+			<div class="">
+				<div class="student-list">
+					<ul>
+						<li>
+							<span class="student-type enroll">입회</span>
+							<span class="student-name">HANHAN HAN(G00200365)</span>
+							<a class="student-menu" data-toggle="collapse" data-parent="#accordion" href="#st1" aria-expanded="false" aria-controls="st1"><i class="fas fa-caret-down"></i><span class="sr-only">menu</span></a>
+							<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+							<div id="st1" class="panel-collapse collapse" role="tabpanel">
+								<ul class="list-menu">
+									<li><a href="#">Consultation</a></li>
+									<li><a href="#">Trial</a></li>
+									<li><a href="#">DT</a></li>
+									<li><a href="#">Enroll</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<span class="student-type lead">가망</span>
+							<span class="student-name">HANHAN HAN(G00200365)</span>
+							<a class="student-menu" data-toggle="collapse" data-parent="#accordion" href="#st2" aria-expanded="false" aria-controls="st2"><i class="fas fa-caret-down"></i><span class="sr-only">menu</span></a>
+							<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+							<div id="st2" class="panel-collapse collapse" role="tabpanel">
+								<ul class="list-menu">
+									<li><a href="#">Consultation</a></li>
+									<li><a href="#">Trial</a></li>
+									<li><a href="#">DT</a></li>
+									<li><a href="#">Enroll</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- all menu -->
+	<div class="allmenu-slideout slideout">
+		<div class="slideout-info-area">
+			<a href="#" class="slideout-btn bt-close">닫기</a>
+			<a href="#" class="slideout-btn bt-prev-small">닫기</a>
+			<div class="user-info-wrap">
+				<div class="user-info">
+					<span class="user-name">Nebula, Karen Gillan</span>
+					<span class="user-code">(CN00000039)</span>
+				</div>
+				<div class="half-group">
+					<span class="left"><a href="#" class="bt-mypage">My page</a></span>
+					<span class="right"><a href="#" class="bt-logout">log-out</a></span>
+				</div>
+			</div>
+		</div>
+		<div class="allmenu-list">
+			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+			  <div class="panel">
+				<div class="panel-heading" role="tab" id="headingOne">
+				  <span class="panel-title member"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseMember" aria-expanded="false" aria-controls="collapseMember">Member</a></span>
+				</div>
+				<div id="collapseMember" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+				  <div class="panel-body">
+					<ul class="list-custom">
+						<li><a href="#">Lead</a></li>
+						<li><a href="#">Consultation</a></li>
+						<li><a href="#">Member</a></li>
+					</ul>
+				  </div>
+				</div>
+			  </div>
+			  <div class="panel">
+				<div class="panel-heading" role="tab" id="headingTwo">
+				  <span class="panel-title learning"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseLearning" aria-expanded="false" aria-controls="collapseLearning">Learning</a></span>
+				</div>
+				<div id="collapseLearning" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+				  <div class="panel-body">
+					<ul class="list-custom">
+						<li><a href="#">Schedule</a></li>
+						<li><a href="#">Attendance</a></li>
+						<li><a href="#">Progress</a></li>
+						<li><a href="#">Diagnostic Test</a></li>
+						<li><a href="#">Test result</a></li>
+						<li><a href="#">Booklet management</a></li>
+					</ul>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- my student -->
+	<div  class="studentList-slideout slideout">
+		<div class="slideout-info-area">
+			<a href="#" class="slideout-btn bt-prev-small">닫기</a>
+			<a href="#" class="slideout-btn bt-close">닫기</a>
+			<div class="user-info">
+				<span class="user-name">My student</span>
+			</div>
+		</div>
+		<div class="col-md-12 py-2">
+			<div class="pull-left total">
+				Total 20
+			</div>
+			<div class="pull-right form-inline ">
+				<select class="form-control ">
+					<option value="" selected>Name</option>
+				</select>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+		<div class="student-list">
+			<ul>
+				<li>
+					<span class="student-name">
+						HANHAN HAN(G00200365)
+					</span>
+					<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+				</li>
+				<li>
+					<span class="student-name">
+						HANHAN HAN(G00200365)
+					</span>
+					<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+				</li>
+				<li>
+					<span class="student-name">
+						HANHAN HAN(G00200365)
+					</span>
+					<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+				</li>
+				<li>
+					<span class="student-name">
+						HANHAN HAN(G00200365)
+					</span>
+					<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="main-content" role="main">
+		<div class="page-info center">
+			<h1>PROGRESS</h1>
+		</div>
+		<div class="pc-data">
+			<div class="container-fluid">
+				<div class="col-md-12 progress-container">
+					<h3>Progress</h3>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="progress-info list-inline">
+								<span id="memNm" class="member-name">Ken.Song</span>
+								<span id="memId" class="member-id">(K00031023) </span>
+								<a role="button" class="btn btn-default py-2 mr-3"><i class="far fa-edit"></i></a>
+								<ul class="fas-group">
+									<li><i class="fas fa-book"></i> <span class="subj-tit">Subject  : </span><span id="subjNm" class="subj-txt">EL Eng</span></li>
+									<li><i class="far fa-dot-circle"></i> <span class="subj-tit">Grade : </span><span id="grdNm" class="subj-txt">Primary Standard 4</span></li>
+									<li><i class="fas fa-bookmark"></i> <span class="subj-tit">Max Bookets/Week : </span><span id="stdySetCnt" class="subj-txt">6</span></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<span class="list-toggle">
+								<input type="radio" id="radio1-1" name="radio1" checked="checked"><label for="radio1-1"><span class="icon"></span>Standard</label>
+								<input type="radio" id="radio1-2" name="radio1"><label for="radio1-2"><span class="icon"></span>Manual</label>
+							</span>
+						</div>
+					</div>
+					<div class="row mt-3">
+						<div class="col-md-12">
+							<h4>Progress history <a role="button" class="btn btn-default py-2 ml-2"><i class="fas fa-sync-alt"></i></a></h4>
+							<div class="booklet-tab">
+								<ul class="nav" role="tablist">
+									<li role="presentation" class="active"><a href="#tab1" aria-controls="#tab1" role="tab" data-toggle="tab">Old booklet</a></li>
+									<li role="presentation"><a href="#tab2" aria-controls="#tab2" role="tab" data-toggle="tab">New booklet</a></li>
+								</ul>
+								<div class="tab-wrap">
+									<div class="tab-content">
+										<div role="tabpanel" class="tab-pane" id="tab1">
+												
+										</div>
+										<div role="tabpanel" class="tab-pane" id="tab2">
+											<span class="list-toggle mr-0">
+												<input type="radio" id="radio2-1" name="radio2" checked="checked"><label for="radio2-1"><span class="icon"></span>USING</label>
+												<input type="radio" id="radio2-2" name="radio2"><label for="radio2-2"><span class="icon"></span>NO USING</label>
+											</span>
+											<div class="form-group form-inline mt-1">
+												<select class="form-control input-sm">
+													<option value="">WB</option>
+												</select>
+												<select class="form-control input-sm">
+													<option value="">w1</option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>			
+						<div class="col-md-12">
+							<div class="progress-closing-date">
+								Closing Date: <span>2019/02/15</span>
+							</div>
+							<ul class="progress-period-list mt-2 mb-3">
+								<li class="all">
+									<span class="pull-left mt-1"><i class="fas fa-th"></i></span><!-- 180628_수정 [class 변경] -->
+									<div class="text">
+										<!-- 180620_수정 [change-period class 추가] -->
+										<span>Progress Period<a href="#" class="change-period ml-1"><input type="hidden" id="selected-month" /><i class="far fa-edit"></i><span class="hide">Change period</span></a></span>
+										<span id="progressPeriod" class="period-week">2019/02/01-02/28</span>
+									</div>
+								</li>
+								<li class="week active">
+									<span class="pull-left"><i class="fas fa-pencil-alt"></i></span>
+									<div class="text">
+										<span>W1</span>
+										<span id="progressPeriod" class="period-week">02/ 04,06,08</span>
+									</div>
+								</li>
+								<li class="week">
+									<span class="pull-left"><i class="fas fa-pencil-alt"></i></span>
+									<div class="text">
+										<span>W2</span>
+										<span id="progressPeriod" class="period-week">02/ 04,06,08</span>
+									</div>
+								</li>
+								<li class="week">
+									<span class="pull-left"><i class="fas fa-pencil-alt"></i></span>
+									<div class="text">
+										<span>W3</span>
+										<span id="progressPeriod" class="period-week">02/ 04,06,08</span>
+									</div>
+								</li>
+								<li class="week">
+									<span class="pull-left"><i class="fas fa-pencil-alt"></i></span>
+									<div class="text">
+										<span>W4</span>
+										<span id="progressPeriod" class="period-week">02/ 04,06,08</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="col-md-12">
+							<!-- 180620_수정 [BTM, CTM 영역 분리] -->
+							<div class="edit-week">
+								<!-- 180725_수정 -->
+								<p class="txts">
+									<span class="tx-blue" id="stdySetCntTemp">0</span> / <span class="stdySetCntSpan">6</span>
+									<span class="btn-x"><a role="button" id="btn-deletet-all-setlist"><i class="far fa-times-circle"></i></a></span>
+								</p>
+								<!-- // 180725_수정 -->
+								<div class="edit-week-box">
+									<span class="lb-txt mr-3">BTM</span>
+									<span class="alert alert-info" role="alert">04/04<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></span>
+									<span class="alert alert-info" role="alert">04/06<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></span>
+									<span class="alert alert-info" role="alert">04/08<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></span>
+								</div>
+								<div class="edit-week-box">
+									<span class="lb-txt mr-3">CTM</span>
+									<span class="alert alert-info" role="alert">04/04<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></span>
+									<span class="alert alert-info" role="alert">04/06<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></span>
+									<span class="alert alert-info" role="alert">04/08<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></span>
+									<span class="alert alert-info" role="alert">04/04<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></span>
+									<span class="alert alert-info" role="alert">04/06<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></span>
+									<span class="alert alert-info" role="alert">04/08<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></span>
+								</div>	
+							</div>
+							<!-- // 180620_수정 [BTM, CTM 영역 분리] -->
+						</div>
+						<div class="col-md-12">
+							<div class="bx-table progress-overview">
+								<div class="tb-dimm"><span class="txts">Fetching data...</span></div>
+								<div class="" id="dragConts">
+									<div class="progress-area">
+										<div class="progress-area-info">
+											<div class="form-inline">
+												<div class="form-group mr-3">
+													<span>Level</span>		
+													<select name="prgStsCd" class="form-control input-sm ml-1">
+														<option value="">01</option>
+													</select>
+												</div>
+												<div class="form-group ml-3">
+													<span class="bold">BTM</span>
+													<div class="input-group ml-1">
+														<input type="text" class="form-control input-sm clearable" maxlength="15" placeholder="Search model" />
+														<div class="input-group-btn">
+															<button type="button" class="btn btn-search"><span class="fas fa-search"></span><span class="hide">Search</span></button>
+														</div>
+													</div>
+												</div>
+												<div class="pull-right my-1"><!-- 180620_수정 [my-1로 변경 ] -->
+													<!-- 180620_수정 [LP추가] -->
+													<span>SP: <span>0101</span></span> | 
+													<span class="mr-2">LP: <span>0102</span></span>
+													<!-- // 180620_수정 [LP추가] -->
+													<button type="button" class="btn"><span class="far fa-edit"></span><span class="hide">Edit SP</span></button>
+												</div>
+											</div>
+										</div>
+										<!--  180620_수정 [tooltip 영역 삭제 table 공통 적용] -->
+										<table class="progress-area-header">
+											<colgroup>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+											</colgroup>
+											<tbody>
+												<tr>
+													<td colspan="3">Information text is quite long</td>
+													<td>Information text is quite long</td>
+													<td colspan="2">Information text is quite long</td>
+													<td>Information text is quite long</td>
+													<td>Information text is quite long</td>
+													<td colspan="8">Information text is quite long</td>
+													<td>Information text is quite long</td>
+													<td>Information text is quite long</td>
+												</tr>
+												<tr>
+													<td>1</td>
+													<td>2</td>
+													<td>3</td>
+													<td>4</td>
+													<td>5</td>
+													<td>6</td>
+													<td>7</td>
+													<td>8</td>
+													<td>9</td>
+													<td>10</td>
+													<td>11</td>
+													<td>12</td>
+													<td>13</td>
+													<td>14</td>
+													<td>15</td>
+													<td>16</td>
+													<td>17</td>
+													<td>18</td>
+												</tr>
+											</tbody>
+										</table>
+										<table class="progress-area-body">
+											<colgroup>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+											</colgroup>
+											<tbody>
+												<tr data-modules='drag-rows' class="row1">
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+												</tr>
+												<tr data-modules='drag-rows' class="row2">
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+												</tr>
+												<tr data-modules='drag-rows' class="row3">
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<div class="progress-area last">
+										<div class="progress-area-info">
+											<div class="form-inline">
+												<div class="form-group mr-3">
+													<span>Level</span>		
+													<select name="prgStsCd" class="form-control input-sm ml-1">
+														<option value="">01</option>
+													</select>
+												</div>
+												<div class="form-group ml-3">
+													<span class="bold">CTM</span>
+													<div class="input-group  ml-1">
+														<input type="text" class="form-control input-sm clearable" maxlength="15" placeholder="Search model" />
+														<div class="input-group-btn">
+															<button type="button" class="btn btn-search"><span class="fas fa-search"></span><span class="hide">Search</span></button>
+														</div>
+													</div>
+												</div>
+												<div class="pull-right my-1"><!-- 180620_수정 [my-1로 변경 ] -->
+													<!-- 180620_수정 [LP추가] -->
+													<span>SP: <span>0101</span></span> | 
+													<span class="mr-2">LP: <span>0102</span></span>
+													<!-- // 180620_수정 [LP추가] -->
+													<button type="button" class="btn"><span class="far fa-edit"></span><span class="hide">Edit SP</span></button>
+												</div>
+											</div>
+										</div>
+										<table class="progress-area-header">
+											<colgroup>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+											</colgroup>
+											<tbody>
+												<tr>
+													<td colspan="3">Information text is quite long</td>
+													<td>Information text is quite long</td>
+													<td colspan="2">Information text is quite long</td>
+													<td>Information text is quite long</td>
+													<td>Information text is quite long</td>
+													<td>Information text is quite long</td>
+													<td>Information text is quite long</td>
+													<td>Information text is quite long</td>
+													<td>Information text is quite long</td>
+													<td>Information text is quite long</td>
+												</tr>
+												<tr>
+													<td>19</td>
+													<td>20</td>
+													<td>21</td>
+													<td>22</td>
+													<td>23</td>
+													<td>24</td>
+													<td>25</td>
+													<td>26</td>
+													<td>27</td>
+													<td>28</td>
+													<td>29</td>
+													<td>30</td>
+													<td>31</td>
+												</tr>
+											</tbody>
+										</table>
+										<table class="progress-area-body">
+											<colgroup>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+												<col/>
+											</colgroup>
+											<tbody>
+												<tr data-modules='drag-rows' class="row1">
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+												</tr>
+												<tr data-modules='drag-rows' class="row2">
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+												</tr>
+												<tr data-modules='drag-rows' class="row3">
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12 mt-3">
+							<div class="pull-right">
+								<a href="#" class="btn btn-primary mr-3">Save</a>
+								<a href="#" class="btn btn-success">List</a>
+							</div>
+							<ul class="list-inline pull-left mt-2 progress-line">
+								<li>
+									<div class="period past-period arrow"></div>
+									<span class="txts">Past Period</span>
+								</li>
+								<li>
+									<div class="period this-period arrow"></div>
+									<span class="txts">This Period</span>
+								<li>
+									<div class="period next-period arrow"></div>
+									<span class="txts">Next Period</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="test-results">
+						<button type="button" id="testResultBtn" class="btn btn-success sidebar-btn"><i class="fas fa-chevron-left"></i>Test Results</button>
+						<div class="test-result-collapse" id="testResultCollapse">
+							<button type="button" id="testResultClose" class="btn btn-success sidebar-btn"><i class="fas fa-chevron-right"></i>Test Results History</button>
+							<div class="wrapper">
+								<h4>Recent 30days<i class="fas fa-angle-double-right ml-2"></i></h4>
+								<div class="bx-table mt-2">
+									<div class="tb-dimm"><span class="txts">Fetching data...</span></div>
+									<div class="y-scroll auto">
+										<table class="table table-bordered">
+											<thead>
+												<tr>
+													<th scope="col" rowspan="2">Date</th>
+													<th scope="col" rowspan="2">Category</th>
+													<th scope="col" rowspan="2">Booklet</th>
+													<th scope="col" colspan="2">Result</th>
+												</tr>
+												<tr>
+													<th scope="col">SCT</th>
+													<th scope="col">SAR</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>01/02</td>
+													<td>BTM</td>
+													<td>05  / 10</td>
+													<td>
+														<span class="percent">90%</span>
+														<span class="score">(90/100)</span>
+													</td>
+													<td>
+														<span class="percent">PASS</span>
+														<span class="score">(80s)</span>
+													</td>
+												</tr>
+												<tr>
+													<td>01/02</td>
+													<td>BTM</td>
+													<td>05  / 10</td>
+													<td>
+														<span class="percent">90%</span>
+														<span class="score">(90/100)</span>
+													</td>
+													<td>
+														<span class="percent">FAIL</span>
+														<span class="score">(80s)</span>
+													</td>
+												</tr>
+												<tr>
+													<td>01/02</td>
+													<td>BTM</td>
+													<td>05  / 10</td>
+													<td>
+														<span class="percent">90%</span>
+														<span class="score">(90/100)</span>
+													</td>
+													<td>
+														<span class="percent">PASS</span>
+														<span class="score">(80s)</span>
+													</td>
+												</tr>
+												<tr>
+													<td>01/02</td>
+													<td>BTM</td>
+													<td>05  / 10</td>
+													<td>
+														<span class="percent">90%</span>
+														<span class="score">(90/100)</span>
+													</td>
+													<td>
+														<span class="percent">FAIL</span>
+														<span class="score">(80s)</span>
+													</td>
+												</tr>
+												<tr>
+													<td>01/02</td>
+													<td>BTM</td>
+													<td>05  / 10</td>
+													<td>
+														<span class="percent">90%</span>
+														<span class="score">(90/100)</span>
+													</td>
+													<td>
+														<span class="percent">PASS</span>
+														<span class="score">(80s)</span>
+													</td>
+												</tr>
+												<tr>
+													<td>01/02</td>
+													<td>BTM</td>
+													<td>05  / 10</td>
+													<td>
+														<span class="percent">90%</span>
+														<span class="score">(90/100)</span>
+													</td>
+													<td>
+														<span class="percent">FAIL</span>
+														<span class="score">(80s)</span>
+													</td>
+												</tr>
+												<tr>
+													<td>01/02</td>
+													<td>BTM</td>
+													<td>05  / 10</td>
+													<td>
+														<span class="percent">90%</span>
+														<span class="score">(90/100)</span>
+													</td>
+													<td>
+														<span class="percent">PASS</span>
+														<span class="score">(80s)</span>
+													</td>
+												</tr>
+												<tr>
+													<td>01/02</td>
+													<td>BTM</td>
+													<td>05  / 10</td>
+													<td>
+														<span class="percent">90%</span>
+														<span class="score">(90/100)</span>
+													</td>
+													<td>
+														<span class="percent">FAIL</span>
+														<span class="score">(80s)</span>
+													</td>
+												</tr>
+												<tr>
+													<td>01/02</td>
+													<td>BTM</td>
+													<td>05  / 10</td>
+													<td>
+														<span class="percent">90%</span>
+														<span class="score">(90/100)</span>
+													</td>
+													<td>
+														<span class="percent">PASS</span>
+														<span class="score">(80s)</span>
+													</td>
+												</tr>
+												<tr>
+													<td>01/02</td>
+													<td>BTM</td>
+													<td>05  / 10</td>
+													<td>
+														<span class="percent">90%</span>
+														<span class="score">(90/100)</span>
+													</td>
+													<td>
+														<span class="percent">FAIL</span>
+														<span class="score">(80s)</span>
+													</td>
+												</tr>
+												<tr>
+													<td>01/02</td>
+													<td>BTM</td>
+													<td>05  / 10</td>
+													<td>
+														<span class="percent">90%</span>
+														<span class="score">(90/100)</span>
+													</td>
+													<td>
+														<span class="percent">PASS</span>
+														<span class="score">(80s)</span>
+													</td>
+												</tr>
+												<tr>
+													<td>01/02</td>
+													<td>BTM</td>
+													<td>05  / 10</td>
+													<td>
+														<span class="percent">90%</span>
+														<span class="score">(90/100)</span>
+													</td>
+													<td>
+														<span class="percent">FAIL</span>
+														<span class="score">(80s)</span>
+													</td>
+												</tr>
+												<tr>
+													<td>01/02</td>
+													<td>BTM</td>
+													<td>05  / 10</td>
+													<td>
+														<span class="percent">90%</span>
+														<span class="score">(90/100)</span>
+													</td>
+													<td>
+														<span class="percent">FAIL</span>
+														<span class="score">(80s)</span>
+													</td>
+												</tr>
+												<tr>
+													<td>01/02</td>
+													<td>BTM</td>
+													<td>05  / 10</td>
+													<td>
+														<span class="percent">90%</span>
+														<span class="score">(90/100)</span>
+													</td>
+													<td>
+														<span class="percent">FAIL</span>
+														<span class="score">(80s)</span>
+													</td>
+												</tr>
+												<tr>
+													<td>01/02</td>
+													<td>BTM</td>
+													<td>05  / 10</td>
+													<td>
+														<span class="percent">90%</span>
+														<span class="score">(90/100)</span>
+													</td>
+													<td>
+														<span class="percent">FAIL</span>
+														<span class="score">(80s)</span>
+													</td>
+												</tr>
+												<tr>
+													<td>01/02</td>
+													<td>BTM</td>
+													<td>05  / 10</td>
+													<td>
+														<span class="percent">90%</span>
+														<span class="score">(90/100)</span>
+													</td>
+													<td>
+														<span class="percent">FAIL</span>
+														<span class="score">(80s)</span>
+													</td>
+												</tr>
+												<tr>
+													<td>01/02</td>
+													<td>BTM</td>
+													<td>05  / 10</td>
+													<td>
+														<span class="percent">90%</span>
+														<span class="score">(90/100)</span>
+													</td>
+													<td>
+														<span class="percent">FAIL</span>
+														<span class="score">(80s)</span>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="slideout-overlay"></div>
+</div>
+
+<div class="modal fade mobile-only" id="myStudentModal" tabindex="-1" role="dialog">
+	<div class="modal-dialog modal-sm" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			</div>
+			<div class="modal-body">
+				<ul class="list-custom before-none ml-3">
+					<li><a href="#">info</a></li>
+					<li><a href="#">Register Schedule</a></li>
+					<li><a href="#">채점</a></li>
+					<li><a href="#">Payment</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+<style>
+	.active-td{background:#f00;}
+	/* .progress-area-body td{border:1px solid red;} */
+	#tart, #end, #move{display: inline-block;border:1px solid red;}
+	#dragConts{overflow-x:auto;}
+</style>
+<div class="overlay"></div>
+<script src="/js/custom.js"></script>
+<script>
+
+
+	var DragSchedule = (function(){
+		var wrap = $('#dragConts'),
+			tables = wrap.find('.progress-area-body'),
+			scrollInterval = null,
+			elems = [],
+			elemWidth,
+			deviceWidth = $(window).width(),
+			division = 6,
+			padding,
+			firstEl,
+			move = 2,
+			interval = 10,
+			delay = 300,
+			moveTimeout = null,
+			moveInverval = null;
+
+		
+		var init = function (){
+			bindEvent();
+		}
+
+		var bindEvent = function(){
+			wrap.on('touchstart mousedown', function(e){
+				var $this = $(this);
+				var deviceWidth = $(window).width();
+				var first = deviceWidth / division;
+				var last = first * (division-1);
+				var scrollPos = $this.scrollLeft();
+				var screenX = (e.type === 'touchstart') ? e.originalEvent.touches[0].pageX : e.pageX ;
+				scrollPosition(screenX);
+
+				firstEl = $(e.target);
+				$('#tart').text(e.type)
+				padding = wrap.offset().left;
+				if (firstEl.parent('tr').data('modules') !== 'drag-rows') return false;
+				if(firstEl.hasClass('period')){
+					firstEl.removeClass('period')
+					checkDisable(firstEl)
+				}else{
+					firstEl.addClass('period')
+					checkEnable(firstEl)
+				}
+				setArray($this, firstEl);
+
+				e.preventDefault();
+        		e.stopPropagation();
+				$this.on('mousemove touchmove', function(e){
+					var evTypes = e.type;
+					var pointerX;
+					var posX;
+					var el;
+					e.preventDefault();
+        			e.stopPropagation();
+					if ( evTypes === 'mousemove' ) {
+						pointerX = e;
+					}else if( evTypes === 'touchmove' ){
+						pointerX = e.originalEvent.touches[0];
+					}
+					$('#move').text(evTypes);
+					scrollStop();
+					scrollPosition(pointerX.pageX);
+					drowScheduleLists(pointerX.pageX)
+					return false;
+				})
+				return false;
+			});
+			wrap.on('mouseup touchend', function(e){
+				$('#end').text(e.type)
+				$(this).off('mousemove touchmove');
+				scrollStop()
+			});
+		}
+
+		var setArray = function (el, lists) {
+			elems = [];
+			var elem = el;
+			var target  = lists;
+			var sortElems = target.parent().attr('class');
+			defaultWidth = lists.width();
+			$('.'+sortElems).each(function(e){
+				var $this = $(this);
+				elems.push($this.find('td'))
+			});
+			// console.log(elems)
+			// machElements();
+		};
+		var machElements = function (posX) {
+			var pagex = posX, i, j, pos, machTarget;
+			for ( i = 0 ; i < elems.length ; i+=1){
+				for ( j = 0 ; j < elems[i].length ; j+=1){
+					pos = elems[i][j].offsetLeft;
+					if ( pagex >= pos && (pos + defaultWidth) >= pagex ){
+						machTarget = elems[i][j];
+						break;
+					}
+				}
+			};
+			return machTarget;
+		}
+		var drowScheduleLists = function(pointerX){
+			posX = parseInt(wrap.scrollLeft() + pointerX - padding)
+			el = machElements(posX);
+			if (firstEl[0] !== el){
+				if($(el).hasClass('period')){
+					$(el).removeAttr('class')
+					checkDisable($(el))
+				}else{
+					$(el).addClass('period')
+					checkEnable($(el))
+				}
+				firstEl = $(el);
+			}
+			
+		}
+		var scrollPosition = function(screenX){
+			if (moveTimeout!= null || moveInverval != null ) return false;
+			var screenX = screenX 
+			var first = deviceWidth / division;
+			var last = first * (division-1);
+			$('#move').text('move')
+			if ( first > screenX ){
+				scrollLeftMove(screenX);
+			} else if (last < screenX){
+				scrollRightMove(screenX)
+			}
+		}
+		var scrollLeftMove = function(screenX){
+			var scr = wrap.scrollLeft()
+			moveTimeout = setTimeout(function(){
+				moveInverval = setInterval(function(){
+					scr = wrap.scrollLeft()
+					if (!scr) scrollStop();
+					// console.log('prev')
+					drowScheduleLists(screenX)
+					wrap.scrollLeft(scr-=move)
+				}, interval)
+			}, delay)
+		}
+		var scrollRightMove = function(screenX){
+			var scr = wrap.scrollLeft()
+			moveTimeout = setTimeout(function(){
+				moveInverval = setInterval(function(){
+					scr = wrap.scrollLeft()
+					if ( (wrap.width() + scr) === wrap[0].scrollWidth) scrollStop();
+					drowScheduleLists(screenX)
+					wrap.scrollLeft(scr+=move)
+					// console.log('next')
+				}, interval)
+			}, delay)
+		};
+		var scrollStop = function(){
+			if (moveTimeout !== null) {
+				clearTimeout(moveTimeout) 
+				moveTimeout = null;
+			}
+			if (moveInverval !== null) {
+				clearInterval(moveInverval) 
+				moveInverval = null;
+			}
+			$('#move').text('stop')
+
+		}
+		var checkEnable = function(el){
+			console.log(el)
+		}
+		var checkDisable = function(el){
+			console.log(el)
+		}
+		return {
+			_init : init
+		}
+	});
+	var scheduleLists = new DragSchedule();
+	scheduleLists._init();
+
+
+</script>
+</body>
+</html>

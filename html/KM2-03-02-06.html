@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<link rel="SHORTCUT ICON" href="/images/favicon.ico">
+<title>Key&amp;Manager ver.2</title>
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/fontawesome-all.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" type="text/css" href="/css/custom.css">
+<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+<script src="/js/vendors/jquery-ui.min.js"></script>
+<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+<script src="/js/vendors/moment.js"></script>
+<script src="/js/vendors/bootstrap.min.js"></script>
+<script src="/js/vendors/bootstrap-datetimepicker.min.js"></script>
+</head>
+<body class="nav-sm modal-open">
+<div class="modal fade in" id="modal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel5" style="display: block;">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel5">Invoice<small class="ml-2">SHekinah Francesca Louis (K30000718)</small></h4>
+			</div>
+			<div class="modal-body">
+				<div class="form_wizard_wrap">
+					<div class="form_wizard">
+						<ul class="list-unstyled wizard_steps anchor">
+							<li class="active"><a href="#step-1" role="tab" data-toggle="tab" aria-controls="step-1" aria-expanded="true"><span class="step_name text-right">Invoice</span></a></li>
+							<li><a href="#step-2" role="tab" data-toggle="tab" aria-controls="step-2" aria-expanded="false"><span class="step_name text-right">Send</span></a></li>
+							<li><a href="#step-3" role="tab" data-toggle="tab" aria-controls="step-3" aria-expanded="false"><span class="step_name text-right">History</span></a></li>
+						</ul>
+						<div class="stepContainer">
+							<div id="step-1" class="stepContBox fade active in">
+								<h2 class="sr-only">Invoice</h2>
+								<div class="form-group col-md-12">
+									<div class="bx-bills bx-invoice">
+										<div class="bi-title">
+											INVOICE
+										</div>
+										<div class="bi-line">
+											<p class="bi-invoice-num">No.Ⅰ-2017-02-1234</p>
+											<p class="bi-due-date">Payment Due Date: 02/11/2017</p>
+										</div>
+										<ul class="bi-list">
+											<li>Eye Level Little Scholar</li>
+											<li>No. 112-11-11111</li>
+											<li>TAX No. 123123123</li>
+											<li>6th FL Daekyo Tower Gangnam, Seoul, Korea</li>
+											<li>Tel: 888-9999</li>
+											<li>Representative: Amy Kim</li>
+											<li>Issued Date: 02/11/2017</li>
+										</ul>
+										<script type="text/javascript">
+											$(document).ready(function() {
+												$(".change-invoice").click(function(){
+													$(".bi-table .form-control").removeAttr("readonly");
+													$(".bx-invoice .collapse").addClass("in");
+													$(this).html('Save').removeClass('change-invoice').addClass('change-save');
+												});
+												// List: 행 추가
+												$(document).on('click', '.btn-list-open', function(e) {
+													e.preventDefault();
+													add_row();
+												});
+												
+												// List: 행 삭제
+												$(document).on('click', '.btn-list-del', function(e) {
+													e.preventDefault();
+													if ($('#editTable > tbody > tr').length == 1) return;
+													var deletedRowIndex = delete_row($(this));
+													// delete row
+													$(this).closest('tr').remove();
+												});
+											});
+											
+											function add_row() {
+												var my_tbody = document.getElementById('editTable');
+												var row = my_tbody.insertRow( my_tbody.rows.length ); // 하단에 추가
+												var cell1 = row.insertCell(0);
+												var cell2 = row.insertCell(1);
+												var cell3 = row.insertCell(2);
+												var cell4 = row.insertCell(3);
+													cell1.innerHTML = '03-2017';
+													cell2.innerHTML = '<input type="text" class="form-control input-sm clearable" placeholder="">';
+													cell3.innerHTML = '<input type="text" class="form-control input-sm clearable text-right" placeholder="">';
+													cell4.innerHTML = '<a href="#" class="btn-list-del">Delete</a><a href="#" class="btn-list-open">Add</a>';
+											}
+											function delete_row(_elem) {
+												var thisRow = _elem.closest('tr');
+												return $('#editTable > tbody > tr').index(thisRow);
+											}
+										</script>
+										<div class="bi-name">
+											<div class="pull-right btn-group-xs">
+												<button type="button" class="btn btn-warning btn-xs change-invoice">Edit</button>
+											</div>
+											<div class="pull-left">
+												Ken Song (K200000000)
+											</div>
+										</div>
+										<div class="bi-table">
+											<table class="table" id="editTable">
+												<colgroup>
+													<col style="width:20%">
+													<col style="width:40%">
+													<col style="width:20%">
+													<col style="width:auto">
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col" colspan="2">Description</th>
+														<th scope="col">Amount</th>
+														<th scope="col"></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>03-2017</td>
+														<td><input type="text" class="form-control input-sm clearable" placeholder="EL Math" readonly="readonly"></td>
+														<td><input type="text" class="form-control input-sm clearable text-right" placeholder="100.00" readonly="readonly"></td>
+														<td></td>
+													</tr>
+													<tr>
+														<td>03-2017</td>
+														<td><input type="text" class="form-control input-sm clearable" placeholder="EL Eng" readonly="readonly"></td>
+														<td><input type="text" class="form-control input-sm clearable text-right" placeholder="50.00" readonly="readonly"></td>
+														<td></td>
+													</tr>
+													<tr>
+														<td>03-2017</td>
+														<td><input type="text" class="form-control input-sm clearable" placeholder="EL Kor" readonly="readonly"></td>
+														<td><input type="text" class="form-control input-sm clearable text-right" placeholder="50.00" readonly="readonly"></td>
+														<td>
+															<span class="collapse"><a href="#" class="btn-list-open">Add</a></span>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										
+										<div class="bi-bottom">
+											<ul class="bi-total">
+												<li>
+													<span class="bi-labels">TOTAL</span>
+													<span class="bi-numbers">200.00</span>
+												</li>
+												<li>
+													<span class="bi-labels">NET AMOUNT</span>
+													<span class="bi-numbers">181.81</span>
+												</li>
+												<li>
+													<span class="bi-labels">TAX</span>
+													<span class="bi-numbers">18.19</span>
+												</li>
+												<li class="bi-due">
+													<span class="bi-labels">TOTAL DUE</span>
+													<span class="bi-numbers">200.00</span>
+												</li>
+											</ul>
+										</div>
+										<div class="bi-footer">
+											<span class="bi-logo">eye level i am the key</span>
+											<span class="bi-sign">Signature</span>
+										</div>
+									</div>
+								</div>
+								<div class="actionBar col-md-12">
+									<div class="pull-left">
+										<a href="#" class="btn btn-primary">Pdf file Download</a>
+									</div>
+									<div class="pull-right">
+										<a href="#" class="btn btn-default" data-dismiss="modal" aria-label="Close">Close</a>
+									</div>
+								</div>
+							</div>
+							
+							<div id="step-2" class="stepContBox fade">
+								<h2 class="sr-only">청구서 전송</h2>
+								<form class="">
+									<div class="form-group form-inline col-md-12">
+										<span class="lb-txt mb-1">Send Channel</span>
+										<div class="checkbox checkbox-primary checkbox-inline">
+											<input type="checkbox" id="checkbox1" value="checkbox1" name="checkbox1" checked="checked">
+											<label for="checkbox1">E-mail</label>
+										</div>
+										<!-- 180717_수정 [화면설계서 v3.1 수정사항 반영] -->
+										<div class="checkbox checkbox-primary checkbox-inline">
+											<input type="checkbox" id="checkbox2" value="checkbox2" name="checkbox2" checked="checked">
+											<label for="checkbox2">Messenger</label><!-- 180731_수정 [오타수정] -->
+										</div>
+										<!-- 180717_수정 [화면설계서 v3.1 수정사항 반영] -->
+									</div>
+									<div class="form-group form-inline col-md-12">
+										<span class="lb-txt mb-1">Send Format</span>
+										<div class="radio radio-primary radio-inline">
+											<input type="radio" id="inlineRadio1" value="option1" name="radioInline1" checked="checked">
+											<label for="inlineRadio1">with STATEMENT</label>
+										</div>
+										<div class="radio radio-primary radio-inline">
+											<input type="radio" id="inlineRadio2" value="option1" name="radioInline1" checked="checked">
+											<label for="inlineRadio2">Invoice Only</label>
+										</div>
+									</div>
+								</form>
+								<div class="actionBar col-md-12">
+									<div class="pull-right">
+										<a href="#" class="btn btn-success">Send</a>
+										<a href="#" class="btn btn-default" data-dismiss="modal" aria-label="Close">Close</a>
+									</div>
+								</div>
+							</div>
+							<div id="step-3" class="stepContBox fade" >
+								<h2 class="sr-only">History</h2>
+								<div class="col-md-12">
+									<h3 class="cm-h4 mt-0">History</h3>
+									<div class="bx-table form-group">
+										<table class="table">
+											<colgroup>
+												<col style="width:20%">
+												<col style="width:20%">
+												<col style="width:auto">
+												<col style="width:20%">
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col">수정 발행 일자</th>
+													<th scope="col">대상 월</th>
+													<th scope="col">과목</th>
+													<th scope="col">Amount</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td rowspan="2">10/04/2017</td>
+													<td rowspan="2">05-2017</td>
+													<td>EL Math</td>
+													<td>100.00</td>
+												</tr>
+												<tr>
+													<td>EL Eng</td>
+													<td>50.00</td>
+												</tr>
+												<tr>
+													<td rowspan="2">10/04/2017</td>
+													<td rowspan="2">04-2017</td>
+													<td>EL Math</td>
+													<td>100.00</td>
+												</tr>
+												<tr>
+													<td>EL Eng</td>
+													<td>50.00</td>
+												</tr>
+												<tr>
+													<td rowspan="2">10/04/2017</td>
+													<td rowspan="2">04-2017</td>
+													<td>EL Math</td>
+													<td>100.00</td>
+												</tr>
+												<tr>
+													<td>EL Eng</td>
+													<td>50.00</td>
+												</tr>
+												<tr>
+													<td rowspan="2">10/04/2017</td>
+													<td rowspan="2">04-2017</td>
+													<td>EL Math</td>
+													<td>100.00</td>
+												</tr>
+												<tr>
+													<td>EL Eng</td>
+													<td>50.00</td>
+												</tr>
+												<tr>
+													<td rowspan="2">10/04/2017</td>
+													<td rowspan="2">04-2017</td>
+													<td>EL Math</td>
+													<td>100.00</td>
+												</tr>
+												<tr>
+													<td>EL Eng</td>
+													<td>50.00</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<div class="actionBar col-md-12">
+									<div class="pull-right">
+										<a href="#" class="btn btn-default" data-dismiss="modal" aria-label="Close">Close</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal-backdrop fade in"></div>
+
+<script src="/js/custom.js"></script>
+</body>
+</html>

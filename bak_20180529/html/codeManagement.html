@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<link rel="SHORTCUT ICON" href="/images/favicon.ico">
+<title>Key&amp;Manager ver.2</title>
+<link rel="stylesheet" href="/css/common.css">
+<link rel="stylesheet" href="/css/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" href="/css/jquery-ui.css">
+<link rel="stylesheet" media="all and (min-width: 0) and (max-width: 1280px)" href="/css/tablet.css" />
+<link rel="stylesheet" media="all and (min-width: 0) and (max-width: 767px)" href="/css/mobile.css" />
+<script src="/js/jQuery/jquery-2.2.4.min.js"></script>
+<script src="/js/jQuery/jquery-ui.js"></script>
+<script src="/js/jQuery/jquery.mCustomScrollbar.js"></script>
+<script src="/js/common.js"></script>
+</head>
+<body>
+<div id="kmWrap">
+	<!-- s : mobile only -->
+	<div id="kmBtn" class="mobile-only">
+		<button class="ctrl-favorite"><span>favorite</span></button>
+		<button class="ctrl-search"><span>search</span></button>
+		<button class="ctrl-mystudent"><span>mystudent</span></button>
+	</div>
+	<!-- // e : mobile only -->
+	
+	<!-- s : kmNavi -->
+	<div id="kmNavi">
+		<button class="ctrl-nav"><span class="nav-ico"></span><span class="nav-txt">Close</span></button>
+		<div class="nav-list">
+			<div class="mobile-only">
+				<!-- 모바일 내용 추가 예정 -->
+			</div>
+			<ul>
+				<li class="no-children"><a href="#"><span class="nav-txt">Schedule</span></a></li> 
+				<li class="has-children"><a href="#"><span class="nav-txt">Member</span></a>
+					<ul class="depth2">
+						<li><a href="#">Member</a></li>
+						<li><a href="#">Attendance</a></li> 
+						<li><a href="#">Subject Transfer</a></li>
+						<li><a href="#">Learning</a></li> 
+						<li><a href="#">Attendance</a></li> 
+					</ul>
+				</li>
+				<li class="has-children"><a href="#"><span class="nav-txt">Learning</span></a>
+					<ul class="depth2">
+						<li><a href="#">Learning</a></li> 
+						<li><a href="#">Attendance</a></li> 
+						<li><a href="#">Progress</a></li> 
+						<li><a href="#">Diagnostic test</a></li> 
+						<li><a href="#">Material</a></li> 
+					</ul>
+				</li>
+				<li class="has-children"><a href="#"><span class="nav-txt">Finance</span></a>
+					<ul class="depth2">
+						<li><a href="#">Deposit Management</a></li>
+						<li><a href="#">Learning</a></li> 
+						<li><a href="#">Attendance</a></li> 
+						<li><a href="#">Progress</a></li> 
+						<li><a href="#">Diagnostic test</a></li> 
+						<li><a href="#">Material</a></li> 
+					</ul>
+				</li>
+				<li class="has-children"><a href="#"><span class="nav-txt">Center</span></a>
+					<ul class="depth2">
+						<li><a href="#">Organization Info</a></li>
+						<li><a href="#">Learning</a></li> 
+						<li><a href="#">Attendance</a></li> 
+						<li><a href="#">Progress</a></li> 
+						<li><a href="#">Diagnostic test</a></li> 
+						<li><a href="#">Material</a></li> 
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- e : kmNavi -->
+
+	<!-- s : kmContainer -->
+	<div id="kmContainer">
+		<!-- s : kmHeader -->	
+		<div id="kmHeader">
+			<div class="head-favorite">
+				<div class="favorite-list">
+					<a href="#">Create member</a>
+					<a href="#">Payment</a>
+					<a href="#">My student</a>
+				</div>
+				<a href="#" class="favorite-set" title="favorite">favorite list</a>
+			</div>
+			<div class="head-user-info">
+				<a href="#" class="head-logout">Logout</a>
+				<span class="head-name">Tony tony chopa (FC0001S)</span>
+				<a href="#" class="head-mypage">My page</a>
+			</div>
+			<div class="head-search mobile-only">
+				<form action="" method="" class="search-form">
+					<div class="search-panel">
+						<input type="text" name="search" placeholder="Search here..." title="search">
+						<button type="submit"><span class="">검색</span></button>
+					</div>
+					<div class="">
+						<!-- 모바일 내용 추가 예정 : 검색결과 리스트 -->
+					</div>
+				</form>
+			</div>
+			<div class="head-mystudent mobile-only">
+				<!-- 모바일 내용 추가 예정 -->
+			</div>
+		</div>
+		<!-- e : kmHeader -->
+	
+		
+
+		
+		<!-- s : kmConts -->
+		<div id="kmConts">
+			<div class="page-info">
+				<div class="location">
+					<span class="home"><a href="#">home</a></span>
+					<span><a href="#">location 1depth</a></span>
+				</div>
+				<h2 class="page-tit">공통 코드 관리</h2>
+			</div>
+			<div class="bx-cont half">
+				<div class="left">
+					<span class="list-total">Total : <span id="">1</span></span>
+					<div class="bx-btn al-right">
+						<a href="#" class="layer1 btn-layer btn btn-blue">Add</a>
+					</div>
+					<div class="bx-table">
+						<div class="tb-dimm"><span class="txts">Fetching data...</span></div>
+						<div class="x-scroll">
+							<table id="specialOrders" class="tb-col sort-in">
+								<thead>
+									<tr>
+										<th scope="col"><a href="#" class="sorting">No</a></th>
+										<th scope="col"><a href="#" class="sorting">그룹코드</a></th>
+										<th scope="col"><a href="#" class="sorting">그룹명</a></th>
+										<th scope="col"><a href="#" class="sorting">소스코드구분</a></th>
+										<th scope="col"><a href="#" class="sorting">사용여부</a></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td><a href="#">MST001</a></td>
+										<td><a href="#">회원</a></td>
+										<td>GD</td>
+										<td>Y</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td><a href="#">MST001</a></td>
+										<td><a href="#">회원</a></td>
+										<td>GD</td>
+										<td>Y</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td><a href="#">MST001</a></td>
+										<td><a href="#">회원</a></td>
+										<td>GD</td>
+										<td>Y</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td><a href="#">MST001</a></td>
+										<td><a href="#">회원</a></td>
+										<td>GD</td>
+										<td>Y</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td><a href="#">MST001</a></td>
+										<td><a href="#">회원</a></td>
+										<td>GD</td>
+										<td>Y</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td><a href="#">MST001</a></td>
+										<td><a href="#">회원</a></td>
+										<td>GD</td>
+										<td>Y</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td><a href="#">MST001</a></td>
+										<td><a href="#">회원</a></td>
+										<td>GD</td>
+										<td>Y</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td><a href="#">MST001</a></td>
+										<td><a href="#">회원</a></td>
+										<td>GD</td>
+										<td>Y</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td><a href="#">MST001</a></td>
+										<td><a href="#">회원</a></td>
+										<td>GD</td>
+										<td>Y</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td><a href="#">MST001</a></td>
+										<td><a href="#">회원</a></td>
+										<td>GD</td>
+										<td>Y</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div id="specialOrders_pagination" class="pagination">
+						<a href="#" class="btn-forward"><span>forward</span></a>
+						<a href="#" class="btn-prevpage"><span>prev page</span></a>
+						<span>
+							<a class="on" href="#">1</a>
+							<a href="#">2</a>
+							<a href="#">3</a>
+							<a href="#">4</a>
+							<a href="#">5</a>
+							<a href="#">6</a>
+							<a href="#">7</a>
+							<a href="#">8</a>
+							<a href="#">9</a>
+							<a href="#">10</a>
+						</span>
+						<a href="#" class="btn-nextpage"><span>next page</span></a>
+						<a href="#" class="btn-backward"><span>backward</span></a>
+					</div>
+				</div>
+				<div class="right">
+					<span class="list-total">Total : <span id="">2</span></span>
+					<div class="bx-btn al-right">
+						<a href="#" class="layer2 btn-layer btn btn-blue">Add</a>
+					</div>
+					<div class="bx-table">
+						<div class="tb-dimm"><span class="txts">Fetching data...</span></div>
+						<div class="x-scroll">
+							<table id="specialOrders" class="tb-col sort-in">
+								<thead>
+									<tr>
+										<th scope="col"><a href="#" class="sorting">No</a></th>
+										<th scope="col"><a href="#" class="sorting">그룹코드</a></th>
+										<th scope="col"><a href="#" class="sorting">코드</a></th>
+										<th scope="col"><a href="#" class="sorting">코드명</a></th>
+										<th scope="col"><a href="#" class="sorting">소스코드구분</a></th>
+										<th scope="col"><a href="#" class="sorting">정렬순서</a></th>
+										<th scope="col"><a href="#" class="sorting">사용여부</a></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>MST00</td>
+										<td><a href="#">12</a></td>
+										<td><a href="#">sister</a></td>
+										<td>GD</td>
+										<td>0</td>
+										<td>Y</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>MST00</td>
+										<td><a href="#">12</a></td>
+										<td><a href="#">sister</a></td>
+										<td>GD</td>
+										<td>0</td>
+										<td>Y</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>MST00</td>
+										<td><a href="#">12</a></td>
+										<td><a href="#">sister</a></td>
+										<td>GD</td>
+										<td>0</td>
+										<td>Y</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>MST00</td>
+										<td><a href="#">12</a></td>
+										<td><a href="#">sister</a></td>
+										<td>GD</td>
+										<td>0</td>
+										<td>Y</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>MST00</td>
+										<td><a href="#">12</a></td>
+										<td><a href="#">sister</a></td>
+										<td>GD</td>
+										<td>0</td>
+										<td>Y</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>MST00</td>
+										<td><a href="#">12</a></td>
+										<td><a href="#">sister</a></td>
+										<td>GD</td>
+										<td>0</td>
+										<td>Y</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>MST00</td>
+										<td><a href="#">12</a></td>
+										<td><a href="#">sister</a></td>
+										<td>GD</td>
+										<td>0</td>
+										<td>Y</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>MST00</td>
+										<td><a href="#">12</a></td>
+										<td><a href="#">sister</a></td>
+										<td>GD</td>
+										<td>0</td>
+										<td>Y</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>MST00</td>
+										<td><a href="#">12</a></td>
+										<td><a href="#">sister</a></td>
+										<td>GD</td>
+										<td>0</td>
+										<td>Y</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>MST00</td>
+										<td><a href="#">12</a></td>
+										<td><a href="#">sister</a></td>
+										<td>GD</td>
+										<td>0</td>
+										<td>Y</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="pagination">
+						<a href="#" class="btn-forward"><span>forward</span></a>
+						<a href="#" class="btn-prevpage"><span>prev page</span></a>
+						<span>
+							<a class="on" href="#">1</a>
+							<a href="#">2</a>
+							<a href="#">3</a>
+							<a href="#">4</a>
+							<a href="#">5</a>
+							<a href="#">6</a>
+							<a href="#">7</a>
+							<a href="#">8</a>
+							<a href="#">9</a>
+							<a href="#">10</a>
+						</span>
+						<a href="#" class="btn-nextpage"><span>next page</span></a>
+						<a href="#" class="btn-backward"><span>backward</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- e : kmConts -->
+		<!-- s : kmFooter -->	
+		<div id="kmFooter">
+			<div class="ft-area">
+				<span class="ft-logo">KEY &amp; MANAGER</span>
+				<p class="ft-copy">Copyright &copy; 2018 Daekyo Co., Ltd All rights reserved. For more information, contact <a href="mailto:myeyelevel@myeyelevel.com">myeyelevel@myeyelevel.com</a></p>
+				<div class="ft-site">
+					<dl>
+						<dt><a href="#class">Links</a></dt>
+						<dd>
+							<ul>
+								<li><a href="https://sites.google.com/a/myeyelevel.com/itisthekey/" target="_blank">User guide</a></li>
+								<li><a href="http://www.myeyelevel.com/Global/English/" target="_blank">Eyelevel Site</a></li>
+								<li><a href="http://www.iamthekey.com/" target="_blank">Brand Site</a></li>
+								<li><a href="http://eng.daekyo.com/En/default.aspx" target="_blank">Corporate Site</a></li>
+								<li><a href="http://elu.myeyelevel.com" target="_blank">Eye Level University</a></li>
+								<li><a href="http://email.myeyelevel.com" target="_blank">Email</a></li>
+							</ul>
+						</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+		<!-- e : kmFooter -->
+	</div>
+	<!-- e : kmContainer -->
+</div>
+<div class="dimm"></div>
+<div id="layer1" class="layer layer-s">
+	<div class="layer-tit">
+		<h3 class="">코드 그룹 등록</h3>
+		<a href="#" class="btn-layer-close"><span>닫기</span></a>
+	</div>
+	<div class="layer-con">
+		<div class="tab-content">
+			<div class="bx-form bx-cols1">
+				<span class="form-th"><label for="inp1-1">* 그룹코드</span>
+				<span class="form-td">
+					<input type="text" id="inp1-1" placeholder="10Byte 이내 입력" >
+					<p class="error-msg">그룹코드는 필수 데이터 입니다.</p>
+					<p class="error-msg">이미 등록된 코드입니다.</p>
+				</span>
+			</div>
+			<div class="bx-form bx-cols1">
+				<span class="form-th"><label for="inp1-2">* 그룹명</span>
+				<span class="form-td">
+					<input type="text" id="inp1-2" placeholder="100Byte 이내 입력">
+					<p class="error-msg">그룹명은 필수 데이터 입니다.</p>
+				</span>
+			</div>
+			<div class="bx-form bx-cols1">
+				<span class="form-th">* 소스구분코드</span>
+				<span class="form-td">
+					<input type="radio" id="radio1-1" name="radio1">
+					<label for="radio1-1"><span class="icon"></span>GD</label>
+					<input type="radio" id="radio1-2" name="radio1">
+					<label for="radio1-2"><span class="icon"></span>FC</label>
+					<p class="error-msg">소스구분코드는 필수 데이터입니다.</p>
+				</span>
+			</div>
+			<div class="bx-form bx-cols1">
+				<span class="form-th">* 사용여부</span>
+				<span class="form-td">
+					<input type="radio" id="radio2-1" name="radio2" checked="checked">
+					<label for="radio2-1"><span class="icon"></span>Y</label>
+					<input type="radio" id="radio2-2" name="radio2">
+					<label for="radio2-2"><span class="icon"></span>N</label>
+				</span>
+			</div>
+			<div class="bx-btn">
+				<a href="#" class="btn">저장</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="layer2" class="layer layer-s">
+	<div class="layer-tit">
+		<h3 class="">코드 등록</h3>
+		<a href="#" class="btn-layer-close"><span>닫기</span></a>
+	</div>
+	<div class="layer-con">
+		<div class="tab-content">
+			<div class="bx-form bx-cols1">
+				<span class="form-th"><label for="inp2-1">* 그룹코드</span>
+				<span class="form-td">
+					<span class="select">
+						<select id="inp2-1">
+							<option value="1">CRD001</option>
+						</select>
+					</span>
+				</span>
+			</div>
+			<div class="bx-form bx-cols1">
+				<span class="form-th"><label for="inp2-2">그룹명</span>
+				<span class="form-td">
+					<input type="text" id="inp2-2" placeholder="회계">
+				</span>
+			</div>
+			<div class="bx-form bx-cols1">
+				<span class="form-th"><label for="inp2-3">* 그룹코드</span>
+				<span class="form-td">
+					<input type="text" id="inp2-3" placeholder="20Byte 이내로 입력">
+					<p class="error-msg">코드는 필수 데이터입니다.</p>
+				</span>
+			</div>
+			<div class="bx-form bx-cols1">
+				<span class="form-th"><label for="inp2-4">* 코드명</span>
+				<span class="form-td">
+					<input type="text" id="inp2-4" placeholder="200Byte 이내로 입력">
+					<p class="error-msg">코드명은 필수 데이터입니다.</p>
+				</span>
+			</div>
+			<div class="bx-form bx-cols1">
+				<span class="form-th">* 소스구분코드</span>
+				<span class="form-td">
+					<input type="radio" id="radio3-1" name="radio3">
+					<label for="radio3-1"><span class="icon"></span>GD</label>
+					<input type="radio" id="radio3-2" name="radio3">
+					<label for="radio3-2"><span class="icon"></span>FC</label>
+					<p class="error-msg">소스구분코드는 필수 데이터입니다.</p>
+				</span>
+			</div>
+			<div class="bx-form bx-cols1">
+				<span class="form-th">* 정렬순서</span>
+				<span class="form-td">
+					<input type="text" id="inp2-4" placeholder="0">
+					<p class="error-msg">정렬순서는 필수 데이터입니다.</p>
+				</span>
+			</div>
+			<div class="bx-form bx-cols1">
+				<span class="form-th">* 사용여부</span>
+				<span class="form-td">
+					<input type="radio" id="radio4-1" name="radio4" checked="checked">
+					<label for="radio4-1"><span class="icon"></span>Y</label>
+					<input type="radio" id="radio4-2" name="radio4">
+					<label for="radio4-2"><span class="icon"></span>N</label>
+				</span>
+			</div>
+			<div class="bx-btn">
+				<a href="#" class="btn">저장</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

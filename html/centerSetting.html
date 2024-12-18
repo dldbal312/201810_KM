@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<link rel="SHORTCUT ICON" href="/images/favicon.ico">
+<title>Key&amp;Manager ver.2</title>
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/fontawesome-all.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" type="text/css" href="/css/custom.css">
+<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+<script src="/js/vendors/jquery-ui.min.js"></script>
+<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+<script src="/js/vendors/moment.js"></script>
+<script src="/js/vendors/bootstrap.min.js"></script>
+<script src="/js/vendors/bootstrap-datetimepicker.min.js"></script>
+</head>
+<body class="nav-sm">
+<div class="wrapper">		
+	<div class="left_col">
+		<div id="sidebar-menu" class="main_menu_side main_menu">
+			<div class="menu_section">
+				<ul class="nav side-menu">
+					<li class="parent_menu"><a href="#"><i class="ico-schedule"></i>Schedule</a><a role="button" class="submenu-open"></a></li>
+					<li class="parent_menu"><a href="#"><i class="ico-member"></i>Member</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Member</a>
+								<ul class="nav-depth3">
+									<li class="active"><a href="#">Subject Transfer</a></li>
+									<li><a href="#">Learning</a></li> 
+									<li><a href="#">Attendance</a></li> 
+								</ul>
+							</li>
+							<li><a href="#">Attendance</a></li> 
+							<li><a href="#">Subject Transfer</a></li>
+							<li><a href="#">Learning</a></li> 
+							<li><a href="#">Attendance</a></li> 
+						</ul>
+					</li>
+					<li class="parent_menu"><a href="#"><i class="ico-learning"></i>Learning</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Member</a></li>
+							<li><a href="#">Attendance</a></li>
+							<li><a href="#">Subject Transfer</a></li>
+							<li><a href="#">Learning</a></li>
+							<li><a href="#">Attendance</a></li>
+						</ul>
+					</li>
+					<li class="parent_menu"><a href="#"><i class="ico-finance"></i>Finance</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Member</a></li>
+							<li><a href="#">Attendance</a></li> 
+							<li><a href="#">Subject Transfer</a></li>
+							<li><a href="#">Learning</a></li> 
+							<li><a href="#">Attendance</a></li> 
+						</ul>
+					</li>
+					<li class="parent_menu"><a href="#"><i class="ico-center"></i>Center</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Member</a></li>
+							<li><a href="#">Attendance</a></li> 
+							<li><a href="#">Subject Transfer</a></li>
+							<li><a href="#">Learning</a></li> 
+							<li><a href="#">Attendance</a></li> 
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="right_col">		
+		<div class="nav_menu">
+			<div class="toggle">
+				<a href="#" class="menu_toggle"><i></i></a>
+			</div>
+			<div class="head-wrap">
+				<div class="pull-left head-favorite">
+					<ul class="head-favorite-list">
+						<li><a href="#" class="list">Create member</a><a href="#" class="ico-delete"><i class="fas fa-times"></i></a></li>
+						<li><a href="#" class="list">Payment</a><a href="#" class="ico-delete"><i class="fas fa-times"></i></a></li>
+						<li><a href="#" class="list">My student</a><a href="#" class="ico-delete"><i class="fas fa-times"></i></a></li>
+					</ul>
+					<a href="#" class="favorite-set"><span class="ico-count cl-gray"></span>My menu add</a>
+				</div>
+				<div class="pull-right head-user-info">
+					<a href="#" class="head-logout">Logout</a>
+					<span class="head-name">Tony tony chopa (FC0001S)</span>
+					<a href="#" class="head-mypage">My page</a>
+				</div>
+			</div>
+		</div>
+		<div class="right_content" role="main">
+			<div class="container-fluid">
+				<div class="col-md-12">
+					<h3>센터환경설정</h3>
+					<div class="row btn-in">
+						<div class="col-md-12 form-tit">
+							<h4 class="tit">Center Info</h4>
+							<div class="info">
+								<ul class="breadcrumb">
+									<li>Daekyo Malaysia</li>
+									<li>Daekyo Malaysia</li>
+									<li>Bukit Damansara</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="ln_solid"></div>
+					<div class="row">
+						<div  class="col-md-12">
+							<div class="pull-right">
+								<a href="#" class="btn btn-success">Save</a>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="row">
+								<div class="form-group">
+									<div class="">
+										<div class="col-md-3">
+											<div class="form-group">
+												<span class="lb-txt mb-1">언어세팅</span>
+												<select class="form-control input-sm">
+													<option value="" selected">English</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="form-group">
+												<span class="lb-txt mb-1">화폐단위세팅</span>
+												<select class="form-control input-sm">
+													<option value="" selected">Ringgit, RM</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="form-group">
+												<span class="lb-txt mb-1">날짜포멧세팅</span>
+												<select class="form-control input-sm">
+													<option value="" selected="">dd-mm-yyyy</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="form-group">
+												<span class="lb-txt mb-1">센터 이름 세팅</span>
+												<input type="text" class="form-control input-sm clearable" value="Bukit Damansara">
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="form-group">
+												<span class="lb-txt mb-1">대표자이름 세팅</span>
+												<input type="text" class="form-control input-sm clearable" value="Jinhee Kim">
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="form-group">
+												<span class="lb-txt mb-1">홈페이지 주소</span>
+												<input type="text" class="form-control input-sm clearable" value="">
+											</div>
+										</div>
+										<!-- 180731_수정 [센터대표메일 추가] -->
+										<div class="col-md-3">
+											<div class="form-group">
+												<span class="lb-txt mb-1">센터 대표 메일<i class="required">*</i></span>
+												<input type="text" class="form-control input-sm clearable" value="">
+											</div>
+										</div><!-- //180731_수정 [센터대표메일 추가] -->
+										<!-- 180717_수정 [화면설계서 v3.1 수정사항 반영] -->
+										<div class="col-md-12">
+											<div class="form-group">
+												<span class="lb-txt mb-1">영업 일</span>
+												<div class="row form-inline">
+													<div class="col-md-6 h30">
+														<div class="checkbox checkbox-primary checkbox-inline">
+															<input type="checkbox" id="checkbox1" name="checkbox1-1" checked="checked">
+															<label for="checkbox1">MON</label>
+														</div>
+														<div class="checkbox checkbox-primary checkbox-inline">
+															<input type="checkbox" id="checkbox2" name="checkbox1-1" checked="checked">
+															<label for="checkbox2">TUE</label>
+														</div>
+														<div class="checkbox checkbox-primary checkbox-inline">
+															<input type="checkbox" id="checkbox3" name="checkbox1-1" checked="checked">
+															<label for="checkbox3">WED</label>
+														</div>
+														<div class="checkbox checkbox-primary checkbox-inline">
+															<input type="checkbox" id="checkbox4" name="checkbox1-1" checked="checked">
+															<label for="checkbox4">THU</label>
+														</div>
+														<div class="checkbox checkbox-primary checkbox-inline">
+															<input type="checkbox" id="checkbox5" name="checkbox1-1" checked="checked">
+															<label for="checkbox5">FRI</label>
+														</div>
+														<div class="checkbox checkbox-primary checkbox-inline">
+															<input type="checkbox" id="checkbox6" name="checkbox1-1" checked="checked">
+															<label for="checkbox6">SAT</label>
+														</div>
+														<div class="checkbox checkbox-primary checkbox-inline">
+															<input type="checkbox" id="checkbox7" name="checkbox1-1" checked="checked">
+															<label for="checkbox7">SUN</label>
+														</div>
+													</div>
+													<div class="col-md-3 col-sm-6">
+														<span class="bold">Open time</span>
+														<select class="form-control input-sm">
+															<option value="" selected="">09</option>
+														</select>
+														<select class="form-control input-sm">
+															<option value="" selected="">30</option>
+														</select>
+													</div>
+													<div class="col-md-3 col-sm-6">
+														<span class="bold">Close time</span>
+														<select class="form-control input-sm">
+															<option value="" selected="">17</option>
+														</select>
+														<select class="form-control input-sm">
+															<option value="" selected="">30</option>
+														</select>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="form-group">
+												<span class="lb-txt mb-1">회비납부 마감일</span>
+												<select class="form-control input-sm">
+													<option value="" selected="">05</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="form-group">
+												<span class="lb-txt mb-1">회비청구서 자동전송</span>
+												<div class="form-inline h30">
+													<div class="radio radio-primary radio-inline">
+														<input type="radio" value="" name="ra1" checked="checked" id="ra1">
+														<label for="ra1">ON</label>
+													</div>
+													<div class="radio radio-primary radio-inline">
+														<input type="radio" value="" name="ra1" id="ra2">
+														<label for="ra2">OFF</label>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="form-group">
+												<span class="lb-txt mb-1">사업자등록번호</span>
+												<input type="text" class="form-control input-sm clearable" value="">
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="form-group">
+												<span class="lb-txt mb-1">방문횟수 충전방식 유효기간 만료 전 알림</span>
+												<div class="form-inline">
+													<select class="form-control input-sm">
+														<option value="" selected">ON</option>
+													</select>
+													<select class="form-control input-sm">
+														<option value="" selected">1주 전</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="form-group">
+												<span class="lb-txt mb-1">홈 Default 설정</span>
+												<select class="form-control input-sm">
+													<option value="" selected">Schedule</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="form-group">
+												<span class="lb-txt mb-1">TAX 번호</span>
+												<input type="text" class="form-control input-sm clearable" value="">
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="form-group">
+												<span class="lb-txt mb-1">타임 존</span>
+												<select class="form-control input-sm">
+													<option value="" selected">(UTC-08:00) Pacific Sta...</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="form-group">
+												<span class="lb-txt mb-1">회비방식 세팅</span>
+												<div class="form-inline h30">
+													<div class="radio radio-primary radio-inline">
+														<input type="radio" value="" name="ra11" checked="checked" id="ra11">
+														<label for="ra11">월회비 방식</label>
+													</div>
+													<div class="radio radio-primary radio-inline">
+														<input type="radio" value="" name="ra11" id="ra12">
+														<label for="ra12">방문횟수 충전방식</label>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- // 180717_수정 [화면설계서 v3.1 수정사항 반영] -->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="ln_dashed"></div>
+				</div>
+
+				<!-- 180727_수정 [화면설계서 v3.3 수정사항 반영] -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="col-md-6">
+							<h4 class="cm-h4">알림방식설정</h4>
+							<div class="bx-table">
+								<table class="table">
+									<colgroup>
+										<col style="width:50%">
+										<col style="width:50%">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">종류</th>
+											<th scope="col">알림 사용 여부</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>E-mail</td>
+											<td>
+												<span class="switch-check">
+													<input type="checkbox" id="check-21" checked="checked">
+													<label for="check-21">
+														<span class="switch-inner">
+															<span class="active">ON</span>
+															<span class="default pr-0">OFF</span>
+														</span>
+													</label>
+												</span>
+											</td>
+										</tr>
+										<tr>
+											<td>Facebook</td>
+											<td>
+												<span class="switch-check">
+													<input type="checkbox" id="check-22" checked="checked">
+													<label for="check-22">
+														<span class="switch-inner">
+															<span class="active">ON</span>
+															<span class="default pr-0">OFF</span>
+														</span>
+													</label>
+												</span>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<h4 class="cm-h4">구글 캘린더 연동</h4><!-- 180730_수정 [타이틀 변경] -->
+							<div class="bx-table">
+								<table class="table">
+									<colgroup>
+										<col style="width:auto">
+										<col style="width:15%">
+										<col style="width:20%">
+										<col style="width:20%"><!-- 180730_수정 [추가] -->
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">사용 E-Mail 설정</th>
+											<th scope="col">사용 여부</th>
+											<th scope="col">인증 여부</th>
+											<th scope="col">캘린더 연동</th><!-- 180730_수정 [추가] -->
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												<div class="form-inline">
+													<input type="text" class="form-control input-sm clearable" placeholder="G-mail 계정만 가능">
+													<!-- <span class="">@gmail.com</span> --><!-- 180730_수정 [삭제] -->
+												</div>
+											</td>
+											<td>
+												<span class="switch-check">
+													<input type="checkbox" id="check-31" checked="checked">
+													<label for="check-31">
+														<span class="switch-inner">
+															<span class="active">ON</span>
+															<span class="default">OFF</span>
+														</span>
+													</label>
+												</span>
+											</td>
+											<td>
+												<a href="#" class="btn btn-default btn-request">Request</a>
+												<!-- <span class="verified active">√ Verified</span> -->
+												<!-- <span class="verified">√  Non Verified</span> -->
+											</td>
+											<td>
+												<a href="#" class="btn btn-default btn-request">Google calendar</a><!-- 180730_수정 [추가] -->
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="col-md-6">
+							<h4 class="cm-h4">TAX 세팅</h4>
+							<div class="bx-table">
+									<table class="table">
+										<colgroup>
+											<col style="width:8%">
+											<col style="width:auto">
+											<col style="width:20%">
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">NO</th>
+												<th scope="col">TAX 설정</th>
+												<th scope="col">사용 여부</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>1</td>
+												<td>
+													<div class="form-inline">
+														<input type="text" class="form-control input-sm clearable" placeholder="TAX1">
+														<input type="text" class="form-control input-sm clearable" placeholder="3">
+														<span class="date-period-divider">%</span>
+													</div>
+												</td>
+												<td>
+													<span class="switch-check">
+														<input type="checkbox" id="check-11" checked="checked">
+														<label for="check-11">
+															<span class="switch-inner">
+																<span class="active">ON</span>
+																<span class="default">OFF</span>
+															</span>
+														</label>
+													</span>
+												</td>
+											</tr>
+											<tr>
+												<td>2</td>
+												<td>
+													<div class="form-inline">
+														<input type="text" class="form-control input-sm clearable" placeholder="TAX2">
+														<input type="text" class="form-control input-sm clearable" placeholder="5">
+														<span class="date-period-divider">%</span>
+													</div>
+												</td>
+												<td>
+													<span class="switch-check">
+														<input type="checkbox" id="check-12">
+														<label for="check-12">
+															<span class="switch-inner">
+																<span class="active">ON</span>
+																<span class="default">OFF</span>
+															</span>
+														</label>
+													</span>
+												</td>
+											</tr>
+											<tr>
+												<td>3</td>
+												<td>
+													<div class="form-inline">
+														<input type="text" class="form-control input-sm clearable" placeholder="TAX1">
+														<input type="text" class="form-control input-sm clearable" placeholder="3">
+														<span class="date-period-divider">%</span>
+													</div>
+												</td>
+												<td>
+													<span class="switch-check">
+														<input type="checkbox" id="check-13">
+														<label for="check-13">
+															<span class="switch-inner">
+																<span class="active">ON</span>
+																<span class="default">OFF</span>
+															</span>
+														</label>
+													</span>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+							</div>
+						</div>
+						
+						<div class="col-md-6">
+							<h4 class="cm-h4">TAX 추가 정보</h4>
+							<div class="bx-table">
+									<table class="table">
+										<colgroup>
+											<col style="width:10%">
+											<col style="width:auto">
+										</colgroup>
+										<tbody>
+											<tr>
+												<th scope="row">Address</th>
+												<td>
+													<input type="text" class="form-control input-sm clearable" placeholder="6th FL Daekyo Tower Gangnam, Seoul, Korea">
+												</td>
+											</tr>
+											<tr>
+												<th scope="row">Contact </th>
+												<td>
+													<input type="text" class="form-control input-sm clearable" placeholder="888-9999">
+												</td>
+											</tr>
+											<tr>
+												<th scope="row">비고</th>
+												<td>
+													<textarea name="" id="" cols="30" rows="8" class="form-control">
+Amount of Tax subject to Reverse Charges: NIL
+CIN: UU7123123123123
+PAN: AAFD123123
+For NEFT / Bank transfer Purposes:-
+Bank Nam – HDFC BANK
+A/C No. – 12312312312
+IFSC Code: -HDF0000123123
+													</textarea>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- // 180727_수정 [화면설계서 v3.3 수정사항 반영] -->
+			</div>
+		</div>
+		<footer>
+			<span class="ft-logo">KEY &amp; MANAGER</span>
+			<p class="ft-copy">Copyright &copy; 2018 Daekyo Co., Ltd All rights reserved. For more information, contact <a href="mailto:myeyelevel@myeyelevel.com">myeyelevel@myeyelevel.com</a></p>
+			<div class="ft-site">
+				<dl>
+					<dt><a href="#class">LINKS</a></dt>
+					<dd>
+						<ul>
+							<li><a href="https://sites.google.com/a/myeyelevel.com/itisthekey/" target="_blank">User guide</a></li>
+							<li><a href="http://www.myeyelevel.com/Global/English/" target="_blank">Eyelevel Site</a></li>
+							<li><a href="http://www.iamthekey.com/" target="_blank">Brand Site</a></li>
+							<li><a href="http://eng.daekyo.com/En/default.aspx" target="_blank">Corporate Site</a></li>
+							<li><a href="http://elu.myeyelevel.com" target="_blank">Eye Level University</a></li>
+							<li><a href="http://email.myeyelevel.com" target="_blank">Email</a></li>
+						</ul>
+					</dd>
+				</dl>
+			</div>
+		</footer>
+	</div>
+</div>
+<script src="/js/custom.js"></script>
+</body>
+</html>

@@ -1,0 +1,655 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<link rel="SHORTCUT ICON" href="/images/favicon.ico">
+<title>Key&amp;Manager ver.2</title>
+<link rel="stylesheet" href="/css/vendors/bootstrap.min.css">
+<link rel="stylesheet" href="/css/vendors/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" href="/css/vendors/fontawesome-all.min.css">
+<link rel="stylesheet" href="/css/vendors/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" href="/css/vendors/jquery-ui.dynatree.css">
+<link rel="stylesheet" href="/css/custom.css">
+<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+<script src="/js/vendors/jquery-ui.min.js"></script>
+<script src="/js/vendors/jquery-ui.dynatree.js"></script>
+<script src="/js/vendors/moment.js"></script>
+<script src="/js/vendors/bootstrap.min.js"></script>
+<script src="/js/vendors/bootstrap-datetimepicker.min.js"></script>
+</head>
+<body class="nav-sm">
+<div class="wrapper pc-only">	
+	<div class="left_col">
+		<div id="sidebar-menu" class="main_menu_side main_menu">
+			<div class="menu_section">
+				<ul class="nav side-menu">
+					<li class="parent_menu"><a href="#"><i class="ico-schedule"></i>Schedule</a><a role="button" class="submenu-open"></a></li>
+					<li class="parent_menu"><a href="#"><i class="ico-member"></i>Member</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Member</a>
+								<ul class="nav-depth3">
+									<li class="active"><a href="#">Subject Transfer</a></li>
+									<li><a href="#">Learning</a></li> 
+									<li><a href="#">Attendance</a></li> 
+								</ul>
+							</li>
+							<li><a href="#">Attendance</a></li> 
+							<li><a href="#">Subject Transfer</a></li>
+							<li><a href="#">Learning</a></li> 
+							<li><a href="#">Attendance</a></li> 
+						</ul>
+					</li>
+					<li class="parent_menu"><a href="#"><i class="ico-learning"></i>Learning</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Member</a></li>
+							<li><a href="#">Attendance</a></li>
+							<li><a href="#">Subject Transfer</a></li>
+							<li><a href="#">Learning</a></li>
+							<li><a href="#">Attendance</a></li>
+						</ul>
+					</li>
+					<li class="parent_menu"><a href="#"><i class="ico-finance"></i>Finance</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Member</a></li>
+							<li><a href="#">Attendance</a></li> 
+							<li><a href="#">Subject Transfer</a></li>
+							<li><a href="#">Learning</a></li> 
+							<li><a href="#">Attendance</a></li> 
+						</ul>
+					</li>
+					<li class="parent_menu"><a href="#"><i class="ico-center"></i>Center</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Member</a></li>
+							<li><a href="#">Attendance</a></li> 
+							<li><a href="#">Subject Transfer</a></li>
+							<li><a href="#">Learning</a></li> 
+							<li><a href="#">Attendance</a></li> 
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="right_col">
+		<div class="schedule-wrap">
+			<div class="nav_menu">
+				<div class="toggle">
+					<a href="#" class="menu_toggle"><i></i></a>
+				</div>
+				<div class="head-wrap">
+					<div class="pull-left head-favorite">
+						<ul class="head-favorite-list">
+							<li><a href="#" class="list">Create member</a><a href="#" class="ico-delete"><i class="fas fa-times"></i></a></li>
+							<li><a href="#" class="list">Payment</a><a href="#" class="ico-delete"><i class="fas fa-times"></i></a></li>
+							<li><a href="#" class="list">My student</a><a href="#" class="ico-delete"><i class="fas fa-times"></i></a></li>
+						</ul>
+						<a href="#" class="favorite-set"><span class="ico-count cl-gray"></span>My menu add</a>
+					</div>
+					<div class="pull-right head-user-info">
+						<a href="#" class="head-logout">Logout</a>
+						<span class="head-name">Tony tony chopa (FC0001S)</span>
+						<a href="#" class="head-mypage">My page</a>
+					</div>
+				</div>
+			</div>
+			<div class="right_content" role="main">
+				<div class="container-fluid">
+					<div class="col-md-12 progress-container">
+						<h3>Schedule</h3>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="progress-top">
+									<!-- 날짜 및 선택 보기 -->
+									<div class="date-select-wrap">
+										<div class="date-select">
+											<a href="#"><i class="fas fa-caret-left"></i></a>
+											<span class="date">03. 20</span>
+											<a href="#"><i class="fas fa-caret-right"></i></a>
+										</div>
+										<div class="date-type-select">
+											<span class="radio-btn">
+												<input type="radio" id="inlineRadio1" value="option1" name="radioInline1">
+												<label for="inlineRadio1">Today</label>
+											</span>
+											<span class="radio-btn">
+												<input type="radio" id="inlineRadio2" value="option1" name="radioInline1">
+												<label for="inlineRadio2">Day</label>
+											</span>
+											<span class="radio-btn">
+												<input type="radio" id="inlineRadio3" value="option1" name="radioInline1" checked>
+												<label for="inlineRadio3">Week</label>
+											</span>
+											<span class="radio-btn">
+												<input type="radio" id="inlineRadio4" value="option1" name="radioInline1">
+												<label for="inlineRadio4">Month</label>
+											</span>
+										</div>
+									</div>
+									<!--// 날짜 및 선택 보기 -->
+									<div class="sc-data">
+										<dl class="stu">
+											<dt>Today Student</dt>
+											<dd><em class="tx-red">3</em>/10</dd>
+										</dl>
+										<dl class="cons">
+											<dt>Consultation</dt>
+											<dd><em class="tx-red">3</em>/1</dd>
+										</dl>
+										<div class="last-time">
+											<p>13:06</p>
+											<a role="button" class="btn btn-default py-2"><i class="fas fa-sync-alt"></i></a>
+										</div>
+										<div class="datasort-btns">
+											<span class="radio radio-primary radio-inline">
+												<input type="radio" id="datasort1" name="datasort" checked>
+												<label for="datasort1">Instructor</label>
+											</span>
+											<span class="radio radio-primary radio-inline">
+												<input type="radio" id="datasort2" name="datasort">
+												<label for="datasort2">Member</label>
+											</span>
+										</div>
+										<div class="input-group">
+											<input class="form-control input-md clearable" type="text">
+											<div class="input-group-btn">
+												<button type="button" class="btn btn-search" data-toggle="modal" data-target="#searchMember"><span class="fas fa-search"></span><span class="hide">Search</span></button>
+												<button type="button" class="btn btn-primary">Search</button>
+											</div>
+										</div>
+									</div>
+									<div class="data-sort">
+										<span class="sort">
+											<a href="">All</a>
+											<a href="">Class</a>
+											<a href="">Consultation</a>
+										</span>
+										<button type="button" class="excel-download">Excel</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="schedule-lists week">
+									<div class="date-table">
+										<table>
+											<caption>Schedule week</caption>
+											<colgroup>
+												<col class="col1">
+												<col class="col2">
+												<col class="col3">
+												<col class="col4">
+												<col class="col5 col-today">
+												<col class="col6">
+												<col class="col7">
+												<col class="col8">
+											</colgroup>
+											<thead>
+												<tr class="week">
+													<th rowspan="2">TIME</th>
+													<th>SUN</th>
+													<th>MON</th>
+													<th>TUE</th>
+													<th class="today">WED</th>
+													<th>THU</th>
+													<th>FRI</th>
+													<th>SAT</th>
+												</tr>
+												<tr class="date">
+													<th><div>Mar/18<a href="#" class="add">+</a></div></th>
+													<th><div>Mar/19<a href="#" class="add">+</a></div></th>
+													<th><div>Mar/20<a href="#" class="add">+</a></div></th>
+													<th class="today"><div>Mar/21<a href="#" class="add">+</a></div></th>
+													<th><div>Mar/22<a href="#" class="add">+</a></div></th>
+													<th><div>Mar/23<a href="#" class="add">+</a></div></th>
+													<th><div>Mar/24<a href="#" class="add">+</a></div></th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th>09:00<br>-10:00</th>
+													<td data-modules="dropBox" class="sch">
+														<div class="sch-in">
+															<dl>
+																<dt>Snow White</dt>
+																<dd>
+																	<ul>
+																		<li><i class="far fa-user"></i><span>3/4</span></li>
+																		<li><i class="far fa-comment-dots"></i><span>3/4</span></li>
+																	</ul>
+																</dd>
+															</dl>
+														</div>
+														<div class="sch-in etc">
+															<dl>
+																<dt><a href="#etc00" class="collapsed" data-toggle="collapse">Snow White<i class="fas fa-sort-up"></i></a></dt>
+																<dd id="etc00" class="collapse">
+																	<ul>
+																		<li><i class="far fa-user"></i><span>3/4</span></li>
+																		<li><i class="far fa-comment-dots"></i><span>3/4</span></li>
+																	</ul>
+																</dd>
+															</dl>
+														</div>
+													</td>
+													<td data-modules="dropBox">
+														<div class="sch-in etc">
+															<dl>
+																<dt><a href="#etc01" class="collapsed" data-toggle="collapse">Snow White<i class="fas fa-sort-up"></i></a></dt>
+																<dd id="etc01" class="collapse">
+																	<ul>
+																		<li><i class="far fa-user"></i><span>3/4</span></li>
+																		<li><i class="far fa-comment-dots"></i><span>3/4</span></li>
+																	</ul>
+																</dd>
+															</dl>
+														</div>
+													</td>
+													<td data-modules="dropBox"></td>
+													<td data-modules="dropBox" class="today">
+														<div class="sch-in">
+															<dl>
+																<dt>Snow White</dt>
+																<dd>
+																	<ul>
+																		<li><i class="far fa-user"></i><span>3/4</span></li>
+																		<li><i class="far fa-comment-dots"></i><span>3/4</span></li>
+																	</ul>
+																</dd>
+															</dl>
+														</div>
+													</td>
+													<td data-modules="dropBox"></td>
+													<td data-modules="dropBox"></td>
+													<td data-modules="dropBox"></td>
+												</tr>
+												<tr>
+													<th>10:15<br>-11:00</th>
+													<td data-modules="dropBox"></td>
+													<td data-modules="dropBox"></td>
+													<td data-modules="dropBox"></td>
+													<td data-modules="dropBox" class="today">
+														<div class="sch-in">
+															<dl>
+																<dt>Snow White</dt>
+																<dd>
+																	<ul>
+																		<li><i class="far fa-user"></i><span>3/4</span></li>
+																		<li><i class="far fa-comment-dots"></i><span>3/4</span></li>
+																	</ul>
+																</dd>
+															</dl>
+														</div>
+													</td>
+													<td data-modules="dropBox"></td>
+													<td data-modules="dropBox"></td>
+													<td data-modules="dropBox"></td>
+												</tr>
+												<tr>
+													<th>11:00<br>-12:00</th>
+													<td data-modules="dropBox">
+														<div class="sch-in etc">
+															<dl>
+																<dt><a href="#etc100" class="collapsed" data-toggle="collapse">Snow White<i class="fas fa-sort-up"></i></a></dt>
+																<dd id="etc100" class="collapse">
+																	<ul>
+																		<li><i class="far fa-user"></i><span>3/4</span></li>
+																		<li><i class="far fa-comment-dots"></i><span>3/4</span></li>
+																	</ul>
+																</dd>
+															</dl>
+														</div>
+														<div class="sch-in etc">
+															<dl>
+																<dt><a href="#etc101" class="collapsed" data-toggle="collapse">Snow White<i class="fas fa-sort-up"></i></a></dt>
+																<dd id="etc101" class="collapse">
+																	<ul>
+																		<li><i class="far fa-user"></i><span>3/4</span></li>
+																		<li><i class="far fa-comment-dots"></i><span>3/4</span></li>
+																	</ul>
+																</dd>
+															</dl>
+														</div>
+													</td>
+													<td data-modules="dropBox"></td>
+													<td data-modules="dropBox"></td>
+													<td data-modules="dropBox" class="today"></td>
+													<td data-modules="dropBox"></td>
+													<td data-modules="dropBox"></td>
+													<td data-modules="dropBox"></td>
+												</tr>
+												<tr>
+													<th>13:1<br>-14:00</th>
+													<td data-modules="dropBox"></td>
+													<td data-modules="dropBox"></td>
+													<td data-modules="dropBox"></td>
+													<td data-modules="dropBox" class="today"></td>
+													<td data-modules="dropBox"></td>
+													<td data-modules="dropBox"></td>
+													<td data-modules="dropBox"></td>
+												</tr>
+												<tr>
+													<th>18:00<br>-19:00</th>
+													<td data-modules="dropBox"></td>
+													<td data-modules="dropBox"></td>
+													<td data-modules="dropBox"></td>
+													<td data-modules="dropBox" class="today"></td>
+													<td data-modules="dropBox"></td>
+													<td data-modules="dropBox"></td>
+													<td data-modules="dropBox"></td>
+												</tr>
+												<tr>
+													<th>20:00<br>-21:00</th>
+													<td data-modules="dropBox"></td>
+													<td data-modules="dropBox"></td>
+													<td data-modules="dropBox"></td>
+													<td data-modules="dropBox" class="today"></td>
+													<td data-modules="dropBox"></td>
+													<td data-modules="dropBox"></td>
+													<td data-modules="dropBox"></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="schedule-drag-lists">
+				<div class="headers">
+					<h3>My Schedule<a href="#">+</a></h3>
+					 <span class="date">
+						 <span class="week">TUE</span>
+						 <span class="day">21</span>
+					 </span>
+				</div>
+				<div class="user-name">
+					<p><span class="name">Danny Kim</span> (CN0000083)<a href="#"><span class="fas fa-search"></span></a></p>
+					<div class="list-sorting">
+						<span class="checkbox checkbox-primary">
+							<input id="sort-lists" type="checkbox">
+							<label for="sort-lists">그룹 별로 보기</label>
+						</span>
+					</div>
+				</div>
+				<div class="conts">
+					<div class="inner-scroll">
+						<!-- 클래스 별 보기 -->
+						<div class="class-groups" style="display:;">
+							<dl class="lists">
+								<dt><a href="#classes01" data-toggle="collapse">DAN_0915_TUE</a></dt>
+								<dd class="top-data">
+									<span class="length"><em class="tx-blue">1</em>/4</span>
+									<span class="in-out vertical">
+										<span class="checkbox checkbox-primary">
+											<input id="check1_all" type="checkbox">
+											<label for="check1_all">All</label>
+										</span>
+									</span>
+								</dd>
+								<dd id="classes01" class="collapse in">
+									<ul>
+										<li>
+											<a href="" class="check" data-modules="dragBox">
+												<span class="time">99:99</span>
+												<span class="name">Mary.koMary.koMary<span class="flag">New!</span><br>EE(D0102)</span>
+												<span class="in-out hori">
+													<span class="checkbox checkbox-primary">
+														<input id="check1_11" type="checkbox">
+														<label for="check1_11">99:99</label>
+													</span>
+													<span class="checkbox checkbox-primary">
+														<input id="check1_21" type="checkbox">
+														<label for="check1_21">out</label>
+													</span>
+												</span>
+											</a>
+										</li>
+										<li>
+											<a href="" class="check" data-modules="dragBox">
+												<span class="time">99:99</span>
+												<span class="name">Mary.ko<span class="flag"><i class="fas fa-birthday-cake"></i></span><br>EE(D0102)</span>
+												<span class="in-out hori">
+													<span class="checkbox checkbox-primary">
+														<input id="check1_111" type="checkbox">
+														<label for="check1_111">99:99</label>
+													</span>
+													<span class="checkbox checkbox-primary">
+														<input id="check1_211" type="checkbox">
+														<label for="check1_211">out</label>
+													</span>
+												</span>
+											</a>
+										</li>
+									</ul>
+								</dd>
+							</dl>
+							<dl class="lists">
+								<dt><a href="#classes02" class="collapsed" data-toggle="collapse">DAN_0915_TUE</a></dt>
+								<dd class="top-data">
+									<span class="length"><em class="tx-blue">1</em>/4</span>
+								</dd>
+								<dd id="classes02" class="collapse">
+									<ul>
+										<li>
+											<span class="check consult" data-modules="dragBox">
+												<i class="far fa-comment-dots"></i>
+												<span class="time">99:99</span>
+												<span class="name">Tony Tony Chopper</span>
+												<span class="btns">
+													<a href=""><i class="far fa-edit"></i></a>
+												</span>
+											</span>
+										</li>
+										<li>
+											<span class="check consult" data-modules="dragBox">
+												<i class="far fa-comment-dots"></i>
+												<span class="time">99:99</span>
+												<span class="name">Tony Tony Chopper</span>
+												<span class="btns">
+													<a href=""><i class="far fa-edit"></i></a>
+												</span>
+											</span>
+										</li>
+									</ul>
+								</dd>
+							</dl>
+						</div>
+						<!--// 클래스 별 보기 -->
+						<!-- 리스트 형식으로 보기 -->
+						<div class="lists-group" style="display:none;">
+							<ul>
+								<li>
+									<a href="" class="check" data-modules="dragBox">
+										<span class="time">99:99</span>
+										<span class="name">Mary.koMary.koMary<span class="flag">New!</span><br>EE(D0102)</span>
+										<span class="in-out hori">
+											<span class="checkbox checkbox-primary">
+												<input id="check1_1111" type="checkbox">
+												<label for="check1_1111">99:99</label>
+											</span>
+											<span class="checkbox checkbox-primary">
+												<input id="check1_2111" type="checkbox">
+												<label for="check1_2111">out</label>
+											</span>
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="" class="check" data-modules="dragBox">
+										<span class="time">99:99</span>
+										<span class="name">Mary.koMary.koMary<span class="flag">New!</span><br>EE(D0102)</span>
+										<span class="in-out hori">
+											<span class="checkbox checkbox-primary">
+												<input id="check1_11111" type="checkbox">
+												<label for="check1_11111">99:99</label>
+											</span>
+											<span class="checkbox checkbox-primary">
+												<input id="check1_21111" type="checkbox">
+												<label for="check1_21111">out</label>
+											</span>
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="" class="check" data-modules="dragBox">
+										<span class="time">99:99</span>
+										<span class="name">Mary.koMary.koMary<span class="flag">New!</span><br>EE(D0102)</span>
+										<span class="in-out hori">
+											<span class="checkbox checkbox-primary">
+												<input id="check1_11112" type="checkbox">
+												<label for="check1_11112">99:99</label>
+											</span>
+											<span class="checkbox checkbox-primary">
+												<input id="check1_21112" type="checkbox">
+												<label for="check1_21112">out</label>
+											</span>
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="" class="check" data-modules="dragBox">
+										<span class="time">99:99</span>
+										<span class="name">Mary.koMary.koMary<span class="flag">New!</span><br>EE(D0102)</span>
+										<span class="in-out hori">
+											<span class="checkbox checkbox-primary">
+												<input id="check1_11113" type="checkbox">
+												<label for="check1_11113">99:99</label>
+											</span>
+											<span class="checkbox checkbox-primary">
+												<input id="check1_21113" type="checkbox">
+												<label for="check1_21113">out</label>
+											</span>
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="" class="check" data-modules="dragBox">
+										<span class="time">99:99</span>
+										<span class="name">Mary.koMary.koMary<span class="flag">New!</span><br>EE(D0102)</span>
+										<span class="in-out hori">
+											<span class="checkbox checkbox-primary">
+												<input id="check1_11114" type="checkbox">
+												<label for="check1_11114">99:99</label>
+											</span>
+											<span class="checkbox checkbox-primary">
+												<input id="check1_21114" type="checkbox">
+												<label for="check1_21114">out</label>
+											</span>
+										</span>
+									</a>
+								</li>
+								<li>
+									<span class="check consult" data-modules="dragBox">
+										<i class="far fa-comment-dots"></i>
+										<span class="time">99:99</span>
+										<span class="name">Tony Tony Chopper</span>
+										<span class="btns">
+											<a href=""><i class="far fa-edit"></i></a>
+										</span>
+									</span>
+								</li>
+								<li>
+									<span class="check consult" data-modules="dragBox">
+										<i class="far fa-comment-dots"></i>
+										<span class="time">99:99</span>
+										<span class="name">Tony Tony Chopper</span>
+										<span class="btns">
+											<a href=""><i class="far fa-edit"></i></a>
+										</span>
+									</span>
+								</li>
+								<li>
+									<span class="check consult" data-modules="dragBox">
+										<i class="far fa-comment-dots"></i>
+										<span class="time">99:99</span>
+										<span class="name">Tony Tony Chopper</span>
+										<span class="btns">
+											<a href=""><i class="far fa-edit"></i></a>
+										</span>
+									</span>
+								</li>
+								<li>
+									<span class="check consult" data-modules="dragBox">
+										<i class="far fa-comment-dots"></i>
+										<span class="time">99:99</span>
+										<span class="name">Tony Tony Chopper</span>
+										<span class="btns">
+											<a href=""><i class="far fa-edit"></i></a>
+										</span>
+									</span>
+								</li>
+								<li>
+									<span class="check consult" data-modules="dragBox">
+										<i class="far fa-comment-dots"></i>
+										<span class="time">99:99</span>
+										<span class="name">Tony Tony Chopper</span>
+										<span class="btns">
+											<a href=""><i class="far fa-edit"></i></a>
+										</span>
+									</span>
+								</li>
+							</ul>
+						</div>
+						<!-- 리스트 형식으로 보기 -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="hidden-xs hidden-sm">
+			<span class="ft-logo">KEY &amp; MANAGER</span>
+			<p class="ft-copy">Copyright &copy; 2018 Daekyo Co., Ltd All rights reserved. For more information, contact <a href="mailto:myeyelevel@myeyelevel.com">myeyelevel@myeyelevel.com</a></p>
+			<div class="ft-site">
+				<dl>
+					<dt><a href="#class">Links</a></dt>
+					<dd>
+						<ul>
+							<li><a href="https://sites.google.com/a/myeyelevel.com/itisthekey/" target="_blank">User guide</a></li>
+							<li><a href="http://www.myeyelevel.com/Global/English/" target="_blank">Eyelevel Site</a></li>
+							<li><a href="http://www.iamthekey.com/" target="_blank">Brand Site</a></li>
+							<li><a href="http://eng.daekyo.com/En/default.aspx" target="_blank">Corporate Site</a></li>
+							<li><a href="http://elu.myeyelevel.com" target="_blank">Eye Level University</a></li>
+							<li><a href="http://email.myeyelevel.com" target="_blank">Email</a></li>
+						</ul>
+					</dd>
+				</dl>
+			</div>
+		</footer>
+	</div>
+</div>
+<div class="overlay"></div>
+<script src="/js/custom.js"></script>
+<script>
+	scheduleDraggable.init()
+	$('[data-modules="dropBox"]').on('dropped', function(e){
+		var $this = $(this);
+		var pn = $this.parent().index() +1
+		var n = $this.index()
+		var date = pn + '행' + n +'열'
+		alert(date)
+		// console.log($this)
+		scheduleDraggable.reset();
+	})
+	// function isDragged(el){
+	// 	var pn = el.parent().index() +1
+	// 	var n = el.index()
+	// 	var date = pn + '행' + n +'열'
+	// 	alert(date)
+
+	// 	// 드래그 엘리먼트 원위치.
+	// 	scheduleDraggable.reset();
+	// }
+
+	// 선택된 마이스케쥴 리스트 삭제
+	// scheduleDraggable.remove();
+</script>
+</body>
+</html>

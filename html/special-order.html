@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<link rel="SHORTCUT ICON" href="/images/favicon.ico">
+<title>Key&amp;Manager ver.2</title>
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/fontawesome-all.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" type="text/css" href="/css/custom.css">
+<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+<script src="/js/vendors/jquery-ui.min.js"></script>
+<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+<script src="/js/vendors/moment.js"></script>
+<script src="/js/vendors/bootstrap.min.js"></script>
+<script src="/js/vendors/bootstrap-datetimepicker.min.js"></script>
+</head>
+<body class="nav-sm">
+<div class="wrapper">		
+	<div class="left_col">
+		<div id="sidebar-menu" class="main_menu_side main_menu">
+			<div class="menu_section">
+				<ul class="nav side-menu">
+					<li class="parent_menu"><a href="#"><i class="ico-schedule"></i>Schedule</a><a role="button" class="submenu-open"></a></li>
+					<li class="parent_menu"><a href="#"><i class="ico-member"></i>Member</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Member</a>
+								<ul class="nav-depth3">
+									<li class="active"><a href="#">Subject Transfer</a></li>
+									<li><a href="#">Learning</a></li> 
+									<li><a href="#">Attendance</a></li> 
+								</ul>
+							</li>
+							<li><a href="#">Attendance</a></li> 
+							<li><a href="#">Subject Transfer</a></li>
+							<li><a href="#">Learning</a></li> 
+							<li><a href="#">Attendance</a></li> 
+						</ul>
+					</li>
+					<li class="parent_menu"><a href="#"><i class="ico-learning"></i>Learning</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Member</a></li>
+							<li><a href="#">Attendance</a></li>
+							<li><a href="#">Subject Transfer</a></li>
+							<li><a href="#">Learning</a></li>
+							<li><a href="#">Attendance</a></li>
+						</ul>
+					</li>
+					<li class="parent_menu"><a href="#"><i class="ico-finance"></i>Finance</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Member</a></li>
+							<li><a href="#">Attendance</a></li> 
+							<li><a href="#">Subject Transfer</a></li>
+							<li><a href="#">Learning</a></li> 
+							<li><a href="#">Attendance</a></li> 
+						</ul>
+					</li>
+					<li class="parent_menu"><a href="#"><i class="ico-center"></i>Center</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Member</a></li>
+							<li><a href="#">Attendance</a></li> 
+							<li><a href="#">Subject Transfer</a></li>
+							<li><a href="#">Learning</a></li> 
+							<li><a href="#">Attendance</a></li> 
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="right_col">		
+		<div class="nav_menu">
+			<div class="toggle">
+				<a href="#" class="menu_toggle"><i></i></a>
+			</div>
+			<div class="head-wrap">
+				<div class="pull-left head-favorite">
+					<ul class="head-favorite-list">
+						<li><a href="#" class="list">Create member</a><a href="#" class="ico-delete"><i class="fas fa-times"></i></a></li>
+						<li><a href="#" class="list">Payment</a><a href="#" class="ico-delete"><i class="fas fa-times"></i></a></li>
+						<li><a href="#" class="list">My student</a><a href="#" class="ico-delete"><i class="fas fa-times"></i></a></li>
+					</ul>
+					<a href="#" class="favorite-set"><span class="ico-count cl-gray"></span>My menu add</a>
+				</div>
+				<div class="pull-right head-user-info">
+					<a href="#" class="head-logout">Logout</a>
+					<span class="head-name">Tony tony chopa (FC0001S)</span>
+					<a href="#" class="head-mypage">My page</a>
+				</div>
+			</div>
+		</div>
+		<div class="right_content" role="main">
+			<div class="container-fluid">
+				<div class="col-md-12">
+					<h3>Special Order</h3>
+					<div class="row btn-in">
+						<div class="col-md-12 form-tit">
+							<h4 class="tit">Center Info</h4>
+							<div class="info">
+								<ul class="breadcrumb">
+									<li>Daekyo Malaysia</li>
+									<li>Daekyo Malaysia</li>
+									<li>Bukit Damansara</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-11 bx-search">
+							<form class="form-inline">
+								<div class="row col-md-12">
+									<div class="form-group">
+										<span class="lb-txt st1">Order Type</span>
+										<div class="btn-group" data-toggle="buttons">
+											<label class="btn btn-default active">
+												<input type="radio" name="itemTp" id="type_ALL" value="" checked="checked">
+												<span>All</span>
+											</label>
+											<label class="btn btn-default">
+												<input type="radio" name="itemTp" id="type_booklet" value="booklet" >
+												<span>Teaching Booklet</span>
+											</label>
+											<label class="btn btn-default">
+												<input type="radio" name="itemTp" id="type_sub-booklet" value="sub-booklet" >
+												<span>Supporting Booklet</span>
+											</label>
+											<label class="btn btn-default">
+												<input type="radio" name="itemTp" id="type_material" value="material" >
+												<span>Material</span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-12">
+										<div class="form-group">
+											<span class="lb-txt st1">Order State</span>
+											<select name="prgStsCd" class="form-control input-sm">
+												<option value="" selected="selected">All</option>
+												<option value="S" >Ready</option>
+												<option value="Q" >Request</option>
+												<option value="R" >Register</option>
+												<option value="P" >Progress</option>
+												<option value="O" >Shipment</option>
+												<option value="D" >Rejection</option>
+											</select>
+										</div>
+
+										<div class="form-group mt-2">
+											<span class="lb-txt st1">Requested Date</span>
+											<div class="radio radio-primary radio-inline">
+												<input type="radio" name="datetype" id="date_this_week">
+												<label for="date_this_week">Last 7 days</label>
+											</div>
+											<div class="radio radio-primary radio-inline">
+												<input type="radio" name="datetype" id="date_this_month">
+												<label for="date_this_month">Last 30 days</label>
+											</div>
+											<div class="radio radio-primary radio-inline mr-2">
+												<input type="radio" name="datetype" id="date_select" >
+												<label for="date_select">Select</label>
+											</div>
+											<div class="input-group date">
+												<input type="text" class="form-control input-sm clearable datepicker" placeholder="dd/mm/yyyy" name="requestDateFrom" id="requestDateFrom" />
+												<span class="input-group-addon">
+													<span class="calendar-icon"></span>
+												</span>
+											</div>
+											<span class="date-period-divider">~</span>
+											<div class="input-group date">
+												<input type="text" class="form-control input-sm clearable datepicker" placeholder="dd/mm/yyyy" name="requestDateTo" id="requestDateTo" />
+												<span class="input-group-addon">
+													<span class="calendar-icon"></span>
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="btn-area col-md-1">
+							<a class="btn btn-primary" onclick="searchList('specialOrders')">Search</a>
+						</div>
+					</div>
+					<div class="ln_solid"></div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="pull-right mb-1">
+								<a href="#" class="btn btn-success">Add</a>
+								<a href="#" class="btn btn-default">Sample</a><!-- 180724_수정 [버튼아이콘 삭제] -->
+							</div>
+							<ul class="nav nav-tabs special-order" role="tablist">
+								<li role="presentation" class="active"><a href="#make-orders" aria-controls="make-orders" role="tab" data-toggle="tab">Make Orders</a></li>
+								<li role="presentation"><a href="#import" aria-controls="import" role="tab" data-toggle="tab">Import</a></li>
+							</ul>
+							<div class="tab-content">
+								<div role="tabpanel" class="tab-pane active" id="make-orders">
+									<div class="bx-table">
+										<div class="x-scroll">
+											<form id="orderList_form" onSubmit="return false;" class="form-group form-inline">
+												<table id="orderList_table" class="table">
+													<colgroup>
+														<col style="width:150px">
+														<col style="width:150px">
+														<col style="width:auto">
+														<col style="width:100px">
+													</colgroup>
+													<thead>
+														<tr>
+															<th scope="col">Order Type</th>
+															<th scope="col">Quantity</th>
+															<th scope="col">Product</th>
+															<th scope="col"></th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td class="left">
+																<select name="formList[0].itemTp" class="form-control input-sm">
+																	<option value="booklet">Teaching Booklet</option>
+																	<option value="sub-booklet">Supporting Booklet</option>
+																	<option value="material">Material</option>
+																</select>
+															</td>
+															<td class="left">
+																<input type="text" name="formList[0].qty" placeholder="- Number only" class="form-control input-sm">
+															</td>
+															<td class="left orderList_td_product">
+																<select name="formList[0].subjCd" class="form-control input-sm">
+																	<option value="">- Subject</option>
+																</select>
+																<select name="formList[0].crsCd" class="form-control input-sm">
+																	<option value="">- Level</option>
+																</select>
+																<select name="formList[0].setNoFrom" class="form-control input-sm">
+																	<option value="">- Set(From)</option>
+																</select>
+																<select name="formList[0].setNoTo" class="form-control input-sm">
+																	<option value="">- Set(To)</option>
+																</select>
+															</td>
+															<td>
+																<a class="btn-list-del orderList_btn_del">Delete</a>
+																<a id="orderList_btn_add" class="btn-list-open">Add</a>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</form>
+										</div>
+									</div>
+									<!-- <div class="pull-right col-md-1 text-center" style="width:100px">
+										<a id="orderList_btn_add" class="btn-list-open">Add</a>
+									</div> -->
+								</div>
+								<div role="tabpanel" class="tab-pane" id="import">
+									<textarea name="orderListText" style="width: 100%; padding: 15px 0 15px 15px;" cols="30" rows="10" placeholder="Copy a list from Excel and paste it here."></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<h4 class="cm-h4">Order List</h4>
+							<div class="col-md-12">
+								<div class="row">
+									<div class="pull-right">
+										<a href="#" class="btn btn-success">Place Order(All)</a>
+										<a href="#" class="btn btn-default"><i class="far fa-file-excel"></i> Excel</a><!-- 180724_수정 [버튼명칭 수정] -->
+									</div>
+									<ul id="specialOrders_counts_list" class="list-inline pull-left mt-2">
+										<li class="total">Total : <span id="specialOrders_counts_total">0</span></li>
+										<li>Ready : <span id="specialOrders_counts_Ready">0</span></li>
+										<li>Request : <span id="specialOrders_counts_Request">0</span></li>
+										<li class="tx_red">Rejection : <span id="specialOrders_counts_Rejection">0</span></li>
+										<li>Register : <span id="specialOrders_counts_Register">0</span></li>
+										<li>Progress : <span id="specialOrders_counts_Progress">0</span></li>
+										<li>Shipment : <span id="specialOrders_counts_Shipment">0</span></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div id="specialOrders" class="col-md-12"><!-- 180726_수정 [class 삭제] -->
+							<div class="bx-table">
+								<div class="tb-dimm"><span class="txts">Fetching data...</span></div>
+								<div class="x-scroll">
+									<table class="table table-sort list">
+										<thead>
+											<tr>
+												<th scope="col">No.</th>
+												<th scope="col"><a data-col="orderState" data-col-order="" data-form="specialOrders" class="sorting">Order State</a></th>
+												<th scope="col"><a data-col="poDt" data-col-order="" data-form="specialOrders" class="sorting">Requested Date</a></th>
+												<th scope="col"><a data-col="subjNm" data-col-order="" data-form="specialOrders" class="sorting">Subject</a></th>
+												<th scope="col"><a data-col="crsCd" data-col-order="" data-form="specialOrders" class="sorting">Level</a></th>
+												<th scope="col"><a data-col="setNo" data-col-order="" data-form="specialOrders" class="sorting">Set</a></th>
+												<th scope="col"><a data-col="subBookletNm" data-col-order="" data-form="specialOrders" class="sorting">Supporting Booklet</a></th>
+												<th scope="col"><a data-col="materialNm" data-col-order="" data-form="specialOrders" class="sorting">Material</a></th>
+												<th scope="col"><a data-col="qty" data-col-order="" data-form="specialOrders" class="sorting">Quantity</a></th>
+												<th scope="col"><a data-col="cfmQty" data-col-order="" data-form="specialOrders" class="sorting">Approved</a></th>
+												<th scope="col"><a data-col="ntiQty" data-col-order="" data-form="specialOrders" class="sorting">Not Approved</a></th>
+												<th scope="col"><a data-col="prc" data-col-order="" data-form="specialOrders" class="sorting">Unit Price</a></th>
+												<th scope="col"><a data-col="amt" data-col-order="" data-form="specialOrders" class="sorting">Total Amount</a></th>
+												<th scope="col"><a data-col="orderReason" data-col-order="" data-form="specialOrders" class="sorting">Reason</a></th>
+												<th scope="col">Delete</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>1</td>
+												<td>Ready</td>
+												<td>-</td>
+												<td>EL Eng</td>
+												<td>L1</td>
+												<td>02</td>
+												<td class="left">-</td>
+												<td class="left">-</td>
+												<td>1</td>
+												<td>1</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+												<td class="left">-</td>
+												<td><a href="#" data-pono="PK00002770" data-seq="487" class="btn-list-del btn_del_savedList">Delete</a></td>
+											</tr>
+											<tr>
+												<td>2</td>
+												<td>Ready</td>
+												<td>-</td>
+												<td>EL Math</td>
+												<td>-</td>
+												<td>-</td>
+												<td class="left">EL Math-Clear Paper 9</td>
+												<td class="left">-</td>
+												<td>4</td>
+												<td>4</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+												<td class="left">-</td>
+												<td><a href="#" data-pono="PK00002770" data-seq="2" class="btn-list-del btn_del_savedList">Delete</a></td>
+											</tr>
+											<tr>
+												<td>3</td>
+												<td>Ready</td>
+												<td>-</td>
+												<td>-</td>
+												<td>-</td>
+												<td>-</td>
+												<td class="left">-</td>
+												<td class="left">Eraser</td>
+												<td>1</td>
+												<td>1</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+												<td class="left">-</td>
+												<td><a href="#" data-pono="PK00002770" data-seq="366" class="btn-list-del btn_del_savedList">Delete</a></td>
+											</tr>
+											<tr style="background-color: rgba(228,230,236,0.2);">
+												<td>4</td>
+												<td>Request</td>
+												<td>05/29/2018</td>
+												<td>EL Eng</td>
+												<td>L1</td>
+												<td>02</td>
+												<td class="left">-</td>
+												<td class="left">-</td>
+												<td>1</td>
+												<td>1</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+												<td class="left">imported list</td>
+												<td></td>
+											</tr>
+											<tr style="background-color: rgba(228,230,236,0.2);">
+												<td>5</td>
+												<td>Request</td>
+												<td>05/29/2018</td>
+												<td>EL Eng</td>
+												<td>L1</td>
+												<td>02</td>
+												<td class="left">-</td>
+												<td class="left">-</td>
+												<td>1</td>
+												<td>1</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+												<td class="left">imported list</td>
+												<td></td>
+											</tr>
+											<tr style="background-color: rgba(228,230,236,0.2);">
+												<td>6</td>
+												<td>Request</td>
+												<td>05/29/2018</td>
+												<td>EL Math</td>
+												<td>-</td>
+												<td>-</td>
+												<td class="left">EL Math-Clear Paper 9</td>
+												<td class="left">-</td>
+												<td>4</td>
+												<td>4</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+												<td class="left">imported list</td>
+												<td></td>
+											</tr>
+											<tr style="background-color: rgba(228,230,236,0.2);">
+												<td>7</td>
+												<td>Request</td>
+												<td>05/29/2018</td>
+												<td>EL Math</td>
+												<td>-</td>
+												<td>-</td>
+												<td class="left">EL Math-Clear Paper 9</td>
+												<td class="left">-</td>
+												<td>4</td>
+												<td>4</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+												<td class="left">imported list</td>
+												<td></td>
+											</tr>
+											<tr style="background-color: rgba(228,230,236,0.2);">
+												<td>8</td>
+												<td>Request</td>
+												<td>05/29/2018</td>
+												<td>-</td>
+												<td>-</td>
+												<td>-</td>
+												<td class="left">-</td>
+												<td class="left">Eraser</td>
+												<td>1</td>
+												<td>1</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+												<td class="left">imported list</td>
+												<td></td>
+											</tr>
+											<tr style="background-color: rgba(228,230,236,0.2);">
+												<td>9</td>
+												<td>Request</td>
+												<td>05/29/2018</td>
+												<td>-</td>
+												<td>-</td>
+												<td>-</td>
+												<td class="left">-</td>
+												<td class="left">Eraser</td>
+												<td>1</td>
+												<td>1</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+												<td class="left">imported list</td>
+												<td></td>
+											</tr>
+											<tr style="background-color: rgba(228,230,236,0.2);">
+												<td>10</td>
+												<td>Request</td>
+												<td>05/28/2018</td>
+												<td>EL Eng</td>
+												<td>L1</td>
+												<td>02</td>
+												<td class="left">-</td>
+												<td class="left">-</td>
+												<td>1</td>
+												<td>1</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+												<td class="left">test reason</td>
+												<td></td>
+											</tr>
+											<tr style="background-color: rgba(228,230,236,0.2);">
+												<td>11</td>
+												<td>Request</td>
+												<td>05/28/2018</td>
+												<td>EL Eng</td>
+												<td>L1</td>
+												<td>02</td>
+												<td class="left">-</td>
+												<td class="left">-</td>
+												<td>1</td>
+												<td>1</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+												<td class="left">test reason</td>
+												<td></td>
+											</tr>
+											<tr style="background-color: rgba(228,230,236,0.2);">
+												<td>12</td>
+												<td>Request</td>
+												<td>05/28/2018</td>
+												<td>EL Eng</td>
+												<td>L1</td>
+												<td>03</td>
+												<td class="left">-</td>
+												<td class="left">-</td>
+												<td>1</td>
+												<td>1</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+												<td class="left">test reason</td>
+												<td></td>
+											</tr>
+											<tr style="background-color: rgba(228,230,236,0.2);">
+												<td>13</td>
+												<td>Request</td>
+												<td>05/28/2018</td>
+												<td>EL Math</td>
+												<td>01</td>
+												<td>01</td>
+												<td class="left">-</td>
+												<td class="left">-</td>
+												<td>1</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+												<td class="left">test reason</td>
+												<td></td>
+											</tr>
+											<tr style="background-color: rgba(228,230,236,0.2);">
+												<td>14</td>
+												<td>Request</td>
+												<td>05/28/2018</td>
+												<td>EL Math</td>
+												<td>01</td>
+												<td>02</td>
+												<td class="left">-</td>
+												<td class="left">-</td>
+												<td>1</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+												<td class="left">test reason</td>
+												<td></td>
+											</tr>
+											<tr style="background-color: rgba(228,230,236,0.2);">
+												<td>15</td>
+												<td>Request</td>
+												<td>05/28/2018</td>
+												<td>EL Math</td>
+												<td>-</td>
+												<td>-</td>
+												<td class="left">EL Math Ans. Book(CTM-24)</td>
+												<td class="left">-</td>
+												<td>1</td>
+												<td>1</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+												<td class="left">test reason3</td>
+												<td></td>
+											</tr>
+											<tr style="background-color: rgba(228,230,236,0.2);">
+												<td>16</td>
+												<td>Request</td>
+												<td>05/28/2018</td>
+												<td>EL Math</td>
+												<td>-</td>
+												<td>-</td>
+												<td class="left">EL Math-Clear Paper 9</td>
+												<td class="left">-</td>
+												<td>3</td>
+												<td>3</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+												<td class="left">test reason</td>
+												<td></td>
+											</tr>
+											<tr style="background-color: rgba(228,230,236,0.2);">
+												<td>17</td>
+												<td>Request</td>
+												<td>05/28/2018</td>
+												<td>EL Math</td>
+												<td>-</td>
+												<td>-</td>
+												<td class="left">EL Math-Clear Paper 1</td>
+												<td class="left">-</td>
+												<td>1</td>
+												<td>1</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+												<td class="left">test reason3</td>
+												<td></td>
+											</tr>
+											<tr style="background-color: rgba(228,230,236,0.2);">
+												<td>18</td>
+												<td>Request</td>
+												<td>05/28/2018</td>
+												<td>-</td>
+												<td>-</td>
+												<td>-</td>
+												<td class="left">-</td>
+												<td class="left">Eraser</td>
+												<td>3</td>
+												<td>3</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+												<td class="left">test reason2</td>
+												<td></td>
+											</tr>
+											<tr style="background-color: rgba(228,230,236,0.2);">
+												<td>19</td>
+												<td>Request</td>
+												<td>05/28/2018</td>
+												<td>-</td>
+												<td>-</td>
+												<td>-</td>
+												<td class="left">-</td>
+												<td class="left">Eye Level Good Job sticker </td>
+												<td>1</td>
+												<td>1</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+												<td class="left">test reason2</td>
+												<td></td>
+											</tr>
+											<tr style="background-color: rgba(228,230,236,0.2);">
+												<td>20</td>
+												<td>Request</td>
+												<td>05/28/2018</td>
+												<td>-</td>
+												<td>-</td>
+												<td>-</td>
+												<td class="left">-</td>
+												<td class="left">Pencil Case(Blue)</td>
+												<td>1</td>
+												<td>1</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+												<td class="left">test reason2</td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="text-center">
+							<nav>
+								<ul class="pagination">
+									<li class="disabled"><a href="#" aria-label="First"><i class="fas fa-angle-double-left"></i></a></li>
+									<li class="disabled"><a href="#" aria-label="Previous"><i class="fas fa-angle-left"></i></a></li>
+									<li class="active"><a href="#">1<span class="sr-only">(current)</span></a></li>
+									<li><a href="#">2</a></li>
+									<li><a href="#">3</a></li>
+									<li><a href="#">4</a></li>
+									<li><a href="#">5</a></li>
+									<li><a href="#">6</a></li>
+									<li><a href="#">7</a></li>
+									<li><a href="#">8</a></li>
+									<li><a href="#">9</a></li>
+									<li><a href="#">10</a></li>
+									<li><a href="#" aria-label="Next"><i class="fas fa-angle-right"></i></a></li>
+									<li><a href="#" aria-label="Last"><i class="fas fa-angle-double-right"></i></a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+				<div id="savingResultsPopup" class="modal" tabindex="-1" role="dialog">
+				  <div class="modal-dialog modal-lg" style="max-width: 1120px;" role="document">
+					<div class="modal-content">
+					  <div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						  <span aria-hidden="true">&times;</span>
+						</button>
+						<h4 class="modal-title">Saving Results</h4>
+					  </div>
+					  <div class="modal-body">
+						<table id="saveResultList_table" class="tb-col">
+							<thead>
+								<tr>
+									<th scope="col">No</th>
+									<th scope="col">Order Type</th>
+									<th scope="col">Subject</th>
+									<th scope="col">Level</th>
+									<th scope="col">SetFrom</th>
+									<th scope="col">SetTo</th>
+									<th scope="col">Supporting Booklet</th>
+									<th scope="col">Material</th>
+									<th scope="col">Quantity</th>
+									<th scope="col">Result</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td colspan="10" class="tb-no-data">
+										No data to display.
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					  </div>
+					  <div class="modal-footer">
+						<button type="button" class="btn btn-primary" onclick="$.km.alert('test');">OK</button>
+					  </div>
+					</div>
+				  </div>
+				</div>	
+			</div>
+		</div>
+		<footer>
+			<span class="ft-logo">KEY &amp; MANAGER</span>
+			<p class="ft-copy">Copyright &copy; 2018 Daekyo Co., Ltd All rights reserved. For more information, contact <a href="mailto:myeyelevel@myeyelevel.com">myeyelevel@myeyelevel.com</a></p>
+			<div class="ft-site">
+				<dl>
+					<dt><a href="#class">LINKS</a></dt>
+					<dd>
+						<ul>
+							<li><a href="https://sites.google.com/a/myeyelevel.com/itisthekey/" target="_blank">User guide</a></li>
+							<li><a href="http://www.myeyelevel.com/Global/English/" target="_blank">Eyelevel Site</a></li>
+							<li><a href="http://www.iamthekey.com/" target="_blank">Brand Site</a></li>
+							<li><a href="http://eng.daekyo.com/En/default.aspx" target="_blank">Corporate Site</a></li>
+							<li><a href="http://elu.myeyelevel.com" target="_blank">Eye Level University</a></li>
+							<li><a href="http://email.myeyelevel.com" target="_blank">Email</a></li>
+						</ul>
+					</dd>
+				</dl>
+			</div>
+		</footer>
+	</div>
+</div>
+<script src="/js/custom.js"></script>
+</body>
+</html>

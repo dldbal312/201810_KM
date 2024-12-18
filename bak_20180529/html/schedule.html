@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<link rel="SHORTCUT ICON" href="/images/favicon.ico">
+<title>Member</title>
+<link rel="stylesheet" href="/css/common.css">
+<link rel="stylesheet" href="/css/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" href="/css/jquery-ui.css">
+<link rel="stylesheet" media="all and (min-width: 0) and (max-width: 1280px)" href="/css/tablet.css" />
+<link rel="stylesheet" media="all and (min-width: 0) and (max-width: 767px)" href="/css/mobile.css" />
+<script src="/js/jQuery/jquery-2.2.4.min.js"></script>
+<script src="/js/jQuery/jquery-ui.js"></script>
+<script src="/js/jQuery/jquery.mCustomScrollbar.js"></script>
+<script src="/js/common.js"></script>
+</head>
+<body>
+<div id="kmWrap">
+	<!-- s : mobile only -->
+	<div id="kmBtn" class="mobile-only">
+		<button class="ctrl-favorite"><span>favorite</span></button>
+		<button class="ctrl-search"><span>search</span></button>
+		<button class="ctrl-mystudent"><span>mystudent</span></button>
+	</div>
+	<!-- e : mobile only -->
+
+	<!-- s : kmNavi -->
+	<div id="kmNavi">
+		<button class="ctrl-nav"><span class="nav-ico"></span><span class="nav-txt">Close</span></button>
+		<div class="nav-list">
+			<div class="mobile-only">
+				<!-- 모바일 내용 추가 예정 -->
+			</div>
+			<ul>
+				<li class="no-children"><a href="#"><span class="nav-txt">Schedule</span></a></li> 
+				<li class="has-children"><a href="#"><span class="nav-txt">Member</span></a>
+					<ul class="depth2">
+						<li><a href="#">Member</a></li>
+						<li><a href="#">Attendance</a></li> 
+						<li><a href="#">Subject Transfer</a></li>
+						<li><a href="#">Learning</a></li> 
+						<li><a href="#">Attendance</a></li> 
+					</ul>
+				</li>
+				<li class="has-children"><a href="#"><span class="nav-txt">Learning</span></a>
+					<ul class="depth2">
+						<li><a href="#">Learning</a></li> 
+						<li><a href="#">Attendance</a></li> 
+						<li><a href="#">Progress</a></li> 
+						<li><a href="#">Diagnostic test</a></li> 
+						<li><a href="#">Material</a></li> 
+					</ul>
+				</li>
+				<li class="has-children"><a href="#"><span class="nav-txt">Finance</span></a>
+					<ul class="depth2">
+						<li><a href="#">Deposit Management</a></li>
+						<li><a href="#">Learning</a></li> 
+						<li><a href="#">Attendance</a></li> 
+						<li><a href="#">Progress</a></li> 
+						<li><a href="#">Diagnostic test</a></li> 
+						<li><a href="#">Material</a></li> 
+					</ul>
+				</li>
+				<li class="has-children"><a href="#"><span class="nav-txt">Center</span></a>
+					<ul class="depth2">
+						<li><a href="#">Organization Info</a></li>
+						<li><a href="#">Learning</a></li> 
+						<li><a href="#">Attendance</a></li> 
+						<li><a href="#">Progress</a></li> 
+						<li><a href="#">Diagnostic test</a></li> 
+						<li><a href="#">Material</a></li> 
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- e : kmNavi -->
+
+	<!-- s : kmContainer -->
+	<div id="kmContainer">
+		<!-- s : kmHeader -->
+		<div id="kmHeader">
+			<div class="head-favorite">
+				<div class="favorite-list">
+					<a href="#">Create member</a>
+					<a href="#">Payment</a>
+					<a href="#">My student</a>
+				</div>
+				<a href="#" class="favorite-set" title="favorite">favorite list</a>
+			</div>
+			<div class="head-user-info">
+				<a href="#" class="head-logout">Logout</a>
+				<span class="head-name">Tony tony chopa (FC0001S)</span>
+				<a href="#" class="head-mypage">My page</a>
+			</div>
+			<div class="head-search mobile-only">
+				<form action="" method="" class="search-form">
+					<div class="search-panel">
+						<input type="text" name="search" placeholder="Search here..." title="search">
+						<button type="submit"><span class="">검색</span></button>
+					</div>
+					<div class="">
+						<!-- 모바일 내용 추가 예정 : 검색결과 리스트 -->
+					</div>
+				</form>
+			</div>
+			<div class="head-mystudent mobile-only">
+				<!-- 모바일 내용 추가 예정 -->
+			</div>
+		</div>
+		<!-- e : kmHeader -->
+
+		<!-- s : kmConts -->
+		<div id="kmConts">
+			<div class="page-info">
+				<div class="location">
+					<span class="home"><a href="#">home</a></span>
+					<span><a href="#">Member</a></span>
+				</div>
+				<h2 class="page-tit">Member</h2>
+			</div>
+			<div class="bx-cont">
+				<div class="grid">
+					<div class="form-tit">
+						<h3 class="tit">Center Info</h3>
+						<span class="info">Daekyo Malaysia > Daekyo Malaysia > Bukit Damansara</span>
+					</div>
+					<div class="tb-data btn-in">
+						<dl>
+							<dt class="al-left">
+								<input type="radio" id="radio1-1" name="radio1" checked="checked">
+								<label for="radio1-1"><span class="icon"></span>Subject</label>
+								<input type="radio" id="radio1-2" name="radio1">
+								<label for="radio1-2"><span class="icon"></span>Member</label>
+							</dt>
+							<dd>
+								<!-- 
+									 dev : 활성화 클래스 추가 [on]
+								-->
+								<ul class="tab-list">
+									<li class="on"><a href="#">All</a></li>
+									<li><a href="#">Study</a></li>
+									<li><a href="#">Drop</a></li>
+									<li><a href="#">Free Trial</a></li>
+									<li><a href="#">Free Trial(End)</a></li>
+									<li><a href="#">Lead</a></li>
+									<li><a href="#">Pause</a></li>
+									<li><a href="#">Graduate</a></li>
+								</ul>
+							</dd>
+						</dl>
+						<div class="cols">
+							<dl class="column4">
+								<dt>Study Day</dt>
+								<dd>
+									<span class="select">
+										<select title="All">
+											<option value="0" selected="" title="All">All</option>
+											<option value="1" title="Sun">Sun</option>
+											<option value="2" title="Mon">Mon</option>
+											<option value="3" title="Tue">Tue</option>
+											<option value="4" title="Wed">Wed</option>
+											<option value="5" title="Thu">Thu</option>
+											<option value="6" title="Fri">Fri</option>
+											<option value="7" title="Sat">Sat</option>
+										</select>
+									</span>
+								</dd>
+							</dl>
+							<dl class="column4">
+								<dt>Member</dt>
+								<dd>
+									<div class="bx-search">
+										<input type="text" name="" value="Member">
+										<button type="button" class="layer1 btn-layer ico-search">search</button>
+									</div>
+								</dd>
+							</dl>
+							<dl class="column4">
+								<dt>Manager</dt>
+								<dd>
+									<div class="bx-search">
+										<input type="text" name="" value="Manager">
+										<button type="button" class="layer2 btn-layer ico-search">search</button>
+									</div>
+								</dd>
+							</dl>
+							<dl class="column4">
+								<dt>Subject</dt>
+								<dd>
+									<span class="select">
+										<select title="All">
+											<option value="0" selected="" title="All">All</option>
+											<option value="1" title="EL Math">EL Math</option>
+											<option value="2" title="EL Play Math">EL Play Math</option>
+											<option value="3" title="EL Eng">EL Eng</option>
+											<option value="4" title="EL Kor">EL Kor</option>
+											<option value="5" title="EL Matematika">EL Matematika</option>
+											<option value="6" title="EL Eng Sparks">EL Eng Sparks</option>
+											<option value="7" title="NNP Kor">NNP Kor</option>
+											<option value="8" title="NNP Infant Kor">NNP Infant Kor</option>
+											<option value="9" title="NNP Mid. Society">NNP Mid. Society</option>
+											<option value="10" title="NNP WebPlus Mid. Kor">NNP WebPlus Mid. Kor</option>
+											<option value="11" title="NNP Thinking P. Math">NNP Thinking P. Math</option>
+											<option value="12" title="NNP Infant Math">NNP Infant Math</option>
+											<option value="13" title="NNP Eng">NNP Eng</option>
+											<option value="14" title="Super Talk Talk">Super Talk Talk</option>
+											<option value="15" title="NNP Chinese Char.">NNP Chinese Char.</option>
+											<option value="16" title="NNP Japanese">NNP Japanese</option>
+											<option value="17" title="NNP Social Study">NNP Social Study</option>
+											<option value="18" title="NNP Science">NNP Science</option>
+											<option value="19" title="CH Chinese">CH Chinese</option>
+											<option value="20" title="Inopi Math">Inopi Math</option>
+											<option value="21" title="NNP Clinic Kor">NNP Clinic Kor</option>
+											<option value="22" title="NNP Baby">NNP Baby</option>
+											<option value="23" title="Inopi">Inopi</option>
+											<option value="24" title="EL Eng Blended">EL Eng Blended</option>
+											<option value="25" title="Inopi Math Online">Inopi Math Online</option>
+											<option value="26" title="EL Math Online">EL Math Online</option>
+											<option value="27" title="EL HappyTalk">EL HappyTalk</option>
+											<option value="28" title="EL Chinese.J">EL Chinese.J</option>
+											<option value="29" title="EL Matematika Online">EL Matematika Online</option>
+										</select>
+									</span>
+								</dd>
+							</dl>
+						</div>
+						<div class="bx-btn al-right">
+							<a href="#" class="layer4 btn-layer btn btn-gray">reset</a>
+							<a href="#" class="btn btn-blue">search</a>
+						</div>
+					</div>
+				</div>	
+			</div>
+			<div class="bx-cont">
+				<div class="bx-btn right">
+					<a href="#" class="layer3 btn-layer btn btn-blue">등록</a>
+				</div>
+				<!-- 
+					dev : 스크롤 
+					- 가로 : x-scroll 
+					- 세로 : y-scroll
+					- 가로세로 : xy-scroll
+				-->
+				<div class="x-scroll">
+					<!-- 
+						dev : sort class명
+						- default : sorting
+						- 오름차순 : sorting_asc
+						- 오름차순 disabled : sorting_asc disabled
+						- 내림차순 : sorting_desc
+						- 내림차순 disabled : sorting_desc disabled
+					-->
+					<table class="tb-col">
+						<thead>
+							<tr>
+								<th scope="col"><input id="all" name="all" class="" type="checkbox" value="all"><label for="all"><span class="icon"></span></label></th>
+								<th scope="col" class="sorting_desc">No</th>
+								<th scope="col" class="sorting_asc">MemberID</th>
+								<th scope="col" class="sorting">Name</th>
+								<th scope="col" class="sorting">Manager</th>
+								<th scope="col" class="sorting">Subject</th>
+								<th scope="col" class="sorting">Study status</th>
+								<th scope="col" class="sorting">Grade</th>
+								<th scope="col" class="sorting">Fully Paid Month</th>
+								<th scope="col" class="sorting">Study Day</th>
+								<th scope="col" class="sorting">Contact Number</th>
+								<th scope="col" class="sorting">Attendance Code</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><input id="pt1" name="pt1" class="" type="checkbox" value="pt1"><label for="pt1"><span class="icon"></span></label></td>
+								<td>1</td>
+								<td><a href="#" class="layer5 btn-layer">G00204614</a></td>
+								<td><a href="#" class="layer5 btn-layer">Brandon Tan</a></td>
+								<td>Bukit Damansara</td>
+								<td>EL Math Online</td>
+								<td>study</td>
+								<td>&nbsp;</td>
+								<td>01/2015</td>
+								<td>Fri</td>
+								<td>0111111111</td>
+								<td>-</td>
+							</tr>
+							<tr>
+								<td><input id="pt2" name="pt2" class="" type="checkbox" value="pt2"><label for="pt2"><span class="icon"></span></label></td>
+								<td>2</td>
+								<td><a href="#">K30001494</a></td>
+								<td><a href="#">chulhee</a></td>
+								<td>Bukit Damansara</td>
+								<td>EL Math</td>
+								<td>study</td>
+								<td>Age 0 ~ 1</td>
+								<td>04/2018</td>
+								<td>Mon</td>
+								<td>1234</td>
+								<td>1234</td>
+							</tr>
+							<tr>
+								<td><input id="pt3" name="pt3" class="" type="checkbox" value="pt3"><label for="pt3"><span class="icon"></span></label></td>
+								<td>3</td>
+								<td><a href="#">K30001494</a></td>
+								<td><a href="#">chulhee</a></td>
+								<td>Bukit Damansara</td>
+								<td>EL Math</td>
+								<td>study</td>
+								<td>Age 0 ~ 1</td>
+								<td>04/2018</td>
+								<td>Mon</td>
+								<td>1234</td>
+								<td>1234</td>
+							</tr>
+							<tr>
+								<td><input id="pt4" name="pt4" class="" type="checkbox" value="pt4"><label for="pt4"><span class="icon"></span></label></td>
+								<td>4</td>
+								<td><a href="#">K30001494</a></td>
+								<td><a href="#">chulhee</a></td>
+								<td>Bukit Damansara</td>
+								<td>EL Math</td>
+								<td>study</td>
+								<td>Age 0 ~ 1</td>
+								<td>04/2018</td>
+								<td>Mon</td>
+								<td>1234</td>
+								<td>1234</td>
+							</tr>
+							<tr>
+								<td><input id="pt5" name="pt5" class="" type="checkbox" value="pt5"><label for="pt5"><span class="icon"></span></label></td>
+								<td>5</td>
+								<td><a href="#">K30001494</a></td>
+								<td><a href="#">chulhee</a></td>
+								<td>Bukit Damansara</td>
+								<td>EL Math</td>
+								<td>study</td>
+								<td>Age 0 ~ 1</td>
+								<td>04/2018</td>
+								<td>Mon</td>
+								<td>1234</td>
+								<td>1234</td>
+							</tr>
+							<tr>
+								<td><input id="pt6" name="pt6" class="" type="checkbox" value="pt6"><label for="pt6"><span class="icon"></span></label></td>
+								<td>6</td>
+								<td><a href="#">K30001494</a></td>
+								<td><a href="#">chulhee</a></td>
+								<td>Bukit Damansara</td>
+								<td>EL Math</td>
+								<td>study</td>
+								<td>Age 0 ~ 1</td>
+								<td>04/2018</td>
+								<td>Mon</td>
+								<td>1234</td>
+								<td>1234</td>
+							</tr>
+							<tr>
+								<td><input id="pt7" name="pt7" class="" type="checkbox" value="pt7"><label for="pt7"><span class="icon"></span></label></td>
+								<td>7</td>
+								<td><a href="#">K30001494</a></td>
+								<td><a href="#">chulhee</a></td>
+								<td>Bukit Damansara</td>
+								<td>EL Math</td>
+								<td>study</td>
+								<td>Age 0 ~ 1</td>
+								<td>04/2018</td>
+								<td>Mon</td>
+								<td>1234</td>
+								<td>1234</td>
+							</tr>
+							<tr>
+								<td><input id="pt8" name="pt8" class="" type="checkbox" value="pt8"><label for="pt8"><span class="icon"></span></label></td>
+								<td>8</td>
+								<td><a href="#">K30001494</a></td>
+								<td><a href="#">chulhee</a></td>
+								<td>Bukit Damansara</td>
+								<td>EL Math</td>
+								<td>study</td>
+								<td>Age 0 ~ 1</td>
+								<td>04/2018</td>
+								<td>Mon</td>
+								<td>1234</td>
+								<td>1234</td>
+							</tr>
+							<tr>
+								<td><input id="pt9" name="pt9" class="" type="checkbox" value="pt9"><label for="pt9"><span class="icon"></span></label></td>
+								<td>9</td>
+								<td><a href="#">K30001494</a></td>
+								<td><a href="#">chulhee</a></td>
+								<td>Bukit Damansara</td>
+								<td>EL Math</td>
+								<td>study</td>
+								<td>Age 0 ~ 1</td>
+								<td>04/2018</td>
+								<td>Mon</td>
+								<td>1234</td>
+								<td>1234</td>
+							</tr>
+							<tr>
+								<td><input id="pt10" name="pt10" class="" type="checkbox" value="pt10"><label for="pt10"><span class="icon"></span></label></td>
+								<td>10</td>
+								<td><a href="#">K30001494</a></td>
+								<td><a href="#">chulhee</a></td>
+								<td>Bukit Damansara</td>
+								<td>EL Math</td>
+								<td>study</td>
+								<td>Age 0 ~ 1</td>
+								<td>04/2018</td>
+								<td>Mon</td>
+								<td>1234</td>
+								<td>1234</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="pagination">
+					<a href="javascript:;" class="btn-forward"><span>first</span></a>
+					<a href="javascript:;" class="btn-prevpage"><span>prev page</span></a>
+					<span>
+						<a href="javascript:;" class="on">1</a>
+						<a href="javascript:;">2</a>
+						<a href="javascript:;">3</a>
+						<a href="javascript:;">4</a>
+						<a href="javascript:;">5</a>
+						<a href="javascript:;">6</a>
+						<a href="javascript:;">7</a>
+						<a href="javascript:;">8</a>
+						<a href="javascript:;">9</a>
+						<a href="javascript:;">10</a>
+					</span>
+					<a href="javascript:;" class="btn-nextpage"><span>next page</span></a>
+					<a href="javascript:;" class="btn-backward"><span>last page</span></a>
+				</div>
+			</div>
+		</div>
+		<!-- e : kmConts -->
+
+		<!-- s : kmFooter -->
+		<div id="kmFooter">
+			<div class="ft-area">
+				<span class="ft-logo">KEY &amp; MANAGER</span>
+				<p class="ft-copy">Copyright &copy; 2018 Daekyo Co., Ltd All rights reserved. For more information, contact <a href="mailto:myeyelevel@myeyelevel.com">myeyelevel@myeyelevel.com</a></p>
+				<div class="ft-site">
+					<dl>
+						<dt><a href="#class">Links</a></dt>
+						<dd>
+							<ul>
+								<li><a href="https://sites.google.com/a/myeyelevel.com/itisthekey/" target="_blank">User guide</a></li>
+								<li><a href="http://www.myeyelevel.com/Global/English/" target="_blank">Eyelevel Site</a></li>
+								<li><a href="http://www.iamthekey.com/" target="_blank">Brand Site</a></li>
+								<li><a href="http://eng.daekyo.com/En/default.aspx" target="_blank">Corporate Site</a></li>
+								<li><a href="http://elu.myeyelevel.com" target="_blank">Eye Level University</a></li>
+								<li><a href="http://email.myeyelevel.com" target="_blank">Email</a></li>
+							</ul>
+						</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+		<!-- e : kmFooter -->
+	</div>
+	<!-- e : kmContainer -->
+</div>
+</body>
+</html>

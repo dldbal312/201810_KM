@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<link rel="SHORTCUT ICON" href="/images/favicon.ico">
+<title>Key&amp;Manager ver.2</title>
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/fontawesome-all.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" type="text/css" href="/css/custom.css">
+<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+<script src="/js/vendors/jquery-ui.min.js"></script>
+<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+<script src="/js/vendors/moment.js"></script>
+<script src="/js/vendors/bootstrap.min.js"></script>
+<script src="/js/vendors/bootstrap-datetimepicker.min.js"></script>
+</head>
+<body class="nav-sm modal-open">
+<div class="modal fade in" id="modal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel5" style="display: block;">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h1 class="modal-title" id="myModalLabel5">Resume from Other Center</h1>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="col-md-3">
+							<div class="form-group">
+								<span class="lb-txt mb-1">Member ID</span>
+								<div class="input-group">
+									<input class="form-control input-sm clearable" type="text" placeholder="G00203378">
+									<div class="input-group-btn">
+										<button type="button" class="btn btn-search" data-toggle="modal" data-target="#searchMember"><span class="fas fa-search"></span><span class="hide">Search</span></button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="form-group">
+								<span class="lb-txt mb-1">Member Name</span>
+								<input type="text" class="form-control input-sm clearable" placeholder="Ashley Loo See Qi" readonly="readonly"><!-- 180725_수정 [readonly 추가] -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="col-md-3">
+							<div class="form-group">
+								<span class="lb-txt mb-1">Corporation</span>
+								<input type="text" class="form-control input-sm clearable" placeholder="Daekyo Malaysia" readonly="readonly"><!-- 180725_수정 [readonly 추가] -->
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="form-group">
+								<span class="lb-txt mb-1">Office/FO</span>
+								<div class="form-inline half">
+									<select class="form-control input-sm" disabled="disabled"><!-- 180725_수정 [disabled 추가] -->
+										<option value="" selected="selected">OFFICE</option>
+									</select>
+									<select class="form-control input-sm" disabled="disabled"><!-- 180725_수정 [disabled 추가] -->
+										<option value="" selected="selected">Daekyo Mal..</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="form-group">
+								<span class="lb-txt mb-1">Center</span>
+								<div class="form-inline">
+									<select class="form-control input-sm" disabled="disabled"><!-- 180725_수정 [disabled 추가] -->
+										<option value="" selected="selected">Bukit Damansara</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="ln_dashed"></div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="col-md-3">
+							<div class=" form-group">
+								<span class="lb-txt mb-1">Subject<i class="required">*</i></span>
+								<select class="form-control input-sm">
+									<option value="" selected="selected">EL Math</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class=" form-group">
+								<span class="lb-txt mb-1">Instructor<i class="required">*</i></span>
+								<div class="input-group">
+									<input class="form-control input-sm clearable" type="text">
+									<div class="input-group-btn">
+										<button type="button" class="btn btn-search" data-toggle="modal" data-target="#searchManager"><span class="fas fa-search"></span><span class="hide">Search</span></button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="form-group">
+								<span class="lb-txt mb-1">Starting Point 1<i class="required">*</i></span>
+								<div class="form-inline half">
+									<select class="form-control input-sm">
+										<option value="" selected="selected">Select</option>
+									</select>
+									<select class="form-control input-sm">
+										<option value="" selected="selected">Select</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="form-group">
+								<span class="lb-txt mb-1">Starting Point 2<i class="required">*</i></span>
+								<div class="form-inline half">
+									<select class="form-control input-sm">
+										<option value="" selected="selected">Select</option>
+									</select>
+									<select class="form-control input-sm">
+										<option value="" selected="selected">Select</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="form-group">
+								<span class="lb-txt mb-1">Enrollment Date<i class="required">*</i></span>
+								<div class="form-inline input-group date">
+									<input class="form-control input-sm clearable datepicker" type="text" placeholder="dd/mm/yyyy">
+									<span class="input-group-addon">
+										<span class="calendar-icon"></span>
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="form-group">
+								<span class="lb-txt mb-1">Study Start Date<i class="required">*</i></span>
+								<div class="form-inline input-group date">
+									<input class="form-control input-sm clearable datepicker" type="text" placeholder="dd/mm/yyyy">
+									<span class="input-group-addon">
+										<span class="calendar-icon"></span>
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class=" form-group">
+								<span class="lb-txt mb-1">Study Day<i class="required">*</i></span>
+								<div class="form-inline">
+									<select class="form-control input-sm">
+										<option value="" selected="selected">MON</option>
+									</select>
+									<select class="form-control input-sm">
+										<option value="" selected="selected">00</option>
+									</select>
+									<span class="date-period-divider">시</span>
+									<select class="form-control input-sm">
+										<option value="" selected="selected">00</option>
+									</select>
+									<span class="date-period-divider">분</span>
+									<a href="#" class="btn-list-open">Add</a>
+								</div>
+							</div>
+							<div class="edit-week">
+								<div class="edit-week-box">
+									<span class="alert alert-info" role="alert">MON 15:00<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button></span>
+									<span class="alert alert-info" role="alert">TUE 16:00<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button></span>
+									<span class="alert alert-info" role="alert">WED 17:00<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button></span>
+									<span class="alert alert-info" role="alert">THU 17:00<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button></span>
+									<span class="alert alert-info" role="alert">FRI 17:00<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button></span>
+									<span class="alert alert-info" role="alert">SAT 17:00<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button></span>
+									<span class="alert alert-info" role="alert">SUN 17:00<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button></span>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="form-group">
+								<span class="lb-txt mb-1">Enrollment Reason<i class="required">*</i></span>
+								<input class="form-control input-sm clearable" type="text">
+							</div>
+						</div>
+						<div class="col-md-9">
+							<div class="form-group">
+								<span class="lb-txt mb-1">Enrollment Channel<i class="required">*</i></span>
+								<div class="form-inline half">
+									<select class="form-control input-sm">
+										<option value="" selected="selected">Select</option>
+									</select>
+									<input class="form-control input-sm clearable" type="text">
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group">
+								<span class="lb-txt mb-1">Remarks</span>
+								<input class="form-control input-sm clearable" type="text" placeholder="">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="ln_dashed"></div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="col-md-3">
+							<div class=" form-group">
+								<span class="lb-txt mb-1">No. of Study Weeks<i class="required">*</i></span>
+								<select class="form-control input-sm">
+									<option value="" selected="selected">Select</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class=" form-group">
+								<span class="lb-txt mb-1">Tuition Type<i class="required">*</i></span>
+								<div class="form-inline half">
+									<select class="form-control input-sm">
+										<option value="" selected="selected">Select</option>
+									</select>
+									<span class="txt-box mt-2">(40.00/주 회비)</span>
+								</div>
+							</div>
+						</div>
+						<!-- 180725_수정 [Max Booklets/Wee 위치 및 고정텍스트로 변경] -->
+						<div class="col-md-3">
+							<div class=" form-group">
+								<span class="lb-txt mb-1">Max Booklets/Week</span>
+								<p class="ml-2 mt-1 tx-red underline">1</p>
+							</div>
+						</div>
+						<!-- // 180725_수정 [Max Booklets/Wee 위치 및 고정텍스트로 변경] -->
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="col-md-3">
+							<div class="form-group">
+								<span class="lb-txt mb-1">입회비</span>
+								<input type="text" class="form-control input-sm clearable" placeholder="00.00" readonly="readonly"><!-- 180725_수정 [readonly 추가] -->
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="form-group">
+								<span class="lb-txt mb-1">이번달 회비</span>
+								<input type="text" class="form-control input-sm clearable" placeholder="00.00" readonly="readonly"><!-- 180725_수정 [readonly 추가] -->
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="form-group">
+								<span class="lb-txt mb-1">다음달 회비</span>
+								<input type="text" class="form-control input-sm clearable" placeholder="00.00" readonly="readonly"><!-- 180725_수정 [readonly 추가] -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="text-center">
+						<button type="button" class="btn btn-primary">Save</button>
+						<button type="button" class="btn btn-info" data-dismiss="modal">Cancel</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal-backdrop fade in"></div>
+
+<script src="/js/custom.js"></script>
+</body>
+</html>

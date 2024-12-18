@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<link rel="SHORTCUT ICON" href="/images/favicon.ico">
+<title>Key&amp;Manager ver.2</title>
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/fontawesome-all.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" type="text/css" href="/css/custom.css">
+<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+<script src="/js/vendors/jquery-ui.min.js"></script>
+<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+<script src="/js/vendors/moment.js"></script>
+<script src="/js/vendors/bootstrap.min.js"></script>
+<script src="/js/vendors/bootstrap-datetimepicker.min.js"></script>
+</head>
+<body class="nav-sm">
+<div class="wrapper">		
+	<div class="left_col">
+		<div id="sidebar-menu" class="main_menu_side main_menu">
+			<div class="menu_section">
+				<ul class="nav side-menu">
+					<li class="parent_menu"><a href="#"><i class="ico-schedule"></i>Schedule</a><a role="button" class="submenu-open"></a></li>
+					<li class="parent_menu"><a href="#"><i class="ico-member"></i>Member</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Member</a>
+								<ul class="nav-depth3">
+									<li class="active"><a href="#">Subject Transfer</a></li>
+									<li><a href="#">Learning</a></li> 
+									<li><a href="#">Attendance</a></li> 
+								</ul>
+							</li>
+							<li><a href="#">Attendance</a></li> 
+							<li><a href="#">Subject Transfer</a></li>
+							<li><a href="#">Learning</a></li> 
+							<li><a href="#">Attendance</a></li> 
+						</ul>
+					</li>
+					<li class="parent_menu"><a href="#"><i class="ico-learning"></i>Learning</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Member</a></li>
+							<li><a href="#">Attendance</a></li>
+							<li><a href="#">Subject Transfer</a></li>
+							<li><a href="#">Learning</a></li>
+							<li><a href="#">Attendance</a></li>
+						</ul>
+					</li>
+					<li class="parent_menu"><a href="#"><i class="ico-finance"></i>Finance</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Member</a></li>
+							<li><a href="#">Attendance</a></li> 
+							<li><a href="#">Subject Transfer</a></li>
+							<li><a href="#">Learning</a></li> 
+							<li><a href="#">Attendance</a></li> 
+						</ul>
+					</li>
+					<li class="parent_menu"><a href="#"><i class="ico-center"></i>Center</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Member</a></li>
+							<li><a href="#">Attendance</a></li> 
+							<li><a href="#">Subject Transfer</a></li>
+							<li><a href="#">Learning</a></li> 
+							<li><a href="#">Attendance</a></li> 
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="right_col">		
+		<div class="nav_menu">
+			<div class="toggle">
+				<a href="#" class="menu_toggle"><i></i></a>
+			</div>
+			<div class="head-wrap">
+				<div class="pull-left head-favorite">
+					<ul class="head-favorite-list">
+						<li><a href="#" class="list">Create member</a><a href="#" class="ico-delete"><i class="fas fa-times"></i></a></li>
+						<li><a href="#" class="list">Payment</a><a href="#" class="ico-delete"><i class="fas fa-times"></i></a></li>
+						<li><a href="#" class="list">My student</a><a href="#" class="ico-delete"><i class="fas fa-times"></i></a></li>
+					</ul>
+					<a href="#" class="favorite-set"><span class="ico-count cl-gray"></span>My menu add</a>
+				</div>
+				<div class="pull-right head-user-info">
+					<a href="#" class="head-logout">Logout</a>
+					<span class="head-name">Tony tony chopa (FC0001S)</span>
+					<a href="#" class="head-mypage">My page</a>
+				</div>
+			</div>
+		</div>
+		<div class="right_content" role="main">
+			<div class="container-fluid">
+				<div class="col-md-12">
+					<h3>상담관리</h3>
+					<div class="row btn-in">
+						<div class="col-md-12 form-tit">
+							<h4 class="tit">Center Info</h4>
+							<div class="info">
+								<ul class="breadcrumb">
+									<li>Daekyo Malaysia</li>
+									<li>Daekyo Malaysia</li>
+									<li>Bukit Damansara</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-11 bx-search">
+							<!-- 180717_수정 [화면설계서 v3.1 수정사항 반영 ] -->
+							<form class="form-inline">
+								<div class="row bx-search">
+									<div class="col-md-12">
+										<div class="form-group">
+											<span class="lb-txt st1">회원구분</span>
+											<div class="btn-group" data-toggle="buttons">
+												<label class="btn btn-default active">
+													<input type="radio" name="itemTp" id="type_ALL" value="" checked="checked">
+													<span>All</span>
+												</label>
+												<label class="btn btn-default">
+													<input type="radio" name="itemTp" id="type_student" value="" >
+													<span>Student</span>
+												</label>
+												<label class="btn btn-default">
+													<input type="radio" name="itemTp" id="type_lead" value="" >
+													<span>Lead</span>
+												</label>
+											</div>
+										</div>
+										<div class="form-group">
+											<span class="lb-txt st1">상담구분</span>
+											<select class="form-control input-sm">
+												<option value="" selected="selected">All</option>
+											</select>
+										</div>
+										<div class="form-group">
+											<span class="lb-txt st1">접수창구</span>
+											<select class="form-control input-sm">
+												<option value="" selected="selected">All</option>
+											</select>
+										</div>
+										<div class="form-group">
+											<span class="lb-txt st1">Date</span>
+											<div class="input-group date">
+												<input type="text" class="form-control input-sm clearable datepicker" placeholder="dd/mm/yyyy">
+												<span class="input-group-addon">
+													<span class="calendar-icon"></span>
+												</span>
+											</div>
+											<span class="date-period-divider">~</span>
+											<div class="input-group date">
+												<input type="text" class="form-control input-sm clearable datepicker" placeholder="dd/mm/yyyy">
+												<span class="input-group-addon">
+													<span class="calendar-icon"></span>
+												</span>
+											</div>
+											<div class="checkbox checkbox-primary checkbox-inline">
+												<input type="checkbox" id="checkbox0" value="checkbox0" name="checkbox0">
+												<label for="checkbox0">오늘과 내일 상담만 보기</label>
+											</div>
+										</div>
+										<div class="form-group">
+											<span class="lb-txt st1">상담과목</span>
+											<select class="form-control input-sm">
+												<option value="" selected="selected">All</option>
+											</select>
+										</div>
+										<div class="form-group">
+											<span class="lb-txt st1">Status</span>
+											<select class="form-control input-sm">
+												<option value="" selected="selected">All</option>
+											</select>
+										</div>
+										<div class="form-group">
+											<span class="lb-txt st1">Name</span>
+											<div class="input-group">
+												<input class="form-control input-sm clearable" type="text">
+												<div class="input-group-btn">
+													<button type="button" class="btn btn-search" data-toggle="modal" data-target="#searchMemeber"><span class="fas fa-search"></span><span class="hide">Search</span></button>
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<span class="lb-txt st1">Contact</span>
+											<input class="form-control input-sm clearable" type="text">
+										</div>
+										<div class="form-group">
+											<span class="lb-txt st1">Instructor</span>
+											<div class="input-group">
+												<input class="form-control input-sm clearable" type="text">
+												<div class="input-group-btn">
+													<button type="button" class="btn btn-search" data-toggle="modal" data-target="#searchManager"><span class="fas fa-search"></span><span class="hide">Search</span></button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+							<!-- // 180717_수정 [화면설계서 v3.1 수정사항 반영] -->
+						</div>
+						<div class="btn-area col-md-1">
+							<a href="#" class="btn btn-primary">Search</a>
+						</div>
+					</div>
+					<div class="ln_solid"></div>
+
+					<div class="row">
+						<div class="col-md-12">
+							<div class="pull-right">
+								<a href="#" class="btn btn-success" data-toggle="modal" data-target="#modal1">+ Consult</a><!-- 180717_수정 [화면설계서 v3.1 수정사항 반영] -->
+								<a href="#" class="btn btn-info">Delete</a><!-- 180717_수정 [화면설계서 v3.1 수정사항 반영] -->
+							</div>
+							<ul class="list-inline pull-left mt-2">
+								<li class="total">Total : <span>0</span></li>
+							</ul>
+						</div>
+					</div>
+					<div class="bx-table">
+						<div class="tb-dimm"><span class="txts">Fetching data...</span></div>
+						<div class="x-scroll">
+							<table class="table table-sort tb-check">
+								<colgroup>
+									<col style="width:50px">
+									<col style="width:auto">
+									<col style="width:auto">
+									<col style="width:auto">
+									<col style="width:auto">
+									<col style="width:auto">
+									<col style="width:auto">
+									<col style="width:auto">
+									<col style="width:auto">
+									<col style="width:auto">
+									<col style="width:20%">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col"><a href="#" class="sorting">NO</a></th>
+										<th scope="col"><a href="#" class="sorting">상담구분</a></th>
+										<th scope="col"><a href="#" class="sorting">접수창구</a></th>
+										<th scope="col"><a href="#" class="sorting">상담과목</a></th>
+										<th scope="col"><a href="#" class="sorting">Name</a></th>
+										<th scope="col"><a href="#" class="sorting">ID</a></th>
+										<th scope="col"><a href="#" class="sorting">Contact</a></th>
+										<th scope="col"><a href="#" class="sorting">상담일자</a></th>
+										<th scope="col"><a href="#" class="sorting">상태</a></th>
+										<th scope="col"><a href="#" class="sorting">Instructor</a></th>
+										<th scope="col"><a href="#" class="sorting">Comments</a></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>2</td>
+										<td>입회문의</td>
+										<td>전화</td>
+										<td>영어,수학</td>
+										<td><a href="#" class="link-modal">Ken Song</a></td>
+										<td><a href="#" class="link-modal">K0003008</a></td>
+										<td>0123333333</td>
+										<td>03-29-2018 11:30</td>
+										<td><a href="#" class="link-modal">예약</a></td>
+										<td>Sunny.kim</td>
+										<td><span class="underline">착한 학생이네요.</span></td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>학습상담</td>
+										<td>이메일</td>
+										<td>영어</td>
+										<td><a href="#" class="link-modal">Ken Song</a></td>
+										<td><a href="#" class="link-modal">K0003008</a></td>
+										<td>0123333333</td>
+										<td>03-29-2018 11:30</td>
+										<td><a href="#" class="link-modal">취소</a></td>
+										<td>Sunny.kim</td>
+										<td><span class="tx-end">입회상담했으나, 어려울 것 같음.</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+		<footer>
+			<span class="ft-logo">KEY &amp; MANAGER</span>
+			<p class="ft-copy">Copyright &copy; 2018 Daekyo Co., Ltd All rights reserved. For more information, contact <a href="mailto:myeyelevel@myeyelevel.com">myeyelevel@myeyelevel.com</a></p>
+			<div class="ft-site">
+				<dl>
+					<dt><a href="#class">LINKS</a></dt>
+					<dd>
+						<ul>
+							<li><a href="https://sites.google.com/a/myeyelevel.com/itisthekey/" target="_blank">User guide</a></li>
+							<li><a href="http://www.myeyelevel.com/Global/English/" target="_blank">Eyelevel Site</a></li>
+							<li><a href="http://www.iamthekey.com/" target="_blank">Brand Site</a></li>
+							<li><a href="http://eng.daekyo.com/En/default.aspx" target="_blank">Corporate Site</a></li>
+							<li><a href="http://elu.myeyelevel.com" target="_blank">Eye Level University</a></li>
+							<li><a href="http://email.myeyelevel.com" target="_blank">Email</a></li>
+						</ul>
+					</dd>
+				</dl>
+			</div>
+		</footer>
+	</div>
+</div>
+
+<script src="/js/custom.js"></script>
+</body>
+</html>

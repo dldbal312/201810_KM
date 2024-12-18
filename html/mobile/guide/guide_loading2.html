@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+	<link rel="SHORTCUT ICON" href="../images/favicon.ico">
+	<title>Key&amp;Manager ver.2</title>
+	<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap-datetimepicker.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendors/fontawesome-all.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendors/jquery.mCustomScrollbar.css">
+	<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+	<script src="/js/vendors/jquery-ui.min.js"></script>
+	<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+	<script src="/js/vendors/moment.js"></script>
+	<script src="/js/vendors/bootstrap.min.js"></script>
+	<script src="/js/vendors/bootstrap-datetimepicker.min.js"></script>
+
+	<!-- mobile 추가 -->
+	<link rel="stylesheet" type="text/css" href="/css/custom-mobile.css">
+	<script src="/js/vendors/jquery.touchSwipe.min.js"></script>
+	<script src="/js/custom-mobile.js"></script>
+</head>
+<body>
+<div class="modal fade mobile-only modules-confirm in" id="monthSelect" tabindex="-1" role="dialog" style="display: block; padding-right: 16px;">
+  <div class="modal-dialog modal-sm" role="document">
+	<div class="modal-content loading"> <!-- 페이지 로딩 시 클래스 추가 -->
+		<div class="modal-header">
+			<h1 class="tit">Progress Month</h1>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+		</div>
+		<div class="modal-body">
+			<div class="select-month-wrap">
+				<div class="years">
+					<!-- 비 활성화 시 disabled 속성 추가 -->
+					<button type="button" class="prev"><i class="fas fa-caret-left"></i></button>
+					<span>2018</span>
+					<button type="button" class="next"><i class="fas fa-caret-right"></i></button>
+				</div>
+				<div class="select-numbers size04">
+					<span class="radio">
+						<input type="radio" id="month01" name="select-month">
+						<label for="month01">01</label>
+					</span>
+					<span class="radio">
+						<input type="radio" id="month02" name="select-month">
+						<label for="month02">02</label>
+					</span>
+					<span class="radio">
+						<input type="radio" id="month03" name="select-month">
+						<label for="month03">03</label>
+					</span>
+					<span class="radio">
+						<input type="radio" id="month04" name="select-month">
+						<label for="month04">04</label>
+					</span>
+					<span class="radio">
+						<input type="radio" id="month05" name="select-month">
+						<label for="month05">05</label>
+					</span>
+					<span class="radio">
+						<input type="radio" id="month06" name="select-month">
+						<label for="month06">06</label>
+					</span>
+					<span class="radio">
+						<input type="radio" id="month07" name="select-month">
+						<label for="month07">07</label>
+					</span>
+					<span class="radio">
+						<input type="radio" id="month08" name="select-month">
+						<label for="month08">08</label>
+					</span>
+					<span class="radio">
+						<input type="radio" id="month09" name="select-month">
+						<label for="month09">09</label>
+					</span>
+					<span class="radio">
+						<input type="radio" id="month10" name="select-month">
+						<label for="month10">10</label>
+					</span>
+					<span class="radio">
+						<input type="radio" id="month11" name="select-month">
+						<label for="month11">11</label>
+					</span>
+					<span class="radio">
+						<input type="radio" id="month12" name="select-month">
+						<label for="month12">12</label>
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<button type="button" class="btn btn-primary btn-lg">Save</button>
+			<button type="button" class="btn btn-info btn-lg" data-dismiss="modal">Cancel</button>
+		</div>
+		<!-- loading dim.... -->
+		<div class="data-loading">
+			<span class="txts">Fetching data...</span>
+		</div>
+		<!--// loading dim.... -->
+	</div>
+  </div>
+</div>
+</body>
+</html>

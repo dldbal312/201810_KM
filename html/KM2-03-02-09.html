@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<link rel="SHORTCUT ICON" href="/images/favicon.ico">
+<title>Key&amp;Manager ver.2</title>
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/fontawesome-all.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" type="text/css" href="/css/custom.css">
+<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+<script src="/js/vendors/jquery-ui.min.js"></script>
+<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+<script src="/js/vendors/moment.js"></script>
+<script src="/js/vendors/bootstrap.min.js"></script>
+<script src="/js/vendors/bootstrap-datetimepicker.min.js"></script>
+</head>
+<body class="nav-sm modal-open">
+<div class="modal fade in" id="modal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel5" style="display: block;">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel5">Receipt<small class="ml-2">SHekinah Francesca Louis (K30000718)</small></h4>
+			</div>
+			<div class="modal-body">
+				<div class="form_wizard_wrap">
+					<div class="form_wizard">
+						<ul class="list-unstyled wizard_steps anchor">
+							<li class="active"><a href="#step-1" role="tab" data-toggle="tab" aria-controls="step-1" aria-expanded="true"><span class="step_name text-right">영수증 미리보기</span></a></li>
+							<li><a href="#step-2" role="tab" data-toggle="tab" aria-controls="step-2" aria-expanded="false"><span class="step_name text-right">영수증 전송</span></a></li>
+						</ul>
+						<div class="stepContainer">
+							<div id="step-1" class="stepContBox fade active in">
+								<h2 class="sr-only">영수증 미리보기</h2>
+								<div class="form-group col-md-12">
+									<div class="bx-bills bx-receipt">
+										<div class="bi-subject">
+											<span class="bi-logo top">eye level i am the key</span>
+											<span class="pull-right mt-2">No. R00001234-1234</span>
+										</div>
+										<div class="bi-title">
+											RECEIPT
+										</div>
+										<ul class="bi-list">
+											<li>Eye Level Little Scholar</li>
+											<li>No. 112-11-11111</li>
+											<li>TAX No. 123123123</li>
+											<li>6th FL Daekyo Tower Gangnam, Seoul, Korea</li>
+											<li>Tel: 888-9999</li>
+											<li>Representative: Amy Kim</li>
+											<li>Paid Date: 02/20/2017</li>
+										</ul>
+										<div class="bi-name">
+											Ken Song (K200000000)
+										</div>
+										<div class="bi-table">
+											<table class="table">
+												<colgroup>
+													<col style="width:auto">
+													<col style="width:40%">
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col">DESCRIPTION</th>
+														<th scope="col">AMOUNT</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Math & English 03-2017</td>
+														<td>200.00</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="bi-bottom">
+											<ul class="bi-total">
+												<li class="bi-due">
+													<span class="bi-labels">PAY</span>
+													<span class="bi-numbers">200.00</span>
+												</li>
+												<li>
+													<span class="bi-labels">NET AMOUNT</span>
+													<span class="bi-numbers">181.81</span>
+												</li>
+												<li>
+													<span class="bi-labels">TAX</span>
+													<span class="bi-numbers">18.19</span>
+												</li>
+												<li>
+													<span class="bi-labels">METHOD</span>
+													<span class="bi-numbers">Cash</span>
+												</li>
+												<li>
+													<span class="bi-labels">REMARKS</span>
+													<span class="bi-numbers">Thank you</span>
+												</li>
+											</ul>
+										</div>
+										<div class="bi-footer">
+											<span class="bi-sign">Signature</span>
+										</div>
+									</div>
+								</div>
+								<div class="actionBar col-md-12">
+									<div class="pull-right">
+										<a href="#" class="btn btn-default" data-dismiss="modal" aria-label="Close">Close</a>
+									</div>
+								</div>
+							</div>
+							<div id="step-2" class="stepContBox fade">
+								<h2 class="sr-only">영수증 전송</h2>
+								<form class="">
+									<div class="form-group col-md-12">
+										<span class="lb-txt">Download Receipt</span>
+										<div class="btn-group" data-toggle="buttons">
+											<label class="btn btn-default active">
+												<input type="radio" name="itemTp" id="" value="" checked="checked">
+												<span>PDF</span>
+											</label>
+										</div>
+									</div>
+									<div class="form-group form-inline col-md-12">
+										<span class="lb-txt mb-1">Send Receipt</span>
+										<div class="checkbox checkbox-primary checkbox-inline">
+											<input type="checkbox" id="checkbox1" value="checkbox1" name="checkbox1" checked="checked">
+											<label for="checkbox1">E-mail</label>
+										</div>
+										<!-- 180717_수정 [화면설계서 v3.1 수정사항 반영] -->
+										<div class="checkbox checkbox-primary checkbox-inline">
+											<input type="checkbox" id="checkbox2" value="checkbox2" name="checkbox2" checked="checked">
+											<label for="checkbox2">Messenger</label><!-- 180731_수정 [오타수정] -->
+										</div>
+										<!-- 180717_수정 [화면설계서 v3.1 수정사항 반영] -->
+									</div>
+								</form>
+								<div class="actionBar col-md-12">
+									<div class="pull-right">
+										<a href="#" class="btn btn-success">Send</a>
+										<a href="#" class="btn btn-default" data-dismiss="modal" aria-label="Close">Close</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal-backdrop fade in"></div>
+
+<script src="/js/custom.js"></script>
+</body>
+</html>

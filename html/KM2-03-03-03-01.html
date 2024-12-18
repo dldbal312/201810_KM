@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<link rel="SHORTCUT ICON" href="/images/favicon.ico">
+<title>Key&amp;Manager ver.2</title>
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/fontawesome-all.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" type="text/css" href="/css/custom.css">
+<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+<script src="/js/vendors/jquery-ui.min.js"></script>
+<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+<script src="/js/vendors/moment.js"></script>
+<script src="/js/vendors/bootstrap.min.js"></script>
+<script src="/js/vendors/bootstrap-datetimepicker.min.js"></script>
+</head>
+<body class="nav-sm modal-open">
+
+
+<div class="modal fade in" id="modal4" tabindex="-1" role="dialog" style="display:block">
+	<div class="modal-dialog modal-sm" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title">회비설정</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="form-group">
+							<span class="lb-txt mb-1">회비적용월</span>
+							<div class="input-group month">
+								<input type="text" class="form-control input-sm clearable datepicker" placeholder="01/2018" />
+								<span class="input-group-addon">
+									<span class="calendar-icon"></span>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="form-group">
+							<span class="lb-txt mb-1">Tuition Type</span>
+							<select class="form-control input-sm">
+								<option value="" title="" selected="selected">KK0002801</option>
+							</select>
+							<p class="mt-1">만료예정일 : 11/01/2020</p>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="form-group">
+							<span class="lb-txt mb-1">Charge amount</span>
+							<input type="text" class="form-control input-sm clearable" placeholder="300">
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="form-group">
+							<span class="lb-txt mb-1">No. of Charges</span>
+							<input type="text" class="form-control input-sm clearable" placeholder="30">
+						</div>
+					</div>
+					<div class="col-md-12">
+						<span class="lb-txt mb-1">Booklets per Week : </span>
+						<span class="tx-blue bold">06</span>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary">Save</button>
+				<a href="#" class="btn btn-info" data-dismiss="modal" aria-label="Close">Close</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal-backdrop fade in"></div>
+
+<script src="/js/custom.js"></script>
+</body>
+</html>

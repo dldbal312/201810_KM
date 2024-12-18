@@ -1,0 +1,2049 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<link rel="SHORTCUT ICON" href="/images/favicon.ico">
+<title>Key&amp;Manager ver.2</title>
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/fontawesome-all.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" type="text/css" href="/css/custom.css">
+<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+<script src="/js/vendors/jquery-ui.min.js"></script>
+<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+<script src="/js/vendors/moment.js"></script>
+<script src="/js/vendors/bootstrap.min.js"></script>
+<script src="/js/vendors/bootstrap-datetimepicker.min.js"></script>
+</head>
+<body class="nav-sm">
+<div class="wrapper">		
+	<div class="left_col">
+		<div id="sidebar-menu" class="main_menu_side main_menu">
+			<div class="menu_section">
+				<ul class="nav side-menu">
+					<li class="parent_menu"><a href="#"><i class="ico-schedule"></i>Schedule</a><a role="button" class="submenu-open"></a></li>
+					<li class="parent_menu"><a href="#"><i class="ico-member"></i>Member</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Member</a>
+								<ul class="nav-depth3">
+									<li class="active"><a href="#">Subject Transfer</a></li>
+									<li><a href="#">Learning</a></li> 
+									<li><a href="#">Attendance</a></li> 
+								</ul>
+							</li>
+							<li><a href="#">Attendance</a></li> 
+							<li><a href="#">Subject Transfer</a></li>
+							<li><a href="#">Learning</a></li> 
+							<li><a href="#">Attendance</a></li> 
+						</ul>
+					</li>
+					<li class="parent_menu"><a href="#"><i class="ico-learning"></i>Learning</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Member</a></li>
+							<li><a href="#">Attendance</a></li>
+							<li><a href="#">Subject Transfer</a></li>
+							<li><a href="#">Learning</a></li>
+							<li><a href="#">Attendance</a></li>
+						</ul>
+					</li>
+					<li class="parent_menu"><a href="#"><i class="ico-finance"></i>Finance</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Member</a></li>
+							<li><a href="#">Attendance</a></li> 
+							<li><a href="#">Subject Transfer</a></li>
+							<li><a href="#">Learning</a></li> 
+							<li><a href="#">Attendance</a></li> 
+						</ul>
+					</li>
+					<li class="parent_menu"><a href="#"><i class="ico-center"></i>Center</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Member</a></li>
+							<li><a href="#">Attendance</a></li> 
+							<li><a href="#">Subject Transfer</a></li>
+							<li><a href="#">Learning</a></li> 
+							<li><a href="#">Attendance</a></li> 
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="right_col">		
+		<div class="nav_menu">
+			<div class="toggle">
+				<a href="#" class="menu_toggle"><i></i></a>
+			</div>
+			<div class="head-wrap">
+				<div class="pull-left head-favorite">
+					<ul class="head-favorite-list">
+						<li><a href="#" class="list">Create member</a><a href="#" class="ico-delete"><i class="fas fa-times"></i></a></li>
+						<li><a href="#" class="list">Payment</a><a href="#" class="ico-delete"><i class="fas fa-times"></i></a></li>
+						<li><a href="#" class="list">My student</a><a href="#" class="ico-delete"><i class="fas fa-times"></i></a></li>
+					</ul>
+					<a href="#" class="favorite-set"><span class="ico-count cl-gray"></span>My menu add</a>
+				</div>
+				<div class="pull-right head-user-info">
+					<a href="#" class="head-logout">Logout</a>
+					<span class="head-name">Tony tony chopa (FC0001S)</span>
+					<a href="#" class="head-mypage">My page</a>
+				</div>
+			</div>
+		</div>
+		<div class="right_content" role="main">
+			<div class="container-fluid">
+				<div class="col-md-12">
+					<h3>양식 관리</h3>
+					<div class="row">
+						<div class="col-md-12 form-tit">
+							<h4 class="tit">Center Info</h4>
+							<div class="info">
+								<ul class="breadcrumb">
+									<li>Daekyo Malaysia</li>
+									<li>Daekyo Malaysia</li>
+									<li>Bukit Damansara</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="row bx-formManage-info">
+						<div class="col-md-12">
+							<ul class="list-inline pull-right mt-1">
+								<li>Select No.  <span class="tx-blue">2</span></li>
+								<li>Total Form.  <span class="tx-blue">4</span></li>
+								<li>Recent Date.  <span class="tx-blue">01/01/2018</span></li>
+							</ul>
+							<ul class="nav nav-tabs" role="tablist">
+								<li role="presentation" class="active"><a href="#tab-box1" aria-controls="tab-box1" role="tab" data-toggle="tab" aria-expanded="true">Invoice</a></li>
+								<li role="presentation"><a href="#tab-box2" aria-controls="tab-box2" role="tab" data-toggle="tab" aria-expanded="true">Receipt</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="tab-content">
+						<div role="tabpanel" class="tab-pane active" id="tab-box1">
+							<div class="bx-formManage">
+								<!-- 영어기본 - 미주, 기타국가 -->
+								<div class="box active">
+									<p class="title">Type. 01</p>
+									<div class="bx-bills bx-invoice">
+										<div class="bi-title">
+											INVOICE
+										</div>
+										<div class="bi-line">
+											<p class="bi-invoice-num">No.Ⅰ-2017-02-1234</p>
+											<p class="bi-due-date">Payment Due Date: 02/11/2017</p>
+										</div>
+										<ul class="bi-list">
+											<li>Eye Level Little Scholar</li>
+											<li>No. 112-11-11111</li>
+											<li>TAX No. 123123123</li>
+											<li>6th FL Daekyo Tower Gangnam, Seoul, Korea</li>
+											<li>Tel: 888-9999</li>
+											<li>Representative: Amy Kim</li>
+											<li>Issued Date: 02/11/2017</li>
+										</ul>
+										<div class="bi-name">
+											Ken Song (K200000000)
+										</div>
+										<div class="bi-table">
+											<table class="table">
+												<colgroup>
+													<col style="width:30%">
+													<col style="width:30%">
+													<col style="width:40%">
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col" colspan="2">Description</th>
+														<th scope="col">Amount</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>03-2017</td>
+														<td>EL Math</td>
+														<td>100.00</td>
+													</tr>
+													<tr>
+														<td>03-2017</td>
+														<td>EL Eng</td>
+														<td>50.00</td>
+													</tr>
+													<tr>
+														<td>03-2017</td>
+														<td>EL Kor</td>
+														<td>50.00</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="bi-bottom">
+											<ul class="bi-total">
+												<li>
+													<span class="bi-labels">TOTAL</span>
+													<span class="bi-numbers">200.00</span>
+												</li>
+												<li>
+													<span class="bi-labels">NET AMOUNT</span>
+													<span class="bi-numbers">181.81</span>
+												</li>
+												<li>
+													<span class="bi-labels">TAX</span>
+													<span class="bi-numbers">18.19</span>
+												</li>
+												<li class="bi-due">
+													<span class="bi-labels">TOTAL DUE</span>
+													<span class="bi-numbers">200.00</span>
+												</li>
+											</ul>
+										</div>
+										<div class="bi-footer">
+											<span class="bi-logo">eye level i am the key</span>
+											<span class="bi-sign">Signature</span>
+										</div>
+									</div>
+									<span class="check_dim"></span>
+									<a href="#" class="checking"><i class="far fa-check-circle"></i></a>
+								</div>
+
+								<!-- 영어기본 with Message - 미주, 기타국가 -->
+								<div class="box">
+									<p class="title">Type. 02</p>
+									<div class="bx-bills bx-invoice">
+										<div class="bi-title">
+											INVOICE
+										</div>
+										<div class="bi-line">
+											<p class="bi-invoice-num">No.Ⅰ-2017-02-1234</p>
+											<p class="bi-due-date">Payment Due Date: 02/11/2017</p>
+										</div>
+										<ul class="bi-list">
+											<li>Eye Level Little Scholar</li>
+											<li>No. 112-11-11111</li>
+											<li>TAX No. 123123123</li>
+											<li>6th FL Daekyo Tower Gangnam, Seoul, Korea</li>
+											<li>Tel: 888-9999</li>
+											<li>Representative: Amy Kim</li>
+											<li>Issued Date: 02/11/2017</li>
+										</ul>
+										<div class="bi-name">
+											Ken Song (K200000000)
+										</div>
+										<div class="bi-table">
+											<table class="table">
+												<colgroup>
+													<col style="width:30%">
+													<col style="width:30%">
+													<col style="width:40%">
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col" colspan="2">Description</th>
+														<th scope="col">Amount</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>03-2017</td>
+														<td>EL Math</td>
+														<td>100.00</td>
+													</tr>
+													<tr>
+														<td>03-2017</td>
+														<td>EL Eng</td>
+														<td>50.00</td>
+													</tr>
+													<tr>
+														<td>03-2017</td>
+														<td>EL Kor</td>
+														<td>50.00</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="bi-bottom">
+											<ul class="bi-total">
+												<li>
+													<span class="bi-labels">TOTAL</span>
+													<span class="bi-numbers">200.00</span>
+												</li>
+												<li>
+													<span class="bi-labels">NET AMOUNT</span>
+													<span class="bi-numbers">181.81</span>
+												</li>
+												<li>
+													<span class="bi-labels">TAX</span>
+													<span class="bi-numbers">18.19</span>
+												</li>
+												<li class="bi-due">
+													<span class="bi-labels">TOTAL DUE</span>
+													<span class="bi-numbers">200.00</span>
+												</li>
+											</ul>
+											<div class="bi-message">
+												Amount of Tax subject to Reverse Charges: NIL<br>
+												CIN: UU7123123123123<br>
+												PAN: AAFD123123<br>
+												For NEFT / Bank transfer Purposes:-<br>
+												Bank Nam – HDFC BANK<br>
+												A/C No. – 12312312312<br>
+												IFSC Code: -HDF0000123123
+											</div>
+										</div>
+										<div class="bi-footer">
+											<span class="bi-logo">eye level i am the key</span>
+											<span class="bi-sign">Signature</span>
+										</div>
+									</div>
+									<span class="check_dim"></span>
+									<a href="#" class="checking"><i class="far fa-check-circle"></i></a>
+								</div>
+
+								<!-- 영어기본 - 영국, 인도네시아 -->
+								<div class="box">
+									<p class="title">Type. 03</p>
+									<div class="bx-bills bx-invoice">
+										<div class="bi-title">
+											INVOICE
+										</div>
+										<div class="bi-line">
+											<p class="bi-invoice-num">No.Ⅰ-2017-02-1234</p>
+											<p class="bi-due-date">Payment Due Date: 02/11/2017</p>
+										</div>
+										<ul class="bi-list">
+											<li>Eye Level Little Scholar</li>
+											<li>No. 112-11-11111</li>
+											<li>TAX No. 123123123</li>
+											<li>6th FL Daekyo Tower Gangnam, Seoul, Korea</li>
+											<li>Tel: 888-9999</li>
+											<li>Representative: Amy Kim</li>
+											<li>Issued Date: 02/11/2017</li>
+										</ul>
+										<div class="bi-name">
+											Ken Song (K200000000)
+										</div>
+										<div class="bi-table">
+											<table class="table">
+												<colgroup>
+													<col style="width:30%">
+													<col style="width:30%">
+													<col style="width:40%">
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col" colspan="2">Description</th>
+														<th scope="col">Amount</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>03-2017</td>
+														<td>EL Math</td>
+														<td>100.00</td>
+													</tr>
+													<tr>
+														<td>03-2017</td>
+														<td>EL Eng</td>
+														<td>50.00</td>
+													</tr>
+													<tr>
+														<td>03-2017</td>
+														<td>EL Kor</td>
+														<td>50.00</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="bi-bottom">
+											<ul class="bi-total">
+												<li>
+													<span class="bi-labels">TOTAL</span>
+													<span class="bi-numbers">200.00</span>
+												</li>
+												<li>
+													<span class="bi-labels">NET AMOUNT</span>
+													<span class="bi-numbers">181.81</span>
+												</li>
+												<li>
+													<span class="bi-labels">TAX</span>
+													<span class="bi-numbers">18.19</span>
+												</li>
+												<li class="bi-due">
+													<span class="bi-labels">TOTAL DUE</span>
+													<span class="bi-numbers">200.00</span>
+												</li>
+											</ul>
+										</div>
+										<div class="bi-footer">
+											<span class="bi-logo">eye level i am the key</span>
+											<span class="bi-sign">Signature</span>
+										</div>
+									</div>
+									<span class="check_dim"></span>
+									<a href="#" class="checking"><i class="far fa-check-circle"></i></a>
+								</div>
+
+								<!-- 영어기본 with Message - 영국, 인도네시아 -->
+								<div class="box">
+									<p class="title">Type. 04</p>
+									<div class="bx-bills bx-invoice">
+										<div class="bi-title">
+											INVOICE
+										</div>
+										<div class="bi-line">
+											<p class="bi-invoice-num">No.Ⅰ-2017-02-1234</p>
+											<p class="bi-due-date">Payment Due Date: 02/11/2017</p>
+										</div>
+										<ul class="bi-list">
+											<li>Eye Level Little Scholar</li>
+											<li>No. 112-11-11111</li>
+											<li>TAX No. 123123123</li>
+											<li>6th FL Daekyo Tower Gangnam, Seoul, Korea</li>
+											<li>Tel: 888-9999</li>
+											<li>Representative: Amy Kim</li>
+											<li>Issued Date: 02/11/2017</li>
+										</ul>
+										<div class="bi-name">
+											Ken Song (K200000000)
+										</div>
+										<div class="bi-table">
+											<table class="table">
+												<colgroup>
+													<col style="width:30%">
+													<col style="width:30%">
+													<col style="width:40%">
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col" colspan="2">Description</th>
+														<th scope="col">Amount</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>03-2017</td>
+														<td>EL Math</td>
+														<td>100.00</td>
+													</tr>
+													<tr>
+														<td>03-2017</td>
+														<td>EL Eng</td>
+														<td>50.00</td>
+													</tr>
+													<tr>
+														<td>03-2017</td>
+														<td>EL Kor</td>
+														<td>50.00</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="bi-bottom">
+											<ul class="bi-total">
+												<li>
+													<span class="bi-labels">TOTAL</span>
+													<span class="bi-numbers">200.00</span>
+												</li>
+												<li>
+													<span class="bi-labels">NET AMOUNT</span>
+													<span class="bi-numbers">181.81</span>
+												</li>
+												<li>
+													<span class="bi-labels">TAX</span>
+													<span class="bi-numbers">18.19</span>
+												</li>
+												<li class="bi-due">
+													<span class="bi-labels">TOTAL DUE</span>
+													<span class="bi-numbers">200.00</span>
+												</li>
+											</ul>
+											<div class="bi-message">
+												Amount of Tax subject to Reverse Charges: NIL<br>
+												CIN: UU7123123123123<br>
+												PAN: AAFD123123<br>
+												For NEFT / Bank transfer Purposes:-<br>
+												Bank Nam – HDFC BANK<br>
+												A/C No. – 12312312312<br>
+												IFSC Code: -HDF0000123123
+											</div>
+										</div>
+										<div class="bi-footer">
+											<span class="bi-logo">eye level i am the key</span>
+											<span class="bi-sign">Signature</span>
+										</div>
+									</div>
+									<span class="check_dim"></span>
+									<a href="#" class="checking"><i class="far fa-check-circle"></i></a>
+								</div>
+
+								<!-- 영어 GST 기본 - 싱가폴 -->
+								<div class="box">
+									<p class="title">Type. 05</p>
+									<div class="bx-bills bx-invoice">
+										<div class="bi-title">
+											INVOICE
+										</div>
+										<div class="bi-line">
+											<p class="bi-invoice-num">No.Ⅰ-2017-02-1234</p>
+											<p class="bi-due-date">Payment Due Date: 02/11/2017</p>
+										</div>
+										<ul class="bi-list">
+											<li>Eye Level Little Scholar</li>
+											<li>No. 112-11-11111</li>
+											<li>GST No. 123123123</li>
+											<li>6th FL Daekyo Tower Gangnam, Seoul, Korea</li>
+											<li>Tel: 888-9999</li>
+											<li>Representative: Amy Kim</li>
+											<li>Issued Date: 02/11/2017</li>
+										</ul>
+										<div class="bi-name">
+											Ken Song (K200000000)
+										</div>
+										<div class="bi-table">
+											<table class="table">
+												<colgroup>
+													<col style="width:30%">
+													<col style="width:30%">
+													<col style="width:40%">
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col" colspan="2">Description</th>
+														<th scope="col">Amount</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>03-2017</td>
+														<td>EL Math</td>
+														<td>100.00</td>
+													</tr>
+													<tr>
+														<td>03-2017</td>
+														<td>EL Eng</td>
+														<td>50.00</td>
+													</tr>
+													<tr>
+														<td>03-2017</td>
+														<td>EL Kor</td>
+														<td>50.00</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="bi-bottom">
+											<ul class="bi-total">
+												<li>
+													<span class="bi-labels">TOTAL</span>
+													<span class="bi-numbers">200.00</span>
+												</li>
+												<li>
+													<span class="bi-labels">NET AMOUNT</span>
+													<span class="bi-numbers">181.81</span>
+												</li>
+												<li>
+													<span class="bi-labels">GST</span>
+													<span class="bi-numbers">18.19</span>
+												</li>
+												<li class="bi-due">
+													<span class="bi-labels">TOTAL DUE</span>
+													<span class="bi-numbers">200.00</span>
+												</li>
+											</ul>
+										</div>
+										<div class="bi-footer">
+											<span class="bi-logo">eye level i am the key</span>
+											<span class="bi-sign">Signature</span>
+										</div>
+									</div>
+									<span class="check_dim"></span>
+									<a href="#" class="checking"><i class="far fa-check-circle"></i></a>
+								</div>
+
+								<!-- 영어 GST 세분화A - 인도 -->
+								<div class="box">
+									<p class="title">Type. 06</p>
+									<div class="bx-bills bx-invoice">
+										<div class="bi-title">
+											INVOICE
+										</div>
+										<div class="bi-line">
+											<p class="bi-invoice-num">No.Ⅰ-2017-02-1234</p>
+											<p class="bi-due-date">Payment Due Date: 02/11/2017</p>
+										</div>
+										<ul class="bi-list">
+											<li>Eye Level Little Scholar</li>
+											<li>No. 112-11-11111</li>
+											<li>GST No. 123123123</li>
+											<li>6th FL Daekyo Tower Gangnam, Seoul, Korea</li>
+											<li>Tel. 888-9999</li>
+											<li>Representative. Amy Kim</li>
+											<li>Issued Date. 11/02/2017</li>
+										</ul>
+										<div class="bi-name">
+											Ken Song (K200000000)
+										</div>
+										<div class="bi-table">
+											<table class="table">
+												<colgroup>
+													<col style="width:30%">
+													<col style="width:30%">
+													<col style="width:40%">
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col" colspan="2">Description</th>
+														<th scope="col">Amount</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>03-2017</td>
+														<td>EL Math</td>
+														<td>100.00</td>
+													</tr>
+													<tr>
+														<td>03-2017</td>
+														<td>EL Eng</td>
+														<td>50.00</td>
+													</tr>
+													<tr>
+														<td>03-2017</td>
+														<td>EL Kor</td>
+														<td>50.00</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="bi-bottom">
+											<ul class="bi-total">
+												<li>
+													<span class="bi-labels">TOTAL</span>
+													<span class="bi-numbers">200.00</span>
+												</li>
+												<li>
+													<span class="bi-labels">NET AMOUNT</span>
+													<span class="bi-numbers">181.81</span>
+												</li>
+												<li>
+													<span class="bi-labels">CGST</span>
+													<span class="bi-numbers">6.3</span>
+												</li>
+												<li>
+													<span class="bi-labels">SGST</span>
+													<span class="bi-numbers">6.3</span>
+												</li>
+												<li>
+													<span class="bi-labels">IGST</span>
+													<span class="bi-numbers">6.4</span>
+												</li>
+												<li class="bi-due">
+													<span class="bi-labels">TOTAL DUE</span>
+													<span class="bi-numbers">200.00</span>
+												</li>
+											</ul>
+										</div>
+										<div class="bi-footer">
+											<span class="bi-logo">eye level i am the key</span>
+											<span class="bi-sign">Signature</span>
+										</div>
+									</div>
+									<span class="check_dim"></span>
+									<a href="#" class="checking"><i class="far fa-check-circle"></i></a>
+								</div>
+
+								<!-- 영어 GST 세분화B - 말레이시아 -->
+								<div class="box">
+									<p class="title">Type. 07</p>
+									<div class="bx-bills bx-invoice">
+										<div class="bi-title">
+											INVOICE
+										</div>
+										<div class="bi-line">
+											<p class="bi-invoice-num">No.Ⅰ-2017-02-1234</p>
+											<p class="bi-due-date">Payment Due Date: 02/11/2017</p>
+										</div>
+										<ul class="bi-list">
+											<li>Eye Level Little Scholar</li>
+											<li>No. 112-11-11111</li>
+											<li>GST No. 123123123</li>
+											<li>6th FL Daekyo Tower Gangnam, Seoul, Korea</li>
+											<li>Tel. 888-9999</li>
+											<li>Representative. Amy Kim</li>
+											<li>Issued Date. 11/02/2017</li>
+										</ul>
+										<div class="bi-name">
+											Ken Song (K200000000)
+										</div>
+										<div class="bi-table">
+											<table class="table">
+												<colgroup>
+													<col style="width:30%">
+													<col style="width:30%">
+													<col style="width:40%">
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col" colspan="2">Description</th>
+														<th scope="col">Amount</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>03-2017</td>
+														<td>EL Math</td>
+														<td>100.00</td>
+													</tr>
+													<tr>
+														<td>03-2017</td>
+														<td>EL Eng</td>
+														<td>50.00</td>
+													</tr>
+													<tr>
+														<td>03-2017</td>
+														<td>EL Kor</td>
+														<td>50.00</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="bi-bottom">
+											<ul class="bi-total">
+												<li>
+													<span class="bi-labels">TOTAL</span>
+													<span class="bi-numbers">200.00</span>
+												</li>
+												<li>
+													<span class="bi-labels">NET AMOUNT</span>
+													<span class="bi-numbers">181.81</span>
+												</li>
+												<li>
+													<span class="bi-labels">S=GST</span>
+													<span class="bi-numbers">9</span>
+												</li>
+												<li>
+													<span class="bi-labels">Z=GST</span>
+													<span class="bi-numbers">9</span>
+												</li>
+												<li>
+													<span class="bi-labels">Rounding</span>
+													<span class="bi-numbers">0.45</span>
+												</li>
+												<li class="bi-due">
+													<span class="bi-labels">TOTAL DUE</span>
+													<span class="bi-numbers">200.00</span>
+												</li>
+											</ul>
+										</div>
+										<div class="bi-footer">
+											<span class="bi-logo">eye level i am the key</span>
+											<span class="bi-sign">Signature</span>
+										</div>
+									</div>
+									<span class="check_dim"></span>
+									<a href="#" class="checking"><i class="far fa-check-circle"></i></a>
+								</div>
+
+								<!-- 영어 GST용 with Message - 싱가폴 -->
+								<div class="box">
+									<p class="title">Type. 08</p>
+									<div class="bx-bills bx-invoice">
+										<div class="bi-title">
+											INVOICE
+										</div>
+										<div class="bi-line">
+											<p class="bi-invoice-num">No.Ⅰ-2017-02-1234</p>
+											<p class="bi-due-date">Payment Due Date: 02/11/2017</p>
+										</div>
+										<ul class="bi-list">
+											<li>Eye Level Little Scholar</li>
+											<li>No. 112-11-11111</li>
+											<li>GST No. 123123123</li>
+											<li>6th FL Daekyo Tower Gangnam, Seoul, Korea</li>
+											<li>Tel. 888-9999</li>
+											<li>Representative. Amy Kim</li>
+											<li>Issued Date. 11/02/2017</li>
+										</ul>
+										<div class="bi-name">
+											Ken Song (K200000000)
+										</div>
+										<div class="bi-table">
+											<table class="table">
+												<colgroup>
+													<col style="width:30%">
+													<col style="width:30%">
+													<col style="width:40%">
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col" colspan="2">Description</th>
+														<th scope="col">Amount</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>03-2017</td>
+														<td>EL Math</td>
+														<td>100.00</td>
+													</tr>
+													<tr>
+														<td>03-2017</td>
+														<td>EL Eng</td>
+														<td>50.00</td>
+													</tr>
+													<tr>
+														<td>03-2017</td>
+														<td>EL Kor</td>
+														<td>50.00</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="bi-bottom">
+											<ul class="bi-total">
+												<li>
+													<span class="bi-labels">TOTAL</span>
+													<span class="bi-numbers">200.00</span>
+												</li>
+												<li>
+													<span class="bi-labels">NET AMOUNT</span>
+													<span class="bi-numbers">181.81</span>
+												</li>
+												<li>
+													<span class="bi-labels">GST</span>
+													<span class="bi-numbers">18.19</span>
+												</li>
+												<li class="bi-due">
+													<span class="bi-labels">TOTAL DUE</span>
+													<span class="bi-numbers">200.00</span>
+												</li>
+											</ul>
+											<div class="bi-message">
+												Amount of Tax subject to Reverse Charges: NIL<br>
+												CIN: UU7123123123123<br>
+												PAN: AAFD123123<br>
+												For NEFT / Bank transfer Purposes:-<br>
+												Bank Nam – HDFC BANK<br>
+												A/C No. – 12312312312<br>
+												IFSC Code: -HDF0000123123
+											</div>
+										</div>
+										<div class="bi-footer">
+											<span class="bi-logo">eye level i am the key</span>
+											<span class="bi-sign">Signature</span>
+										</div>
+									</div>
+									<span class="check_dim"></span>
+									<a href="#" class="checking"><i class="far fa-check-circle"></i></a>
+								</div>
+
+								<!-- 영어 GST 세분화A with Message - 인도 -->
+								<div class="box">
+									<p class="title">Type. 09</p>
+									<div class="bx-bills bx-invoice">
+										<div class="bi-title">
+											INVOICE
+										</div>
+										<div class="bi-line">
+											<p class="bi-invoice-num">No.Ⅰ-2017-02-1234</p>
+											<p class="bi-due-date">Payment Due Date: 02/11/2017</p>
+										</div>
+										<ul class="bi-list">
+											<li>Eye Level Little Scholar</li>
+											<li>No. 112-11-11111</li>
+											<li>GST No. 123123123</li>
+											<li>6th FL Daekyo Tower Gangnam, Seoul, Korea</li>
+											<li>Tel. 888-9999</li>
+											<li>Representative. Amy Kim</li>
+											<li>Issued Date. 11/02/2017</li>
+										</ul>
+										<div class="bi-name">
+											Ken Song (K200000000)
+										</div>
+										<div class="bi-table">
+											<table class="table">
+												<colgroup>
+													<col style="width:30%">
+													<col style="width:30%">
+													<col style="width:40%">
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col" colspan="2">Description</th>
+														<th scope="col">Amount</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>03-2017</td>
+														<td>EL Math</td>
+														<td>100.00</td>
+													</tr>
+													<tr>
+														<td>03-2017</td>
+														<td>EL Eng</td>
+														<td>50.00</td>
+													</tr>
+													<tr>
+														<td>03-2017</td>
+														<td>EL Kor</td>
+														<td>50.00</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="bi-bottom">
+											<ul class="bi-total">
+												<li>
+													<span class="bi-labels">TOTAL</span>
+													<span class="bi-numbers">200.00</span>
+												</li>
+												<li>
+													<span class="bi-labels">NET AMOUNT</span>
+													<span class="bi-numbers">181.81</span>
+												</li>
+												<li>
+													<span class="bi-labels">CGST</span>
+													<span class="bi-numbers">6.3</span>
+												</li>
+												<li>
+													<span class="bi-labels">SGST</span>
+													<span class="bi-numbers">6.3</span>
+												</li>
+												<li>
+													<span class="bi-labels">IGST</span>
+													<span class="bi-numbers">6.4</span>
+												</li>
+												<li class="bi-due">
+													<span class="bi-labels">TOTAL DUE</span>
+													<span class="bi-numbers">200.00</span>
+												</li>
+											</ul>
+											<div class="bi-message">
+												Amount of Tax subject to Reverse Charges: NIL<br>
+												CIN: UU7123123123123<br>
+												PAN: AAFD123123<br>
+												For NEFT / Bank transfer Purposes:-<br>
+												Bank Nam – HDFC BANK<br>
+												A/C No. – 12312312312<br>
+												IFSC Code: -HDF0000123123
+											</div>
+										</div>
+										<div class="bi-footer">
+											<span class="bi-logo">eye level i am the key</span>
+											<span class="bi-sign">Signature</span>
+										</div>
+									</div>
+									<span class="check_dim"></span>
+									<a href="#" class="checking"><i class="far fa-check-circle"></i></a>
+								</div>
+
+								<!-- 영어 GST 세분화B with Message - 말레이시아 -->
+								<div class="box">
+									<p class="title">Type. 10</p>
+									<div class="bx-bills bx-invoice">
+										<div class="bi-title">
+											INVOICE
+										</div>
+										<div class="bi-line">
+											<p class="bi-invoice-num">No.Ⅰ-2017-02-1234</p>
+											<p class="bi-due-date">Payment Due Date: 02/11/2017</p>
+										</div>
+										<ul class="bi-list">
+											<li>Eye Level Little Scholar</li>
+											<li>No. 112-11-11111</li>
+											<li>GST No. 123123123</li>
+											<li>6th FL Daekyo Tower Gangnam, Seoul, Korea</li>
+											<li>Tel. 888-9999</li>
+											<li>Representative. Amy Kim</li>
+											<li>Issued Date. 11/02/2017</li>
+										</ul>
+										<div class="bi-name">
+											Ken Song (K200000000)
+										</div>
+										<div class="bi-table">
+											<table class="table">
+												<colgroup>
+													<col style="width:30%">
+													<col style="width:30%">
+													<col style="width:40%">
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col" colspan="2">Description</th>
+														<th scope="col">Amount</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>03-2017</td>
+														<td>EL Math</td>
+														<td>100.00</td>
+													</tr>
+													<tr>
+														<td>03-2017</td>
+														<td>EL Eng</td>
+														<td>50.00</td>
+													</tr>
+													<tr>
+														<td>03-2017</td>
+														<td>EL Kor</td>
+														<td>50.00</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="bi-bottom">
+											<ul class="bi-total">
+												<li>
+													<span class="bi-labels">TOTAL</span>
+													<span class="bi-numbers">200.00</span>
+												</li>
+												<li>
+													<span class="bi-labels">NET AMOUNT</span>
+													<span class="bi-numbers">181.81</span>
+												</li>
+												<li>
+													<span class="bi-labels">S=GST</span>
+													<span class="bi-numbers">9</span>
+												</li>
+												<li>
+													<span class="bi-labels">Z=GST</span>
+													<span class="bi-numbers">9</span>
+												</li>
+												<li>
+													<span class="bi-labels">Rounding</span>
+													<span class="bi-numbers">0.45</span>
+												</li>
+												<li class="bi-due">
+													<span class="bi-labels">TOTAL DUE</span>
+													<span class="bi-numbers">200.00</span>
+												</li>
+											</ul>
+											<div class="bi-message">
+												Amount of Tax subject to Reverse Charges: NIL<br>
+												CIN: UU7123123123123<br>
+												PAN: AAFD123123<br>
+												For NEFT / Bank transfer Purposes:-<br>
+												Bank Nam – HDFC BANK<br>
+												A/C No. – 12312312312<br>
+												IFSC Code: -HDF0000123123
+											</div>
+										</div>
+										<div class="bi-footer">
+											<span class="bi-logo">eye level i am the key</span>
+											<span class="bi-sign">Signature</span>
+										</div>
+									</div>
+									<span class="check_dim"></span>
+									<a href="#" class="checking"><i class="far fa-check-circle"></i></a>
+								</div>
+
+								<!-- 중국어간체 - 상해, 장춘 -->
+								<div class="box">
+									<p class="title">Type. 11</p>
+									<div class="bx-bills bx-invoice">
+										<div class="bi-title">
+											发票
+										</div>
+										<div class="bi-line">
+											<p class="bi-invoice-num">号.Ⅰ-2017-02-1234</p>
+											<p class="bi-due-date">缴纳期限: 2017/02/20</p>
+										</div>
+										<ul class="bi-list">
+											<li>Eye Level Little Scholar</li>
+											<li>6th FL Daekyo Tower Gangnam, Seoul, Korea</li>
+											<li>电话号码: 888-9999</li>
+											<li>开票人: Amy Kim</li>
+											<li>开票日: 2017/02/11</li>
+										</ul>
+										<div class="bi-name">
+											Ken Song (K200000000)
+										</div>
+										<div class="bi-table">
+											<table class="table">
+												<colgroup>
+													<col style="width:30%">
+													<col style="width:30%">
+													<col style="width:40%">
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col" colspan="2">项目</th>
+														<th scope="col">金额</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>03-2017</td>
+														<td>EL Math</td>
+														<td>100.00</td>
+													</tr>
+													<tr>
+														<td>03-2017</td>
+														<td>EL Eng</td>
+														<td>50.00</td>
+													</tr>
+													<tr>
+														<td>03-2017</td>
+														<td>EL Kor</td>
+														<td>50.00</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="bi-bottom">
+											<ul class="bi-total">
+												<li>
+													<span class="bi-labels">合计</span>
+													<span class="bi-numbers">200.00</span>
+												</li>
+												<li>
+													<span class="bi-labels">销售额</span>
+													<span class="bi-numbers">181.81</span>
+												</li>
+												<li>
+													<span class="bi-labels">增值税</span>
+													<span class="bi-numbers">18.19</span>
+												</li>
+												<li class="bi-due">
+													<span class="bi-labels">收费金额</span>
+													<span class="bi-numbers">200.00</span>
+												</li>
+											</ul>
+										</div>
+										<div class="bi-footer">
+											<span class="bi-logo">eye level i am the key</span>
+											<span class="bi-sign">签字</span>
+										</div>
+									</div>
+									<span class="check_dim"></span>
+									<a href="#" class="checking"><i class="far fa-check-circle"></i></a>
+								</div>
+
+								<!-- 중국어간체 with Message – 상해, 장춘 -->
+								<div class="box">
+									<p class="title">Type. 12</p>
+									<div class="bx-bills bx-invoice">
+										<div class="bi-title">
+											发票
+										</div>
+										<div class="bi-line">
+											<p class="bi-invoice-num">号.Ⅰ-2017-02-1234</p>
+											<p class="bi-due-date">缴纳期限: 2017/02/20</p>
+										</div>
+										<ul class="bi-list">
+											<li>Eye Level Little Scholar</li>
+											<li>6th FL Daekyo Tower Gangnam, Seoul, Korea</li>
+											<li>电话号码: 888-9999</li>
+											<li>开票人: Amy Kim</li>
+											<li>开票日: 2017/02/11</li>
+										</ul>
+										<div class="bi-name">
+											Ken Song (K200000000)
+										</div>
+										<div class="bi-table">
+											<table class="table">
+												<colgroup>
+													<col style="width:30%">
+													<col style="width:30%">
+													<col style="width:40%">
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col" colspan="2">项目</th>
+														<th scope="col">金额</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>03-2017</td>
+														<td>EL Math</td>
+														<td>100.00</td>
+													</tr>
+													<tr>
+														<td>03-2017</td>
+														<td>EL Eng</td>
+														<td>50.00</td>
+													</tr>
+													<tr>
+														<td>03-2017</td>
+														<td>EL Kor</td>
+														<td>50.00</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="bi-bottom">
+											<ul class="bi-total">
+												<li>
+													<span class="bi-labels">合计</span>
+													<span class="bi-numbers">200.00</span>
+												</li>
+												<li>
+													<span class="bi-labels">销售额</span>
+													<span class="bi-numbers">181.81</span>
+												</li>
+												<li>
+													<span class="bi-labels">增值税</span>
+													<span class="bi-numbers">18.19</span>
+												</li>
+												<li class="bi-due">
+													<span class="bi-labels">收费金额</span>
+													<span class="bi-numbers">200.00</span>
+												</li>
+											</ul>
+											<div class="bi-message">
+												Amount of Tax subject to Reverse Charges: NIL<br>
+												CIN: UU7123123123123<br>
+												PAN: AAFD123123<br>
+												For NEFT / Bank transfer Purposes:-<br>
+												Bank Nam – HDFC BANK<br>
+												A/C No. – 12312312312<br>
+												IFSC Code: -HDF0000123123
+											</div>
+										</div>
+										<div class="bi-footer">
+											<span class="bi-logo">eye level i am the key</span>
+											<span class="bi-sign">签字</span>
+										</div>
+									</div>
+									<span class="check_dim"></span>
+									<a href="#" class="checking"><i class="far fa-check-circle"></i></a>
+								</div>
+
+								<!-- 중국어번체 - 홍콩, 마카오 -->
+								<div class="box">
+									<p class="title">Type. 13</p>
+									<div class="bx-bills bx-invoice">
+										<div class="bi-title">
+											發票
+										</div>
+										<div class="bi-line">
+											<p class="bi-invoice-num">號.Ⅰ-2017-02-1234</p>
+											<p class="bi-due-date">繳納期限: 2017/02/20</p>
+										</div>
+										<ul class="bi-list">
+											<li>Eye Level Little Scholar</li>
+											<li>6th FL Daekyo Tower Gangnam, Seoul, Korea</li>
+											<li>電話號碼 : 888-9999   </li>
+											<li>開票人 : Amy Kim</li>
+											<li>開票日 : 2017/02/11</li>
+										</ul>
+										<div class="bi-name">
+											Ken Song (K200000000)
+										</div>
+										<div class="bi-table">
+											<table class="table">
+												<colgroup>
+													<col style="width:30%">
+													<col style="width:30%">
+													<col style="width:40%">
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col" colspan="2">項目</th>
+														<th scope="col">金額</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>03-2017</td>
+														<td>EL Math</td>
+														<td>100.00</td>
+													</tr>
+													<tr>
+														<td>03-2017</td>
+														<td>EL Eng</td>
+														<td>50.00</td>
+													</tr>
+													<tr>
+														<td>03-2017</td>
+														<td>EL Kor</td>
+														<td>50.00</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="bi-bottom">
+											<ul class="bi-total">
+												<li>
+													<span class="bi-labels">合計</span>
+													<span class="bi-numbers">200.00</span>
+												</li>
+												<li>
+													<span class="bi-labels">銷售額</span>
+													<span class="bi-numbers">181.81</span>
+												</li>
+												<li>
+													<span class="bi-labels">增值稅</span>
+													<span class="bi-numbers">18.19</span>
+												</li>
+												<li class="bi-due">
+													<span class="bi-labels">收費金額</span>
+													<span class="bi-numbers">200.00</span>
+												</li>
+											</ul>
+										</div>
+										<div class="bi-footer">
+											<span class="bi-logo">eye level i am the key</span>
+											<span class="bi-sign">簽字</span>
+										</div>
+									</div>
+									<span class="check_dim"></span>
+									<a href="#" class="checking"><i class="far fa-check-circle"></i></a>
+								</div>
+
+								<!-- 중국어번체 with Message – 홍콩, 마카오 -->
+								<div class="box">
+									<p class="title">Type. 14</p>
+									<div class="bx-bills bx-invoice">
+										<div class="bi-title">
+											發票
+										</div>
+										<div class="bi-line">
+											<p class="bi-invoice-num">號.Ⅰ-2017-02-1234</p>
+											<p class="bi-due-date">繳納期限: 2017/02/20</p>
+										</div>
+										<ul class="bi-list">
+											<li>Eye Level Little Scholar</li>
+											<li>6th FL Daekyo Tower Gangnam, Seoul, Korea</li>
+											<li>電話號碼 : 888-9999   </li>
+											<li>開票人 : Amy Kim</li>
+											<li>開票日 : 2017/02/11</li>
+										</ul>
+										<div class="bi-name">
+											Ken Song (K200000000)
+										</div>
+										<div class="bi-table">
+											<table class="table">
+												<colgroup>
+													<col style="width:30%">
+													<col style="width:30%">
+													<col style="width:40%">
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col" colspan="2">項目</th>
+														<th scope="col">金額</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>03-2017</td>
+														<td>EL Math</td>
+														<td>100.00</td>
+													</tr>
+													<tr>
+														<td>03-2017</td>
+														<td>EL Eng</td>
+														<td>50.00</td>
+													</tr>
+													<tr>
+														<td>03-2017</td>
+														<td>EL Kor</td>
+														<td>50.00</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="bi-bottom">
+											<ul class="bi-total">
+												<li>
+													<span class="bi-labels">合計</span>
+													<span class="bi-numbers">200.00</span>
+												</li>
+												<li>
+													<span class="bi-labels">銷售額</span>
+													<span class="bi-numbers">181.81</span>
+												</li>
+												<li>
+													<span class="bi-labels">增值稅</span>
+													<span class="bi-numbers">18.19</span>
+												</li>
+												<li class="bi-due">
+													<span class="bi-labels">收費金額</span>
+													<span class="bi-numbers">200.00</span>
+												</li>
+											</ul>
+											<div class="bi-message">
+												Amount of Tax subject to Reverse Charges: NIL<br>
+												CIN: UU7123123123123<br>
+												PAN: AAFD123123<br>
+												For NEFT / Bank transfer Purposes:-<br>
+												Bank Nam – HDFC BANK<br>
+												A/C No. – 12312312312<br>
+												IFSC Code: -HDF0000123123
+											</div>
+										</div>
+										<div class="bi-footer">
+											<span class="bi-logo">eye level i am the key</span>
+											<span class="bi-sign">簽字</span>
+										</div>
+									</div>
+									<span class="check_dim"></span>
+									<a href="#" class="checking"><i class="far fa-check-circle"></i></a>
+								</div>
+
+								<!-- 베트남어 - 베트남 -->
+								<div class="box">
+									<p class="title">Type. 15</p>
+									<div class="bx-bills bx-invoice">
+										<div class="bi-title">
+											HÓA ĐƠN
+										</div>
+										<div class="bi-line">
+											<p class="bi-invoice-num">Số hóa đơn: I-2017-02-1234</p>
+											<p class="bi-due-date">Ngày đến hạn thanh toán: 20/02/2017</p>
+										</div>
+										<ul class="bi-list">
+											<li>Đơn vị mua hàng : Eye Level Little Scholar</li>
+											<li>No. 112-11-11111</li>
+											<li>Mã số thuế : 123123123</li>
+											<li>Địa chỉ : 6th FL Daekyo Tower Gangnam, Seoul, Korea</li>
+											<li>Điện thoại : 888-9999</li>
+											<li>Người mua hàng : Amy Kim</li>
+											<li>Ngày xuất: 11/02/2017</li>
+										</ul>
+										<div class="bi-name">
+											Ken Song (K200000000)
+										</div>
+										<div class="bi-table">
+											<table class="table">
+												<colgroup>
+													<col style="width:30%">
+													<col style="width:30%">
+													<col style="width:40%">
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col" colspan="2">Tên hàng hóa, dịch vụ</th>
+														<th scope="col">Thành tiền</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>03-2017</td>
+														<td>EL Math</td>
+														<td>100.00</td>
+													</tr>
+													<tr>
+														<td>03-2017</td>
+														<td>EL Eng</td>
+														<td>50.00</td>
+													</tr>
+													<tr>
+														<td>03-2017</td>
+														<td>EL Kor</td>
+														<td>50.00</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="bi-bottom">
+											<ul class="bi-total">
+												<li>
+													<span class="bi-labels">Thành tiền đã có thuế GTGT</span>
+													<span class="bi-numbers">200.00</span>
+												</li>
+												<li>
+													<span class="bi-labels">Tổng cộng tiền trước thuế</span>
+													<span class="bi-numbers">181.81</span>
+												</li>
+												<li>
+													<span class="bi-labels">Tiền thuế GTGT</span>
+													<span class="bi-numbers">18.19</span>
+												</li>
+												<li class="bi-due">
+													<span class="bi-labels">Tổng cộng tiền thanh toán</span>
+													<span class="bi-numbers">200.00</span>
+												</li>
+											</ul>
+										</div>
+										<div class="bi-footer">
+											<span class="bi-logo">eye level i am the key</span>
+											<span class="bi-sign">Người bán hàng</span>
+										</div>
+									</div>
+									<span class="check_dim"></span>
+									<a href="#" class="checking"><i class="far fa-check-circle"></i></a>
+								</div>
+							</div>
+						</div>
+						<div role="tabpanel" class="tab-pane" id="tab-box2">
+							<div class="bx-formManage">
+								<!-- 영어기본 - 미주, 기타국가 -->
+								<div class="box active">
+									<p class="title">Type. 01</p>
+									<div class="bx-bills bx-receipt">
+										<div class="bi-subject">
+											<span class="bi-logo top">eye level i am the key</span>
+											<span class="pull-right mt-2">No. R00001234-1234</span>
+										</div>
+										<div class="bi-title">
+											RECEIPT
+										</div>
+										<ul class="bi-list">
+											<li>Eye Level Little Scholar</li>
+											<li>No. 112-11-11111</li>
+											<li>TAX No. 123123123</li>
+											<li>6th FL Daekyo Tower Gangnam, Seoul, Korea</li>
+											<li>Tel: 888-9999</li>
+											<li>Representative: Amy Kim</li>
+											<li>Paid Date: 02/20/2017</li>
+										</ul>
+										<div class="bi-name">
+											Ken Song (K200000000)
+										</div>
+										<div class="bi-table">
+											<table class="table">
+												<colgroup>
+													<col style="width:auto">
+													<col style="width:40%">
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col">DESCRIPTION</th>
+														<th scope="col">AMOUNT</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Math & English 03-2017</td>
+														<td>200.00</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="bi-bottom">
+											<ul class="bi-total">
+												<li class="bi-due">
+													<span class="bi-labels">PAY</span>
+													<span class="bi-numbers">200.00</span>
+												</li>
+												<li>
+													<span class="bi-labels">NET AMOUNT</span>
+													<span class="bi-numbers">181.81</span>
+												</li>
+												<li>
+													<span class="bi-labels">TAX</span>
+													<span class="bi-numbers">18.19</span>
+												</li>
+												<li>
+													<span class="bi-labels">METHOD</span>
+													<span class="bi-numbers">Cash</span>
+												</li>
+												<li>
+													<span class="bi-labels">REMARKS</span>
+													<span class="bi-numbers">Thank you</span>
+												</li>
+											</ul>
+										</div>
+										<div class="bi-footer">
+											<span class="bi-sign">Signature</span>
+										</div>
+									</div>
+									<span class="check_dim"></span>
+									<a href="#" class="checking"><i class="far fa-check-circle"></i></a>
+								</div>
+								<!-- 영어 GST용 - 싱가폴 -->
+								<div class="box">
+									<p class="title">Type. 02</p>
+									<div class="bx-bills bx-receipt">
+										<div class="bi-subject">
+											<span class="bi-logo top">eye level i am the key</span>
+											<span class="pull-right mt-2">No. R00001234-1234</span>
+										</div>
+										<div class="bi-title">
+											RECEIPT
+										</div>
+										<ul class="bi-list">
+											<li>Eye Level Little Scholar</li>
+											<li>No. 112-11-11111</li>
+											<li>GST No. 123123123</li>
+											<li>6th FL Daekyo Tower Gangnam, Seoul, Korea</li>
+											<li>Tel: 888-9999</li>
+											<li>Representative: Amy Kim</li>
+											<li>Paid Date: 02/20/2017</li>
+										</ul>
+										<div class="bi-name">
+											Ken Song (K200000000)
+										</div>
+										<div class="bi-table">
+											<table class="table">
+												<colgroup>
+													<col style="width:auto">
+													<col style="width:40%">
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col">DESCRIPTION</th>
+														<th scope="col">AMOUNT</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Math & English 03-2017</td>
+														<td>200.00</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="bi-bottom">
+											<ul class="bi-total">
+												<li class="bi-due">
+													<span class="bi-labels">PAY</span>
+													<span class="bi-numbers">200.00</span>
+												</li>
+												<li>
+													<span class="bi-labels">NET AMOUNT</span>
+													<span class="bi-numbers">181.81</span>
+												</li>
+												<li>
+													<span class="bi-labels">GST</span>
+													<span class="bi-numbers">18.19</span>
+												</li>
+												<li>
+													<span class="bi-labels">METHOD</span>
+													<span class="bi-numbers">Cash</span>
+												</li>
+												<li>
+													<span class="bi-labels">REMARKS</span>
+													<span class="bi-numbers">Thank you</span>
+												</li>
+											</ul>
+										</div>
+										<div class="bi-footer">
+											<span class="bi-sign">Signature</span>
+										</div>
+									</div>
+									<span class="check_dim"></span>
+									<a href="#" class="checking"><i class="far fa-check-circle"></i></a>
+								</div>
+								<!-- 영어 GST 세분화A - 인도 -->
+								<div class="box">
+									<p class="title">Type. 03</p>
+									<div class="bx-bills bx-receipt">
+										<div class="bi-subject">
+											<span class="bi-logo top">eye level i am the key</span>
+											<span class="pull-right mt-2">No. R00001234-1234</span>
+										</div>
+										<div class="bi-title">
+											RECEIPT
+										</div>
+										<ul class="bi-list">
+											<li>Eye Level Little Scholar</li>
+											<li>No. 112-11-11111</li>
+											<li>GST No. 123123123</li>
+											<li>6th FL Daekyo Tower Gangnam, Seoul, Korea</li>
+											<li>Tel: 888-9999</li>
+											<li>Representative: Amy Kim</li>
+											<li>Paid Date: 02/20/2017</li>
+										</ul>
+										<div class="bi-name">
+											Ken Song (K200000000)
+										</div>
+										<div class="bi-table">
+											<table class="table">
+												<colgroup>
+													<col style="width:auto">
+													<col style="width:40%">
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col">DESCRIPTION</th>
+														<th scope="col">AMOUNT</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Math & English 03-2017</td>
+														<td>200.00</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="bi-bottom">
+											<ul class="bi-total">
+												<li class="bi-due">
+													<span class="bi-labels">PAY</span>
+													<span class="bi-numbers">200.00</span>
+												</li>
+												<li>
+													<span class="bi-labels">NET AMOUNT</span>
+													<span class="bi-numbers">181.81</span>
+												</li>
+												<li>
+													<span class="bi-labels">CGST</span>
+													<span class="bi-numbers">6.3</span>
+												</li>
+												<li>
+													<span class="bi-labels">SGST</span>
+													<span class="bi-numbers">6.3</span>
+												</li>
+												<li>
+													<span class="bi-labels">IGST</span>
+													<span class="bi-numbers">6.4</span>
+												</li>
+												<li>
+													<span class="bi-labels">METHOD</span>
+													<span class="bi-numbers">Cash</span>
+												</li>
+												<li>
+													<span class="bi-labels">REMARKS</span>
+													<span class="bi-numbers">Thank you</span>
+												</li>
+											</ul>
+										</div>
+										<div class="bi-footer">
+											<span class="bi-sign">Signature</span>
+										</div>
+									</div>
+									<span class="check_dim"></span>
+									<a href="#" class="checking"><i class="far fa-check-circle"></i></a>
+								</div>
+								<!-- 영어 GST 세분화A - 말레이시아 -->
+								<div class="box">
+									<p class="title">Type. 04</p>
+									<div class="bx-bills bx-receipt">
+										<div class="bi-subject">
+											<span class="bi-logo top">eye level i am the key</span>
+											<span class="pull-right mt-2">No. R00001234-1234</span>
+										</div>
+										<div class="bi-title">
+											RECEIPT
+										</div>
+										<ul class="bi-list">
+											<li>Eye Level Little Scholar</li>
+											<li>No. 112-11-11111</li>
+											<li>GST No. 123123123</li>
+											<li>6th FL Daekyo Tower Gangnam, Seoul, Korea</li>
+											<li>Tel: 888-9999</li>
+											<li>Representative: Amy Kim</li>
+											<li>Paid Date: 02/20/2017</li>
+										</ul>
+										<div class="bi-name">
+											Ken Song (K200000000)
+										</div>
+										<div class="bi-table">
+											<table class="table">
+												<colgroup>
+													<col style="width:auto">
+													<col style="width:40%">
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col">DESCRIPTION</th>
+														<th scope="col">AMOUNT</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Math & English 03-2017</td>
+														<td>200.00</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="bi-bottom">
+											<ul class="bi-total">
+												<li class="bi-due">
+													<span class="bi-labels">PAY</span>
+													<span class="bi-numbers">200.00</span>
+												</li>
+												<li>
+													<span class="bi-labels">NET AMOUNT</span>
+													<span class="bi-numbers">181.81</span>
+												</li>
+												<li>
+													<span class="bi-labels">S=GST</span>
+													<span class="bi-numbers">9</span>
+												</li>
+												<li>
+													<span class="bi-labels">Z=GST</span>
+													<span class="bi-numbers">9</span>
+												</li>
+												<li>
+													<span class="bi-labels">Rounding</span>
+													<span class="bi-numbers">0.45</span>
+												</li>
+												<li>
+													<span class="bi-labels">METHOD</span>
+													<span class="bi-numbers">Cash</span>
+												</li>
+												<li>
+													<span class="bi-labels">REMARKS</span>
+													<span class="bi-numbers">Thank you</span>
+												</li>
+											</ul>
+										</div>
+										<div class="bi-footer">
+											<span class="bi-sign">Signature</span>
+										</div>
+									</div>
+									<span class="check_dim"></span>
+									<a href="#" class="checking"><i class="far fa-check-circle"></i></a>
+								</div>
+								<!-- 중국어간체 - 상해,장춘 -->
+								<div class="box">
+									<p class="title">Type. 05</p>
+									<div class="bx-bills bx-receipt">
+										<div class="bi-subject">
+											<span class="bi-logo top">eye level i am the key</span>
+											<span class="pull-right mt-2">号. R00001234-1234</span>
+										</div>
+										<div class="bi-title">
+											电子发票
+										</div>
+										<ul class="bi-list">
+											<li>Eye Level Little Scholar</li>
+											<li>6th FL Daekyo Tower Gangnam, Seoul, Korea</li>
+											<li>电话号码: 888-9999</li>
+											<li>开票人： Amy Kim</li>
+											<li>开票日: 2017/02/11</li>
+										</ul>
+										<div class="bi-name">
+											Ken Song (K200000000)
+										</div>
+										<div class="bi-table">
+											<table class="table">
+												<colgroup>
+													<col style="width:auto">
+													<col style="width:40%">
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col">项目</th>
+														<th scope="col">金额</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Math & English 03-2017</td>
+														<td>200.00</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="bi-bottom">
+											<ul class="bi-total">
+												<li class="bi-due">
+													<span class="bi-labels">合计</span>
+													<span class="bi-numbers">200.00</span>
+												</li>
+												<li>
+													<span class="bi-labels">销售额</span>
+													<span class="bi-numbers">181.81</span>
+												</li>
+												<li>
+													<span class="bi-labels">增值税</span>
+													<span class="bi-numbers">18.19</span>
+												</li>
+												<li>
+													<span class="bi-labels">支付方式</span>
+													<span class="bi-numbers">Cash</span>
+												</li>
+												<li>
+													<span class="bi-labels">备注</span>
+													<span class="bi-numbers">Thank you</span>
+												</li>
+											</ul>
+										</div>
+										<div class="bi-footer">
+											<span class="bi-sign">签字</span>
+										</div>
+									</div>
+									<span class="check_dim"></span>
+									<a href="#" class="checking"><i class="far fa-check-circle"></i></a>
+								</div>
+								<!-- 중국어번체 - 홍콩,마카오 -->
+								<div class="box">
+									<p class="title">Type. 06</p>
+									<div class="bx-bills bx-receipt">
+										<div class="bi-subject">
+											<span class="bi-logo top">eye level i am the key</span>
+											<span class="pull-right mt-2">号. R00001234-1234</span>
+										</div>
+										<div class="bi-title">
+											電子發票
+										</div>
+										<ul class="bi-list">
+											<li>Eye Level Little Scholar</li>
+											<li>6th FL Daekyo Tower Gangnam, Seoul, Korea</li>
+											<li>電話號碼 : 888-9999</li>
+											<li>開票人 : Amy Kim</li>
+											<li>開票日 : 2017/02/11</li>
+										</ul>
+										<div class="bi-name">
+											Ken Song (K200000000)
+										</div>
+										<div class="bi-table">
+											<table class="table">
+												<colgroup>
+													<col style="width:auto">
+													<col style="width:40%">
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col">項目</th>
+														<th scope="col">金額</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Math & English 03-2017</td>
+														<td>200.00</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="bi-bottom">
+											<ul class="bi-total">
+												<li class="bi-due">
+													<span class="bi-labels">合計</span>
+													<span class="bi-numbers">200.00</span>
+												</li>
+												<li>
+													<span class="bi-labels">銷售額</span>
+													<span class="bi-numbers">181.81</span>
+												</li>
+												<li>
+													<span class="bi-labels">增值稅</span>
+													<span class="bi-numbers">18.19</span>
+												</li>
+												<li>
+													<span class="bi-labels">支付方式</span>
+													<span class="bi-numbers">Cash</span>
+												</li>
+												<li>
+													<span class="bi-labels">備註</span>
+													<span class="bi-numbers">Thank you</span>
+												</li>
+											</ul>
+										</div>
+										<div class="bi-footer">
+											<span class="bi-sign">簽字</span>
+										</div>
+									</div>
+									<span class="check_dim"></span>
+									<a href="#" class="checking"><i class="far fa-check-circle"></i></a>
+								</div>
+								<!-- 베트남어 - 베트남 -->
+								<div class="box">
+									<p class="title">Type. 07</p>
+									<div class="bx-bills bx-receipt">
+										<div class="bi-subject">
+											<span class="bi-logo top">eye level i am the key</span>
+											<span class="pull-right mt-2">Số. R00001234-1234</span>
+										</div>
+										<div class="bi-title">
+											PHIẾU THU
+										</div>
+										<ul class="bi-list">
+											<li>Đơn vị mua hàng : Eye Level Little Scholar</li>
+											<li>No. 112-11-11111</li>
+											<li>Mã số thuế : 123123123</li>
+											<li>Địa chỉ : 6th FL Daekyo Tower Gangnam, Seoul, Korea</li>
+											<li>Điện thoại : 888-9999</li>
+											<li>Người mua hàng : Amy Kim</li>
+											<li>Ngày thanh toán: 20/02/2017</li>
+										</ul>
+										<div class="bi-name">
+											Ken Song (K200000000)
+										</div>
+										<div class="bi-table">
+											<table class="table">
+												<colgroup>
+													<col style="width:30%">
+													<col style="width:30%">
+													<col style="width:40%">
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col">Tên hàng hóa, dịch vụ</th>
+														<th scope="col">Thành tiền</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Math & English 03-2017</td>
+														<td>200.00</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="bi-bottom">
+											<ul class="bi-total">
+												<li class="bi-due">
+													<span class="bi-labels">Tổng cộng  tiền thanh toán</span>
+													<span class="bi-numbers">200.00</span>
+												</li>
+												<li>
+													<span class="bi-labels">Tổng cộng tiền trước thuế</span>
+													<span class="bi-numbers">181.81</span>
+												</li>
+												<li>
+													<span class="bi-labels">Tiền thuế GTGT</span>
+													<span class="bi-numbers">18.19</span>
+												</li>
+												<li>
+													<span class="bi-labels">Hình thức thanh toán</span>
+													<span class="bi-numbers">Tiền mặt</span>
+												</li>
+												<li>
+													<span class="bi-labels">Ghi chú</span>
+													<span class="bi-numbers"></span>
+												</li>
+											</ul>
+										</div>
+										<div class="bi-footer">
+											<span class="bi-sign">Người mua hàng</span>
+										</div>
+									</div>
+									<span class="check_dim"></span>
+									<a href="#" class="checking"><i class="far fa-check-circle"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+		<footer>
+			<span class="ft-logo">KEY &amp; MANAGER</span>
+			<p class="ft-copy">Copyright &copy; 2018 Daekyo Co., Ltd All rights reserved. For more information, contact <a href="mailto:myeyelevel@myeyelevel.com">myeyelevel@myeyelevel.com</a></p>
+			<div class="ft-site">
+				<dl>
+					<dt><a href="#class">LINKS</a></dt>
+					<dd>
+						<ul>
+							<li><a href="https://sites.google.com/a/myeyelevel.com/itisthekey/" target="_blank">User guide</a></li>
+							<li><a href="http://www.myeyelevel.com/Global/English/" target="_blank">Eyelevel Site</a></li>
+							<li><a href="http://www.iamthekey.com/" target="_blank">Brand Site</a></li>
+							<li><a href="http://eng.daekyo.com/En/default.aspx" target="_blank">Corporate Site</a></li>
+							<li><a href="http://elu.myeyelevel.com" target="_blank">Eye Level University</a></li>
+							<li><a href="http://email.myeyelevel.com" target="_blank">Email</a></li>
+						</ul>
+					</dd>
+				</dl>
+			</div>
+		</footer>
+	</div>
+</div>
+
+<script>
+	$(document).on('click', '.bx-formManage .box .title,.bx-formManage .checking,.bx-formManage .check_dim', function() {
+		$(this).parents('.bx-formManage .box').addClass('active').siblings().removeClass('active');
+	});
+</script>
+
+<script src="/js/custom.js"></script>
+</body>
+</html>

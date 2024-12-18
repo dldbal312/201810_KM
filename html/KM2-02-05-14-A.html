@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<link rel="SHORTCUT ICON" href="/images/favicon.ico">
+<title>Key&amp;Manager ver.2</title>
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/fontawesome-all.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" type="text/css" href="/css/custom.css">
+<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+<script src="/js/vendors/jquery-ui.min.js"></script>
+<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+<script src="/js/vendors/moment.js"></script>
+<script src="/js/vendors/bootstrap.min.js"></script>
+<script src="/js/vendors/bootstrap-datetimepicker.min.js"></script>
+<script src="/js/vendors/jquery.easypiechart.min.js"></script>
+<script>
+$(function() {
+	$('.chart-div').easyPieChart({
+		scaleColor: false,
+		trackColor: '#e0e0e0',
+		lineCap: 'round',
+		lineWidth: 6,
+		size: 120,
+		animate: 1000
+	});  
+});
+</script>
+</head>
+<body class="nav-sm modal-open">
+
+<!-- Modal -->
+<div class="modal fade in print" id="studentInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4" style="display:block">
+	<div class="modal-dialog modal-wide" role="document"  id="printableArea">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close hidden-print" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h1 class="modal-title" id="myModalLabel4">Eye Level Eng Monthly Report</h1>
+			</div>
+			<div class="modal-body">
+				<div class="px-3">
+					<div class="row test-date">
+						<div class="pull-left col-md-6">
+							Cyndy kim(K0000040)
+						</div>
+						<div class="pull-right col-md-6 text-right">
+							Test Date: 2018.03
+						</div>
+					</div>
+					<h2 class="cm-h4">TEST RESULT</h2>
+					<p class="decs">Eye Level Learning Center에서 영어실력과 공부습관을 길러갑니다.<span class="line-break">한 달 동안 열심히 학습한 <em class="tx-blue bold">CINDY</em>를 칭찬해 주세요!</span></p>
+					<div class="test-result">
+						<div class="box wide col6">
+ 							<div class="chart-wrap">
+								 <p class="tit">Overall Result</p>
+								 <div class="chart-inner num">
+									<h4 class="fs12 pt-2">Textbook Num</h4>
+									<div class="chart">
+										<p class="nums book">8</p>
+									</div>
+								</div>
+								<div class="chart-inner num">
+									<h4 class="fs12 pt-2">Words Studied</h4>
+									<div class="chart">
+										<p class="nums cap">58</p>
+									</div>
+								</div>
+								<div class="chart-inner num">
+									<h4 class="fs12 pt-2">Reading<br>
+										Passages Read</h4>
+									<div class="chart">
+										<p class="nums book">20</p>
+									</div>
+								</div>
+								<div class="chart-inner">
+									<h4 class="fs12">Attendence</h4>
+									<div class="chart">
+										<div class="chart-div" data-percent="100" data-bar-color="#0f8ce4"><span>100</span>%</div>
+										<span class="labels">8/8</span>
+									</div>
+								</div>
+								<div class="chart-inner">
+									<h4 class="fs12">SCORE</h4>
+									<div class="chart">
+										<div class="chart-div" data-percent="88" data-bar-color="#3ecfc0"><span>88</span>%</div>
+										<span class="labels">493/560</span>
+									</div>
+								</div>
+								<div class="chart-inner">
+									<h4 class="fs12">Fluency Rate</h4>
+									<div class="chart">
+										<div class="chart-div" data-percent="88" data-bar-color="#ffba00"><span>88</span>%</div>
+										<span class="labels">7/8</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<span class="line"></span>
+					<h2 class="cm-h4">Review Book Result (level B Booklet 6)</h2>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="bx-table">
+								<div class="no-scroll">
+									<table class="table">
+										<colgroup>
+											<col style="width:20%">
+											<col style="width:20%">
+											<col style="width:20%">
+											<col style="width:20%">
+											<col style="width:20%">
+										</colgroup>
+										<thead>
+											<tr>
+												<th>Topic(Booklet No.)</th>
+												<th>Score (Correct/Total Question)</th>
+												<th>My Success Rate</th>
+												<th>My Strengths</th>
+												<th>My Weakness</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th>M Sound(B01)</th>
+												<td>118/283</td>
+												<td>42%</td>
+												<td><span class="symbol type1"></span></td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>S Sound(B02)</th>
+												<td>118/283</td>
+												<td>42%</td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>T Sound(B03)</th>
+												<td>118/283</td>
+												<td>42%</td>
+												<td></td>
+												<td><span class="symbol type2"></span></td>
+											</tr>
+											<tr>
+												<th>B Sound(B04)</th>
+												<td>118/283</td>
+												<td>42%</td>
+												<td><span class="symbol type1"></span></td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>H Sound(B05)</th>
+												<td>118/283</td>
+												<td>42%</td>
+												<td><span class="symbol type1"></span></td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="cmt-write-wrap">
+						<h2 class="tit-cmts">Instructor Comments</h2>
+						<div class="cmt-wrap">
+							<div class="write"><textarea name="" id="" cols="30" rows="5"></textarea></div>
+						</div>
+						<button type="button" class="btn-save"><span>Save</button>
+					</div>
+					<h2 class="cm-h4">Learning Result(Booklet별 상세 결과)</h2>
+					<div class="learnn-results">
+						<h3 class="results-tit">M Sound(B01)</h3>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="data-table">
+									<table class="table">
+										<colgroup>
+											<col style="width:25%">
+											<col style="width:25%">
+											<col style="width:25%">
+											<col style="width:25%">
+										</colgroup>
+										<thead>
+											<tr>
+												<th>Words Studied</th>
+												<th>Reading Passages Read</th>
+												<th>Fluency</th>
+												<th>Score</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>10</td>
+												<td>4</td>
+												<td>X</td>
+												<td>85/86(99%)</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="table-bottom">
+										<p>By the end of this booklet, students should be able to:<br>
+												•read and write the words beginning with the consonant digraph, sh-<br>
+												•master the sight words ‘first’ and ‘next’<br>
+												•tell the sequence of events in a story Words to Know shark, sharp, shed, sheep, shell, ship, shirt, shoe, shop, short, shoulder,<br> shovel, shelf, earn, table</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<h3 class="results-tit">M Sound(B02)</h3>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="data-table">
+									<table class="table">
+										<colgroup>
+											<col style="width:25%">
+											<col style="width:25%">
+											<col style="width:25%">
+											<col style="width:25%">
+										</colgroup>
+										<thead>
+											<tr>
+												<th>Words Studied</th>
+												<th>Reading Passages Read</th>
+												<th>Fluency</th>
+												<th>Score</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>10</td>
+												<td>4</td>
+												<td>X</td>
+												<td>85/86(99%)</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="table-bottom">
+										<p>By the end of this booklet, students should be able to:<br>
+												•read and write the words beginning with the consonant digraph, sh-<br>
+												•master the sight words ‘first’ and ‘next’<br>
+												•tell the sequence of events in a story Words to Know shark, sharp, shed, sheep, shell, ship, shirt, shoe, shop, short, shoulder,<br> shovel, shelf, earn, table</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="text-center btn-wrap mb-3">
+						<button type="button" class="btn btn-primary">Pdf file Download</button>
+						<button type="button" class="btn btn-info">Cancel</button>
+						<dl class="btns-share" data-toggleClass="on, off" data-active="off">
+							<dt><button type="button">share</button></dt>
+							<dd>
+								<div>
+									<a href="#">Email</a>
+									<a href="#">Messenger</a>
+									<a href="#">url copy</a>
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+			<span class="paper"><img src="/images/bg_paper.png" alt=""></span>
+		</div>
+	</div>
+</div>
+
+
+<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel4">DT 결과<small class="ml-2">SHekinah Francesca Louis (K30000718)</small></h4>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<span class="lb-txt mb-1">Starting Point 1<i class="required">*</i></span>
+							<div class="form-inline half">
+								<select class="form-control input-sm">
+									<option value="" selected="selected">Select</option>
+								</select>
+								<select class="form-control input-sm">
+									<option value="" selected="selected">Select</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<span class="lb-txt mb-1">Starting Point 2<i class="required">*</i></span>
+							<div class="form-inline half">
+								<select class="form-control input-sm">
+									<option value="" selected="selected">Select</option>
+								</select>
+								<select class="form-control input-sm">
+									<option value="" selected="selected">Select</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class=" form-group">
+							<span class="lb-txt mb-1">Max Booklets/Week<i class="required">*</i></span>
+							<input class="form-control input-sm clearable" type="text">
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class=" form-group">
+							<span class="lb-txt mb-1">진도 모델</span>
+							<input class="form-control input-sm clearable" type="text">
+						</div>
+					</div>
+				</div>
+				<div class="text-center">
+					<button type="button" class="btn btn-primary">OK</button>
+					<button type="button" class="btn btn-info" data-dismiss="modal">Cancel</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal-backdrop fade in"></div>
+
+<script src="/js/custom.js"></script>
+</body>
+</html>

@@ -1,0 +1,689 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<link rel="SHORTCUT ICON" href="/images/favicon.ico">
+<title>Key&amp;Manager ver.2</title>
+<link rel="stylesheet" href="/css/vendors/bootstrap.min.css">
+<link rel="stylesheet" href="/css/vendors/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" href="/css/vendors/fontawesome-all.min.css">
+<link rel="stylesheet" href="/css/vendors/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" href="/css/vendors/jquery-ui.dynatree.css">
+<link rel="stylesheet" href="/css/custom.css">
+<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+<script src="/js/vendors/jquery-ui.min.js"></script>
+<script src="/js/vendors/jquery-ui.dynatree.js"></script>
+<script src="/js/vendors/moment.js"></script>
+<script src="/js/vendors/bootstrap.min.js"></script>
+<script src="/js/vendors/bootstrap-datetimepicker.min.js"></script>
+</head>
+<body class="nav-sm">
+<div class="wrapper pc-only">	
+	<div class="left_col">
+		<div id="sidebar-menu" class="main_menu_side main_menu">
+			<div class="menu_section">
+				<ul class="nav side-menu">
+					<li class="parent_menu"><a href="#"><i class="ico-schedule"></i>Schedule</a><a role="button" class="submenu-open"></a></li>
+					<li class="parent_menu"><a href="#"><i class="ico-member"></i>Member</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Member</a>
+								<ul class="nav-depth3">
+									<li class="active"><a href="#">Subject Transfer</a></li>
+									<li><a href="#">Learning</a></li> 
+									<li><a href="#">Attendance</a></li> 
+								</ul>
+							</li>
+							<li><a href="#">Attendance</a></li> 
+							<li><a href="#">Subject Transfer</a></li>
+							<li><a href="#">Learning</a></li> 
+							<li><a href="#">Attendance</a></li> 
+						</ul>
+					</li>
+					<li class="parent_menu"><a href="#"><i class="ico-learning"></i>Learning</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Member</a></li>
+							<li><a href="#">Attendance</a></li>
+							<li><a href="#">Subject Transfer</a></li>
+							<li><a href="#">Learning</a></li>
+							<li><a href="#">Attendance</a></li>
+						</ul>
+					</li>
+					<li class="parent_menu"><a href="#"><i class="ico-finance"></i>Finance</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Member</a></li>
+							<li><a href="#">Attendance</a></li> 
+							<li><a href="#">Subject Transfer</a></li>
+							<li><a href="#">Learning</a></li> 
+							<li><a href="#">Attendance</a></li> 
+						</ul>
+					</li>
+					<li class="parent_menu"><a href="#"><i class="ico-center"></i>Center</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Member</a></li>
+							<li><a href="#">Attendance</a></li> 
+							<li><a href="#">Subject Transfer</a></li>
+							<li><a href="#">Learning</a></li> 
+							<li><a href="#">Attendance</a></li> 
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="right_col">
+		<div class="schedule-wrap">
+			<div class="nav_menu">
+				<div class="toggle">
+					<a href="#" class="menu_toggle"><i></i></a>
+				</div>
+				<div class="head-wrap">
+					<div class="pull-left head-favorite">
+						<ul class="head-favorite-list">
+							<li><a href="#" class="list">Create member</a><a href="#" class="ico-delete"><i class="fas fa-times"></i></a></li>
+							<li><a href="#" class="list">Payment</a><a href="#" class="ico-delete"><i class="fas fa-times"></i></a></li>
+							<li><a href="#" class="list">My student</a><a href="#" class="ico-delete"><i class="fas fa-times"></i></a></li>
+						</ul>
+						<a href="#" class="favorite-set"><span class="ico-count cl-gray"></span>My menu add</a>
+					</div>
+					<div class="pull-right head-user-info">
+						<a href="#" class="head-logout">Logout</a>
+						<span class="head-name">Tony tony chopa (FC0001S)</span>
+						<a href="#" class="head-mypage">My page</a>
+					</div>
+				</div>
+			</div>
+			<div class="right_content" role="main">
+				<div class="container-fluid">
+					<div class="col-md-12 progress-container">
+						<h3>Schedule</h3>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="progress-top">
+									<!-- 날짜 및 선택 보기 -->
+									<div class="date-select-wrap">
+										<div class="date-select">
+											<a href="#"><i class="fas fa-caret-left"></i></a>
+											<span class="date">03. 20</span>
+											<a href="#"><i class="fas fa-caret-right"></i></a>
+										</div>
+										<div class="date-type-select">
+											<span class="radio-btn">
+												<input type="radio" id="inlineRadio1" value="option1" name="radioInline1" checked>
+												<label for="inlineRadio1">Today</label>
+											</span>
+											<span class="radio-btn">
+												<input type="radio" id="inlineRadio2" value="option1" name="radioInline1">
+												<label for="inlineRadio2">Day</label>
+											</span>
+											<span class="radio-btn">
+												<input type="radio" id="inlineRadio3" value="option1" name="radioInline1">
+												<label for="inlineRadio3">Week</label>
+											</span>
+											<span class="radio-btn">
+												<input type="radio" id="inlineRadio4" value="option1" name="radioInline1">
+												<label for="inlineRadio4">Month</label>
+											</span>
+										</div>
+									</div>
+									<!--// 날짜 및 선택 보기 -->
+									<div class="sc-data">
+										<dl class="stu">
+											<dt>Today Student</dt>
+											<dd><em class="tx-red">3</em>/10</dd>
+										</dl>
+										<dl class="cons">
+											<dt>Consultation</dt>
+											<dd><em class="tx-red">3</em>/1</dd>
+										</dl>
+										<div class="last-time">
+											<p>13:06</p>
+											<a role="button" class="btn btn-default py-2"><i class="fas fa-sync-alt"></i></a>
+										</div>
+										<div class="datasort-btns">
+											<span class="radio radio-primary radio-inline">
+												<input type="radio" id="datasort1" name="datasort" checked>
+												<label for="datasort1">Instructor</label>
+											</span>
+											<span class="radio radio-primary radio-inline">
+												<input type="radio" id="datasort2" name="datasort">
+												<label for="datasort2">Member</label>
+											</span>
+										</div>
+										<div class="input-group">
+											<input class="form-control input-md clearable" type="text">
+											<div class="input-group-btn">
+												<button type="button" class="btn btn-search" data-toggle="modal" data-target="#searchMember"><span class="fas fa-search"></span><span class="hide">Search</span></button>
+												<button type="button" class="btn btn-primary">Search</button>
+											</div>
+										</div>
+									</div>
+									<div class="data-sort">
+										<span class="sort">
+											<a href="" class="active">All</a>
+											<a href="">Class</a>
+											<a href="">Consultation</a>
+										</span>
+										<button type="button" class="excel-download">Excel</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="schedule-lists date">
+									<div class="header">
+										<div class="time">
+											<p>Time</p>
+										</div>
+										<div class="teacher">
+											<span class="date">03/20</span>
+											<span class="week">THU</span>
+											<a href="" class="btn-add">+</a>
+										</div>
+									</div>
+									<ul>
+										<li class="lists">
+											<div class="time">
+												<p>09:00</p>
+											</div>
+											<div class="teacher">
+												<a class="t-name" id='test' data-toggle="collapse" href="#detail01">Ken Song<i class="fas fa-sort-up"></i></a>
+												<div class="detail-view collapse in" id="detail01">
+													<div class="inner">
+														<div class="boxs">
+															<span class="length">
+																<span class="tx-blue">01</span><span>/03</span>
+															</span>
+															<span class="btns in-out vertical">
+																<span class="checkbox checkbox-primary">
+																	<input id="check-all1_1" type="checkbox">
+																	<label for="check-all1_1">All</label>
+																</span>
+															</span>
+														</div>
+														<div class="boxs">
+															<span class="length">
+																<span class="tx-blue">01</span><span>/03</span>
+															</span>
+															<span class="btns in-out">
+																<a href="" class="comment"><i class="far fa-comment-dots"></i></a>
+															</span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="detail open">
+												<p class="decs-min"><span>Student (0)</span><span>consultation (0/1)</span></p>
+												<ul class="detail-lists">
+													<li>
+														<span class="time">09:15</span>
+														<span class="txts tx-blue">
+															Mary.ko / EE(D0102)ary.ko 
+															<span class="labels tx-red">New!</span>
+														</span>
+														<span class="btns in-out hori">
+															<span class="checkbox checkbox-primary">
+																<input id="check1_1" type="checkbox">
+																<label for="check1_1">99:99</label>
+															</span>
+															<span class="checkbox checkbox-primary">
+																<input id="check1_2" type="checkbox">
+																<label for="check1_2">out</label>
+															</span>
+															<button type="button" class="btn-change">change</button>
+														</span>
+													</li>
+													<li>
+														<span class="time"></span>
+														<span class="txts">
+															Mary.ko / EE(D0102)ary.ko 
+															<span class="labels tx-red">New!</span>
+														</span>
+														<span class="btns in-out hori">
+															<span class="checkbox checkbox-primary">
+																<input id="check2_1" type="checkbox">
+																<label for="check2_1">in</label>
+															</span>
+															<span class="checkbox checkbox-primary">
+																<input id="check2_2" type="checkbox">
+																<label for="check2_2">out</label>
+															</span>
+															<button type="button" class="btn-change">change</button>
+														</span>
+													</li>
+													<li>
+														<span class="time">09:45</span>
+														<span class="txts">
+															Mary.ko / EE(D0102)ary.ko 
+															<span class="labels tx-red">New!</span>
+														</span>
+														<span class="btns in-out hori">
+															<span class="checkbox checkbox-primary">
+																<input id="check3_1" type="checkbox">
+																<label for="check3_1">in</label>
+															</span>
+															<span class="checkbox checkbox-primary">
+																<input id="check3_2" type="checkbox">
+																<label for="check3_2">out</label>
+															</span>
+															<button type="button" class="btn-change">change</button>
+														</span>
+													</li>
+												</ul>
+											</div>
+										</li>
+										<li class="lists same">
+											<div class="time">
+												<p></p>
+											</div>
+											<div class="teacher">
+												<a class="t-name collapsed" data-toggle="collapse" href="#detail011">Ken Song<i class="fas fa-sort-up"></i></a>
+												<div class="detail-view collapse" id="detail011">
+													<div class="inner">
+														<div class="boxs">
+															<span class="length">
+																<span class="tx-blue">01</span><span>/03</span>
+															</span>
+															<span class="btns in-out vertical">
+																<span class="checkbox checkbox-primary">
+																	<input id="check-all1_1" type="checkbox">
+																	<label for="check-all1_1">All</label>
+																</span>
+															</span>
+														</div>
+														<div class="boxs">
+															<span class="length">
+																<span class="tx-blue">01</span><span>/03</span>
+															</span>
+															<span class="btns in-out">
+																<a href="" class="comment"><i class="far fa-comment-dots"></i></a>
+															</span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="detail">
+												<p class="decs-min"><span>Student (0)</span><span>consultation (0/1)</span></p>
+												<ul class="detail-lists">
+													<li>
+														<span class="time">09:15</span>
+														<span class="txts tx-blue">
+															Mary.ko / EE(D0102)ary.ko 
+															<span class="labels tx-red">New!</span>
+														</span>
+														<span class="btns">
+															<a href=""><i class="far fa-edit"></i></a>
+														</span>
+													</li>
+													<li>
+														<span class="time">09:15</span>
+														<span class="txts">
+															Mary.ko / EE(D0102)ary.ko 
+															<span class="labels tx-red">New!</span>
+														</span>
+														<span class="btns">
+															<a href=""><i class="far fa-edit"></i></a>
+														</span>
+													</li>
+													<li>
+														<span class="time">09:15</span>
+														<span class="txts">
+															Mary.ko / EE(D0102)ary.ko 
+															<span class="labels tx-red">New!</span>
+														</span>
+														<span class="btns">
+															<a href=""><i class="far fa-edit"></i></a>
+														</span>
+													</li>
+												</ul>
+											</div>
+										</li>
+										<li class="lists same">
+											<div class="time">
+												<p></p>
+											</div>
+											<div class="teacher">
+												<a class="t-name collapsed" data-toggle="collapse" href="#detail0111">Ken Song<i class="fas fa-sort-up"></i></a>
+												<div class="detail-view collapse" id="detail0111">
+													<div class="inner">
+														<div class="boxs">
+															<span class="length">
+																<span class="tx-blue">01</span><span>/03</span>
+															</span>
+															<span class="btns in-out vertical">
+																<span class="checkbox checkbox-primary">
+																	<input id="check-all1_1" type="checkbox">
+																	<label for="check-all1_1">All</label>
+																</span>
+															</span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="detail">
+												<p class="decs-min"><span>Student (0)</span><span>consultation (0/1)</span></p>
+												<ul class="detail-lists">
+													<li>
+														<span class="time">09:15</span>
+														<span class="txts tx-blue">
+															Mary.ko / EE(D0102)ary.ko 
+															<span class="labels tx-red">New!</span>
+														</span>
+														<span class="btns in-out hori">
+															<span class="checkbox checkbox-primary">
+																<input id="check1_1" type="checkbox">
+																<label for="check1_1">99:99</label>
+															</span>
+															<span class="checkbox checkbox-primary">
+																<input id="check1_2" type="checkbox">
+																<label for="check1_2">out</label>
+															</span>
+															<button type="button" class="btn-change">change</button>
+														</span>
+													</li>
+												</ul>
+											</div>
+										</li>
+										<li class="lists">
+											<div class="time">
+												<p>10:00</p>
+											</div>
+											<div class="teacher">
+												<a class="t-name" data-toggle="collapse" href="#detail02">Ken Song<i class="fas fa-sort-up"></i></a>
+												<div class="detail-view collapse in" id="detail02">
+													<div class="inner">
+														<div class="boxs">
+															<span class="length">
+																<span class="tx-blue">01</span><span>/03</span>
+															</span>
+															<span class="btns in-out vertical">
+																<span class="checkbox checkbox-primary">
+																	<input id="check-all1_1" type="checkbox">
+																	<label for="check-all1_1">All</label>
+																</span>
+															</span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="detail open">
+												<p class="decs-min"><span>Student (0)</span><span>consultation (0/1)</span></p>
+												<ul class="detail-lists">
+													<li>
+														<span class="time">09:15</span>
+														<span class="txts tx-blue">
+															Mary.ko / EE(D0102)
+															<span class="labels tx-red">New!</span>
+														</span>
+														<span class="btns control">
+															<button type="button" class="btn-change">change</button>
+															<a href=""><i class="far fa-edit"></i></a>
+														</span>
+													</li>
+												</ul>
+											</div>
+										</li>
+										<li class="lists null">
+											<div class="time">
+												<p>11:00</p>
+											</div>
+											<!-- 
+												minit10
+												minit20
+												minit30
+												minit40
+												minit50
+												minit60
+											 -->
+											<div class="now-time minit10">
+												<span></span>
+											</div>
+										</li>
+										<li class="lists null">
+											<div class="time">
+												<p>12:00</p>
+											</div>
+										</li>
+										<li class="lists null">
+											<div class="time">
+												<p>13:00</p>
+											</div>
+										</li>
+										<li class="lists null">
+											<div class="time">
+												<p>14:00</p>
+											</div>
+										</li>
+										<li class="lists null">
+											<div class="time">
+												<p>15:00</p>
+											</div>
+										</li>
+										<li class="lists null">
+											<div class="time">
+												<p>16:00</p>
+											</div>
+										</li>
+										<li class="lists null">
+											<div class="time">
+												<p>17:00</p>
+											</div>
+										</li>
+										<li class="lists null">
+											<div class="time">
+												<p>18:00</p>
+											</div>
+										</li>
+										<li class="lists null">
+											<div class="time">
+												<p>19:00</p>
+											</div>
+										</li>
+										<li class="lists null">
+											<div class="time">
+												<p>20:00</p>
+											</div>
+										</li>
+										<li class="lists null">
+											<div class="time">
+												<p>21:00</p>
+											</div>
+										</li>
+										<li class="lists null">
+											<div class="time">
+												<p>22:00</p>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="schedule-drag-lists">
+				<div class="headers">
+					<h3>My Schedule<a href="#">+</a></h3>
+					 <span class="date">
+						 <span class="week">TUE</span>
+						 <span class="day">21</span>
+					 </span>
+				</div>
+				<div class="user-name">
+					<p><span class="name">Danny Kim</span> (CN0000083)<a href="#"><span class="fas fa-search"></span></a></p>
+				</div>
+				<div class="conts">
+					<div class="inner-scroll">
+						<dl class="lists">
+							<dt>Attend <span class="labels">now</span><span class="num">02<i>/06</i></span></dt>
+							<!-- <dd class="top-data">
+								<span class="length"><em class="tx-blue">1</em>/4</span>
+								<span class="in-out vertical">
+									<span class="checkbox checkbox-primary">
+										<input id="check1_all" type="checkbox">
+										<label for="check1_all">All</label>
+									</span>
+								</span>
+							</dd> -->
+							<dd>
+								<ul>
+									<li>
+										<a href="" class="check" data-modules="dragBox" data-status="disabled">
+											<span class="time">99:99</span>
+											<span class="name">Mary.koMary.koMary<span class="flag">New!</span><br>EE(D0102)</span>
+											<span class="in-out hori">
+												<span class="checkbox checkbox-primary">
+													<input id="check1_11" type="checkbox">
+													<label for="check1_11">99:99</label>
+												</span>
+												<span class="checkbox checkbox-primary">
+													<input id="check1_21" type="checkbox">
+													<label for="check1_21">out</label>
+												</span>
+											</span>
+										</a>
+									</li>
+									<li>
+										<a href="" class="check" data-modules="dragBox" data-status="disabled">
+											<span class="time">99:99</span>
+											<span class="name">Mary.ko<span class="flag"><i class="fas fa-birthday-cake"></i></span><br>EE(D0102)</span>
+											<span class="in-out hori">
+												<span class="checkbox checkbox-primary">
+													<input id="check1_111" type="checkbox">
+													<label for="check1_111">99:99</label>
+												</span>
+												<span class="checkbox checkbox-primary">
+													<input id="check1_211" type="checkbox">
+													<label for="check1_211">out</label>
+												</span>
+											</span>
+										</a>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+						<dl class="lists">
+							<dt>Consult <span class="labels">now</span><span class="num">02<i>/06</i></span></dt>
+							<dd>
+								<ul>
+									<li>
+										<span class="check consult" data-modules="dragBox" data-status="disabled">
+											<i class="far fa-comment-dots"></i>
+											<span class="time">99:99</span>
+											<span class="name">Tony Tony Chopper</span>
+											<span class="btns">
+												<a href=""><i class="far fa-edit"></i></a>
+											</span>
+										</span>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+						<div class="miss-lists">
+							<p class="tit">Missing <span class="labels">yesterday</span></p>
+							<dl class="lists">
+								<dt>Class <span class="num">02</span></dt>
+								<dd>
+									<ul>
+										<li>
+											<a href="" class="check" data-modules="dragBox" data-status="disabled">
+												<span class="time">99:99</span>
+												<span class="name">Mary.ko<span class="flag">New!</span><br>EE(D0102)</span>
+												<span class="in-out hori">
+													<span class="checkbox checkbox-primary">
+														<input id="check1_11" type="checkbox">
+														<label for="check1_11">99:99</label>
+													</span>
+													<span class="checkbox checkbox-primary">
+														<input id="check1_21" type="checkbox">
+														<label for="check1_21">out</label>
+													</span>
+												</span>
+											</a>
+										</li>
+										<li>
+											<a href="" class="check" data-modules="dragBox" data-status="disabled">
+												<span class="time">99:99</span>
+												<span class="name">Mary.ko<span class="flag"><i class="fas fa-birthday-cake"></i></span><br>EE(D0102)</span>
+												<span class="in-out hori">
+													<span class="checkbox checkbox-primary">
+														<input id="check1_111" type="checkbox">
+														<label for="check1_111">99:99</label>
+													</span>
+													<span class="checkbox checkbox-primary">
+														<input id="check1_211" type="checkbox">
+														<label for="check1_211">out</label>
+													</span>
+												</span>
+											</a>
+										</li>
+									</ul>
+								</dd>
+							</dl>
+							<dl class="lists">
+								<dt>Consult<span class="num">02</span></dt>
+								<dd>
+									<ul>
+										<li>
+											<span class="check consult" data-modules="dragBox" data-status="disabled">
+												<i class="far fa-comment-dots"></i>
+												<span class="time">99:99</span>
+												<span class="name">Tony Tony Chopper</span>
+												<span class="btns">
+													<a href=""><i class="far fa-edit"></i></a>
+												</span>
+											</span>
+										</li>
+									</ul>
+								</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="hidden-xs hidden-sm">
+			<span class="ft-logo">KEY &amp; MANAGER</span>
+			<p class="ft-copy">Copyright &copy; 2018 Daekyo Co., Ltd All rights reserved. For more information, contact <a href="mailto:myeyelevel@myeyelevel.com">myeyelevel@myeyelevel.com</a></p>
+			<div class="ft-site">
+				<dl>
+					<dt><a href="#class">Links</a></dt>
+					<dd>
+						<ul>
+							<li><a href="https://sites.google.com/a/myeyelevel.com/itisthekey/" target="_blank">User guide</a></li>
+							<li><a href="http://www.myeyelevel.com/Global/English/" target="_blank">Eyelevel Site</a></li>
+							<li><a href="http://www.iamthekey.com/" target="_blank">Brand Site</a></li>
+							<li><a href="http://eng.daekyo.com/En/default.aspx" target="_blank">Corporate Site</a></li>
+							<li><a href="http://elu.myeyelevel.com" target="_blank">Eye Level University</a></li>
+							<li><a href="http://email.myeyelevel.com" target="_blank">Email</a></li>
+						</ul>
+					</dd>
+				</dl>
+			</div>
+		</footer>
+	</div>
+</div>
+<div class="overlay"></div>
+<script src="/js/custom.js"></script>
+<script>
+	scheduleDraggable.init()
+	$(function(){
+		$('.collapse').on('show.bs.collapse', function () {
+			var targetElem = $(this).parent().siblings('.detail');
+			targetElem.addClass('open')
+		})
+		$('.collapse').on('hide.bs.collapse', function () {
+			var targetElem = $(this).parent().siblings('.detail');
+			targetElem.removeClass('open')
+		})
+	});
+
+</script>
+</body>
+</html>

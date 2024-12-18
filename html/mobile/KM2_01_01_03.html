@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+	<link rel="SHORTCUT ICON" href="../images/favicon.ico">
+	<title>Key&amp;Manager ver.2</title>
+	<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap-datetimepicker.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendors/fontawesome-all.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendors/jquery.mCustomScrollbar.css">
+	<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+	<script src="/js/vendors/jquery-ui.min.js"></script>
+	<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+	<script src="/js/vendors/moment.js"></script>
+	<script src="/js/vendors/bootstrap.min.js"></script>
+	<script src="/js/vendors/bootstrap-datetimepicker.min.js"></script>
+	
+	<!-- mobile 추가 -->
+	<link rel="stylesheet" type="text/css" href="/css/custom-mobile.css">
+	<script src="/js/vendors/jquery.touchSwipe.min.js"></script>
+	<script src="/js/custom-mobile.js"></script>
+</head>
+<body>
+<div class="wrapper">
+	<div class="main-content" role="main" style="min-height:100vh;">
+		<div class="page-info">
+			<a href="#" class="bt-prev">Prev page</a>
+			<h1>Membership Registration</h1>
+			<a href="#" class="bt-close">Close</a>
+		</div>
+		<div class="cnt-box form first">
+			<h2 class="page-main-tit">기본 필수 정보</h2>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<span class="lb-txt">First Name<i class="required">*</i></span>
+						<input type="text" class="form-control input-sm clearable" placeholder="">
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<span class="lb-txt">Last Name<i class="required">*</i></span>
+						<input type="text" class="form-control input-sm clearable" placeholder="">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<span class="lb-txt">Grade<i class="required">*</i></span>
+						<select class="form-control input-sm">
+							<option value="0" title="" selected="selected">- Select -</option>
+							<option value="1" title="Age 0~1">Age 0~1</option>
+							<option value="2" title="Age 1~2">Age 1~2</option>
+							<option value="3" title="Age 2~3">Age 2~3</option>
+							<option value="4" title="Age 3~4">Age 3~4</option>
+							<option value="5" title="Age 4~5">Age 4~5</option>
+							<option value="6" title="Age 5~6">Age 5~6</option>
+							<option value="7" title="Primary Standard 1">Primary Standard 1</option>
+							<option value="8" title="Primary Standard 2">Primary Standard 2</option>
+							<option value="9" title="Primary Standard 3">Primary Standard 3</option>
+							<option value="10" title="Primary Standard 4">Primary Standard 4</option>
+							<option value="11" title="Primary Standard 5">Primary Standard 5</option>
+							<option value="12" title="Primary Standard 6">Primary Standard 6</option>
+							<option value="13" title="Secondary Form 1">Secondary Form 1</option>
+							<option value="14" title="Secondary Form 2">Secondary Form 2</option>
+							<option value="15" title="Secondary Form 3">Secondary Form 3</option>
+							<option value="16" title="Secondary Form 4">Secondary Form 4</option>
+							<option value="17" title="Secondary Form 5">Secondary Form 5</option>
+							<option value="18" title="Secondary Form 6">Secondary Form 6</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<span class="lb-txt">Parent Contact 1<i class="required">*</i></span>
+						<input type="text" class="form-control input-sm clearable" placeholder="">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="acc-header in-ico pl-0">
+			<div class="name">
+				<h4 class="tit page-main-tit">추가정보</h4>
+			</div>
+			<a href="#acc-body" class="acc-btn collapsed" data-toggle="collapse" aria-expanded="false">
+				<span class="btn-circle minus"><i class="fas fa-minus"></i></span>
+			</a>
+		</div>
+		<div class="cnt-box form first collapse" id="acc-body">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<span class="lb-txt">Birthday</span>
+						<div class="input-group date">
+							<input type="text" class="form-control input-sm clearable" placeholder="">
+							<span class="input-group-addon">
+								<span class="calendar-icon"></span>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<span class="lb-txt">Attendance Code</span>
+						<div class="input-group size-s">
+							<input type="text" class="form-control input-sm clearable" placeholder="" maxlength="4">
+							<span class="btns">
+								<a href="" class="btn-imgs replace"></a>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<span class="lb-txt">Parent Contact 2</span>
+						<input type="text" class="form-control input-sm clearable" placeholder="">
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<span class="lb-txt">Parent Email<i class="required">*</i></span>
+						<div class="input-group">
+							<input type="text" class="form-control input-sm clearable">
+							<span class="btns validate">
+								<!-- 인증완료 전 -->
+								<i class="fail">Not verifed</i>
+								<!-- 인증완료 후 -->
+								<!-- <i class="succese">verifed</i> -->
+								<a href="#" class="btn-small">verify</a>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<span class="inline-check">
+							<span class="lb-txt">Messenger</span>
+							<span class="radio inline">
+								<input type="radio" id="inlineRadio1" value="option1" name="radioInline1" checked="checked">
+								<label for="inlineRadio1"><span class="ico facebook">facebook</span></label>
+							</span>
+							<span class="radio inline">
+								<input type="radio" id="inlineRadio2" value="option1" name="radioInline1">
+								<label for="inlineRadio2"><span class="ico blog">blog</span></label>
+							</span>
+						</span>
+						<input type="text" class="form-control input-sm clearable">
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<span class="lb-txt">Remarks</span>
+						<input type="text" class="form-control input-sm clearable">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<span class="lb-txt">Personal Data usage Agreement</span>
+						<div class="pull-right">
+							<span class="switch-check">
+								<input type="checkbox" id="check">
+								<label for="check">
+									<span class="switch-inner">
+										<span class="active">Yes</span>
+										<span class="default">No</span>
+									</span>
+								</label>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="btn-wrap">
+			<div class="row">
+				<div class="pull-left">
+					<button type="button" class="btn btn-default">List</button>
+				</div>	
+				<div class="pull-right">
+					<button type="button" class="btn btn-success">Save</button>
+					<button type="button" class="btn btn-info">Cancel</button>
+				</div>	
+			</div>
+		</div>
+		<div class="wide-type bottom">
+			<span class="row">
+				<a href="#" class="col-btn">DT</a>
+				<a href="#" class="col-btn">Consultation</a>
+				<a href="#" class="col-btn disabled">Trial</a><!-- 비활성화 class [ disabled ] -->
+				<a href="#" class="col-btn">Lead</a>
+			</span>
+		</div>
+	</div>
+	<div class="slideout-overlay"></div>
+</div>
+
+
+</body>
+</html>

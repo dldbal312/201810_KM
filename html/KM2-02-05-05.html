@@ -1,0 +1,381 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<link rel="SHORTCUT ICON" href="/images/favicon.ico">
+<title>Key&amp;Manager ver.2</title>
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/fontawesome-all.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" type="text/css" href="/css/custom.css">
+<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+<script src="/js/vendors/jquery-ui.min.js"></script>
+<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+<script src="/js/vendors/moment.js"></script>
+<script src="/js/vendors/bootstrap.min.js"></script>
+<script src="/js/vendors/bootstrap-datetimepicker.min.js"></script>
+</head>
+<body class="nav-sm">
+<div class="wrapper">		
+	<div class="left_col">
+		<div id="sidebar-menu" class="main_menu_side main_menu">
+			<div class="menu_section">
+				<ul class="nav side-menu">
+					<li class="parent_menu"><a href="#"><i class="ico-schedule"></i>Schedule</a><a role="button" class="submenu-open"></a></li>
+					<li class="parent_menu"><a href="#"><i class="ico-member"></i>Member</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Member</a>
+								<ul class="nav-depth3">
+									<li class="active"><a href="#">Subject Transfer</a></li>
+									<li><a href="#">Learning</a></li> 
+									<li><a href="#">Attendance</a></li> 
+								</ul>
+							</li>
+							<li><a href="#">Attendance</a></li> 
+							<li><a href="#">Subject Transfer</a></li>
+							<li><a href="#">Learning</a></li> 
+							<li><a href="#">Attendance</a></li> 
+						</ul>
+					</li>
+					<li class="parent_menu"><a href="#"><i class="ico-learning"></i>Learning</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Member</a></li>
+							<li><a href="#">Attendance</a></li>
+							<li><a href="#">Subject Transfer</a></li>
+							<li><a href="#">Learning</a></li>
+							<li><a href="#">Attendance</a></li>
+						</ul>
+					</li>
+					<li class="parent_menu"><a href="#"><i class="ico-finance"></i>Finance</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Member</a></li>
+							<li><a href="#">Attendance</a></li> 
+							<li><a href="#">Subject Transfer</a></li>
+							<li><a href="#">Learning</a></li> 
+							<li><a href="#">Attendance</a></li> 
+						</ul>
+					</li>
+					<li class="parent_menu"><a href="#"><i class="ico-center"></i>Center</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Member</a></li>
+							<li><a href="#">Attendance</a></li> 
+							<li><a href="#">Subject Transfer</a></li>
+							<li><a href="#">Learning</a></li> 
+							<li><a href="#">Attendance</a></li> 
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="right_col">		
+		<div class="nav_menu">
+			<div class="toggle">
+				<a href="#" class="menu_toggle"><i></i></a>
+			</div>
+			<div class="head-wrap">
+				<div class="pull-left head-favorite">
+					<ul class="head-favorite-list">
+						<li><a href="#" class="list">Create member</a><a href="#" class="ico-delete"><i class="fas fa-times"></i></a></li>
+						<li><a href="#" class="list">Payment</a><a href="#" class="ico-delete"><i class="fas fa-times"></i></a></li>
+						<li><a href="#" class="list">My student</a><a href="#" class="ico-delete"><i class="fas fa-times"></i></a></li>
+					</ul>
+					<a href="#" class="favorite-set"><span class="ico-count cl-gray"></span>My menu add</a>
+				</div>
+				<div class="pull-right head-user-info">
+					<a href="#" class="head-logout">Logout</a>
+					<span class="head-name">Tony tony chopa (FC0001S)</span>
+					<a href="#" class="head-mypage">My page</a>
+				</div>
+			</div>
+		</div>
+		<div class="right_content" role="main">
+			<div class="container-fluid">
+				<div class="col-md-12">
+					<h3>레벨테스트 결과 - 영어</h3>
+					<div class="row btn-in">
+						<div class="col-md-12 form-tit">
+							<h4 class="tit">Center Info</h4>
+							<div class="info">
+								<ul class="breadcrumb">
+									<li>Daekyo Malaysia</li>
+									<li>Daekyo Malaysia</li>
+									<li>Bukit Damansara</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-11 bx-search">
+							<form class="form-inline">
+								<div class="row">
+									<div class="col-md-12">
+										<div class="form-group">
+											<span class="lb-txt st1">테스트 월</span>
+											<div class="form-group">
+												<div class="input-group date">
+													<input type="text" class="form-control input-sm clearable datepicker" placeholder="dd/mm/yyyy" name="requestDateFrom" id="requestDateFrom" />
+													<span class="input-group-addon">
+														<span class="calendar-icon"></span>
+													</span>
+												</div>
+											</div>
+											<span class="date-period-divider">~</span>
+											<div class="form-group">
+												<div class="input-group date">
+													<input type="text" class="form-control input-sm clearable datepicker" placeholder="dd/mm/yyyy" name="requestDateTo" id="requestDateTo" />
+													<span class="input-group-addon">
+														<span class="calendar-icon"></span>
+													</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="btn-area col-md-1">
+							<a href="#" class="btn btn-primary">Search</a>
+						</div>
+					</div>
+					<div class="ln_solid"></div>
+
+					<div class="bx-table">
+						<div class="tb-dimm"><span class="txts">Fetching data...</span></div>
+						<div class="no-scroll">
+							<table class="table table-sort">
+								<colgroup>
+									<col style="width:8%">
+									<col style="width:auto">
+									<col style="width:auto">
+									<col style="width:auto">
+									<col style="width:auto">
+									<col style="width:auto">
+									<col style="width:auto">
+									<col style="width:auto">
+									<col style="width:8%">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col"><a href="#" class="sorting">No</a></th>
+										<th scope="col"><a href="#" class="sorting">Subject</a></th>
+										<th scope="col"><a href="#" class="sorting">Member</a></th>
+										<th scope="col"><a href="#" class="sorting">Level</a></th>
+										<th scope="col"><a href="#" class="sorting">Correct</a></th>
+										<th scope="col"><a href="#" class="sorting">Points</a></th>
+										<th scope="col"><a href="#" class="sorting">Times</a></th>
+										<th scope="col"><a href="#" class="sorting">Test Date</a></th>
+										<th scope="col"></th>
+									</tr>
+								</thead>
+								<tbody class="panel">
+									<tr class="parent-tr">
+										<td>1</td>
+										<td>EL Eng</td>
+										<td>Ken Song</td>
+										<td>Level D</td>
+										<td>110/115(96%)</td>
+										<td>93</td>
+										<td>170s/180s</td>
+										<td>02-04-2018</td>
+										<td><button type="button" class="btn"><span class="fas fa-minus"></span></button></td>
+									</tr>
+									<tr class="child-tr active">
+										<td colspan="9">
+											<div class="level-test eng">
+												<div class="l-group results">
+													<span class="l-group-tit">TEST RESULTS</span>
+													<div class="bx-table l-group-table">
+														<table class="table">
+															<thead>
+																<tr>
+																	<th scope="col">#Section</th>
+																	<th scope="col">Score</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td>Phonics</td>
+																	<td>40</td>
+																</tr>
+																<tr>
+																	<td>Grammar</td>
+																	<td>10</td>
+																</tr>
+																<tr>
+																	<td>Comprehension</td>
+																	<td>15</td>
+																</tr>
+																<tr>
+																	<td>Sight Words</td>
+																	<td>5</td>
+																</tr>
+																<tr>
+																	<td>Vocabulary</td>
+																	<td>10</td>
+																</tr>
+																<tr>
+																	<td>Writing</td>
+																	<td>6</td>
+																</tr>
+																<tr>
+																	<td>Spelling</td>
+																	<td>7</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+												<div class="l-group feedback">
+													<span class="l-group-tit">PERFORMANCE FEEDBACK</span>
+													<div class="l-group-box">
+														<p class="desc">This student solves problems accurately and quickly.  Encourage the student to have more confidence.</p>
+													</div>
+												</div>
+												<div class="l-group comments">
+													<span class="l-group-tit">TEACHER COMMENTS</span>
+													<div class="l-group-box">
+														<textarea cols="10" rows="20">This student sloves problems accuratel and quickly. Encourage the student to have more confidence.</textarea>
+													</div>
+													<div class="l-group-btn btn-group-xs">
+														<button type="button" class="btn btn-warning btn-xs">Save</button>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr class="parent-tr">
+										<td>2</td>
+										<td>EL Eng</td>
+										<td>Ken Song</td>
+										<td>Level D</td>
+										<td>110/115(96%)</td>
+										<td>93</td>
+										<td>170s/180s</td>
+										<td>02-04-2018</td>
+										<td><button type="button" class="btn"><span class="fas fa-plus"></span></button></td>
+									</tr>
+									<tr class="child-tr">
+										<td colspan="9">
+											<div class="level-test eng">
+												<div class="l-group results">
+													<span class="l-group-tit">TEST RESULTS</span>
+													<div class="bx-table l-group-table">
+														<table class="table">
+															<thead>
+																<tr>
+																	<th scope="col">#Section</th>
+																	<th scope="col">Score</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td>Phonics</td>
+																	<td>40</td>
+																</tr>
+																<tr>
+																	<td>Grammar</td>
+																	<td>10</td>
+																</tr>
+																<tr>
+																	<td>Comprehension</td>
+																	<td>15</td>
+																</tr>
+																<tr>
+																	<td>Sight Words</td>
+																	<td>5</td>
+																</tr>
+																<tr>
+																	<td>Vocabulary</td>
+																	<td>10</td>
+																</tr>
+																<tr>
+																	<td>Writing</td>
+																	<td>6</td>
+																</tr>
+																<tr>
+																	<td>Spelling</td>
+																	<td>7</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+												<div class="l-group feedback">
+													<span class="l-group-tit">PERFORMANCE FEEDBACK</span>
+													<div class="l-group-box">
+														<p class="desc">This student solves problems accurately and quickly.  Encourage the student to have more confidence.</p>
+													</div>
+												</div>
+												<div class="l-group comments">
+													<span class="l-group-tit">TEACHER COMMENTS</span>
+													<div class="l-group-box">
+														<textarea cols="10" rows="20">This student sloves problems accuratel and quickly. Encourage the student to have more confidence.</textarea>
+													</div>
+													<div class="l-group-btn btn-group-xs">
+														<button type="button" class="btn btn-warning btn-xs">Save</button>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+					<div class="text-center">
+						<nav>
+							<ul class="pagination">
+								<li class="disabled"><a href="#" aria-label="First"><i class="fas fa-angle-double-left"></i></a></li>
+								<li class="disabled"><a href="#" aria-label="Previous"><i class="fas fa-angle-left"></i></a></li>
+								<li class="active"><a href="#">1<span class="sr-only">(current)</span></a></li>
+								<li><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><a href="#">4</a></li>
+								<li><a href="#">5</a></li>
+								<li><a href="#">6</a></li>
+								<li><a href="#">7</a></li>
+								<li><a href="#">8</a></li>
+								<li><a href="#">9</a></li>
+								<li><a href="#">10</a></li>
+								<li><a href="#" aria-label="Next"><i class="fas fa-angle-right"></i></a></li>
+								<li><a href="#" aria-label="Last"><i class="fas fa-angle-double-right"></i></a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>	
+			</div>
+		</div>
+		<footer>
+			<span class="ft-logo">KEY &amp; MANAGER</span>
+			<p class="ft-copy">Copyright &copy; 2018 Daekyo Co., Ltd All rights reserved. For more information, contact <a href="mailto:myeyelevel@myeyelevel.com">myeyelevel@myeyelevel.com</a></p>
+			<div class="ft-site">
+				<dl>
+					<dt><a href="#class">LINKS</a></dt>
+					<dd>
+						<ul>
+							<li><a href="https://sites.google.com/a/myeyelevel.com/itisthekey/" target="_blank">User guide</a></li>
+							<li><a href="http://www.myeyelevel.com/Global/English/" target="_blank">Eyelevel Site</a></li>
+							<li><a href="http://www.iamthekey.com/" target="_blank">Brand Site</a></li>
+							<li><a href="http://eng.daekyo.com/En/default.aspx" target="_blank">Corporate Site</a></li>
+							<li><a href="http://elu.myeyelevel.com" target="_blank">Eye Level University</a></li>
+							<li><a href="http://email.myeyelevel.com" target="_blank">Email</a></li>
+						</ul>
+					</dd>
+				</dl>
+			</div>
+		</footer>
+	</div>
+</div>
+
+<script src="/js/custom.js"></script>
+</body>
+</html>

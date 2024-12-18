@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<link rel="SHORTCUT ICON" href="/images/favicon.ico">
+<title>Key&amp;Manager ver.2</title>
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/fontawesome-all.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" type="text/css" href="/css/custom.css">
+<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+<script src="/js/vendors/jquery-ui.min.js"></script>
+<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+<script src="/js/vendors/moment.js"></script>
+<script src="/js/vendors/bootstrap.min.js"></script>
+<script src="/js/vendors/bootstrap-datetimepicker.min.js"></script>
+<style>
+	html{overflow: hidden;}
+</style>
+</head>
+<body>
+	<div class="clearfix my-2">
+		<div class="pull-left">
+			<form class="form-inline">
+				<div class="form-group mr-2">
+					<span class="lb-txt mt-1">Subject</span>
+					<select class="form-control input-sm">
+						<option value="" selected>ALL</option>
+					</select>
+				</div>
+				<a class="btn btn-primary round" href="#">Search</a><!-- 180625_수정 [class 추가: "round"] -->
+			</form>
+		</div>
+	</div>
+	<div class="bx-table">
+		<div class="tb-dimm"><span class="txts">Fetching data...</span></div>
+		<div class="y-scroll">
+			<table class="table tb-check table-sort">
+				<thead>
+					<tr>
+						<th scope="col"><a href="#" class="sorting">진도일자</a></th>
+						<th scope="col"><a href="#" class="sorting">Subject</a></th>
+						<th scope="col"><a href="#" class="sorting">교재</a></th>
+						<th scope="col"><a href="#" class="sorting">학습구분</a></th>
+						<th scope="col"><a href="#" class="sorting">센터학습/숙제여부</a></th>
+						<th scope="col"><a href="#" class="sorting">학습결과</a></th>
+						<th scope="col"><a href="#" class="sorting">SAR</a></th>
+						<th scope="col"><a href="#" class="sorting">SCT</a></th>
+						<th scope="col"><a href="#" class="sorting">Fluency</a></th>
+						<th scope="col"><a href="#" class="sorting">채점일자</a></th>
+						<th scope="col"><a href="#" class="sorting">상세</a></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>02/04/2018</td>
+						<td>EL Eng</td>
+						<td>Level F-05</td>
+						<td>OFF</td>
+						<td>센터학습</td>
+						<td>17/20(85%)</td>
+						<td></td>
+						<td></td>
+						<td>80s/120s</td>
+						<td>02/04/2018</td>
+						<td><a href="#" class="link-blank">자세히보기</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+<script src="/js/custom.js"></script>
+</body>
+</html>

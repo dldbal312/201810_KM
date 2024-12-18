@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<link rel="SHORTCUT ICON" href="/images/favicon.ico">
+<title>Key&amp;Manager ver.2</title>
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/fontawesome-all.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" type="text/css" href="/css/custom.css">
+<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+<script src="/js/vendors/jquery-ui.min.js"></script>
+<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+<script src="/js/vendors/moment.js"></script>
+<script src="/js/vendors/bootstrap.min.js"></script>
+<script src="/js/vendors/bootstrap-datetimepicker.js"></script>
+</head>
+<body class="nav-sm modal-open">
+
+<div class="modal fade in" id="modal1" tabindex="-1" style="display: block;">
+	<div class="modal-dialog modal-md" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title">일정 설정 <small>Ken. Song(K00000038) EE(C09)</small></h4>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<form class="form-group">
+						<div class="col-md-12">
+							<span class="lb-txt mb-1">Study Day</span>
+							<div class="schedule-modify-lists">
+								<ul>
+									<li>
+										<span class="sc">MON.09:15</span>
+									</li>
+									<li class="target">
+										<span class="sc">FRI.09:15</span>
+										<span class="sc md">
+											MON.13:20
+											<span class="btn-x">delete</span>
+										</span>
+									</li>
+									<li>
+										<span class="sc">SAT.09:15</span>
+									</li>
+									<li>
+										<span class="sc">SAT.09:15</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<ul>
+								<li>*.변경할 수업을 태핑해주세요</li>
+								<li>*.변경할 수업이 여러 개일 경우, 순차적으로 변경해주세요</li>
+							</ul>
+						</div>
+						<div class="col-md-12">
+							<span class="lb-txt mb-1">STUDY DAY 변경 </span>
+							<div class="row set-schedule edit-week">
+								<div class="col-md-6">
+									<div id="datetimepicker12"></div>
+								</div>
+								<div class="col-md-6">
+									<dl class="time-select">
+										<dt>Time</dt>
+										<dd>
+											<select class="form-control">
+												<option value="" selected="">13</option>
+												<option value="">14</option>
+											</select>
+											<select class="form-control">
+												<option value="" selected="">50</option>
+												<option value="">55</option>
+											</select>
+										</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+					</form>
+					<div class="text-center">
+						<button type="button" class="btn btn-primary">한번 만 변경</button>
+						<button type="button" class="btn btn-primary">계속 변경</button>
+						<button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal-backdrop fade in"></div>
+
+<script src="/js/custom.js"></script>
+<script>
+	$(function () {
+		$('#datetimepicker12').datetimepicker({
+			inline: true,
+			sideBySide: true,
+			timePickerShow:false
+		});
+	});
+</script>
+</body>
+</html>

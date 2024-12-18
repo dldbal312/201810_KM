@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<link rel="SHORTCUT ICON" href="/images/favicon.ico">
+<title>Key&amp;Manager ver.2</title>
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/fontawesome-all.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" type="text/css" href="/css/custom.css">
+<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+<script src="/js/vendors/jquery-ui.min.js"></script>
+<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+<script src="/js/vendors/moment.js"></script>
+<script src="/js/vendors/bootstrap.min.js"></script>
+<script src="/js/vendors/bootstrap-datetimepicker.min.js"></script>
+</head>
+<body class="nav-sm modal-open">
+
+<div class="modal fade in" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" style="display:block">
+	<div class="modal-dialog modal-md" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel1">계정권한 관리</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div  class="col-md-4">
+						<div class="form-group form-inline">
+							<span class="lb-txt">계정</span>
+							<p class="form-control-static">kensong001</p>
+						</div>
+					</div>
+					<div  class="col-md-4">
+						<div class="form-group form-inline">
+							<span class="lb-txt">사용자명</span>
+							<p class="form-control-static">Ken Song</p>
+						</div>
+					</div>
+				</div>
+				<!-- 180727_수정 [버튼위치 및 텍스트 변경] -->
+				<!-- <div class="text-right mb-1">
+					<button type="button" class="btn btn-primary">Save</button>
+					<button type="button" class="btn btn-success">List</button>
+				</div> -->
+				<div class="bx-table table-responsive">
+					<div class="tb-dimm"><span class="txts">Fetching data...</span></div>
+					<table class="table table-bordered table-condensed">
+						<colgroup>
+							<col style="width:auto">
+							<col style="width:auto">
+							<col style="width:auto">
+							<col style="width:150px">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">대분류</th>
+								<th scope="col">중분류</th>
+								<th scope="col">소분류</th>
+								<th scope="col">권한</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="left" rowspan="5">교사관리</td>
+								<td class="left" colspan="2">가망고객관리</td>
+								<td>
+									<div class="form-inline">
+										<div class="radio radio-primary radio-inline">
+											<input type="radio" id="radio1-1" name="radio1">
+											<label for="radio1-1">있음</label>
+										</div>
+										<div class="radio radio-primary radio-inline">
+											<input type="radio" id="radio1-2" name="radio1" checked="checked">
+											<label for="radio1-2">없음</label>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="left" colspan="2">상담관리</td>
+								<td>
+									<div class="form-inline">
+										<div class="radio radio-primary radio-inline">
+											<input type="radio" id="radio2-1" name="radio2" checked="checked">
+											<label for="radio2-1">있음</label>
+										</div>
+										<div class="radio radio-primary radio-inline">
+											<input type="radio" id="radio2-2" name="radio2">
+											<label for="radio2-2">없음</label>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="left" rowspan="3">회원관리</td>
+								<td class="left">회원조회</td>
+								<td>
+									<div class="form-inline">
+										<div class="radio radio-primary radio-inline">
+											<input type="radio" id="radio4-1" name="radio4" checked="checked">
+											<label for="radio4-1">있음</label>
+										</div>
+										<div class="radio radio-primary radio-inline">
+											<input type="radio" id="radio4-2" name="radio4">
+											<label for="radio4-2">없음</label>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="left">메시지관리</td>
+								<td>
+									<div class="form-inline">
+										<div class="radio radio-primary radio-inline">
+											<input type="radio" id="radio9-1" name="radio9" checked="checked">
+											<label for="radio9-1">있음</label>
+										</div>
+										<div class="radio radio-primary radio-inline">
+											<input type="radio" id="radio9-2" name="radio9">
+											<label for="radio9-2">없음</label>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="left">메시지발송</td>
+								<td>
+									<div class="form-inline">
+										<div class="radio radio-primary radio-inline">
+											<input type="radio" id="radio5-1" name="radio5" checked="checked">
+											<label for="radio5-1">있음</label>
+										</div>
+										<div class="radio radio-primary radio-inline">
+											<input type="radio" id="radio5-2" name="radio5">
+											<label for="radio5-2">없음</label>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="left" rowspan="8">학습운영관리</td>
+								<td class="left" colspan="2">스케쥴</td>
+								<td>
+									<div class="form-inline">
+										<div class="radio radio-primary radio-inline">
+											<input type="radio" id="radio10-1" name="radio10" checked="checked">
+											<label for="radio10-1">있음</label>
+										</div>
+										<div class="radio radio-primary radio-inline">
+											<input type="radio" id="radio10-2" name="radio10">
+											<label for="radio10-2">없음</label>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="left">출결관리</td>
+								<td class="left">출석부</td>
+								<td>
+									<div class="form-inline">
+										<div class="radio radio-primary radio-inline">
+											<input type="radio" id="radio11-1" name="radio11" checked="checked">
+											<label for="radio11-1">있음</label>
+										</div>
+										<div class="radio radio-primary radio-inline">
+											<input type="radio" id="radio11-2" name="radio11">
+											<label for="radio11-2">없음</label>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="left" colspan="2">진도관리</td>
+								<td>
+									<div class="form-inline">
+										<div class="radio radio-primary radio-inline">
+											<input type="radio" id="radio12-1" name="radio12" checked="checked">
+											<label for="radio12-1">있음</label>
+										</div>
+										<div class="radio radio-primary radio-inline">
+											<input type="radio" id="radio12-2" name="radio12">
+											<label for="radio12-2">없음</label>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="left">DT관리</td>
+								<td class="left">학습상담서</td>
+								<td>
+									<div class="form-inline">
+										<div class="radio radio-primary radio-inline">
+											<input type="radio" id="radio13-1" name="radio13" checked="checked">
+											<label for="radio13-1">있음</label>
+										</div>
+										<div class="radio radio-primary radio-inline">
+											<input type="radio" id="radio13-2" name="radio13">
+											<label for="radio13-2">없음</label>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="left" colspan="2">교재채점</td>
+								<td>
+									<div class="form-inline">
+										<div class="radio radio-primary radio-inline">
+											<input type="radio" id="radio14-1" name="radio14" checked="checked">
+											<label for="radio14-1">있음</label>
+										</div>
+										<div class="radio radio-primary radio-inline">
+											<input type="radio" id="radio14-2" name="radio14">
+											<label for="radio14-2">없음</label>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="left" colspan="2">레벨테스트</td>
+								<td>
+									<div class="form-inline">
+										<div class="radio radio-primary radio-inline">
+											<input type="radio" id="radio20-1" name="radio20" checked="checked">
+											<label for="radio20-1">있음</label>
+										</div>
+										<div class="radio radio-primary radio-inline">
+											<input type="radio" id="radio20-2" name="radio20">
+											<label for="radio20-2">없음</label>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="left" colspan="2">해답지</td>
+								<td>
+									<div class="form-inline">
+										<div class="radio radio-primary radio-inline">
+											<input type="radio" id="radio15-1" name="radio15" checked="checked">
+											<label for="radio15-1">있음</label>
+										</div>
+										<div class="radio radio-primary radio-inline">
+											<input type="radio" id="radio15-2" name="radio15">
+											<label for="radio15-2">없음</label>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="left" colspan="2">상담용리포트</td>
+								<td>
+									<div class="form-inline">
+										<div class="radio radio-primary radio-inline">
+											<input type="radio" id="radio16-1" name="radio16" checked="checked">
+											<label for="radio16-1">있음</label>
+										</div>
+										<div class="radio radio-primary radio-inline">
+											<input type="radio" id="radio16-2" name="radio16">
+											<label for="radio16-2">없음</label>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="left" rowspan="3">재무영업관리</td>
+								<td class="left" rowspan="3">청구납부관리</td>
+								<td class="left">회비납부</td>
+								<td>
+									<div class="form-inline">
+										<div class="radio radio-primary radio-inline">
+											<input type="radio" id="radio17-1" name="radio17" checked="checked">
+											<label for="radio17-1">있음</label>
+										</div>
+										<div class="radio radio-primary radio-inline">
+											<input type="radio" id="radio17-2" name="radio17">
+											<label for="radio17-2">없음</label>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="left">STATEMENT</td>
+								<td>
+									<div class="form-inline">
+										<div class="radio radio-primary radio-inline">
+											<input type="radio" id="radio18-1" name="radio18" checked="checked">
+											<label for="radio18-1">있음</label>
+										</div>
+										<div class="radio radio-primary radio-inline">
+											<input type="radio" id="radio18-2" name="radio18">
+											<label for="radio18-2">없음</label>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="left">충전횟수관리</td>
+								<td>
+									<div class="form-inline">
+										<div class="radio radio-primary radio-inline">
+											<input type="radio" id="radio19-1" name="radio19">
+											<label for="radio19-1">있음</label>
+										</div>
+										<div class="radio radio-primary radio-inline">
+											<input type="radio" id="radio19-2" name="radio19" checked="checked">
+											<label for="radio19-2">없음</label>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- 180727_수정 [버튼위치 및 텍스트 변경] -->
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary">Save</button>
+				<button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal-backdrop fade in"></div>
+
+<script src="/js/custom.js"></script>
+</body>
+</html>

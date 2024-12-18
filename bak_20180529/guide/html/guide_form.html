@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Pragma" content="no-cache">
+	<title>K&amp;M2 입력서식 가이드</title>
+	<link rel="SHORTCUT ICON" href="/images/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="/guide/base.css">
+	<link rel="stylesheet" type="text/css" href="/css/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="/guide/shCoreDefault.css">
+
+	
+	<script src="/guide/shCore.js"></script>
+	<script src="/guide/shBrushXml.js"></script>
+	<script src="/guide/shBrushCss.js"></script>
+	<script src="/guide/shBrushJScript.js"></script>
+	<script type="text/javascript">SyntaxHighlighter.all();</script>
+	<script src="/js/jQuery/jquery-2.2.4.min.js"></script>
+	<script src="/js/jQuery/jquery-ui.js"></script>
+	<script src="/js/jQuery/MonthPicker.min.js"></script>
+	<script src="/js/jQuery/jquery.mCustomScrollbar.js"></script>
+	<script src="/js/common.js"></script>
+</head>
+<body>
+<div id="wrap" class="coding_guide">
+	<h1 class="h1_guide">서식 가이드</h1>
+	<h2 class="h2_guide">input type : text, password, tel 등등</h2>
+	<div class="dscBox">
+		<input class="clearable" type="text" name="" value="default">
+		<input class="clearable" type="text" name="" value="focus" class="focus">
+		<input class="clearable" type="text" name="" readonly="readonly" value="readonly">
+		<input class="clearable" type="text" name="" disabled="disabled" value="disable">
+<pre class="brush: xml;">
+<!-- class : [ clearable ] clear기능 추가  -->
+<input class="clearable" type="text" name="" value="default">
+<input class="clearable" type="text" name="" value="focus" class="focus">
+<input class="clearable" type="text" name="" readonly="readonly" value="readonly">
+<input class="clearable" type="text" name="" disabled="disabled" value="disable">
+</pre>
+	</div>
+		
+		<script type="text/javascript">
+			$(document).ready(function () {
+				$(".bx-cont .datepicker-month").MonthPicker({
+					Button: '<img class="ico-monthpicker" src="/images/calendar.png" alt="">'
+					//MonthFormat: "mm-yy"
+				});
+			});
+		</script>
+		<h2 class="h2_guide">datepicker</h2>
+	<div class="dscBox">
+		<div class="bx-cont">
+			dd/mm/yyyyy : <input class="clearable datepicker" type="text" id="searchFrom" name="from" placeholder="dd/mm/yyyy">
+			&nbsp;~&nbsp; <input class="clearable datepicker" type="text" id="searchTo" name="to" placeholder="dd/mm/yyyy">
+		</div>
+		<div class="bx-cont">
+			mm/yyyyy : <input class="clearable datepicker-month" type="text" placeholder="dd/mm/yyyy">
+		</div>
+<pre class="brush: xml;">
+<input class="clearable" type="text" id="searchFrom" name="from" placeholder="dd/mm/yyyy" class="datepicker">&nbsp;~&nbsp; <input class="clearable" type="text" id="searchTo" name="to" placeholder="dd/mm/yyyy" class="datepicker">
+<input class="clearable" type="text" placeholder="dd/mm/yyyy" class="datepicker-month hasDatepicker">
+</pre>
+	</div>
+
+		<h2 class="h2_guide">checkbox</h2>
+	<div class="dscBox">
+		<input type="checkbox" id="check-1" checked="checked"><label for="check-1"><span class="icon"></span>체크박스</label>
+		<input type="checkbox" id="check-2"><label for="check-2"><span class="icon"></span>체크박스</label>
+		<input type="checkbox" id="check-3" disabled=""><label for="check-3"><span class="icon"></span>disabled</label>
+<pre class="brush: xml;">
+<input type="checkbox" id="" checked="checked"><label for=""><span class="icon"></span>체크박스</label>
+<input type="checkbox" id=""><label for=""><span class="icon"></span>체크박스</label>
+<input type="checkbox" id="" disabled=""><label for=""><span class="icon"></span>disabled</label>
+</pre>
+	</div>
+
+	<h2 class="h2_guide">radio</h2>
+	<div class="dscBox">
+		<div class="bx-cont">
+			<input type="radio" id="radio1-1" name="radio1" checked=""><label for="radio1-1"><span class="icon"></span>라디오</label>
+			<input type="radio" id="radio1-2" name="radio1"><label for="radio1-2"><span class="icon"></span>라디오</label>
+			<input type="radio" id="radio1-3" name="radio1" disabled=""><label for="radio1-3"><span class="icon"></span>disabled</label>
+		</div>
+		<div class="bx-cont list-toggle">
+			<input type="radio" id="radio2-1" name="radio2" checked=""><label for="radio2-1"><span class="icon"></span>라디오</label>
+			<input type="radio" id="radio2-2" name="radio2"><label for="radio2-2"><span class="icon"></span>라디오</label>
+			<input type="radio" id="radio2-3" name="radio2" disabled=""><label for="radio2-3"><span class="icon"></span>disabled</label>
+		</div>
+		<div class="bx-cont">
+			<div class="bx-radio">
+				<input type="radio" id="radio3-1" name="radio3" checked=""><label for="radio3-1">All</label>
+				<input type="radio" id="radio3-2" name="radio3"><label for="radio3-2">Teaching Material</label>
+				<input type="radio" id="radio3-3" name="radio3"><label for="radio3-3">Supplemental Booklet</label>
+				<input type="radio" id="radio3-4" name="radio3"><label for="radio3-4">Other Material</label>
+			</div>
+		</div>
+<pre class="brush: xml;">
+<!-- 기본 라디오 -->
+<input type="radio" id="" name="" checked="checked"><label for=""><span class="icon"></span>라디오</label>
+<input type="radio" id="" name=""><label for=""><span class="icon"></span>라디오</label>
+<input type="radio" id="" name="" disabled=""><label for=""><span class="icon"></span>disabled</label>
+
+<!-- 큰 사이즈 라디오 -->
+<div class="list-toggle">
+	<input type="radio" id="" name="" checked="checked"><label for=""><span class="icon"></span>라디오</label>
+	<input type="radio" id="" name=""><label for=""><span class="icon"></span>라디오</label>
+	<input type="radio" id="" name="" disabled=""><label for=""><span class="icon"></span>disabled</label>
+</div>
+
+<!-- 버튼 형태 라디오 -->
+<div class="bx-radio">
+	<input type="radio" id=""name="" checked="checked"><label for="">All</label>
+	<input type="radio" id="" name=""><label for="">Teaching Material</label>
+	<input type="radio" id="" name=""><label for="">Supplemental Booklet</label>
+	<input type="radio" id="" name=""><label for="">Other Material</label>
+</div>
+</pre>
+	</div>
+
+	<h2 class="h2_guide">타이틀</h2>
+	<div class="dscBox">
+<pre class="brush: xml;">
+</pre>
+	</div>
+
+	<h2 class="h2_guide">타이틀</h2>
+	<div class="dscBox">
+<pre class="brush: xml;">
+</pre>
+	</div>
+
+
+</div>
+</body>
+</html>

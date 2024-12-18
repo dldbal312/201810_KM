@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<link rel="SHORTCUT ICON" href="/images/favicon.ico">
+<title>Key&amp;Manager ver.2</title>
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/fontawesome-all.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" type="text/css" href="/css/custom.css">
+<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+<script src="/js/vendors/jquery-ui.min.js"></script>
+<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+<script src="/js/vendors/moment.js"></script>
+<script src="/js/vendors/bootstrap.min.js"></script>
+<script src="/js/vendors/bootstrap-datetimepicker.min.js"></script>
+</head>
+<body class="nav-sm modal-open">
+<div class="modal fade in" id="modal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel5" style="display: block;">
+	<div class="modal-dialog modal-md" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h1 class="modal-title" id="myModalLabel5">Free Trial</h1>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-md-5">
+						<div class=" form-group">
+							<span class="lb-txt mb-1">Member<i class="required">*</i></span>
+							<div class="input-group">
+								<input class="form-control input-sm clearable" type="text">
+								<div class="input-group-btn">
+									<button type="button" class="btn btn-search" data-toggle="modal" data-target="#searchMember"><span class="fas fa-search"></span><span class="hide">Search</span></button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-7">
+						<div class="form-group">
+							<span class="lb-txt mb-1">Parent E-mail<i class="required">*</i></span>
+							<div class="form-inline">
+								<div class="input-group">
+									<input class="form-control input-sm clearable" type="text">
+									<div class="input-group-btn">
+										<button type="button" class="btn btn-default btn-request">Request</button>
+										<button type="button" class="btn ml-0"><i class="fas fa-sync-alt"></i></button>
+										<!-- <span class="verified">√ Not verified</span> -->
+										<!-- <span class="verified active">√ Not verified</span> -->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<p class="tx_red">무료체험 등록을 위해서는 학부모 E-mail 인증이 반드시 필요합니다.</p>
+					</div>
+				</div>
+				<div class="ln_dashed"></div>
+				<!-- 180717_수정 [화면설계서 v3.1 수정사항 반영] -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="form-group form">
+							<div class="row">
+								<div class="col-xs-4">
+									<span class="lb-txt">Subject</span>
+								</div>
+								<div class="col-xs-8 text-right">
+									<span class="lb-txt">Booklet/W <em class="tx-red underline px-2">6</em></span>
+								</div>
+							</div>
+							<div class="btn-group form-control" data-toggle="buttons">
+								<label class="btn btn-default btn-sm">
+									<input type="radio" name="options" id="option1" autocomplete="off">
+									<span>EL Math</span>
+								</label>
+								<label class="btn btn-default btn-sm">
+									<input type="radio" name="options" id="option2" autocomplete="off">
+									<span>EMO</span>
+								</label>
+								<label class="btn btn-default btn-sm">
+									<input type="radio" name="options" id="option3" autocomplete="off">
+									<span>Playmath</span>
+								</label>
+								<label class="btn btn-default btn-sm">
+									<input type="radio" name="options" id="option4" autocomplete="off">
+									<span>ELE</span>
+								</label>
+								<label class="btn btn-default btn-sm">
+									<input type="radio" name="options" id="option8" autocomplete="off">
+									<span>Sparks</span>
+								</label>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6">
+						<div class="form-group">
+							<span class="lb-txt mb-1">Starting Point 1</span>
+							<div class="form-inline half">
+								<select class="form-control input-sm">
+									<option value="" selected="selected">Select</option>
+								</select>
+								<select class="form-control input-sm">
+									<option value="" selected="selected">Select</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<span class="lb-txt mb-1">Starting Point 2</span>
+							<div class="form-inline half">
+								<select class="form-control input-sm">
+									<option value="" selected="selected">Select</option>
+								</select>
+								<select class="form-control input-sm">
+									<option value="" selected="selected">Select</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class=" form-group">
+							<span class="lb-txt mb-1">Instructor</span>
+							<div class="input-group">
+								<input class="form-control input-sm clearable" type="text" placeholder="Sunny. Ko(FC0000008A)">
+								<div class="input-group-btn">
+									<button type="button" class="btn btn-search" data-toggle="modal" data-target="#searchManager"><span class="fas fa-search"></span><span class="hide">Search</span></button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<span class="lb-txt mb-1">Study Start Date</span>
+							<div class="form-inline input-group date">
+								<input class="form-control input-sm clearable datepicker" type="text" placeholder="23/04/2018">
+								<span class="input-group-addon">
+									<span class="calendar-icon"></span>
+								</span>
+							</div>
+
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="form-group">
+							<span class="lb-txt mb-1">Study Day</span>
+							<div class="form-inline">
+								<select class="form-control input-sm">
+									<option value="" selected="selected">MON</option>
+								</select>
+								<select class="form-control input-sm">
+									<option value="" selected="selected">00</option>
+								</select>
+								<span class="date-period-divider">시</span>
+								<select class="form-control input-sm">
+									<option value="" selected="selected">00</option>
+								</select>
+								<span class="date-period-divider">분</span>
+								<a href="#" class="btn-list-open">Add</a>
+							</div>
+						</div>
+						<div class="edit-week">
+							<div class="edit-week-box">
+								<span class="alert alert-info" role="alert">MON 15:00<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button></span>
+								<span class="alert alert-info" role="alert">SUN 17:00<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button></span>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<span class="lb-txt mb-1 mr-2">Trial Weeks</span>
+							<div class="btn-group" data-toggle="buttons">
+								<label class="btn btn-default">
+									<input type="radio" name="itemTp" id="type1" value="">
+									<span>1</span>
+								</label>
+								<label class="btn btn-default">
+									<input type="radio" name="itemTp" id="type2" value="">
+									<span>2</span>
+								</label>
+								<label class="btn btn-default active">
+									<input type="radio" name="itemTp" id="type3" value="" checked="checked">
+									<span>3</span>
+								</label>
+								<label class="btn btn-default">
+									<input type="radio" name="itemTp" id="type4" value="">
+									<span>4</span>
+								</label>
+							</div>
+							<span class="l-group-btn btn-group-xs">
+								<button type="button" class="btn btn-warning btn-xs">Save</button>
+							</span>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class=" form-group">
+							<span class="lb-txt mb-1 mr-2">Booklet</span>
+							<span class="form-inline">
+								<select class="form-control input-sm">
+									<option value="" selected="selected">Level</option>
+								</select>
+								<select class="form-control input-sm">
+									<option value="" selected="selected">Set</option>
+								</select>
+								<a href="#" class="btn-list-open">Add</a>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="bx-table">
+					<form class="form-group">
+						<table class="table table-bordered">
+							<colgroup>
+								<col style="width:20%">
+								<col style="width:40%">
+								<col style="width:40%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">Week</th>
+									<th scope="col">BTM</th>
+									<th scope="col">CTM</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">W1 <span class="line-break">23/04</span></th>
+									<td class="left">
+										<div class="edit-week-box">
+											<span class="alert alert-info active" role="alert">0405<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button></span>
+										</div>
+									</td>
+									<td class="left"></td>
+								</tr>
+								<tr>
+									<th scope="row">W2 <span class="line-break">30/04</span></th>
+									<td class="left"></td>
+									<td class="left"></td>
+								</tr>
+								<tr>
+									<th scope="row">W3 <span class="line-break">23/04</span></th>
+									<td class="left"></td>
+									<td class="left"></td>
+								</tr>
+							</tbody>
+						</table>
+						<!-- // 180717_수정 [화면설계서 v3.1 수정사항 반영] -->
+					</form>
+				</div>	
+				<!-- // 180717_수정 [화면설계서 v3.1 수정사항 반영] -->
+			</div>
+			<!-- 180717_수정 [화면설계서 v3.1 수정사항 반영] -->
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary">Save</button>
+				<button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+			</div>
+			<!-- // 180717_수정 [화면설계서 v3.1 수정사항 반영] -->
+		</div>
+	</div>
+</div>
+<div class="modal-backdrop fade in"></div>
+
+<script src="/js/custom.js"></script>
+</body>
+</html>

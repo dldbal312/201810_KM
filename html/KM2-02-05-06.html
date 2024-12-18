@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<link rel="SHORTCUT ICON" href="/images/favicon.ico">
+<title>Key&amp;Manager ver.2</title>
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/fontawesome-all.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" type="text/css" href="/css/custom.css">
+<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+<script src="/js/vendors/jquery-ui.min.js"></script>
+<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+<script src="/js/vendors/moment.js"></script>
+<script src="/js/vendors/bootstrap.min.js"></script>
+<script src="/js/vendors/bootstrap-datetimepicker.min.js"></script>
+</head>
+<body class="nav-sm modal-open">
+
+<!-- Modal -->
+<div class="modal fade in" id="searchMember" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" style="display:block">
+    <div class="modal-dialog modal-wide" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title" id="myModalLabel1">Booklet Test<span class="title-userid">Ken.song(k0000000038)</span></h4>
+            </div>
+            <div class="modal-body">
+                <div id="answer-lists" class="carousel slide answer-lists-wrap" data-ride="carousel" data-interval="false">
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <div class="pages books-label">
+                                <dl class="level">
+                                    <dt>LEVEL</dt>
+                                    <dd>B<span>29</span></dd>
+                                </dl>
+                                <dl class="title">
+                                    <dt>Booklet Test</dt>
+                                    <dd>EL ENG</dd>
+                                </dl>
+                                <div class="user-data">
+                                    <p>Ken Song (K0000038)</p>
+                                    <div class="date-select">
+                                        <span>Test Date : 09/01/2018 <button class="btn-date-select"><span class="calendar-icon"></span></button></span>
+                                    </div>
+                                    <span class="radio-group">
+                                        <span class="radio radio-primary radio-inline">
+                                            <input type="radio" id="inlineRadio1" value="option1" name="radioInline1" checked="checked">
+                                            <label for="inlineRadio1">Center</label>
+                                        </span>
+                                        <span class="radio radio-primary radio-inline">
+                                            <input type="radio" id="inlineRadio2" value="option1" name="radioInline1">
+                                            <label for="inlineRadio2">Homework</label>
+                                        </span>
+                                    </span>
+                                </div>
+                                <span class="page-num">01</span>
+                            </div>
+                            <div class="pages">
+                                <span class="page-num">02</span>
+                                <div class="inner">
+                                    <div class="answer-list">
+                                        <ul class="answer-check-wrap"> 
+                                            <li class="answer-item">
+                                                <ul class="answer-check th">
+                                                    <li class="item1">No</li>
+                                                    <li class="item2 text-center">Correct and clear</li>
+                                                    <li class="item4">Wrong Check</li>
+                                                </ul>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">1</a></li>
+                                                    <li class="item2">12km</li>
+                                                    <li class="item3"><a href="#answerList01" class="collapsed" data-toggle="collapse" data-target="#answerList01">▼</a></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox1" type="checkbox"><label for="checkbox1"></label></span></li>
+                                                </ul>
+                                                <div class="answer-explanation collapse" id="answerList01">
+                                                    <p class="explanation-wrap">꾸러미 하나가 10을 나타냄으로, 100은 꾸러미가 10개임.</p>
+                                                </div>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">2</a></li>
+                                                    <li class="item2">1½</li>
+                                                    <li class="item3"></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox2" type="checkbox"><label for="checkbox2"></label></span></li>
+                                                </ul>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check  td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">3</a></li>
+                                                    <li class="item2">ⓒ</li>
+                                                    <li class="item3"></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox3" type="checkbox"><label for="checkbox3"></label></span></li>
+                                                </ul>
+                                            </li>
+                                            <li class="answer-item test-paging">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">4</a></li>
+                                                    <li class="item2">16</li>
+                                                    <li class="item3"></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox4" type="checkbox"><label for="checkbox4"></label></span></li>
+                                                </ul>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">5</a></li>
+                                                    <li class="item2">123</li>
+                                                    <li class="item3"></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox5" type="checkbox"><label for="checkbox5"></label></span></li>
+                                                </ul>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">6</a></li>
+                                                    <li class="item2">Jeremy</li>
+                                                    <li class="item3"></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox6" type="checkbox"><label for="checkbox6"></label></span></li>
+                                                </ul>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">7</a></li>
+                                                    <li class="item2">ⓐ</li>
+                                                    <li class="item3"><a href="#answerList02" class="collapsed" data-toggle="collapse" data-target="#answerList02">▼</a></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox7" type="checkbox"><label for="checkbox7"></label></span></li>
+                                                </ul>
+                                                <div class="answer-explanation collapse" id="answerList02">
+                                                    <p class="explanation-wrap">꾸러미 하나가 10을 나타냄으로, 100은 꾸러미가 10개임.</p>
+                                                </div>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">8</a></li>
+                                                    <li class="item2">ⓐ</li>
+                                                    <li class="item3"><a href="#answerList03" class="collapsed" data-toggle="collapse" data-target="#answerList03">▼</a></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox8" type="checkbox"><label for="checkbox8"></label></span></li>
+                                                </ul>
+                                                <div class="answer-explanation collapse" id="answerList03">
+                                                    <p class="explanation-wrap">꾸러미 하나가 10을 나타냄으로, 100은 꾸러미가 10개임.</p>
+                                                </div>
+                                            </li>
+                                            <li class="answer-item test-paging">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">9</a></li>
+                                                    <li class="item2">ⓐ</li>
+                                                    <li class="item3"><a href="#answerList04" class="collapsed" data-toggle="collapse" data-target="#answerList04">▼</a></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox9" type="checkbox"><label for="checkbox9"></label></span></li>
+                                                </ul>
+                                                <div class="answer-explanation collapse" id="answerList04">
+                                                    <p class="explanation-wrap">꾸러미 하나가 10을 나타냄으로, 100은 꾸러미가 10개임.</p>
+                                                </div>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">10</a></li>
+                                                    <li class="item2">ⓐ</li>
+                                                    <li class="item3"><a href="#answerList05" class="collapsed" data-toggle="collapse" data-target="#answerList05">▼</a></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox10" type="checkbox"><label for="checkbox10"></label></span></li>
+                                                </ul>
+                                                <div class="answer-explanation collapse" id="answerList05">
+                                                    <p class="explanation-wrap">꾸러미 하나가 10을 나타냄으로, 100은 꾸러미가 10개임.</p>
+                                                </div>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">11</a></li>
+                                                    <li class="item2">12km</li>
+                                                    <li class="item3"><a href="#answerList06" class="collapsed" data-toggle="collapse" data-target="#answerList06">▼</a></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox11" type="checkbox"><label for="checkbox11"></label></span></li>
+                                                </ul>
+                                                <div class="answer-explanation collapse" id="answerList06">
+                                                    <p class="explanation-wrap">꾸러미 하나가 10을 나타냄으로, 100은 꾸러미가 10개임.</p>
+                                                </div>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">12</a></li>
+                                                    <li class="item2">1½</li>
+                                                    <li class="item3"></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox12" type="checkbox"><label for="checkbox12"></label></span></li>
+                                                </ul>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">13</a></li>
+                                                    <li class="item2">ⓒ</li>
+                                                    <li class="item3"></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox13" type="checkbox"><label for="checkbox13"></label></span></li>
+                                                </ul>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">14</a></li>
+                                                    <li class="item2">16</li>
+                                                    <li class="item3"></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox14" type="checkbox"><label for="checkbox14"></label></span></li>
+                                                </ul>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">15</a></li>
+                                                    <li class="item2">123</li>
+                                                    <li class="item3"></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox16" type="checkbox"><label for="checkbox15"></label></span></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="pages">
+                                <span class="page-num">03</span>
+                                <div class="inner">
+                                    <div class="answer-list">
+                                        <ul class="answer-check-wrap"> 
+                                            <li class="answer-item">
+                                                <ul class="answer-check th">
+                                                    <li class="item1">No</li>
+                                                    <li class="item2 text-center">Correct and clear</li>
+                                                    <li class="item4">Wrong Check</li>
+                                                </ul>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">1</a></li>
+                                                    <li class="item2">12km</li>
+                                                    <li class="item3"><a href="#answerList01" class="collapsed" data-toggle="collapse" data-target="#answerList01">▼</a></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox1" type="checkbox"><label for="checkbox1"></label></span></li>
+                                                </ul>
+                                                <div class="answer-explanation collapse" id="answerList01">
+                                                    <p class="explanation-wrap">꾸러미 하나가 10을 나타냄으로, 100은 꾸러미가 10개임.</p>
+                                                </div>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">2</a></li>
+                                                    <li class="item2">1½</li>
+                                                    <li class="item3"></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox2" type="checkbox"><label for="checkbox2"></label></span></li>
+                                                </ul>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check  td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">3</a></li>
+                                                    <li class="item2">ⓒ</li>
+                                                    <li class="item3"></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox3" type="checkbox"><label for="checkbox3"></label></span></li>
+                                                </ul>
+                                            </li>
+                                            <li class="answer-item test-paging">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">4</a></li>
+                                                    <li class="item2">16</li>
+                                                    <li class="item3"></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox4" type="checkbox"><label for="checkbox4"></label></span></li>
+                                                </ul>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">5</a></li>
+                                                    <li class="item2">123</li>
+                                                    <li class="item3"></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox5" type="checkbox"><label for="checkbox5"></label></span></li>
+                                                </ul>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">6</a></li>
+                                                    <li class="item2">Jeremy</li>
+                                                    <li class="item3"></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox6" type="checkbox"><label for="checkbox6"></label></span></li>
+                                                </ul>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">7</a></li>
+                                                    <li class="item2">ⓐ</li>
+                                                    <li class="item3"><a href="#answerList02" class="collapsed" data-toggle="collapse" data-target="#answerList02">▼</a></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox7" type="checkbox"><label for="checkbox7"></label></span></li>
+                                                </ul>
+                                                <div class="answer-explanation collapse" id="answerList02">
+                                                    <p class="explanation-wrap">꾸러미 하나가 10을 나타냄으로, 100은 꾸러미가 10개임.</p>
+                                                </div>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">8</a></li>
+                                                    <li class="item2">ⓐ</li>
+                                                    <li class="item3"><a href="#answerList03" class="collapsed" data-toggle="collapse" data-target="#answerList03">▼</a></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox8" type="checkbox"><label for="checkbox8"></label></span></li>
+                                                </ul>
+                                                <div class="answer-explanation collapse" id="answerList03">
+                                                    <p class="explanation-wrap">꾸러미 하나가 10을 나타냄으로, 100은 꾸러미가 10개임.</p>
+                                                </div>
+                                            </li>
+                                            <li class="answer-item test-paging">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">9</a></li>
+                                                    <li class="item2">ⓐ</li>
+                                                    <li class="item3"><a href="#answerList04" class="collapsed" data-toggle="collapse" data-target="#answerList04">▼</a></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox9" type="checkbox"><label for="checkbox9"></label></span></li>
+                                                </ul>
+                                                <div class="answer-explanation collapse" id="answerList04">
+                                                    <p class="explanation-wrap">꾸러미 하나가 10을 나타냄으로, 100은 꾸러미가 10개임.</p>
+                                                </div>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">10</a></li>
+                                                    <li class="item2">ⓐ</li>
+                                                    <li class="item3"><a href="#answerList05" class="collapsed" data-toggle="collapse" data-target="#answerList05">▼</a></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox10" type="checkbox"><label for="checkbox10"></label></span></li>
+                                                </ul>
+                                                <div class="answer-explanation collapse" id="answerList05">
+                                                    <p class="explanation-wrap">꾸러미 하나가 10을 나타냄으로, 100은 꾸러미가 10개임.</p>
+                                                </div>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">11</a></li>
+                                                    <li class="item2">12km</li>
+                                                    <li class="item3"><a href="#answerList06" class="collapsed" data-toggle="collapse" data-target="#answerList06">▼</a></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox11" type="checkbox"><label for="checkbox11"></label></span></li>
+                                                </ul>
+                                                <div class="answer-explanation collapse" id="answerList06">
+                                                    <p class="explanation-wrap">꾸러미 하나가 10을 나타냄으로, 100은 꾸러미가 10개임.</p>
+                                                </div>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">12</a></li>
+                                                    <li class="item2">1½</li>
+                                                    <li class="item3"></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox12" type="checkbox"><label for="checkbox12"></label></span></li>
+                                                </ul>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">13</a></li>
+                                                    <li class="item2">ⓒ</li>
+                                                    <li class="item3"></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox13" type="checkbox"><label for="checkbox13"></label></span></li>
+                                                </ul>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">14</a></li>
+                                                    <li class="item2">16</li>
+                                                    <li class="item3"></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox14" type="checkbox"><label for="checkbox14"></label></span></li>
+                                                </ul>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">15</a></li>
+                                                    <li class="item2">123</li>
+                                                    <li class="item3"></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox16" type="checkbox"><label for="checkbox15"></label></span></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="pages">
+                                <span class="page-num">04</span>
+                                <div class="inner">
+                                    <div class="answer-list">
+                                        <ul class="answer-check-wrap"> 
+                                            <li class="answer-item">
+                                                <ul class="answer-check th">
+                                                    <li class="item1">No</li>
+                                                    <li class="item2 text-center">Correct and clear</li>
+                                                    <li class="item4">Wrong Check</li>
+                                                </ul>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">1</a></li>
+                                                    <li class="item2">12km</li>
+                                                    <li class="item3"><a href="#answerList01" class="collapsed" data-toggle="collapse" data-target="#answerList01">▼</a></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox1" type="checkbox"><label for="checkbox1"></label></span></li>
+                                                </ul>
+                                                <div class="answer-explanation collapse" id="answerList01">
+                                                    <p class="explanation-wrap">꾸러미 하나가 10을 나타냄으로, 100은 꾸러미가 10개임.</p>
+                                                </div>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">2</a></li>
+                                                    <li class="item2">1½</li>
+                                                    <li class="item3"></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox2" type="checkbox"><label for="checkbox2"></label></span></li>
+                                                </ul>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check  td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">3</a></li>
+                                                    <li class="item2">ⓒ</li>
+                                                    <li class="item3"></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox3" type="checkbox"><label for="checkbox3"></label></span></li>
+                                                </ul>
+                                            </li>
+                                            <li class="answer-item test-paging">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">4</a></li>
+                                                    <li class="item2">16</li>
+                                                    <li class="item3"></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox4" type="checkbox"><label for="checkbox4"></label></span></li>
+                                                </ul>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">5</a></li>
+                                                    <li class="item2">123</li>
+                                                    <li class="item3"></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox5" type="checkbox"><label for="checkbox5"></label></span></li>
+                                                </ul>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">6</a></li>
+                                                    <li class="item2">Jeremy</li>
+                                                    <li class="item3"></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox6" type="checkbox"><label for="checkbox6"></label></span></li>
+                                                </ul>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">7</a></li>
+                                                    <li class="item2">ⓐ</li>
+                                                    <li class="item3"><a href="#answerList02" class="collapsed" data-toggle="collapse" data-target="#answerList02">▼</a></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox7" type="checkbox"><label for="checkbox7"></label></span></li>
+                                                </ul>
+                                                <div class="answer-explanation collapse" id="answerList02">
+                                                    <p class="explanation-wrap">꾸러미 하나가 10을 나타냄으로, 100은 꾸러미가 10개임.</p>
+                                                </div>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">8</a></li>
+                                                    <li class="item2">ⓐ</li>
+                                                    <li class="item3"><a href="#answerList03" class="collapsed" data-toggle="collapse" data-target="#answerList03">▼</a></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox8" type="checkbox"><label for="checkbox8"></label></span></li>
+                                                </ul>
+                                                <div class="answer-explanation collapse" id="answerList03">
+                                                    <p class="explanation-wrap">꾸러미 하나가 10을 나타냄으로, 100은 꾸러미가 10개임.</p>
+                                                </div>
+                                            </li>
+                                            <li class="answer-item test-paging">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">9</a></li>
+                                                    <li class="item2">ⓐ</li>
+                                                    <li class="item3"><a href="#answerList04" class="collapsed" data-toggle="collapse" data-target="#answerList04">▼</a></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox9" type="checkbox"><label for="checkbox9"></label></span></li>
+                                                </ul>
+                                                <div class="answer-explanation collapse" id="answerList04">
+                                                    <p class="explanation-wrap">꾸러미 하나가 10을 나타냄으로, 100은 꾸러미가 10개임.</p>
+                                                </div>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">10</a></li>
+                                                    <li class="item2">ⓐ</li>
+                                                    <li class="item3"><a href="#answerList05" class="collapsed" data-toggle="collapse" data-target="#answerList05">▼</a></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox10" type="checkbox"><label for="checkbox10"></label></span></li>
+                                                </ul>
+                                                <div class="answer-explanation collapse" id="answerList05">
+                                                    <p class="explanation-wrap">꾸러미 하나가 10을 나타냄으로, 100은 꾸러미가 10개임.</p>
+                                                </div>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">11</a></li>
+                                                    <li class="item2">12km</li>
+                                                    <li class="item3"><a href="#answerList06" class="collapsed" data-toggle="collapse" data-target="#answerList06">▼</a></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox11" type="checkbox"><label for="checkbox11"></label></span></li>
+                                                </ul>
+                                                <div class="answer-explanation collapse" id="answerList06">
+                                                    <p class="explanation-wrap">꾸러미 하나가 10을 나타냄으로, 100은 꾸러미가 10개임.</p>
+                                                </div>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">12</a></li>
+                                                    <li class="item2">1½</li>
+                                                    <li class="item3"></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox12" type="checkbox"><label for="checkbox12"></label></span></li>
+                                                </ul>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">13</a></li>
+                                                    <li class="item2">ⓒ</li>
+                                                    <li class="item3"></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox13" type="checkbox"><label for="checkbox13"></label></span></li>
+                                                </ul>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">14</a></li>
+                                                    <li class="item2">16</li>
+                                                    <li class="item3"></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox14" type="checkbox"><label for="checkbox14"></label></span></li>
+                                                </ul>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">15</a></li>
+                                                    <li class="item2">123</li>
+                                                    <li class="item3"></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox16" type="checkbox"><label for="checkbox15"></label></span></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="pages">
+                                <span class="page-num">05</span>
+                                <div class="inner">
+                                    <div class="answer-list">
+                                        <ul class="answer-check-wrap"> 
+                                            <li class="answer-item">
+                                                <ul class="answer-check th">
+                                                    <li class="item1">No</li>
+                                                    <li class="item2 text-center">Correct and clear</li>
+                                                    <li class="item4">Wrong Check</li>
+                                                </ul>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">1</a></li>
+                                                    <li class="item2">12km</li>
+                                                    <li class="item3"><a href="#answerList01" class="collapsed" data-toggle="collapse" data-target="#answerList01">▼</a></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox1" type="checkbox"><label for="checkbox1"></label></span></li>
+                                                </ul>
+                                                <div class="answer-explanation collapse" id="answerList01">
+                                                    <p class="explanation-wrap">꾸러미 하나가 10을 나타냄으로, 100은 꾸러미가 10개임.</p>
+                                                </div>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">2</a></li>
+                                                    <li class="item2">1½</li>
+                                                    <li class="item3"></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox2" type="checkbox"><label for="checkbox2"></label></span></li>
+                                                </ul>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check  td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">3</a></li>
+                                                    <li class="item2">ⓒ</li>
+                                                    <li class="item3"></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox3" type="checkbox"><label for="checkbox3"></label></span></li>
+                                                </ul>
+                                            </li>
+                                            <li class="answer-item test-paging">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">4</a></li>
+                                                    <li class="item2">16</li>
+                                                    <li class="item3"></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox4" type="checkbox"><label for="checkbox4"></label></span></li>
+                                                </ul>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">5</a></li>
+                                                    <li class="item2">123</li>
+                                                    <li class="item3"></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox5" type="checkbox"><label for="checkbox5"></label></span></li>
+                                                </ul>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">6</a></li>
+                                                    <li class="item2">Jeremy</li>
+                                                    <li class="item3"></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox6" type="checkbox"><label for="checkbox6"></label></span></li>
+                                                </ul>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">7</a></li>
+                                                    <li class="item2">ⓐ</li>
+                                                    <li class="item3"><a href="#answerList02" class="collapsed" data-toggle="collapse" data-target="#answerList02">▼</a></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox7" type="checkbox"><label for="checkbox7"></label></span></li>
+                                                </ul>
+                                                <div class="answer-explanation collapse" id="answerList02">
+                                                    <p class="explanation-wrap">꾸러미 하나가 10을 나타냄으로, 100은 꾸러미가 10개임.</p>
+                                                </div>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">8</a></li>
+                                                    <li class="item2">ⓐ</li>
+                                                    <li class="item3"><a href="#answerList03" class="collapsed" data-toggle="collapse" data-target="#answerList03">▼</a></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox8" type="checkbox"><label for="checkbox8"></label></span></li>
+                                                </ul>
+                                                <div class="answer-explanation collapse" id="answerList03">
+                                                    <p class="explanation-wrap">꾸러미 하나가 10을 나타냄으로, 100은 꾸러미가 10개임.</p>
+                                                </div>
+                                            </li>
+                                            <li class="answer-item test-paging">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">9</a></li>
+                                                    <li class="item2">ⓐ</li>
+                                                    <li class="item3"><a href="#answerList04" class="collapsed" data-toggle="collapse" data-target="#answerList04">▼</a></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox9" type="checkbox"><label for="checkbox9"></label></span></li>
+                                                </ul>
+                                                <div class="answer-explanation collapse" id="answerList04">
+                                                    <p class="explanation-wrap">꾸러미 하나가 10을 나타냄으로, 100은 꾸러미가 10개임.</p>
+                                                </div>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">10</a></li>
+                                                    <li class="item2">ⓐ</li>
+                                                    <li class="item3"><a href="#answerList05" class="collapsed" data-toggle="collapse" data-target="#answerList05">▼</a></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox10" type="checkbox"><label for="checkbox10"></label></span></li>
+                                                </ul>
+                                                <div class="answer-explanation collapse" id="answerList05">
+                                                    <p class="explanation-wrap">꾸러미 하나가 10을 나타냄으로, 100은 꾸러미가 10개임.</p>
+                                                </div>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">11</a></li>
+                                                    <li class="item2">12km</li>
+                                                    <li class="item3"><a href="#answerList06" class="collapsed" data-toggle="collapse" data-target="#answerList06">▼</a></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox11" type="checkbox"><label for="checkbox11"></label></span></li>
+                                                </ul>
+                                                <div class="answer-explanation collapse" id="answerList06">
+                                                    <p class="explanation-wrap">꾸러미 하나가 10을 나타냄으로, 100은 꾸러미가 10개임.</p>
+                                                </div>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">12</a></li>
+                                                    <li class="item2">1½</li>
+                                                    <li class="item3"></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox12" type="checkbox"><label for="checkbox12"></label></span></li>
+                                                </ul>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">13</a></li>
+                                                    <li class="item2">ⓒ</li>
+                                                    <li class="item3"></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox13" type="checkbox"><label for="checkbox13"></label></span></li>
+                                                </ul>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">14</a></li>
+                                                    <li class="item2">16</li>
+                                                    <li class="item3"></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox14" type="checkbox"><label for="checkbox14"></label></span></li>
+                                                </ul>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">15</a></li>
+                                                    <li class="item2">123</li>
+                                                    <li class="item3"></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox16" type="checkbox"><label for="checkbox15"></label></span></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="pages">
+                                <span class="page-num">06</span>
+                                <div class="inner">
+                                    <div class="answer-list">
+                                        <ul class="answer-check-wrap"> 
+                                            <li class="answer-item">
+                                                <ul class="answer-check th">
+                                                    <li class="item1">No</li>
+                                                    <li class="item2 text-center">Correct and clear</li>
+                                                    <li class="item4">Wrong Check</li>
+                                                </ul>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">1</a></li>
+                                                    <li class="item2">12km</li>
+                                                    <li class="item3"><a href="#answerList01" class="collapsed" data-toggle="collapse" data-target="#answerList01">▼</a></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox1" type="checkbox"><label for="checkbox1"></label></span></li>
+                                                </ul>
+                                                <div class="answer-explanation collapse" id="answerList01">
+                                                    <p class="explanation-wrap">꾸러미 하나가 10을 나타냄으로, 100은 꾸러미가 10개임.</p>
+                                                </div>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">2</a></li>
+                                                    <li class="item2">1½</li>
+                                                    <li class="item3"></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox2" type="checkbox"><label for="checkbox2"></label></span></li>
+                                                </ul>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check  td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">3</a></li>
+                                                    <li class="item2">ⓒ</li>
+                                                    <li class="item3"></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox3" type="checkbox"><label for="checkbox3"></label></span></li>
+                                                </ul>
+                                            </li>
+                                            <li class="answer-item test-paging">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">4</a></li>
+                                                    <li class="item2">16</li>
+                                                    <li class="item3"></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox4" type="checkbox"><label for="checkbox4"></label></span></li>
+                                                </ul>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">5</a></li>
+                                                    <li class="item2">123</li>
+                                                    <li class="item3"></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox5" type="checkbox"><label for="checkbox5"></label></span></li>
+                                                </ul>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">6</a></li>
+                                                    <li class="item2">Jeremy</li>
+                                                    <li class="item3"></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox6" type="checkbox"><label for="checkbox6"></label></span></li>
+                                                </ul>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">7</a></li>
+                                                    <li class="item2">ⓐ</li>
+                                                    <li class="item3"><a href="#answerList02" class="collapsed" data-toggle="collapse" data-target="#answerList02">▼</a></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox7" type="checkbox"><label for="checkbox7"></label></span></li>
+                                                </ul>
+                                                <div class="answer-explanation collapse" id="answerList02">
+                                                    <p class="explanation-wrap">꾸러미 하나가 10을 나타냄으로, 100은 꾸러미가 10개임.</p>
+                                                </div>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">8</a></li>
+                                                    <li class="item2">ⓐ</li>
+                                                    <li class="item3"><a href="#answerList03" class="collapsed" data-toggle="collapse" data-target="#answerList03">▼</a></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox8" type="checkbox"><label for="checkbox8"></label></span></li>
+                                                </ul>
+                                                <div class="answer-explanation collapse" id="answerList03">
+                                                    <p class="explanation-wrap">꾸러미 하나가 10을 나타냄으로, 100은 꾸러미가 10개임.</p>
+                                                </div>
+                                            </li>
+                                            <li class="answer-item test-paging">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">9</a></li>
+                                                    <li class="item2">ⓐ</li>
+                                                    <li class="item3"><a href="#answerList04" class="collapsed" data-toggle="collapse" data-target="#answerList04">▼</a></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox9" type="checkbox"><label for="checkbox9"></label></span></li>
+                                                </ul>
+                                                <div class="answer-explanation collapse" id="answerList04">
+                                                    <p class="explanation-wrap">꾸러미 하나가 10을 나타냄으로, 100은 꾸러미가 10개임.</p>
+                                                </div>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">10</a></li>
+                                                    <li class="item2">ⓐ</li>
+                                                    <li class="item3"><a href="#answerList05" class="collapsed" data-toggle="collapse" data-target="#answerList05">▼</a></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox10" type="checkbox"><label for="checkbox10"></label></span></li>
+                                                </ul>
+                                                <div class="answer-explanation collapse" id="answerList05">
+                                                    <p class="explanation-wrap">꾸러미 하나가 10을 나타냄으로, 100은 꾸러미가 10개임.</p>
+                                                </div>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">11</a></li>
+                                                    <li class="item2">12km</li>
+                                                    <li class="item3"><a href="#answerList06" class="collapsed" data-toggle="collapse" data-target="#answerList06">▼</a></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox11" type="checkbox"><label for="checkbox11"></label></span></li>
+                                                </ul>
+                                                <div class="answer-explanation collapse" id="answerList06">
+                                                    <p class="explanation-wrap">꾸러미 하나가 10을 나타냄으로, 100은 꾸러미가 10개임.</p>
+                                                </div>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">12</a></li>
+                                                    <li class="item2">1½</li>
+                                                    <li class="item3"></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox12" type="checkbox"><label for="checkbox12"></label></span></li>
+                                                </ul>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">13</a></li>
+                                                    <li class="item2">ⓒ</li>
+                                                    <li class="item3"></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox13" type="checkbox"><label for="checkbox13"></label></span></li>
+                                                </ul>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">14</a></li>
+                                                    <li class="item2">16</li>
+                                                    <li class="item3"></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox14" type="checkbox"><label for="checkbox14"></label></span></li>
+                                                </ul>
+                                            </li>
+                                            <li class="answer-item">
+                                                <ul class="answer-check td">
+                                                    <li class="item1"><a href="#" data-toggle="modal" data-target="#confirm">15</a></li>
+                                                    <li class="item2">123</li>
+                                                    <li class="item3"></li>
+                                                    <li class="item4"><span class="checkbox checkbox-primary checkbox-inline"><input id="checkbox16" type="checkbox"><label for="checkbox15"></label></span></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="pages">
+                                <span class="page-num">07</span>
+                                <div class="inner">
+                                    <div class="null">
+                                        <p>This is not a marking page.</p>
+                                        <i class="fas fa-book-open"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pages">
+                                <span class="page-num">08</span>
+                                <div class="inner"></div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="pages">
+                                <span class="page-num">09</span>
+                                <div class="inner"></div>
+                            </div>
+                            <div class="pages">
+                                <span class="page-num">10</span>
+                                <div class="inner"></div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="pages">
+                                <span class="page-num">11</span>
+                                <div class="inner"></div>
+                            </div>
+                            <div class="pages">
+                                <span class="page-num">12</span>
+                                <div class="inner"></div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="pages">
+                                <span class="page-num">13</span>
+                                <div class="inner"></div>
+                            </div>
+                            <div class="pages">
+                                <span class="page-num">14</span>
+                                <div class="inner"></div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="pages">
+                                <span class="page-num">15</span>
+                                <div class="inner"></div>
+                            </div>
+                            <div class="pages">
+                                <span class="page-num">16</span>
+                                <div class="inner"></div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="pages">
+                                <span class="page-num">17</span>
+                                <div class="inner"></div>
+                            </div>
+                            <div class="pages">
+                                <span class="page-num">18</span>
+                                <div class="inner"></div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="pages">
+                                <span class="page-num">19</span>
+                                <div class="inner"></div>
+                            </div>
+                            <div class="pages">
+                                <span class="page-num">20</span>
+                                <div class="inner">
+                                    <span class="tit">Check</span>
+                                    <div class="checking-list">
+                                        <div class="lists">
+                                            <a href="#" data-modules="checkCircle" data-toggle="true">
+                                                <span>The student was unable to draw short lines.</span>
+                                                <span class="status"><em class="check_circle txts complete">Check</em></span>
+                                            </a>
+                                        </div>
+                                        <div class="lists">
+                                            <a href="#" data-modules="checkCircle" data-toggle="true">
+                                                <span>The student was unable to count numbers up to 5.</span>
+                                                <span class="status"><em class="check_circle txts">Check</em></span>
+                                            </a>
+                                        </div>
+                                        <div class="lists">
+                                            <a href="#" data-modules="checkCircle" data-toggle="true">
+                                                <span>The student was unable to write numbers correctly.</span>
+                                                <span class="status"><em class="check_circle txts">Check</em></span>
+                                            </a>
+                                        </div>
+                                        <div class="lists">
+                                            <a href="#" data-modules="checkCircle" data-toggle="true">
+                                                <span>The student was unable to count objects without using fingers.</span>
+                                                <span class="status"><em class="check_circle txts">Check</em></span>
+                                            </a>
+                                        </div>
+                                        <div class="lists">
+                                            <a href="#" data-modules="checkCircle" data-toggle="true">
+                                                <span>The student added numbers by counting with fingers.</span>
+                                                <span class="status"><em class="check_circle txts">Check</em></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#answer-lists" role="button" data-slide="prev">
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#answer-lists" role="button" data-slide="next">
+                        <span class="sr-only">Next</span>
+                    </a>
+                    <!-- Indicators -->
+                    <div class="indicators-wrap">
+                        <span class="labels">
+                            <span class="pn">Page</span>
+                            <span class="ic">Incorrect</span>
+                        </span>
+                        <ol class="carousel-indicators custom">
+                            <li data-target="#answer-lists" data-slide-to="0" class="active">
+                                <div class="page-label">
+                                    <span class="page-num">1</span>
+                                </div>
+                                <div class="page-label">
+                                    <span class="page-num">2</span>
+                                    <span class="ic-length">7</span>
+                                </div>
+                            </li>
+                            <li data-target="#answer-lists" data-slide-to="1">
+                                <div class="page-label">
+                                    <span class="page-num">3</span>
+                                </div>
+                                <div class="page-label">
+                                    <span class="page-num">4</span>
+                                </div>
+                            </li>
+                            <li data-target="#answer-lists" data-slide-to="2">
+                                <div class="page-label">
+                                    <span class="page-num">5</span>
+                                </div>
+                                <div class="page-label">
+                                    <span class="page-num">6</span>
+                                </div>
+                            </li>
+                            <li data-target="#answer-lists" data-slide-to="3">
+                                <div class="page-label">
+                                    <span class="page-num">7</span>
+                                </div>
+                                <div class="page-label">
+                                    <span class="page-num">8</span>
+                                </div>
+                            </li>
+                            <li data-target="#answer-lists" data-slide-to="4">
+                                <div class="page-label">
+                                    <span class="page-num">9</span>
+                                </div>
+                                <div class="page-label">
+                                    <span class="page-num">10</span>
+                                </div>
+                            </li>
+                            <li data-target="#answer-lists" data-slide-to="5">
+                                <div class="page-label">
+                                    <span class="page-num">11</span>
+                                </div>
+                                <div class="page-label">
+                                    <span class="page-num">12</span>
+                                </div>
+                            </li>
+                            <li data-target="#answer-lists" data-slide-to="6">
+                                <div class="page-label">
+                                    <span class="page-num">13</span>
+                                </div>
+                                <div class="page-label">
+                                    <span class="page-num">14</span>
+                                </div>
+                            </li>
+                            <li data-target="#answer-lists" data-slide-to="7">
+                                <div class="page-label">
+                                    <span class="page-num">15</span>
+                                    <span class="ic-length">20</span>
+                                </div>
+                                <div class="page-label">
+                                    <span class="page-num">16</span>
+                                </div>
+                            </li>
+                            <li data-target="#answer-lists" data-slide-to="8">
+                                <div class="page-label">
+                                    <span class="page-num">17</span>
+                                </div>
+                                <div class="page-label">
+                                    <span class="page-num">18</span>
+                                </div>
+                            </li>
+                            <li data-target="#answer-lists" data-slide-to="9">
+                                <div class="page-label">
+                                    <span class="page-num">19</span>
+                                </div>
+                                <div class="page-label">
+                                    <span class="page-num">20</span>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+             <div class="modal-footer">
+                <button type="button" class="btn btn-success">Result Send</button>
+                <button type="button" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-backdrop fade in"></div>
+<div class="modal fade " id="confirm" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-sm" role="document">
+	<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			</div>
+			<div class="modal-body">
+				<span class="checkbox-group answer-check">
+					<span class="checkbox checkbox-primary">
+						<input type="checkbox" id="inlinecheckbox1" value="option1" name="checkboxInline1">
+						<label for="inlinecheckbox1">Not solved</label>
+					</span>
+					<span class="checkbox checkbox-primary">
+						<input type="checkbox" id="inlinecheckbox2" value="option2" name="checkboxInline1">
+						<label for="inlinecheckbox2">Finish Here</label>
+					</span>
+				</span>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary">OK</button>
+				<button type="button" class="btn btn-info" data-dismiss="modal">Cancel</button>
+			</div>
+		</div>
+	</div>
+  </div>
+</div>
+
+<script src="/js/custom.js"></script>
+<script>
+    $(function(){
+        function activeSwipe(){
+            $('.answer-check-wrap').on('swipeleft', '.answer-check', function(){
+                var $this = $(this);
+                $this.removeClass('active')
+            })
+            $('.answer-check-wrap').on('swiperight', '.answer-check', function(){
+                var $this = $(this);
+                $this.addClass('active')
+            });
+        };
+        activeSwipe();
+    })
+</script>
+</body>
+</html>

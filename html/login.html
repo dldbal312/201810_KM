@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<link rel="SHORTCUT ICON" href="/images/favicon.ico">
+<title>Key&amp;Manager ver.2</title>
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/fontawesome-all.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" type="text/css" href="/css/custom.css">
+<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+<script src="/js/vendors/jquery-ui.min.js"></script>
+<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+<script src="/js/vendors/moment.js"></script>
+<script src="/js/vendors/bootstrap.min.js"></script>
+<script src="/js/vendors/bootstrap-datetimepicker.min.js"></script>
+</head>
+<body>
+<div class="container">
+	<div class="login">
+		<div class="login-body">
+			<div class="login-cont">
+				<h1 class="logo"><a href="#"><img src="/images/logo.png" alt="Key &amp; Manager"></a></h1>
+				<div class="login-top">
+					<div class="form-group">
+						 <input type="text" class="form-control input-lg clearable" placeholder="ID">
+					</div>
+					<div class="form-group">
+						 <input type="passwrod" class="form-control input-lg clearable" placeholder="Password">
+					</div>
+					<div class="col-md-12">
+						<div class="checkbox checkbox-primary checkbox-inline">
+							<input id="remember-id" type="checkbox">
+							<label for="remember-id">Remember ID</label>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+					<div class="security-num">
+						<em>ID or password do not match</em>
+						<div class="my-2">
+							<span><img id="captchaImg" name="captchaImg" src="/images/@captcha.png" alt="임시 이미지"></span>
+							<span class="captcha-btn">
+								<button type="button" class="ico-sound">음성듣기</button>
+								<button type="button" class="ico-refresh">새로고침</button>
+							</span>
+						</div>
+						<input type="text" class="form-control clearable" placeholder="Enter the above image character.">
+					</div>
+					<div class="ln_solid"></div>
+					<div class="text-center">
+						<button type="button" class="btn btn-primary btn-lg btn-block">LOGIN</button>
+					</div>
+				</div>
+				<div class="forget">
+					<a data-toggle="collapse" href="#findPassword" aria-expanded="false" aria-controls="findPassword"><span>Find password?</span></a>
+					<p class="collapse" id="findPassword">ID와 Password는 관리자나 센터장에 문의 바랍니다.</p>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<span class="ft-logo">KEY &amp; MANAGER</span>
+			<p class="ft-copy">Copyright &copy; 2018 Daekyo Co., Ltd All rights reserved. For more information, contact <a href="mailto:myeyelevel@myeyelevel.com">myeyelevel@myeyelevel.com</a></p>
+			<div class="ft-site">
+				<dl>
+					<dt><a href="#class">LINKS</a></dt>
+					<dd>
+						<ul>
+							<li><a href="https://sites.google.com/a/myeyelevel.com/itisthekey/" target="_blank">User guide</a></li>
+							<li><a href="http://www.myeyelevel.com/Global/English/" target="_blank">Eyelevel Site</a></li>
+							<li><a href="http://www.iamthekey.com/" target="_blank">Brand Site</a></li>
+							<li><a href="http://eng.daekyo.com/En/default.aspx" target="_blank">Corporate Site</a></li>
+							<li><a href="http://elu.myeyelevel.com" target="_blank">Eye Level University</a></li>
+							<li><a href="http://email.myeyelevel.com" target="_blank">Email</a></li>
+						</ul>
+					</dd>
+				</dl>
+			</div>
+		</footer>
+	</div>
+</div>
+<script src="/js/custom.js"></script>
+</body>
+</html>

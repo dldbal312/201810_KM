@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<link rel="SHORTCUT ICON" href="/images/favicon.ico">
+<title>Key&amp;Manager ver.2</title>
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/fontawesome-all.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" type="text/css" href="/css/custom.css">
+<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+<script src="/js/vendors/jquery-ui.min.js"></script>
+<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+<script src="/js/vendors/moment.js"></script>
+<script src="/js/vendors/bootstrap.min.js"></script>
+<script src="/js/vendors/bootstrap-datetimepicker.min.js"></script>
+<style>
+	html{overflow: hidden;}
+</style>
+</head>
+<body>
+	<div class="clearfix my-2">
+		<div class="pull-right">
+			<a href="#" class="btn btn-success round">ProgressDetail</a><!-- 180625_수정 [class 추가: "round"] -->
+		</div>
+		<div class="pull-left mt-1">
+			<form class="form-inline">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="form-group mr-2">
+							<span class="lb-txt mt-1">Subject</span>
+							<select class="form-control input-sm">
+								<option value="" selected>ALL</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<span class="lb-txt mt-1">Study Month  </span>
+							<div class="input-group date">
+								<input type="text" class="form-control input-sm clearable datepicker" placeholder="dd/mm/yyyy">
+								<span class="input-group-addon">
+									<span class="calendar-icon"></span>
+								</span>
+							</div>
+						</div>
+						<span class="date-period-divider">~</span>
+						<div class="form-group">
+							<div class="input-group date">
+								<input type="text" class="form-control input-sm clearable datepicker" placeholder="dd/mm/yyyy">
+								<span class="input-group-addon">
+									<span class="calendar-icon"></span>
+								</span>
+							</div>
+						</div>
+						<a class="btn btn-primary round" href="#">Search</a><!-- 180625_수정 [class 추가: "round"] -->
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="bx-table">
+		<div class="tb-dimm"><span class="txts">Fetching data...</span></div>
+		<div class="y-scroll">
+			<table class="table tb-check table-sort">
+				<thead>
+					<tr>
+						<th scope="col"><a href="#" class="sorting">Subject</a></th>
+						<th scope="col"><a href="#" class="sorting">Progress Date</a></th>
+						<th scope="col"><a href="#" class="sorting">표준모델 코드</a></th>
+						<th scope="col"><a href="#" class="sorting">Category</a></th>
+						<th scope="col"><a href="#" class="sorting">Level. Set</a></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>EL Matematka</td>
+						<td>23/04/2018</td>
+						<td>2112311</td>
+						<td>BTM</td>
+						<td>0308  0412 0414</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+<script src="/js/custom.js"></script>
+</body>
+</html>

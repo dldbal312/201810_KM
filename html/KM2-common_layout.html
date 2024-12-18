@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<link rel="SHORTCUT ICON" href="/images/favicon.ico">
+<title>Key&amp;Manager ver.2</title>
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/fontawesome-all.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" type="text/css" href="/css/custom.css">
+<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+<script src="/js/vendors/jquery-ui.min.js"></script>
+<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+<script src="/js/vendors/moment.js"></script>
+<script src="/js/vendors/bootstrap.min.js"></script>
+<script src="/js/vendors/bootstrap-datetimepicker.min.js"></script>
+</head>
+<body class="nav-sm">
+<div class="wrapper">		
+	<div class="left_col">
+		<div id="sidebar-menu" class="main_menu_side main_menu">
+			<div class="menu_section">
+				<ul class="nav side-menu">
+					<!-- <li class="parent_menu"><a href="#"><i class="ico-schedule"></i>Schedule</a><a role="button" class="submenu-open"></a></li> -->
+					<li class="parent_menu"><a href="#"><i class="ico-member"></i>Student</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Lead</a></li>
+							<li><a href="#">Consultation</a></li>
+							<li><a href="#">Student</a>
+								<ul class="nav-depth3">
+									<li class="active"><a href="#">Student</a></li>
+									<li><a href="#">Sent Message</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Message Template</a></li>
+						</ul>
+					</li>
+					<li class="parent_menu"><a href="#"><i class="ico-learning"></i>Learning</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Timetable</a></li>
+							<li><a href="#">Attendance</a></li>
+							<li><a href="#">Progress</a></li>
+							<li><a href="#">DT</a></li>
+							<li><a href="#">Learning Result</a>
+								<ul class="nav-depth3">
+									<li><a href="#">Grading</a></li>
+									<li><a href="#">LT</a></li>
+									<li><a href="#">Answer Book</a></li>
+									<li><a href="#">Customer Report</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="parent_menu"><a href="#"><i class="ico-finance"></i>Billing &amp; Order</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Billing</a>
+								<ul class="nav-depth3">
+									<li><a href="#">Payment</a></li>
+									<li><a href="#">Statement</a></li>
+									<li><a href="#">Visits</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Deposit</a></li>
+							<li><a href="#">Tuition Type</a></li> 
+							<li><a href="#">Analysis</a></li>
+							<li><a href="#">Special Order</a></li> 
+							<li><a href="#">Change Tuition Type</a></li> 
+							<li><a href="#">Forms</a></li> 
+						</ul>
+					</li>
+					<li class="parent_menu"><a href="#"><i class="ico-center"></i>Settings &amp; Report</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Company</a>
+								<ul class="nav-depth3">
+									<li><a href="#">Company Preference</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Center</a>
+								<ul class="nav-depth3">
+									<li><a href="#">Free trial Settings</a></li>
+									<li><a href="#">Center Preference</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Users</a>
+								<ul class="nav-depth3">
+									<li><a href="#">Users</a></li>
+									<li><a href="#">Instructors</a></li>
+									<li><a href="#">Permissions</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Status Report</a>
+								<ul class="nav-depth3">
+									<li><a href="#">No. of Subject</a></li>
+									<li><a href="#">No. of Subject(Org)</a></li>
+									<li><a href="#">Subject List</a></li>
+									<li><a href="#">Subject List(Monthly)</a></li>
+									<li><a href="#">Enroll/Drop List</a></li>
+									<li><a href="#">Attendance</a></li>
+									<li><a href="#">Progress</a></li>
+									<li><a href="#">Determined Progress Status</a></li>
+									<li><a href="#">Progress Change history</a></li>
+									<li><a href="#">Monthly Payment Report</a></li>
+									<li><a href="#">Payment Report(Visit)</a></li>
+									<li><a href="#">Payment Record</a></li>
+									<li><a href="#">Invoice</a></li>
+									<li><a href="#">Booklet Order</a></li>
+									<li><a href="#">Special Order</a></li>
+									<li><a href="#">Free Trial</a></li>
+									<li><a href="#">Visits</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="right_col">		
+		<div class="nav_menu">
+			<div class="toggle">
+				<a href="#" class="menu_toggle"><i></i></a>
+			</div>
+			<div class="head-wrap">
+				<div class="pull-left head-favorite">
+					<ul class="head-favorite-list">
+						<li><a href="#" class="list">Create member</a><a href="#" class="ico-delete"><i class="fas fa-times"></i></a></li>
+						<li><a href="#" class="list">Payment</a><a href="#" class="ico-delete"><i class="fas fa-times"></i></a></li>
+						<li><a href="#" class="list">My student</a><a href="#" class="ico-delete"><i class="fas fa-times"></i></a></li>
+					</ul>
+					<a href="#" class="favorite-set"><span class="ico-count cl-gray"></span>My menu add</a>
+				</div>
+				<div class="pull-right head-user-info">
+					<a href="#" class="head-logout">Logout</a>
+					<span class="head-name">Tony tony chopa (FC0001S)</span>
+					<a href="#" class="head-mypage">My page</a>
+				</div>
+			</div>
+		</div>
+		<div class="right_content" role="main">
+			<div style="font-size:100px;text-align:center;line-height:500px">CONTENTS</div>
+		</div>
+		<footer>
+			<span class="ft-logo">KEY &amp; MANAGER</span>
+			<p class="ft-copy">Copyright &copy; 2018 Daekyo Co., Ltd All rights reserved. For more information, contact <a href="mailto:myeyelevel@myeyelevel.com">myeyelevel@myeyelevel.com</a></p>
+			<div class="ft-site">
+				<dl>
+					<dt><a href="#class">LINKS</a></dt>
+					<dd>
+						<ul>
+							<li><a href="https://sites.google.com/a/myeyelevel.com/itisthekey/" target="_blank">User guide</a></li>
+							<li><a href="http://www.myeyelevel.com/Global/English/" target="_blank">Eyelevel Site</a></li>
+							<li><a href="http://www.iamthekey.com/" target="_blank">Brand Site</a></li>
+							<li><a href="http://eng.daekyo.com/En/default.aspx" target="_blank">Corporate Site</a></li>
+							<li><a href="http://elu.myeyelevel.com" target="_blank">Eye Level University</a></li>
+							<li><a href="http://email.myeyelevel.com" target="_blank">Email</a></li>
+						</ul>
+					</dd>
+				</dl>
+			</div>
+		</footer>
+	</div>
+</div>
+<script src="/js/custom.js"></script>
+</body>
+</html>

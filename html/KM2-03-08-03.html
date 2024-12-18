@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<link rel="SHORTCUT ICON" href="/images/favicon.ico">
+<title>Key&amp;Manager ver.2</title>
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/fontawesome-all.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" type="text/css" href="/css/custom.css">
+<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+<script src="/js/vendors/jquery-ui.min.js"></script>
+<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+<script src="/js/vendors/moment.js"></script>
+<script src="/js/vendors/bootstrap.min.js"></script>
+<script src="/js/vendors/bootstrap-datetimepicker.min.js"></script>
+</head>
+<body class="nav-sm modal-open">
+
+<div class="modal fade in" id="modal" tabindex="-1" role="dialog" style="display:block">
+	<div class="modal-dialog modal-sm" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title">회비타입 변경</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<form class="col-md-12">
+						<div class="form-group">
+							<span class="lb-txt mb-1 mr-1">선택된 과목 수</span>
+							<span class="tx-red bold fs20">15</span>
+						</div>
+						<div class="form-group">
+							<span class="lb-txt mb-1">현재 회비타입</span>
+							<input type="text" class="form-control input-sm clearable" value="Base1 120" readonly="readonly">
+						</div>
+						<div class="form-group">
+							<span class="lb-txt mb-1">변경할 회비타입</span>
+							<select class="form-control input-sm">
+								<option value="1" selected="selected">Center</option>
+							</select>
+						</div>
+					</form>
+				</div>
+				<div class="row">
+					<div class="col-md-12 text-center my-2">
+						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#info">Save</button>
+						<button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal-backdrop fade in"></div>
+
+<script src="/js/custom.js"></script>
+</body>
+</html>

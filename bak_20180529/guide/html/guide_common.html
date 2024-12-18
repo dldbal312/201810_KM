@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<link rel="SHORTCUT ICON" href="../../images/favicon.ico">
+<title></title>
+<link rel="stylesheet" href="../../css/bootstrap/3.3.7/bootstrap.min.css">
+<link rel="stylesheet" href="../../css/bootstrap/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" href="../../css/boram_common.css">
+<link rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" href="../../css/jquery-ui.css">
+<link rel="stylesheet" media="all and (min-width: 0) and (max-width: 1280px)" href="../../css/tablet.css" />
+<link rel="stylesheet" media="all and (min-width: 0) and (max-width: 767px)" href="../../css/mobile.css" />
+<script src="../../js/jQuery/jquery-2.2.4.min.js"></script>
+<script src="../../js/jQuery/jquery-ui.js"></script>
+<script src="../../js/moment.js"></script>
+<script src="../../js/jQuery/MonthPicker.min.js"></script>
+<script src="../../js/jQuery/jquery.mCustomScrollbar.js"></script>
+<script src="../../js/bootstrap/3.3.7/bootstrap.min.js"></script>
+<script src="../../js/bootstrap/bootstrap-datetimepicker.min.js"></script>
+<script src="../../js/common.js"></script>
+<script src="../../js/boram_common.js"></script>
+<style type="text/css">
+	#kmWrap{padding:20px;}
+	.h1-tit{font-size:20px;}
+	.h1-tit + .bx-cont,.bx-cont + .h1-tit{margin-top:20px;}
+</style>
+<script type="text/javascript">
+var a;
+function loader() {
+    a = setTimeout(showPage, 500);
+}
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+}
+</script>
+</head>
+<body onload="loader()">
+<div id="loader" class="loader-box">
+	<div class="loader"></div>
+	<span class="txts">Loading</span>
+</div>
+<div>
+	<p>※ 추후 각 가이드 페이지로 이동 후 삭제 예정</p>
+	<div class="container-fluid">
+		<h3>버튼</h3>
+		<div class="row py-1">
+			<div class="col-md-12">
+				<a href="#" class="btn btn-primary btn-sm">OK</a>
+				<a href="#" class="btn btn-success btn-sm">Save</a>
+				<a href="#" class="btn btn-info btn-sm">Reset</a>
+				<a href="#" class="btn btn-primary btn-sm disabled">Save(비활성화)</a>
+				<a href="#" class="btn btn-info btn-sm disabled">Reset(비활성화)</a>
+				<a href="#" class="btn-list-del">Delete</a>
+				<a href="#" class="btn-list-open">Add</a>
+			</div>
+		</div>
+		<div class="row py-1">
+			<div class="col-md-12">
+				<button type="button" class="btn btn-primary btn-sm">OK</button>
+				<button type="button" class="btn btn-success btn-sm">Save</button>   
+				<button type="button" class="btn btn-info btn-sm">Reset</button>
+				<button type="button" class="btn btn-primary btn-sm disabled" disabled="disabled">Save(비활성화)</button>
+				<button type="button" class="btn btn-info btn-sm disabled" disabled="disabled">Reset(비활성화)</button>
+				<button type="button" class="btn-list-del">Delete</button>
+				<button type="button" class="btn-list-open">Add</button>
+			</div>
+		</div>
+		<div class="row py-1">
+			<div class="col-md-12 text-right">
+				<a href="#" class="btn btn-primary btn-sm">Add Student</a>
+				<a href="#" class="btn btn-primary btn-sm">Delete</a>
+			</div>
+		</div>
+		<div class="row py-1">
+			<div class="col-md-12 text-left">
+				<a href="#" class="btn btn-primary btn-sm">Add Student</a>
+				<a href="#" class="btn btn-primary btn-sm">Delete</a>
+			</div>
+		</div>
+		<div class="row py-1">
+			<div class="col-md-12">
+				<span class="pull-left">
+					<a href="#" class="btn btn-primary btn-sm">left</a>
+				</span> 
+				<span class="pull-right">
+					<a href="#" class="btn btn-primary btn-sm">right</a>
+				</span>
+			</div>
+		</div>
+		<div class="row py-1">
+			<div class="col-md-12 text-center">
+				<a href="#" class="btn btn-primary btn-sm">OK</a>
+				<a href="#" class="btn btn-info btn-sm">Cancel</a>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<h3>입력서식</h3>
+		<div class="row py-1">
+			<form class="form-inline">
+				<div class="col-md-12 py-2">
+					<div class="form-group has-feedback has-clear">
+						<input type="text" class="form-control input-sm" placeholder="default">
+						<span class="form-control-clear glyphicon glyphicon-remove form-control-feedback hidden"></span>
+				    </div>
+				    <div class="form-group has-feedback has-clear">
+						<input type="text" class="form-control input-sm" placeholder="focus">
+						<span class="form-control-clear glyphicon glyphicon-remove form-control-feedback hidden"></span>
+				    </div>
+				    <div class="form-group has-feedback has-clear">
+						<input type="text" class="form-control input-sm" placeholder="readonly" readonly="readonly">
+						<span class="form-control-clear glyphicon glyphicon-remove form-control-feedback hidden"></span>
+				    </div>
+				    <div class="form-group has-feedback has-clear">
+						<input type="text" class="form-control input-sm" placeholder="disabled" disabled>
+						<span class="form-control-clear glyphicon glyphicon-remove form-control-feedback hidden"></span>
+				    </div>
+				</div>
+				<div class="col-md-12 py-2">
+			        <div class="form-group">
+			            <div class="input-group date">
+			                <input type="text" class="form-control input-sm" placeholder="dd/mmy/yyyy" />
+			                <span class="input-group-addon">
+			                    <span class="calendar-icon"></span>
+			                </span>
+			            </div>
+			        </div>
+			        <span class="date-period-divider">~</span>
+			        <div class="form-group">
+			            <div class="input-group date">
+			                <input type="text" class="form-control input-sm" placeholder="dd/mmy/yyyy" />
+			                <span class="input-group-addon">
+			                    <span class="calendar-icon"></span>
+			                </span>
+			            </div>
+			        </div>
+				</div>
+				<div class="col-md-12 py-2">
+			        <div class="form-group">
+			            <div class="input-group date">
+			                <input type="text" class="form-control input-sm" placeholder="dd/mmy/yyyy" />
+			                <span class="input-group-addon">
+			                    <span class="calendar-icon"></span>
+			                </span>
+			            </div>
+			        </div>
+				</div>
+				<div class="col-md-12 py-2">
+					<div class="checkbox checkbox-primary">
+                        <input id="checkbox1" type="checkbox" checked="checked">
+                        <label for="checkbox1">체크박스1</label>
+                    </div>
+					<div class="checkbox checkbox-primary">
+                        <input id="checkbox2" type="checkbox">
+                        <label for="checkbox2">체크박스2</label>
+                    </div>
+					<div class="checkbox checkbox-primary">
+                        <input id="checkbox2" type="checkbox" disabled>
+                        <label for="checkbox2">체크박스3</label>
+                    </div>
+				</div>
+				<div class="col-md-12 py-2">
+					<div class="radio radio-primary radio-inline">
+                        <input type="radio" id="inlineRadio1" value="option1" name="radioInline1" checked="checked">
+                        <label for="inlineRadio1"> 라디오1-1 </label>
+                    </div>
+                    <div class="radio radio-primary radio-inline">
+                        <input type="radio" id="inlineRadio2" value="option1" name="radioInline1">
+                        <label for="inlineRadio2"> 라디오1-2 </label>
+                    </div>
+                    <div class="radio radio-primary radio-inline">
+                        <input type="radio" id="inlineRadio3" value="option1" name="radioInline2" disabled>
+                        <label for="inlineRadio3"> 라디오2-1 </label>
+                    </div>
+                    <div class="radio radio-primary radio-inline">
+                        <input type="radio" id="inlineRadio4" value="option1" name="radioInline2" checked="checked" disabled>
+                        <label for="inlineRadio3"> 라디오2-2 </label>
+                    </div>
+				</div>
+				<div class="col-md-12 py-2">
+					<div class="btn-group" data-toggle="buttons">
+						<label class="btn btn-default active">
+							<input type="radio" name="options" id="option2" autocomplete="off" chacked>
+							<span>All</span>
+						</label>
+						<label class="btn btn-default">
+							<input type="radio" name="options" id="option1" autocomplete="off">
+							<span>Teaching Booklet</span>
+						</label>
+						<label class="btn btn-default">
+							<input type="radio" name="options" id="option2" autocomplete="off">
+							<span>Supplemental Booklet</span>
+						</label>
+						<label class="btn btn-default">
+							<input type="radio" name="options" id="option2" autocomplete="off">
+							<span>Material</span>
+						</label>
+					</div>
+				</div>
+				<div class="col-md-12 py-2">
+					<select class="form-control">
+						<option value="0" selected="" title="All">All</option>
+						<option value="1" title="EL Math">EL Math</option>
+						<option value="2" title="EL Play Math">EL Play Math</option>
+						<option value="3" title="EL Eng">EL Eng</option>
+						<option value="4" title="EL Kor">EL Kor</option>
+						<option value="5" title="EL Matematika">EL Matematika</option>
+						<option value="6" title="EL Eng Sparks">EL Eng Sparks</option>
+						<option value="7" title="NNP Kor">NNP Kor</option>
+						<option value="8" title="NNP Infant Kor">NNP Infant Kor</option>
+						<option value="9" title="NNP Mid. Society">NNP Mid. Society</option>
+						<option value="10" title="NNP WebPlus Mid. Kor">NNP WebPlus Mid. Kor</option>
+						<option value="11" title="NNP Thinking P. Math">NNP Thinking P. Math</option>
+						<option value="12" title="NNP Infant Math">NNP Infant Math</option>
+						<option value="13" title="NNP Eng">NNP Eng</option>
+						<option value="14" title="Super Talk Talk">Super Talk Talk</option>
+						<option value="15" title="NNP Chinese Char.">NNP Chinese Char.</option>
+						<option value="16" title="NNP Japanese">NNP Japanese</option>
+						<option value="17" title="NNP Social Study">NNP Social Study</option>
+						<option value="18" title="NNP Science">NNP Science</option>
+						<option value="19" title="CH Chinese">CH Chinese</option>
+						<option value="20" title="Inopi Math">Inopi Math</option>
+						<option value="21" title="NNP Clinic Kor">NNP Clinic Kor</option>
+						<option value="22" title="NNP Baby">NNP Baby</option>
+						<option value="23" title="Inopi">Inopi</option>
+						<option value="24" title="EL Eng Blended">EL Eng Blended</option>
+						<option value="25" title="Inopi Math Online">Inopi Math Online</option>
+						<option value="26" title="EL Math Online">EL Math Online</option>
+						<option value="27" title="EL HappyTalk">EL HappyTalk</option>
+						<option value="28" title="EL Chinese.J">EL Chinese.J</option>
+						<option value="29" title="EL Matematika Online">EL Matematika Online</option>
+					</select>
+					<select class="form-control" title="Daekyo Malaysia" disabled="disabled" >
+						<option value="0" title="All">All</option>
+						<option value="1" selected="" title="Daekyo Malaysia">Daekyo Malaysia</option>
+					</select>
+				</div>
+			</form>
+		</div>
+	</div>
+	<h1 class="h1-tit">레이어팝업</h1>
+	<div class="bx-cont">
+		<div class="bx-btn al-left">
+			<a href="#" class="layer1 btn-layer btn">회원검색</a>
+			<a href="#" class="layer2 btn-layer btn">교사검색</a>
+			<a href="#" class="layer3 btn-layer btn">회원등록</a>
+			<!-- <a href="#" class="layer4 btn-layer btn">회원상세</a> -->
+			<a href="#" class="layer5 btn-layer btn">정보알림</a>
+			<a href="#" class="layer6 btn-layer btn">확인알림</a>
+		</div>
+	</div>
+
+	<div class="bx-cont">
+		<div class="x-scroll">
+			<table class="tb-col sort-in">
+				<thead>
+					<tr>
+						<th scope="col"><a href="#" class="sorting desc">No</a></th>
+						<th scope="col"><a href="#" class="sorting asc">MemberID</a></th>
+						<th scope="col"><a href="#" class="sorting">Name</a></th>
+						<th scope="col"><a href="#" class="sorting">Attendance Code</a></th>
+						<th scope="col"><a href="#" class="sorting">Enrollment Date</a></th>
+						<th scope="col"><a href="#" class="sorting">Manager</a></th>
+						<th scope="col"><a href="#" class="sorting">Study status</a></th>
+						<th scope="col"><a href="#" class="sorting">Subject</a></th>
+						<th scope="col"><a href="#" class="sorting">Subject status</a></th>
+						<th scope="col"><a href="#" class="sorting">Grade</a></th>
+						<th scope="col"><a href="#" class="sorting">Study Day</a></th>
+						<th scope="col"><a href="#" class="sorting">Contact Number</a></th>
+						<th scope="col"><a href="#" class="sorting">Enroll</a></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td colspan="13" class="tb-no-data">
+							No data to display.
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<div class="bx-cont">
+		<div class="tb-dimm" style="display:block"><span class="txts">Fetching data...</span></div>
+		<div class="x-scroll">
+			<table class="tb-col sort-in">
+				<thead>
+					<tr>
+						<th scope="col"><a href="#" class="sorting desc">No</a></th>
+						<th scope="col"><a href="#" class="sorting asc">MemberID</a></th>
+						<th scope="col"><a href="#" class="sorting">Name</a></th>
+						<th scope="col"><a href="#" class="sorting">Attendance Code</a></th>
+						<th scope="col"><a href="#" class="sorting">Enrollment Date</a></th>
+						<th scope="col"><a href="#" class="sorting">Manager</a></th>
+						<th scope="col"><a href="#" class="sorting">Study status</a></th>
+						<th scope="col"><a href="#" class="sorting">Subject</a></th>
+						<th scope="col"><a href="#" class="sorting">Subject status</a></th>
+						<th scope="col"><a href="#" class="sorting">Grade</a></th>
+						<th scope="col"><a href="#" class="sorting">Study Day</a></th>
+						<th scope="col"><a href="#" class="sorting">Contact Number</a></th>
+						<th scope="col"><a href="#" class="sorting">Enroll</a></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td><a href="#">G00204614</a></td>
+						<td><a href="#">Shekinah Francesca Louis</a></td>
+						<td></td>
+						<td>04/02/2015</td>
+						<td></td>
+						<td>Lead</td>
+						<td></td>
+						<td></td>
+						<td>Primary Standard 1</td>
+						<td></td>
+						<td>1234</td>
+						<td>
+							<a href="#" class="ico-enroll">Enroll</a>
+						</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td><a href="#">G00204614</a></td>
+						<td><a href="#">Brandon Tan</a></td>
+						<td>0001</td>
+						<td>04/02/2015</td>
+						<td>Bukit Damansara</td>
+						<td>study</td>
+						<td>EL Math Online</td>
+						<td>Drop</td>
+						<td>Secondary Form 1</td>
+						<td>Tue Fri</td>
+						<td>0111111111</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td><a href="#">G00204614</a></td>
+						<td><a href="#">Brandon Tan</a></td>
+						<td>0001</td>
+						<td>04/02/2015</td>
+						<td>Bukit Damansara</td>
+						<td>study</td>
+						<td>EL Math Online</td>
+						<td>Drop</td>
+						<td>Secondary Form 1</td>
+						<td>Tue Fri</td>
+						<td>0111111111</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td><a href="#">G00204614</a></td>
+						<td><a href="#">Brandon Tan</a></td>
+						<td>0001</td>
+						<td>04/02/2015</td>
+						<td>Bukit Damansara</td>
+						<td>study</td>
+						<td>EL Math Online</td>
+						<td>Drop</td>
+						<td>Secondary Form 1</td>
+						<td>Tue Fri</td>
+						<td>0111111111</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td><a href="#">G00204614</a></td>
+						<td><a href="#">Brandon Tan</a></td>
+						<td>0001</td>
+						<td>04/02/2015</td>
+						<td>Bukit Damansara</td>
+						<td>study</td>
+						<td>EL Math Online</td>
+						<td>Drop</td>
+						<td>Secondary Form 1</td>
+						<td>Tue Fri</td>
+						<td>0111111111</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td><a href="#">G00204614</a></td>
+						<td><a href="#">Brandon Tan</a></td>
+						<td>0001</td>
+						<td>04/02/2015</td>
+						<td>Bukit Damansara</td>
+						<td>study</td>
+						<td>EL Math Online</td>
+						<td>Drop</td>
+						<td>Secondary Form 1</td>
+						<td>Tue Fri</td>
+						<td>0111111111</td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<div class="bx-cont">
+		<!-- dev : 스크롤
+			- 가로 [ x-scroll ]
+			- 세로 [ y-scroll ]
+			- 가로세로 [ xy-scroll ]
+		-->
+		<script type="text/javascript">
+			$(function() {
+				$("#tabs").tabs();
+			});
+		</script>
+		<div id="tabs" class="bx-tabs btn-in">
+			<ul>
+				<li><a href="#tabs-1">Make Orders</a></li>
+				<li><a href="#tabs-2">Import</a></li>
+			</ul>
+			<div class="bx-btn al-right">
+				<a href="#" class="layer3 btn-layer btn btn-blue">Place orders</a>
+				<a href="#" class="layer3 btn-layer btn btn-gray">Import Template</a>
+				<a href="#" class="layer3 btn-layer btn btn-gray">Product List</a>
+			</div>
+			<div id="tabs-1" class="bx-tab-cont">
+				<div class="x-scroll">
+					<table class="tb-col">
+						<thead>
+							<tr>
+								<th scope="col">Instructor</th>
+								<th scope="col">Subject</th>
+								<th scope="col">Level</th>
+								<th scope="col">(From)Set</th>
+								<th scope="col">(To)Set</th>
+								<th scope="col">Quantity</th>
+								<th scope="col"></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<span class="select">
+										<select title="Instructor">
+											<option value="0" title="All">-</option>
+											<option value="1" selected="" title="CN00000037A">CN00000037A</option>
+											<option value="1" title="CN00000037B">CN00000037B</option>
+										</select>
+									</span> 
+								</td>
+								<td>
+									<span class="select">
+										<select title="Subject">
+											<option value="1" selected="" title="EL Math">EL Math</option>
+											<option value="1" title="EL English">EL English</option>
+										</select>
+									</span> 
+								</td>
+								<td>
+									<span class="select">
+										<select title="Level">
+											<option value="0" title="All">-</option>
+											<option value="1" selected="" title="">CN00000037A</option>
+											<option value="1" title="">CN00000037B</option>
+										</select>
+									</span> 
+								</td>
+								<td>
+									<span class="select">
+										<select title="(From)Set">
+											<option value="0" title="All">-</option>
+											<option value="1" selected="" title="">10</option>
+											<option value="1" title="">11</option>
+										</select>
+									</span> 
+								</td>
+								<td>
+									<span class="select">
+										<select title="(To)Set">
+											<option value="0" title="All">-</option>
+											<option value="1" selected="" title="">10</option>
+											<option value="1" title="">11</option>
+										</select>
+									</span> 
+								</td>
+								<td>
+									<span class="has-clear"><input type="text" name="" value="Number only"><button type="button" class="form-clear">reset</button></span>
+								</td>
+								<td><a href="#" class="btn-list-del">Delete</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="bx-btn">
+					<a href="#" class="btn-list-open">Add</a>
+				</div>
+			</div>
+			<div id="tabs-2" class="bx-tab-cont">
+				<div class="bx-cont">
+					Select order type to make orders
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="bx-cont">
+		<div class="x-scroll">
+			<!-- 
+				dev : 테이블
+				- default : [ tb-col ]
+				- 정렬 추가 : [ sort-in ]
+			-->
+			<table class="tb-col sort-in">
+				<thead>
+					<tr>
+						<!-- 
+							dev : sort class명
+							- default : [ sorting ]
+							- 오름차순 : [ sorting asc]
+							- 내림차순 : [ sorting desc]
+						-->
+						<th scope="col"><a href="#" class="sorting desc">No</a></th>
+						<th scope="col"><a href="#" class="sorting asc">MemberID</a></th>
+						<th scope="col"><a href="#" class="sorting">Name</a></th>
+						<th scope="col"><a href="#" class="sorting">Attendance Code</a></th>
+						<th scope="col"><a href="#" class="sorting">Enrollment Date</a></th>
+						<th scope="col"><a href="#" class="sorting">Manager</a></th>
+						<th scope="col"><a href="#" class="sorting">Study status</a></th>
+						<th scope="col"><a href="#" class="sorting">Subject</a></th>
+						<th scope="col"><a href="#" class="sorting">Subject status</a></th>
+						<th scope="col"><a href="#" class="sorting">Grade</a></th>
+						<th scope="col"><a href="#" class="sorting">Study Day</a></th>
+						<th scope="col"><a href="#" class="sorting">Contact Number</a></th>
+						<th scope="col"><a href="#" class="sorting">Enroll</a></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td><a href="#">G00204614</a></td>
+						<td><a href="#">Shekinah Francesca Louis</a></td>
+						<td></td>
+						<td>04/02/2015</td>
+						<td></td>
+						<td>Lead</td>
+						<td></td>
+						<td></td>
+						<td>Primary Standard 1</td>
+						<td></td>
+						<td>1234</td>
+						<td>
+							<a href="#" class="ico-enroll">Enroll</a>
+						</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td><a href="#">G00204614</a></td>
+						<td><a href="#">Brandon Tan</a></td>
+						<td>0001</td>
+						<td>04/02/2015</td>
+						<td>Bukit Damansara</td>
+						<td>study</td>
+						<td>EL Math Online</td>
+						<td>Drop</td>
+						<td>Secondary Form 1</td>
+						<td>Tue Fri</td>
+						<td>0111111111</td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="pagination">
+			<a href="javascript:;" class="btn-forward"><span>first</span></a>
+			<a href="javascript:;" class="btn-prevpage"><span>prev page</span></a>
+			<span>
+				<a href="javascript:;" class="on">1</a>
+				<a href="javascript:;">2</a>
+				<a href="javascript:;">3</a>
+				<a href="javascript:;">4</a>
+				<a href="javascript:;">5</a>
+				<a href="javascript:;">6</a>
+				<a href="javascript:;">7</a>
+				<a href="javascript:;">8</a>
+				<a href="javascript:;">9</a>
+				<a href="javascript:;">10</a>
+			</span>
+			<a href="javascript:;" class="btn-nextpage"><span>next page</span></a>
+			<a href="javascript:;" class="btn-backward"><span>last page</span></a>
+		</div>
+	</div>
+</div>
+
+<div class="dimm"></div>
+<div id="layer1" class="layer layer-s">
+	<div class="layer-tit">
+		<h3 class="ico-per">Search Member</h3>
+		<a href="#" class="btn-layer-close"><span>닫기</span></a>
+	</div>
+	<div class="layer-con">
+		<div class="bx-cont">
+			<form id="frm1" name="frm" action="">
+				<div class="bx-form bx-cols1">
+					<span class="form-th"><label for="inp1-1">Member ID</label></span>
+					<span class="form-td"><input type="text" id="inp1-1"></span>
+				</div>
+				<div class="bx-form bx-cols1">
+					<span class="form-th"><label for="inp1-2">Name</label></span>
+					<span class="form-td"><input type="text" id="inp1-2"></span>
+				</div>
+				<div class="bx-btn">
+					<a href="#" class="btn">조회</a>
+				</div>
+			</form>
+		</div>
+		<div class="bx-cont">
+			<table class="tb-col">
+				<colgroup>
+					<col style="width:30%">
+					<col style="width:40%">
+					<col style="width:30%">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">Member ID</th>
+						<th scope="col">Name</th>
+						<th scope="col">Birthday</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><a href="#">G00204614</a></td>
+						<td><a href="#">Brandon Tan</a></td>
+						<td><a href="#">02/03/2013</a></td>
+					</tr>
+					<tr>
+						<td><a href="#">K30001494</a></td>
+						<td><a href="#">chulhee</a></td>
+						<td><a href="#">22/09/2015</a></td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="bx-btn">
+				<a href="#" class="btn">계속</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="layer2" class="layer layer-s">
+	<div class="layer-tit">
+		<h3 class="ico-per">Search Manager</h3>
+		<a href="#" class="btn-layer-close"><span>닫기</span></a>
+	</div>
+	<div class="layer-con">
+		<div class="bx-cont">
+			<form id="frm1" name="frm" action="">
+				<div class="bx-form bx-cols1">
+					<span class="form-th"><label for="inp2-1">Manager ID</label></span>
+					<span class="form-td"><input type="text" id="inp2-1"></span>
+				</div>
+				<div class="bx-form bx-cols1">
+					<span class="form-th"><label for="inp2-2">Name</label></span>
+					<span class="form-td"><input type="text" id="inp2-2"></span>
+				</div>
+				<div class="bx-btn">
+					<a href="#" class="btn">조회</a>
+				</div>
+			</form>
+		</div>
+		<div class="bx-cont">
+			<table class="tb-col">
+				<colgroup>
+					<col style="width:30%">
+					<col style="width:70%">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">Member ID</th>
+						<th scope="col">Name</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><a href="#">K30001134</a></td>
+						<td><a href="#">hwkim hwkim</a></td>
+					</tr>
+					<tr>
+						<td><a href="#">K30001507</a></td>
+						<td><a href="#">nadia kim</a></td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="bx-btn">
+				<a href="#" class="btn">계속</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="layer3" class="layer layer-l">
+	<div class="layer-tit">
+		<h3 class="ico-member">Add Student</h3>
+		<a href="#" class="btn-layer-close"><span>닫기</span></a>
+	</div>
+	<div class="layer-con">
+		<div class="tab-content" id="formDefault">
+			<h4 class="h4-tit">회원정보입력</h4>
+			<div class="bx-form bx-cols2">
+				<span class="form-th"><label for="inp3-1">* First Name</label></span>
+				<span class="form-td"><input type="text" id="inp3-1"></span>
+				<span class="form-th"><label for="inp3-2">* Last Name</label></span>
+				<span class="form-td"><input type="text" id="inp3-2"></span>
+			</div>
+			<div class="bx-form bx-cols2">
+				<span class="form-th"><label for="inp3-3">Middle Name</label></span>
+				<span class="form-td"><input type="text" id="inp3-3"></span>
+				<span class="form-th"><label for="inp3-4">* Grade</label></span>
+				<div class="form-td">
+					<span class="select">
+						<select id="inp3-4">
+							<option value="1" title="Age 0~1">Age 0~1</option>
+							<option value="2" title="Age 1~2">Age 1~2</option>
+							<option value="3" title="Age 2~3">Age 2~3</option>
+							<option value="4" title="Age 3~4">Age 3~4</option>
+							<option value="5" title="Age 4~5">Age 4~5</option>
+							<option value="6" title="Age 5~6">Age 5~6</option>
+							<option value="7" title="Primary Standard 1">Primary Standard 1</option>
+							<option value="8" title="Primary Standard 2">Primary Standard 2</option>
+							<option value="9" title="Primary Standard 3">Primary Standard 3</option>
+							<option value="10" title="Primary Standard 4">Primary Standard 4</option>
+							<option value="11" title="Primary Standard 5">Primary Standard 5</option>
+							<option value="12" title="Primary Standard 6">Primary Standard 6</option>
+							<option value="13" title="Secondary Form 1">Secondary Form 1</option>
+							<option value="14" title="Secondary Form 2">Secondary Form 2</option>
+							<option value="15" title="Secondary Form 3">Secondary Form 3</option>
+							<option value="16" title="Secondary Form 4">Secondary Form 4</option>
+							<option value="17" title="Secondary Form 5">Secondary Form 5</option>
+							<option value="18" title="Secondary Form 6">Secondary Form 6</option>
+						</select>
+					</span>
+				</div>
+			</div>
+			<div class="bx-btn">
+				<div class="right">
+					<a href="#" class="btn btn-gray nextBtn">Next</a>
+					<a href="#" class="btn">Save</a>
+				</div>
+			</div>
+		</div>
+		<div class="tab-content" id="formDetail">
+			<h4 class="h4-tit">추가정보입력</h4>
+			<div class="bx-form bx-cols3">
+				<span class="form-th">Phone</span>
+				<span class="form-td"><input type="text" id=""></span>
+				<span class="form-th">Parent Contact</span>
+				<span class="form-td"><input type="text" id=""></span>
+				<span class="form-th">Parent E-mail</span>
+				<span class="form-td btn-in certify"><input type="text" id=""><span class="ico-certify">인증</span><button type="button" class="btn">Request</button></span>
+			</div>
+			<div class="bx-form bx-cols3">
+				<span class="form-th">Gender</span>
+				<span class="form-td">
+					<input type="radio" id="radio4-1" name="radio4" checked="checked">
+					<label for="radio4-1"><span class="icon"></span>Female</label>
+					<input type="radio" id="radio4-2" name="radio4">
+					<label for="radio4-2"><span class="icon"></span>Male</label>
+				</span>
+				<span class="form-th">School</span>
+				<span class="form-td"><input type="text" id=""></span>
+				<span class="form-th">Messenger</span>
+				<span class="form-td btn-in certify"><input type="text" id=""><span class="ico-certify">인증</span><button type="button" class="btn">Request</button></span>
+			</div>
+			<div class="bx-form bx-cols3">
+				<span class="form-th"><label for="inp4-4">Notice</label></span>
+				<span class="form-td">
+					<span class="select">
+						<select id="inp4-4">
+							<option value="1">Email</option>
+							<option value="2">Messenger</option>
+							<option value="3">Prefer not to receive</option>
+						</select>
+					</span>
+				</span>
+				<span class="form-th">Date of Birth</span>
+				<span class="form-td"><input type="text" id=""></span>
+				<span class="form-th">Attendance Code</span>
+				<span class="form-td btn-in"><input type="text" id=""><button type="button" class="btn">Check</button></span>
+			</div>
+			<div class="bx-form bx-cols3">
+				<span class="form-th"><label for="inp4-5">* Grade Promotion Month</label></span>
+				<span class="form-td">
+					<span class="select">
+						<select id="inp4-5">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+						</select>
+					</span>
+				</span>
+				<span class="form-th">Remarks</span>
+				<span class="form-td"><input type="text" id=""></span>
+				<span class="form-th">개인정보 활용 동의서 수집 여부</span>
+				<span class="form-td">
+					<input type="radio" id="radio5-1" name="radio5" checked="checked">
+					<label for="radio5-1"><span class="icon"></span>YES</label>
+					<input type="radio" id="radio5-2" name="radio5">
+					<label for="radio5-2"><span class="icon"></span>NO</label>
+				</span>
+			</div>
+			<div class="bx-form bx-cols3">
+				<span class="form-th">Address</span>
+				<span class="form-td colspan3"><input type="text" id=""></span>
+				<span class="form-th">Zip Code</span>
+				<span class="form-td"><input type="text" id=""></span>
+			</div>
+			<div class="bx-btn">
+				<div class="right">
+					<a href="#" class="btn btn-gray backBtn">Back</a>
+					<a href="#" class="btn">Save</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- <div id="layer4" class="layer layer-l">
+	<div class="layer-tit">
+		<h3 class="ico-member">SHekinah Francesca Louis (K30000718)</h3>
+		<a href="#" class="btn-layer-close"><span>닫기</span></a>
+	</div>
+	<div class="layer-con">
+		<div class="layer-toggle">
+			<ul>
+				<li class="toggle-box">
+					<a href="#" class="toggle-link">Basic Info</a>
+					<div class="tab-content" id="formDefalt">
+						<div class="tab-cont-tit">
+							<h3>Basic Info</h3>
+						</div>
+						<div class="bx-form half">
+							<ul>
+								<li><label for="inp4-1">* First Name</label><input type="text" id="inp4-1"></li>
+								<li><label for="inp4-2">* Last Name</label><input type="text" id="inp4-2"></li>
+								<li><label for="inp4-3">Middle Name</label><input type="text" id="inp4-3"></li>
+								<li>
+									<label for="inp3-4">* Grade</label>
+									<span class="select">
+										<select id="inp3-4">
+											<option value="1" title="Age 0~1">Age 0~1</option>
+											<option value="2" title="Age 1~2">Age 1~2</option>
+											<option value="3" title="Age 2~3">Age 2~3</option>
+											<option value="4" title="Age 3~4">Age 3~4</option>
+											<option value="5" title="Age 4~5">Age 4~5</option>
+											<option value="6" title="Age 5~6">Age 5~6</option>
+											<option value="7" title="Primary Standard 1">Primary Standard 1</option>
+											<option value="8" title="Primary Standard 2">Primary Standard 2</option>
+											<option value="9" title="Primary Standard 3">Primary Standard 3</option>
+											<option value="10" title="Primary Standard 4">Primary Standard 4</option>
+											<option value="11" title="Primary Standard 5">Primary Standard 5</option>
+											<option value="12" title="Primary Standard 6">Primary Standard 6</option>
+											<option value="13" title="Secondary Form 1">Secondary Form 1</option>
+											<option value="14" title="Secondary Form 2">Secondary Form 2</option>
+											<option value="15" title="Secondary Form 3">Secondary Form 3</option>
+											<option value="16" title="Secondary Form 4">Secondary Form 4</option>
+											<option value="17" title="Secondary Form 5">Secondary Form 5</option>
+											<option value="18" title="Secondary Form 6">Secondary Form 6</option>
+										</select>
+									</span>
+								</li>
+							</ul>
+						</div>
+						<div class="bx-btn al-right">
+							<a href="#" class="btn">검색</a>
+						</div>
+					</div>
+				</li>
+				<li class="toggle-box">
+					<a href="#" class="toggle-link">상세정보</a>
+					<div class="tab-content" id="formDetail">
+						<div class="tab-cont-tit">
+							<h3>상세 정보</h3>
+						</div>
+						<div class="bx-form half">
+							
+						</div>
+						<div class="bx-btn al-right">
+							<a href="#" class="btn">검색</a>
+						</div>
+					</div>
+				</li>
+			</ul>		
+		</div>
+	</div>
+</div> -->
+
+<div id="layer5" class="layer layer-s">
+	<div class="layer-tit">
+		<h3 class="ico-info">Info</h3>
+	</div>
+	<div class="layer-con">
+		<div class="bx-cont">
+			<div class="bx-msg">
+				Page Expired - Key&Manager<br>
+				The page has expired. Click OK to continue.
+			</div>
+			<div class="bx-btn">
+				<a href="#" class="btn btn-blue btn-layer-close">OK</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="layer6" class="layer layer-s">
+	<div class="layer-tit">
+		<h3 class="ico-info">Info</h3>
+		<a href="#" class="btn-layer-close"><span>닫기</span></a>
+	</div>
+	<div class="layer-con">
+		<div class="bx-cont">
+			<div class="bx-msg">
+				예약 코멘트가 없습니다.<br>등록하시겠습니까?
+			</div>
+			<div class="bx-btn">
+				<a href="#" class="btn">OK</a>
+				<a href="#" class="btn btn-gray btn-layer-close">Cancel</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

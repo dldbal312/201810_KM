@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<link rel="SHORTCUT ICON" href="/images/favicon.ico">
+<title>Key&amp;Manager ver.2</title>
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/fontawesome-all.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" type="text/css" href="/css/custom.css">
+<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+<script src="/js/vendors/jquery-ui.min.js"></script>
+<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+<script src="/js/vendors/moment.js"></script>
+<script src="/js/vendors/bootstrap.min.js"></script>
+<script src="/js/vendors/bootstrap-datetimepicker.min.js"></script>
+</head>
+<body class="keypad-wrap">
+<div class="container">
+	<div class="keypad-inner">
+		<h1 class="logo"><a href="#"><img src="/images/logo-keypad.png" alt="Eye level, I'am the key"></a></h1>
+		<div class="keypad-input">
+			<input type="tel" name="attendanceCode" data-input='attCode' id="attCode1" maxlength="1" readonly>
+			<input type="tel" name="attendanceCode" data-input='attCode' id="attCode2" maxlength="1" readonly>
+			<input type="tel" name="attendanceCode" data-input='attCode' id="attCode3" maxlength="1" readonly>
+			<input type="tel" name="attendanceCode" data-input='attCode' id="attCode4" maxlength="1" readonly>
+		</div>
+		<p class="decs">Enter Your Attendance Number.</p>
+		<div class="keyboard" data-modules="numberKeyboard">
+			<div class="keyboard-row"> 
+				<button data-role="button" class="key">1</button>
+				<button data-role="button" class="key">2</button>
+				<button data-role="button" class="key">3</button>
+			</div> 
+			<div class="keyboard-row"> 
+				<button data-role="button" class="key">4</button>
+				<button data-role="button" class="key">5</button>
+				<button data-role="button" class="key">6</button>
+			</div> 
+			<div class="keyboard-row"> 
+				<button data-role="button" class="key">7</button>
+				<button data-role="button" class="key">8</button>
+				<button data-role="button" class="key">9</button>
+			</div> 
+			<div class="keyboard-row"> 
+				<button data-role="button" class="key clear">←</button> 
+				<button data-role="button" class="key">0</button>
+				<button data-role="button" class="key clear-all">CLEAR</button>
+			</div>
+			<div class="keypad-btn">
+				<button type="button" data-bool="true" class="btn type1" id="checkIn">IN</button>
+				<button type="button" data-bool="false" class="btn type2" id="checkOut">OUT</button>
+			</div>
+		</div>
+		<div class="date-times">
+			<p>2018. 12. 31/12:12 PM</p>
+		</div>
+	</div>
+	<footer>
+		<span class="ft-logo">KEY &amp; MANAGER</span>
+		<p class="ft-copy">Copyright &copy; 2018 Daekyo Co., Ltd All rights reserved. For more information, contact <a href="mailto:myeyelevel@myeyelevel.com">myeyelevel@myeyelevel.com</a></p>
+		<div class="ft-site">
+			<dl>
+				<dt><a href="#class">LINKS</a></dt>
+				<dd>
+					<ul>
+						<li><a href="https://sites.google.com/a/myeyelevel.com/itisthekey/" target="_blank">User guide</a></li>
+						<li><a href="http://www.myeyelevel.com/Global/English/" target="_blank">Eyelevel Site</a></li>
+						<li><a href="http://www.iamthekey.com/" target="_blank">Brand Site</a></li>
+						<li><a href="http://eng.daekyo.com/En/default.aspx" target="_blank">Corporate Site</a></li>
+						<li><a href="http://elu.myeyelevel.com" target="_blank">Eye Level University</a></li>
+						<li><a href="http://email.myeyelevel.com" target="_blank">Email</a></li>
+					</ul>
+				</dd>
+			</dl>
+		</div>
+	</footer>
+</div>
+<div class="modal fade keypad-layer" id="info" tabindex="-1" role="dialog" aria-labelledby="myModalLabel5">
+	<div class="modal-dialog modal-m">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title" id="myModalLabel5">Hi, Ken Song</h4>
+			</div>
+			<div class="modal-body">
+				<ul class="user-schedule">
+					<li>EL Math<span class="time">13:00</span></li>
+					<li>EL English<span class="time">15:00</span></li>
+				</ul>
+				<div class="time-in">
+					<dl>
+						<dt>Time in</dt>
+						<dd>31-12-2018 / 12:25 pm</dd>
+						<!-- 180725_수정 [타임아웃 추가] -->
+						<dt class="time-out">Time out</dt>
+						<dd>31-12-2018 / 12:25 pm</dd>
+						<!--// 180725_수정 [타임아웃 추가] -->
+					</dl>
+				</div>
+				<p class="decs">Attendance email/SNS message has been sent</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-info" id="test3" data-dismiss="modal">OK</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="confirm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel6">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel6">INFO</h4>
+			</div>
+			<div class="modal-body">
+				<p>Are you <span class="tx-blue">Ken Song</span>?</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary" id="test1">Yes</button>
+				<button type="button" class="btn btn-info" data-dismiss="modal" id="test2">No</button>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+
+	var keypad = (function(){
+		var keypadInput = $('[data-input="attCode"]');
+		var keypadElems = $('[data-modules="numberKeyboard"]');
+		var ball = $('.ui-keypad-action .keypad-ani');
+		var btns = $('.keypad-btn .btn');
+		var maxlength = 4;
+		var keyNumber = [];
+		return {
+
+			/**
+			 * 초기화
+			 */
+			init : function(){
+				var self = this;
+				self.bindEvent()
+			},
+
+			/**
+			 * 이벤트 바인딩
+			 */
+			bindEvent : function(){
+				var self = this;
+				keypadElems.on('click', 'button.key', function(e){
+					var $this = $(this),
+						num = $this.text();
+
+					if ($this.hasClass('clear')){
+						self.clearBackSpace();
+					}else if($this.hasClass('clear-all')){
+						self.clearInput();
+					}else{
+						self.setNumbers(num)
+					}
+				});
+
+				// 서브밋 버튼 클릭
+				btns.on('click', function(){
+					var $this = $(this);
+					if ( $this.hasClass('active') ){
+						$('#confirm').modal('show')
+					}
+					return false;
+				})
+			},
+
+			/**
+			 * 키코드 체크
+			 * @param key 입력된 키값
+			 */
+			// checkKeyCode : function(key){
+			// 	var self = this,
+			// 		number = null;
+			// 	if(key >= 96 && key <= 105) {
+			// 		number = key - 96;
+			// 	}else if(key >= 48 && key <= 57) {
+			// 		number = key - 48;
+			// 	}else{
+			// 		return false;
+			// 	}
+			// 	self.setNumbers(number);
+			// },
+
+			/**
+			 * 이벤트 바인딩
+			 * @param num 입력된 숫자 
+			 */
+			setNumbers : function(num){
+				var self = this,
+					i,
+					checkInput = self.checkSetInput(num);
+					self.activeBtns();
+			},
+
+			/**
+			 * 인풋 박스에 입력된 숫자 삽입.
+			 * @param num 입력된 숫자 
+			 */
+			checkSetInput : function(num){
+				var val = [];
+				keypadInput.each(function(n){
+					var $this = $(this);
+					if ($this.val() === '' && num !== null){
+						$this.val(num);
+						val[n] = $this.val();
+						return false;
+					}
+					val[n] = $this.val();
+				});
+				keyNumber = val;
+				return val
+			},
+
+			/**
+			 * 백스페이스, 한칸씩 삭제
+			 */
+			clearBackSpace : function(){
+				var self = this,
+					i;
+					
+				for (i = keypadInput.length -1 ; i >= 0 ; i-=1 ){
+					// console.log(keypadInput.length)
+					if(keypadInput.eq(i).val() !== ''){
+						keypadInput.eq(i).val('');
+						keyNumber.length = i
+						break;
+					}
+				}
+				self.activeBtns();
+			},
+
+			/**
+			 * clear All, 입력된 숫자 전체 클리어.
+			 */
+			clearInput : function(){
+				var self = this;
+				var val = ''
+				keypadInput.val(val);
+				keyNumber = [];
+				self.activeBtns();
+			},
+
+			/**
+			 * 입력된 숫자 체크하여 In, Out 버튼 활성화/비활성화 
+			 */
+			activeBtns : function(){
+				if ( keyNumber.length == 4){
+					btns.addClass('active')
+				}else{
+					btns.removeClass('active')
+				}
+			}
+			
+		}
+	});
+	var keypadManager = new keypad();
+	keypadManager.init();
+
+
+	// 레이어팝업 확인 용
+	$('#test1').on('click', function(){
+		$('#confirm').modal('hide');
+		$('#info').modal('show');
+	});
+	$('#test3').on('click', function(){
+		$('#info').modal('hide');
+		keypadManager.clearInput()
+	})
+</script>
+</body>
+</html>

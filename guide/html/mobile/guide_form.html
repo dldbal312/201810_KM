@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Pragma" content="no-cache">
+	<title>K&amp;M2 입력서식 가이드</title>
+	<link rel="SHORTCUT ICON" href="/images/favicon.ico"/>
+	<link rel="SHORTCUT ICON" href="/images/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="/guide/base.css">
+	<link rel="stylesheet" type="text/css" href="/guide/shCoreDefault.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap-datetimepicker.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendors/fontawesome-all.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendors/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" type="text/css" href="/css/custom-mobile.css">
+	<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+	<script src="/js/vendors/jquery-ui.min.js"></script>
+	<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+	<script src="/js/vendors/moment.js"></script>
+	<script src="/js/vendors/bootstrap.min.js"></script>
+	<script src="/js/vendors/bootstrap-datetimepicker.min.js"></script>
+	<script src="/guide/shCore.js"></script>
+	<script src="/guide/shBrushXml.js"></script>
+	<script src="/guide/shBrushCss.js"></script>
+	<script src="/guide/shBrushJScript.js"></script>
+	<script type="text/javascript">SyntaxHighlighter.all();</script>	
+</head>
+<body>
+<div id="wrap" class="coding_guide">
+	<h1 class="h1_guide">서식 가이드</h1>
+	<h2 class="h2_guide">input type : text, password, tel ...</h2>
+	<div class="dscBox">
+		<form class="form-inline">
+			<div class="col-md-12 py-2">
+				<div class="form-group has-feedback">
+					<input type="text" class="form-control input-sm clearable" placeholder="default">
+				</div>
+				<div class="form-group has-feedback">
+					<input type="text" class="form-control input-sm clearable" placeholder="focus">
+				</div>
+				<div class="form-group has-feedback">
+					<input type="text" class="form-control input-sm clearable" placeholder="readonly" readonly="readonly">
+				</div>
+				<div class="form-group has-feedback">
+					<input type="text" class="form-control input-sm clearable" placeholder="disabled" disabled>
+				</div>
+				<div class="form-group search">
+					<input type="text" class="form-control input-sm clearable" placeholder="default">
+					<button type="button" class="search"><i class="fas fa-search"></i></button>
+				</div>
+			</div>
+		</form>
+<pre class="brush: xml;">
+<div class="form-group has-feedback">
+	<input type="text" class="form-control input-sm clearable" placeholder="default">
+</div>
+<div class="form-group has-feedback">
+	<input type="text" class="form-control input-sm clearable" placeholder="focus">
+</div>
+<div class="form-group has-feedback">
+	<input type="text" class="form-control input-sm clearable" placeholder="readonly" readonly="readonly">
+</div>
+<div class="form-group has-feedback">
+	<input type="text" class="form-control input-sm clearable" placeholder="disabled" disabled>
+</div>
+<div class="form-group search">
+	<input type="text" class="form-control input-sm clearable" placeholder="default">
+	<button type="button" class="search"><i class="fas fa-search"></i></button>
+</div>
+</pre>
+	</div>
+	
+	<h2 class="h2_guide">datepicker</h2>
+	<div class="dscBox">
+		<form class="form-inline">
+			<div class="col-md-12 py-2">
+				<div class="form-group">
+					<div class="input-group date">
+						<input type="text" class="form-control input-sm clearable" placeholder="dd/mm/yyyy" />
+						<span class="input-group-addon">
+							<i class="far fa-calendar-alt"></i>
+						</span>
+					</div>
+				</div>
+				<span class="date-period-divider">~</span>
+				<div class="form-group">
+					<div class="input-group date">
+						<input type="text" class="form-control input-sm clearable" placeholder="dd/mm/yyyy" />
+						<span class="input-group-addon">
+							<i class="far fa-calendar-alt"></i>
+						</span>
+					</div>
+				</div>
+			</div>
+		</form>
+<pre class="brush: xml;">
+<div class="form-group">
+	<div class="input-group date">
+		<input type="text" class="form-control input-sm clearable" placeholder="dd/mm/yyyy" />
+		<span class="input-group-addon">
+			<span class="calendar-icon"></span>
+		</span>
+	</div>
+</div>
+<span class="date-period-divider">~</span>
+<div class="form-group">
+	<div class="input-group date">
+		<input type="text" class="form-control input-sm clearable" placeholder="dd/mm/yyyy" />
+		<span class="input-group-addon">
+			<span class="calendar-icon"></span>
+		</span>
+	</div>
+</div>
+</pre>
+	</div>
+
+	<h2 class="h2_guide">checkbox</h2>
+	<div class="dscBox">
+		<form class="form-inline">
+			<div class="col-md-12 py-2">
+				<div class="checkbox checkbox-primary inline">
+					<input id="checkbox1" type="checkbox" checked="checked">
+					<label for="checkbox1">체크박스1</label>
+				</div>
+				<div class="checkbox checkbox-primary inline">
+					<input id="checkbox2" type="checkbox">
+					<label for="checkbox2">체크박스2</label>
+				</div>
+				<div class="checkbox checkbox-primary inline">
+					<input id="checkbox3" type="checkbox" disabled>
+					<label for="checkbox3">체크박스3</label>
+				</div>
+			</div>
+		</form>
+<pre class="brush: xml;">
+<div class="checkbox checkbox-primary inline">
+	<input id="checkbox1" type="checkbox" checked="checked">
+	<label for="checkbox1">체크박스1</label>
+</div>
+<div class="checkbox checkbox-primary inline">
+	<input id="checkbox2" type="checkbox">
+	<label for="checkbox2">체크박스2</label>
+</div>
+<div class="checkbox checkbox-primary inline">
+	<input id="checkbox3" type="checkbox" disabled>
+	<label for="checkbox3">체크박스3</label>
+</div>
+</pre>
+	</div>
+
+	<h2 class="h2_guide">radio</h2>
+	<div class="dscBox">
+		<form class="form-inline">
+			<div class="col-md-12 py-2">
+				<div class="radio radio-primary inline">
+					<input type="radio" id="inlineRadio1" value="option1" name="radioInline1" checked="checked">
+					<label for="inlineRadio1"> 라디오1-1 </label>
+				</div>
+				<div class="radio radio-primary inline">
+					<input type="radio" id="inlineRadio2" value="option1" name="radioInline1">
+					<label for="inlineRadio2"> 라디오1-2 </label>
+				</div>
+				<div class="radio radio-primary inline">
+					<input type="radio" id="inlineRadio3" value="option1" name="radioInline2" disabled>
+					<label for="inlineRadio3"> 라디오2-1 </label>
+				</div>
+				<div class="radio radio-primary inline">
+					<input type="radio" id="inlineRadio4" value="option1" name="radioInline2" checked="checked" disabled>
+					<label for="inlineRadio4"> 라디오2-2 </label>
+				</div>
+			</div>
+			<div class="col-md-12 py-2">
+				<div class="btn-group" data-toggle="buttons">
+					<label class="btn btn-default active">
+						<input type="radio" value="" name="item" checked="checked">
+						<span>All</span>
+					</label>
+					<label class="btn btn-default">
+						<input type="radio" value="" name="item">
+						<span>radio1</span>
+					</label>
+					<label class="btn btn-default">
+						<input type="radio" value="" name="item">
+						<span>radio2</span>
+					</label>
+					<label class="btn btn-default">
+						<input type="radio" value="" name="item">
+						<span>radio3</span>
+					</label>
+				</div>
+			</div>
+		</form>
+
+<pre class="brush: xml;">
+<!-- 기본 라디오 -->
+<div class="radio radio-primary inline">
+	<input type="radio" id="inlineRadio1" value="option1" name="radioInline1" checked="checked">
+	<label for="inlineRadio1"> 라디오1-1 </label>
+</div>
+<div class="radio radio-primary inline">
+	<input type="radio" id="inlineRadio2" value="option1" name="radioInline1">
+	<label for="inlineRadio2"> 라디오1-2 </label>
+</div>
+<div class="radio radio-primary inline">
+	<input type="radio" id="inlineRadio3" value="option1" name="radioInline2" disabled>
+	<label for="inlineRadio3"> 라디오2-1 </label>
+</div>
+<div class="radio radio-primary inline">
+	<input type="radio" id="inlineRadio4" value="option1" name="radioInline2" checked="checked" disabled>
+	<label for="inlineRadio4"> 라디오2-2 </label>
+</div>
+
+<!-- 버튼 형태 라디오 -->
+<div class="btn-group" data-toggle="buttons">
+	<label class="btn btn-default active">
+		<input type="radio" value="" name="item" checked="checked">
+		<span>All</span>
+	</label>
+	<label class="btn btn-default">
+		<input type="radio" value="" name="item">
+		<span>radio1</span>
+	</label>
+	<label class="btn btn-default">
+		<input type="radio" value="" name="item">
+		<span>radio2</span>
+	</label>
+	<label class="btn btn-default">
+		<input type="radio" value="" name="item">
+		<span>radio3</span>
+	</label>
+</div>
+</pre>
+	</div>
+
+	<h2 class="h2_guide">select</h2>
+	<div class="dscBox">
+		<form class="form-inline">
+			<div class="form-group">				
+				<select class="form-control input-sm">
+					<option value="0" selected="" title="All">All</option>
+					<option value="1" title="EL Math">EL Math</option>
+					<option value="2" title="EL Play Math">EL Play Math</option>
+					<option value="3" title="EL Eng">EL Eng</option>
+					<option value="4" title="EL Kor">EL Kor</option>
+					<option value="5" title="EL Matematika">EL Matematika</option>
+					<option value="6" title="EL Eng Sparks">EL Eng Sparks</option>
+					<option value="7" title="NNP Kor">NNP Kor</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<select class="form-control input-sm" disabled="disabled">
+					<option value="0" selected="" title="All">All</option>
+					<option value="1" title="EL Math">EL Math</option>
+				</select>
+			</div>
+		</form>
+<pre class="brush: xml;">
+<div class="form-group">				
+	<select class="form-control input-sm">
+		<option value="" selected=""></option>
+		<option value=""></option>
+	</select>
+</div>
+<div class="form-group">
+	<select class="form-control input-sm" disabled="disabled">
+		<option value=""></option>
+	</select>
+</div>
+</pre>
+	</div>
+
+	<h2 class="h2_guide">textarea</h2>
+	<div class="dscBox">
+		<textarea name="textarea" id="textarea" class="form-control">EL Math EL Math EL Math EL Math EL Math EL Math EL Math EL Math EL Math</textarea>
+<pre class="brush: xml;">
+<textarea name="textarea" id="" class="form-control"></textarea>
+</pre>
+	</div>
+
+	<h2 class="h2_guide">input + button</h2>
+	<div class="dscBox">
+		<span class="switch-check">
+			<input type="checkbox" id="check" >
+			<label for="check">
+				<span class="switch-inner">
+					<span class="active">Yes</span>
+					<span class="default">No</span>
+				</span>
+			</label>
+		</span>
+<pre class="brush: xml;">
+<span class="switch-check">
+	<input type="checkbox" id="check" >
+	<label for="check">
+		<span class="switch-inner">
+			<span class="active">Yes</span>
+			<span class="default">No</span>
+		</span>
+	</label>
+</span>
+</pre>
+	</div>
+
+	<h2 class="h2_guide">textarea</h2>
+	<div class="dscBox">
+		<textarea name="textarea" id="textarea" class="form-control">EL Math EL Math EL Math EL Math EL Math EL Math EL Math EL Math EL Math</textarea>
+<pre class="brush: xml;">
+<textarea name="textarea" id="" class="form-control"></textarea>
+</pre>
+	</div>
+
+	<h2 class="h2_guide">input + btn</h2>
+	<div class="dscBox">
+		<div class="input-group">
+			<input type="text" class="form-control" placeholder="Recipient's username" aria-describedby="basic-addon2">
+			<span class="btns">
+				<a href="#" class="btn btn-success">Save</a>
+			</span>
+		</div>
+<pre class="brush: xml;">
+<div class="input-group">
+	<input type="text" class="form-control">
+	<span class="btns">
+		<a href="#" class="btn btn-success">Save</a>
+	</span>
+</div>
+</pre>
+	</div>
+
+	<h2 class="h2_guide">input + confirm</h2>
+	<div class="dscBox">
+		<div class="input-group">
+			<input type="text" class="form-control">
+			<span class="validate">
+				<span class="fail">Not verifed</span>
+			</span>
+		</div>
+		<div class="input-group">
+			<input type="text" class="form-control">
+			<span class="validate">
+				<span class="succese">Verified</span>
+			</span>
+		</div>
+<pre class="brush: xml;">
+<div class="input-group">
+	<input type="text" class="form-control" >
+	<span class="btns">
+		<a href="#" class="btn btn-success">Save</a>
+	</span>
+</div>
+</pre>
+	</div>
+<script src="/js/custom-mobile.js"></script>
+
+</div>
+</body>
+</html>

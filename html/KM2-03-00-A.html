@@ -1,0 +1,278 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<link rel="SHORTCUT ICON" href="/images/favicon.ico">
+<title>Key&amp;Manager ver.2</title>
+<link rel="stylesheet" href="/css/vendors/bootstrap.min.css">
+<link rel="stylesheet" href="/css/vendors/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" href="/css/vendors/fontawesome-all.min.css">
+<link rel="stylesheet" href="/css/vendors/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" href="/css/vendors/jquery-ui.dynatree.css">
+<link rel="stylesheet" href="/css/custom.css">
+<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+<script src="/js/vendors/jquery-ui.min.js"></script>
+<script src="/js/vendors/jquery-ui.dynatree.js"></script>
+<script src="/js/vendors/moment.js"></script>
+<script src="/js/vendors/bootstrap.min.js"></script>
+<script src="/js/vendors/bootstrap-datetimepicker.min.js"></script>
+</head>
+<body class="nav-sm">
+<div class="wrapper">	
+	<div class="left_col">
+		<div id="sidebar-menu" class="main_menu_side main_menu">
+			<div class="menu_section">
+				<ul class="nav side-menu">
+					<li class="parent_menu"><a href="#"><i class="ico-schedule"></i>Schedule</a><a role="button" class="submenu-open"></a></li>
+					<li class="parent_menu"><a href="#"><i class="ico-member"></i>Member</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Member</a>
+								<ul class="nav-depth3">
+									<li class="active"><a href="#">Subject Transfer</a></li>
+									<li><a href="#">Learning</a></li> 
+									<li><a href="#">Attendance</a></li> 
+								</ul>
+							</li>
+							<li><a href="#">Attendance</a></li> 
+							<li><a href="#">Subject Transfer</a></li>
+							<li><a href="#">Learning</a></li> 
+							<li><a href="#">Attendance</a></li> 
+						</ul>
+					</li>
+					<li class="parent_menu"><a href="#"><i class="ico-learning"></i>Learning</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Member</a></li>
+							<li><a href="#">Attendance</a></li>
+							<li><a href="#">Subject Transfer</a></li>
+							<li><a href="#">Learning</a></li>
+							<li><a href="#">Attendance</a></li>
+						</ul>
+					</li>
+					<li class="parent_menu"><a href="#"><i class="ico-finance"></i>Finance</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Member</a></li>
+							<li><a href="#">Attendance</a></li> 
+							<li><a href="#">Subject Transfer</a></li>
+							<li><a href="#">Learning</a></li> 
+							<li><a href="#">Attendance</a></li> 
+						</ul>
+					</li>
+					<li class="parent_menu"><a href="#"><i class="ico-center"></i>Center</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Member</a></li>
+							<li><a href="#">Attendance</a></li> 
+							<li><a href="#">Subject Transfer</a></li>
+							<li><a href="#">Learning</a></li> 
+							<li><a href="#">Attendance</a></li> 
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="right_col">		
+		<div class="nav_menu">
+			<div class="toggle">
+				<a href="#" class="menu_toggle"><i></i></a>
+			</div>
+			<div class="head-wrap">
+				<div class="pull-left head-favorite">
+					<ul class="head-favorite-list">
+						<li><a href="#" class="list">Create member</a><a href="#" class="ico-delete"><i class="fas fa-times"></i></a></li>
+						<li><a href="#" class="list">Payment</a><a href="#" class="ico-delete"><i class="fas fa-times"></i></a></li>
+						<li><a href="#" class="list">My student</a><a href="#" class="ico-delete"><i class="fas fa-times"></i></a></li>
+					</ul>
+					<a href="#" class="favorite-set"><span class="ico-count cl-gray"></span>My menu add</a>
+				</div>
+				<div class="pull-right head-user-info">
+					<a href="#" class="head-logout">Logout</a>
+					<span class="head-name">Tony tony chopa (FC0001S)</span>
+					<a href="#" class="head-mypage">My page</a>
+				</div>
+			</div>
+		</div>
+		<!-- 180717_수정 [화면설계서 v3.1 수정사항 반영] -->
+		<div class="right_content" role="main">
+			<div class="container-fluid dash-board">
+				<div class="col-md-12">
+					<h3>Financial Sales Management</h3>
+					<div class="card-stats-wrap">
+						<ul class="list-inline">
+							<li>Today is Friday 2018/04/20</li>
+							<li>13:05</li>
+							<li><a href="#" class="btn btn-default py-2"><i class="fas fa-sync-alt"></i></a></li>
+						</ul>
+					</div>
+					<div class="top_dash size4 mint">
+						<div class="boxs">
+							<dl class="data">
+								<dt>Payment</dt>
+								<dd>1,528,721.00</dd>
+							</dl>
+						</div>
+						<div class="boxs">
+							<dl class="data">
+								<dt>Refund</dt>
+								<dd>1200.00</dd>
+							</dl>
+						</div>
+						<div class="boxs">
+							<dl class="data">
+								<dt>Deposit</dt>
+								<dd>500.00</dd>
+							</dl>
+						</div>
+						<div class="boxs">
+							<dl class="data">
+								<dt>Revision</dt>
+								<dd>12.94</dd>
+							</dl>
+						</div>
+					</div>
+					<div class="row card-lists">
+						<div class="col-lg-5 col-md-6 col-sm-12">
+							<div class="card">
+								<div class="card-body">
+									<div class="stu-events">
+										<div class="status">
+											<dl>
+												<dt>Payment <span class="big">Yesterday</span></dt>
+												<dd>05</dd>
+											</dl>
+											<i class="blt far fa-credit-card"></i>
+										</div>
+										<div class="lists">
+											<ul>
+												<li><a href="">Ken.song(100.00)</a></li>
+												<li><a href="">Mary.ko(50.00)</a></li>
+												<li><a href="">Cindy.kim(250.00)</a></li>
+											</ul>
+											<!-- <p class="no-result">No members paid yesterday.</p> -->
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card members">
+								<div class="card-head">
+									<dl class="num">
+										<dt>회비 미납 회원 리스트<span class="big">8월 회비 납부 마감일</span></dt>
+										<dd>07/31</dd>
+									</dl>
+								</div>
+								<div class="card-body">
+									<div class="member-lists">
+										<ul>
+											<li>
+												<p>(K30000718)Kim Do-Hwan</p>
+												<a href="#" class="btns">납부</a>
+												<span class="remain tx_red">480.00</span>
+											</li>
+											<li>
+												<p>(K30000035) Edward Morgan Forster(K30000035) Edward Morgan Forster</p>
+												<a href="#" class="btns">납부</a>
+												<span class="remain tx_red">480.00</span>
+											</li>
+											<li>
+												<p>(K30000718)Kim Do-Hwan</p>
+												<a href="#" class="btns">납부</a>
+												<span class="remain tx_red">480.00</span>
+											</li>
+											<li>
+												<p>(K30000035) Edward Morgan Forster(K30000035) Edward Morgan Forster</p>
+												<a href="#" class="btns">납부</a>
+												<span class="remain tx_red">480.00</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<a href="" class="btn btn-info"><i class="fas fa-angle-double-right"></i><span class="sr-only">more</span></a>
+							</div>
+						</div>
+						<div class="col-lg-7 col-md-6 col-sm-12">
+							<div class="card consults">
+								<div class="card-head">
+									<p><i class="fas fa-receipt"></i>청구 금액 &amp; 납부 금액</p>
+								</div>
+								<div class="card-body">
+									<div class="consult-lists">
+										<div class="bx-table">
+											<div class="tb-dimm"><span class="txts">Fetching data...</span></div>
+											<div class="no-scroll">
+												<table class="table">
+													<thead>
+														<tr>
+															<th scope="col">Month</th>
+															<th scope="col">총 청구 금액</th>
+															<th scope="col">총 납부 금액</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>03</td>
+															<td>$ 8,0000,0000</td>
+															<td>$ 7,500,0000</td>
+														</tr>
+														<tr>
+															<td>02</td>
+															<td>$ 8,0000,0000</td>
+															<td>$ 7,500,0000</td>
+														</tr>
+														<tr>
+															<td>01</td>
+															<td>$ 8,0000,0000</td>
+															<td>$ 7,500,0000</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+								<a href="" class="btn btn-info"><i class="fas fa-angle-double-right"></i><span class="sr-only">more</span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // 180717_수정 [화면설계서 v3.1 수정사항 반영] -->
+		<footer class="hidden-xs hidden-sm">
+			<span class="ft-logo">KEY &amp; MANAGER</span>
+			<p class="ft-copy">Copyright &copy; 2018 Daekyo Co., Ltd All rights reserved. For more information, contact <a href="mailto:myeyelevel@myeyelevel.com">myeyelevel@myeyelevel.com</a></p>
+			<div class="ft-site">
+				<dl>
+					<dt><a href="#class">Links</a></dt>
+					<dd>
+						<ul>
+							<li><a href="https://sites.google.com/a/myeyelevel.com/itisthekey/" target="_blank">User guide</a></li>
+							<li><a href="http://www.myeyelevel.com/Global/English/" target="_blank">Eyelevel Site</a></li>
+							<li><a href="http://www.iamthekey.com/" target="_blank">Brand Site</a></li>
+							<li><a href="http://eng.daekyo.com/En/default.aspx" target="_blank">Corporate Site</a></li>
+							<li><a href="http://elu.myeyelevel.com" target="_blank">Eye Level University</a></li>
+							<li><a href="http://email.myeyelevel.com" target="_blank">Email</a></li>
+						</ul>
+					</dd>
+				</dl>
+			</div>
+		</footer>
+	</div>
+</div>
+<script src="/js/custom.js"></script>
+<script>
+	(function(){
+		$('.consult-lists,.stu-events .lists').mCustomScrollbar({
+			theme:"rounded-dark"
+		});
+		$(window).on('load', function(){
+			$('.consult-lists,.stu-events .lists').mCustomScrollbar("update");
+		});
+	})();
+</script>
+</body>
+</html>

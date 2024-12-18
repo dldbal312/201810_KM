@@ -1,0 +1,1932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+	<link rel="SHORTCUT ICON" href="../images/favicon.ico">
+	<title>Key&amp;Manager ver.2</title>
+	<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap-datetimepicker.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendors/fontawesome-all.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendors/jquery.mCustomScrollbar.css">
+	<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+	<script src="/js/vendors/jquery-ui.min.js"></script>
+	<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+	<script src="/js/vendors/moment.js"></script>
+	<script src="/js/vendors/bootstrap.min.js"></script>
+	<script src="/js/vendors/bootstrap-datetimepicker.min.js"></script>
+	
+	<!-- mobile 추가 -->
+	<link rel="stylesheet" type="text/css" href="/css/custom-mobile.css">
+	<script src="/js/vendors/jquery.touchSwipe.min.js"></script>
+	<script src="/js/custom-mobile.js"></script>
+</head>
+<body>
+<div class="wrapper">
+	<!-- menu bar -->
+	<div class="mHeader">
+		<div class="mHeader-contents-wrap">
+			<div class="mHeader-btn mHeader-allmenu">
+				<a href="#" class="slideout-button" data-selector="allMenu">ALL MENU</a>
+			</div>
+			<div class="mHeader-contents">
+				<div class="mHeader-btn mHeader-mymenu">
+					<a href="#" class="hidden-tablet no-link" data-selector="myMenu">MY MENU</a>
+				</div>
+				<div class="mHeader-btn mHeader-search">
+					<a href="#" class="hidden-desktop no-link" data-selector="search">SEARCH</a>
+				</div>
+			</div>
+			<div class="mHeader-btn mHeader-studentList">
+				<a href="#" class="slideout-button" data-selector="studentList">STUDENT LIST</a>
+			</div>
+		</div>
+	</div>
+	
+	<!-- my menu, search -->
+	<div class="mHeader-sub-wrap">
+		<div class="mHeader-sub-menu mymenu-slideout closed">
+			<div class="slideout-info-area">
+				<a href="#" class="slideout-btn bt-close">닫기</a>
+				<div class="user-info pl-0">
+					<span class="user-name">My menu<em class="ico-count ml-3">4</em></span>
+				</div>
+			</div>
+			<div class="box">
+				<ul class="list-custom btn-in">
+					<li><a href="#">Consultation</a><a href="#" class="ico-delete"><span class="sr-only">Delete</span></a></li>
+					<li><a href="#">Attendance</a><a href="#" class="ico-delete"><span class="sr-only">Delete</span></a></li>
+					<li><a href="#">Member</a><a href="#" class="ico-delete"><span class="sr-only">Delete</span></a></li>
+					<li><a href="#">Diagnostic test</a><a href="#" class="ico-delete"><span class="sr-only">Delete</span></a></li>
+				</ul>
+				<div class="recently-menu">
+					<div class="box">
+						<span class="tit">Recently used menu</span>
+						<ul class="list-custom list-inline btn-in">
+							<li><a href="">Answer book</a><a href="#" class="ico-add"><span class="sr-only">Add</span></a></li>
+							<li><a href="">Staff info </a><a href="#" class="ico-add"><span class="sr-only">Add</span></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="allmenu-list myMenuAdd-list">
+					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+						<div class="panel">
+							<div class="panel-heading" role="tab" id="headingMenuAdd">
+								<span class="panel-title"><a class="collapsed"><i class="ico-count cl-gray mr-3"></i>My menu add</a></span>
+							</div>
+							<div class="panel-collapse">
+								<div class="panel-body">
+									<ul class="list-custom btn-in">
+										<li><a href="#">Lead</a><a href="#" class="ico-add"><span class="sr-only">Add</span></a></li>
+										<li><a href="#">Progress</a><a href="#" class="ico-add"><span class="sr-only">Add</span></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="mHeader-sub-menu search-slideout closed">
+			<div class="search-form ">
+				<form class="form-group">
+					<input type="text" class="form-text"  placeholder="Search" id="tags" >
+					<a href="#" class="form-submit  bt-search">검색</a>
+					<a href="#" class="slideout-btn bt-close">닫기</a>
+				</form>
+			</div>
+			<div class="">
+				<div class="student-list">
+					<ul>
+						<li>
+							<span class="student-type enroll">입회</span>
+							<span class="student-name">HANHAN HAN(G00200365)</span>
+							<a class="student-menu collapsed" data-toggle="collapse" data-parent="#accordion" href="#st1" aria-expanded="false" aria-controls="st1"><i class="fas fa-caret-down"></i><span class="sr-only">menu</span></a>
+							<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+							<div id="st1" class="panel-collapse collapse" role="tabpanel">
+								<ul class="list-menu">
+									<li><a href="#">Consultation</a></li>
+									<li><a href="#">Trial</a></li>
+									<li><a href="#">DT</a></li>
+									<li><a href="#">Enroll</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<span class="student-type lead">가망</span>
+							<span class="student-name">HANHAN HAN(G00200365)</span>
+							<a class="student-menu collapsed" data-toggle="collapse" data-parent="#accordion" href="#st2" aria-expanded="false" aria-controls="st2"><i class="fas fa-caret-down"></i><span class="sr-only">menu</span></a>
+							<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+							<div id="st2" class="panel-collapse collapse" role="tabpanel">
+								<ul class="list-menu">
+									<li><a href="#">Consultation</a></li>
+									<li><a href="#">Trial</a></li>
+									<li><a href="#">DT</a></li>
+									<li><a href="#">Enroll</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- all menu -->
+	<div class="allmenu-slideout slideout">
+		<div class="slideout-info-area">
+			<a href="#" class="slideout-btn bt-close">닫기</a>
+			<a href="#" class="slideout-btn bt-prev-small">닫기</a>
+			<div class="user-info-wrap">
+				<div class="user-info">
+					<span class="user-name">Nebula, Karen Gillan</span>
+					<span class="user-code">(CN00000039)</span>
+				</div>
+				<div class="half-group">
+					<span class="left"><a href="#" class="bt-mypage">My page</a></span>
+					<span class="right"><a href="#" class="bt-logout">log-out</a></span>
+				</div>
+			</div>
+		</div>
+		<div class="allmenu-list">
+			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+			  <div class="panel">
+				<div class="panel-heading" role="tab" id="headingOne">
+				  <span class="panel-title member"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseMember" aria-expanded="false" aria-controls="collapseMember">Member</a></span>
+				</div>
+				<div id="collapseMember" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+				  <div class="panel-body">
+					<ul class="list-custom">
+						<li><a href="#">Lead</a></li>
+						<li><a href="#">Consultation</a></li>
+						<li><a href="#">Member</a></li>
+					</ul>
+				  </div>
+				</div>
+			  </div>
+			  <div class="panel">
+				<div class="panel-heading" role="tab" id="headingTwo">
+				  <span class="panel-title learning"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseLearning" aria-expanded="false" aria-controls="collapseLearning">Learning</a></span>
+				</div>
+				<div id="collapseLearning" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+				  <div class="panel-body">
+					<ul class="list-custom">
+						<li><a href="#">Schedule</a></li>
+						<li><a href="#">Attendance</a></li>
+						<li><a href="#">Progress</a></li>
+						<li><a href="#">Diagnostic Test</a></li>
+						<li><a href="#">Test result</a></li>
+						<li><a href="#">Booklet management</a></li>
+					</ul>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- my student -->
+	<div  class="studentList-slideout slideout">
+		<div class="slideout-info-area">
+			<a href="#" class="slideout-btn bt-prev-small">닫기</a>
+			<a href="#" class="slideout-btn bt-close">닫기</a>
+			<div class="user-info">
+				<span class="user-name">My student</span>
+			</div>
+		</div>
+		<div class="col-md-12 py-2">
+			<div class="pull-left total">
+				Total 20
+			</div>
+			<div class="pull-right form-inline ">
+				<select class="form-control ">
+					<option value="" selected>Name</option>
+				</select>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+		<div class="student-list">
+			<ul>
+				<li>
+					<span class="student-name">
+						HANHAN HAN(G00200365)
+					</span>
+					<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+				</li>
+				<li>
+					<span class="student-name">
+						HANHAN HAN(G00200365)
+					</span>
+					<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+				</li>
+				<li>
+					<span class="student-name">
+						HANHAN HAN(G00200365)
+					</span>
+					<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+				</li>
+				<li>
+					<span class="student-name">
+						HANHAN HAN(G00200365)
+					</span>
+					<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="main-content" role="main">
+		<div class="page-info left">
+			<h1>Schedule</h1>
+			<a href="#" class="bt-right"><i class="fas fa-plus"></i><span class="sr-only">ADD</span></a>
+		</div>
+		<div class="schedule-wrap">
+			<div class="schedule-tab">
+				<div class="overscroll-tab" data-module="overscroll" data-custom="true">
+					<ul id="schedule-tab" class="scroll-inner">
+						<li class="lists active">
+							<a href="#cont1" data-toggle="tab" >
+								<span class="week">Sat</span>
+								<span class="day">1</span>
+							</a>
+						</li>
+						<li class="lists ">
+							<a href="#cont2" data-toggle="tab">
+								<span class="week">Sun</span>
+								<span class="day">2</span>
+							</a>
+						</li>
+						<li class="lists">
+							<a href="#cont3" data-toggle="tab">
+								<span class="week">Mon</span>
+								<span class="day">3</span>
+							</a>
+						</li>
+						<li class="lists">
+							<a href="#cont4" data-toggle="tab">
+								<span class="week">Tue</span>
+								<span class="day">4</span>
+							</a>
+						</li>
+						<li class="lists">
+							<a href="#cont5" data-toggle="tab">
+								<span class="week">Fri</span>
+								<span class="day">5</span>
+							</a>
+						</li>
+						<li class="lists">
+							<a href="#cont6" data-toggle="tab">
+								<span class="week">Sat</span>
+								<span class="day">6</span>
+							</a>
+						</li>
+						<li class="lists">
+							<a href="#cont6" data-toggle="tab">
+								<span class="week">Sat</span>
+								<span class="day">7</span>
+							</a>
+						</li>
+						<li class="lists">
+							<a href="#cont6" data-toggle="tab">
+								<span class="week">Sat</span>
+								<span class="day">8</span>
+							</a>
+						</li>
+						<li class="lists">
+							<a href="#cont6" data-toggle="tab">
+								<span class="week">Sat</span>
+								<span class="day">9</span>
+							</a>
+						</li>
+						<li class="lists">
+							<a href="#cont6" data-toggle="tab">
+								<span class="week">Sat</span>
+								<span class="day">10</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="tab-content" data-toggle="swipe">
+				<div class="tab-pane fade in active" id="cont1">
+					<div class="students-group stu-status">
+						<div class="group-info-date">
+							<p>09:00</p>
+							<a href="#acc-body1" class="acc-btn" data-parent="#accLists" data-toggle="collapse">
+								<span class="btn-circle minus"><i class="fas fa-minus"></i></span>
+							</a>
+						</div>
+						<div class="student-list-dt collapse in" id="acc-body1">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko<span class="label new">New</span></dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="#progressSetting" class="more" data-toggle="modal"></a>
+										</div>
+										<div class="btns status temp">
+											<button type="button" class="in" data-toggleClass="in, out"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko<span class="label birthday">birthday</span></dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status temp">
+											<button type="button" class="out" data-toggleClass="out, in"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<p>Tony Chopper</p>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status temp">
+											<button type="button" class="couns"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="group-info-date">
+							<p>10:00</p>
+							<a href="#acc-body2" class="acc-btn collapsed" data-parent="#accLists" data-toggle="collapse">
+								<span class="btn-circle minus"><i class="fas fa-minus"></i></span>
+							</a>
+						</div>
+						<div class="student-list-dt collapse" id="acc-body2">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko</dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status temp">
+											<button type="button" class="miss"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko</dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status">
+											<button type="button" class="miss"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko</dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status">
+											<button type="button" class="miss"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="group-info-date">
+							<p>13:00</p>
+							<a href="#acc-body3" class="acc-btn collapsed" data-parent="#accLists" data-toggle="collapse">
+								<span class="btn-circle minus"><i class="fas fa-minus"></i></span>
+							</a>
+						</div>
+						<div class="student-list-dt collapse" id="acc-body3">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko</dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status">
+											<button type="button" class="miss"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko</dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status">
+											<button type="button" class="miss"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko</dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status">
+											<button type="button" class="miss"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="group-info-date">
+							<p>14:00</p>
+							<a href="#acc-body4" class="acc-btn collapsed" data-parent="#accLists" data-toggle="collapse">
+								<span class="btn-circle minus"><i class="fas fa-minus"></i></span>
+							</a>
+						</div>
+						<div class="student-list-dt collapse" id="acc-body4">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko</dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status">
+											<button type="button" class="miss"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko</dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status">
+											<button type="button" class="miss"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko</dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status">
+											<button type="button" class="miss"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tab-pane fade" id="cont2">
+					<div class="students-group stu-status">
+						<div class="group-info-date">
+							<p>09:00</p>
+							<a href="#acc-body1_1" class="acc-btn" data-parent="#accLists" data-toggle="collapse">
+								<span class="btn-circle minus"><i class="fas fa-minus"></i></span>
+							</a>
+						</div>
+						<div class="student-list-dt collapse in" id="acc-body1_1">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko<span class="label new">New</span></dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="#progressSetting" class="more" data-toggle="modal"></a>
+										</div>
+										<div class="btns status temp">
+											<button type="button" class="in" data-toggleClass="in, out"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko<span class="label birthday">birthday</span></dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status temp">
+											<button type="button" class="out" data-toggleClass="out, in"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<p>Tony Chopper</p>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status temp">
+											<button type="button" class="couns"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="group-info-date">
+							<p>10:00</p>
+							<a href="#acc-body2_1" class="acc-btn collapsed" data-parent="#accLists" data-toggle="collapse">
+								<span class="btn-circle minus"><i class="fas fa-minus"></i></span>
+							</a>
+						</div>
+						<div class="student-list-dt collapse" id="acc-body2_1">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko</dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status temp">
+											<button type="button" class="miss"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko</dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status">
+											<button type="button" class="miss"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko</dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status">
+											<button type="button" class="miss"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="group-info-date">
+							<p>13:00</p>
+							<a href="#acc-body3" class="acc-btn collapsed" data-parent="#accLists" data-toggle="collapse">
+								<span class="btn-circle minus"><i class="fas fa-minus"></i></span>
+							</a>
+						</div>
+						<div class="student-list-dt collapse" id="acc-body3_1">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko</dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status">
+											<button type="button" class="miss"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko</dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status">
+											<button type="button" class="miss"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko</dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status">
+											<button type="button" class="miss"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="group-info-date">
+							<p>14:00</p>
+							<a href="#acc-body4_1" class="acc-btn collapsed" data-parent="#accLists" data-toggle="collapse">
+								<span class="btn-circle minus"><i class="fas fa-minus"></i></span>
+							</a>
+						</div>
+						<div class="student-list-dt collapse" id="acc-body4_1">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko</dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status">
+											<button type="button" class="miss"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko</dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status">
+											<button type="button" class="miss"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko</dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status">
+											<button type="button" class="miss"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tab-pane fade" id="cont3">
+					<div class="students-group stu-status">
+						<div class="group-info-date">
+							<p>09:00</p>
+							<a href="#acc-body1_2" class="acc-btn" data-parent="#accLists" data-toggle="collapse">
+								<span class="btn-circle minus"><i class="fas fa-minus"></i></span>
+							</a>
+						</div>
+						<div class="student-list-dt collapse in" id="acc-body1_2">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko<span class="label new">New</span></dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status temp">
+											<button type="button" class="in" data-toggleClass="in, out"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko<span class="label birthday">birthday</span></dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status temp">
+											<button type="button" class="out" data-toggleClass="out, in"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<p>Tony Chopper</p>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status temp">
+											<button type="button" class="couns"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="group-info-date">
+							<p>10:00</p>
+							<a href="#acc-body2_2" class="acc-btn collapsed" data-parent="#accLists" data-toggle="collapse">
+								<span class="btn-circle minus"><i class="fas fa-minus"></i></span>
+							</a>
+						</div>
+						<div class="student-list-dt collapse" id="acc-body2_2">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko</dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status temp">
+											<button type="button" class="miss"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko</dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status">
+											<button type="button" class="miss"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko</dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status">
+											<button type="button" class="miss"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="group-info-date">
+							<p>13:00</p>
+							<a href="#acc-body3_2" class="acc-btn collapsed" data-parent="#accLists" data-toggle="collapse">
+								<span class="btn-circle minus"><i class="fas fa-minus"></i></span>
+							</a>
+						</div>
+						<div class="student-list-dt collapse" id="acc-body3_2">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko</dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status">
+											<button type="button" class="miss"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko</dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status">
+											<button type="button" class="miss"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko</dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status">
+											<button type="button" class="miss"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="group-info-date">
+							<p>14:00</p>
+							<a href="#acc-body4_2" class="acc-btn collapsed" data-parent="#accLists" data-toggle="collapse">
+								<span class="btn-circle minus"><i class="fas fa-minus"></i></span>
+							</a>
+						</div>
+						<div class="student-list-dt collapse" id="acc-body4_2">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko</dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status">
+											<button type="button" class="miss"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko</dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status">
+											<button type="button" class="miss"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko</dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status">
+											<button type="button" class="miss"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tab-pane fade" id="cont4">
+					<div class="students-group stu-status">
+						<div class="group-info-date">
+							<p>09:00</p>
+							<a href="#acc-body1_3" class="acc-btn" data-parent="#accLists" data-toggle="collapse">
+								<span class="btn-circle minus"><i class="fas fa-minus"></i></span>
+							</a>
+						</div>
+						<div class="student-list-dt collapse in" id="acc-body1_3">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko<span class="label new">New</span></dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status temp">
+											<button type="button" class="in" data-toggleClass="in, out"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko<span class="label birthday">birthday</span></dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status temp">
+											<button type="button" class="out" data-toggleClass="out, in"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<p>Tony Chopper</p>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status temp">
+											<button type="button" class="couns"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="group-info-date">
+							<p>10:00</p>
+							<a href="#acc-body2_3" class="acc-btn collapsed" data-parent="#accLists" data-toggle="collapse">
+								<span class="btn-circle minus"><i class="fas fa-minus"></i></span>
+							</a>
+						</div>
+						<div class="student-list-dt collapse" id="acc-body2_3">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko</dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status temp">
+											<button type="button" class="miss"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko</dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status">
+											<button type="button" class="miss"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko</dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status">
+											<button type="button" class="miss"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="group-info-date">
+							<p>13:00</p>
+							<a href="#acc-body3" class="acc-btn collapsed" data-parent="#accLists" data-toggle="collapse">
+								<span class="btn-circle minus"><i class="fas fa-minus"></i></span>
+							</a>
+						</div>
+						<div class="student-list-dt collapse" id="acc-body3_3">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko</dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status">
+											<button type="button" class="miss"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko</dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status">
+											<button type="button" class="miss"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko</dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status">
+											<button type="button" class="miss"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="group-info-date">
+							<p>14:00</p>
+							<a href="#acc-body4_3" class="acc-btn collapsed" data-parent="#accLists" data-toggle="collapse">
+								<span class="btn-circle minus"><i class="fas fa-minus"></i></span>
+							</a>
+						</div>
+						<div class="student-list-dt collapse" id="acc-body4_3">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko</dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status">
+											<button type="button" class="miss"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko</dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status">
+											<button type="button" class="miss"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko</dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status">
+											<button type="button" class="miss"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tab-pane fade" id="cont5">
+					<div class="students-group stu-status">
+						<div class="group-info-date">
+							<p>09:00</p>
+							<a href="#acc-body1_4" class="acc-btn" data-parent="#accLists" data-toggle="collapse">
+								<span class="btn-circle minus"><i class="fas fa-minus"></i></span>
+							</a>
+						</div>
+						<div class="student-list-dt collapse in" id="acc-body1_4">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko<span class="label new">New</span></dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status temp">
+											<button type="button" class="in" data-toggleClass="in, out"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko<span class="label birthday">birthday</span></dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status temp">
+											<button type="button" class="out" data-toggleClass="out, in"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<p>Tony Chopper</p>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status temp">
+											<button type="button" class="couns"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="group-info-date">
+							<p>10:00</p>
+							<a href="#acc-body2_4" class="acc-btn collapsed" data-parent="#accLists" data-toggle="collapse">
+								<span class="btn-circle minus"><i class="fas fa-minus"></i></span>
+							</a>
+						</div>
+						<div class="student-list-dt collapse" id="acc-body2_4">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko</dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status temp">
+											<button type="button" class="miss"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko</dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status">
+											<button type="button" class="miss"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko</dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status">
+											<button type="button" class="miss"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="group-info-date">
+							<p>13:00</p>
+							<a href="#acc-body3_4" class="acc-btn collapsed" data-parent="#accLists" data-toggle="collapse">
+								<span class="btn-circle minus"><i class="fas fa-minus"></i></span>
+							</a>
+						</div>
+						<div class="student-list-dt collapse" id="acc-body3_4">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko</dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status">
+											<button type="button" class="miss"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko</dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status">
+											<button type="button" class="miss"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko</dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status">
+											<button type="button" class="miss"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="group-info-date">
+							<p>14:00</p>
+							<a href="#acc-body4_4" class="acc-btn collapsed" data-parent="#accLists" data-toggle="collapse">
+								<span class="btn-circle minus"><i class="fas fa-minus"></i></span>
+							</a>
+						</div>
+						<div class="student-list-dt collapse" id="acc-body4_4">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko</dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status">
+											<button type="button" class="miss"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko</dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status">
+											<button type="button" class="miss"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko</dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status">
+											<button type="button" class="miss"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tab-pane fade" id="cont6">
+					<div class="students-group stu-status">
+						<div class="group-info-date">
+							<p>09:00</p>
+							<a href="#acc-body1" class="acc-btn" data-parent="#accLists" data-toggle="collapse">
+								<span class="btn-circle minus"><i class="fas fa-minus"></i></span>
+							</a>
+						</div>
+						<div class="student-list-dt collapse in" id="acc-body1">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko<span class="label new">New</span></dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status temp">
+											<button type="button" class="in" data-toggleClass="in, out"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko<span class="label birthday">birthday</span></dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status temp">
+											<button type="button" class="out" data-toggleClass="out, in"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<p>Tony Chopper</p>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status temp">
+											<button type="button" class="couns"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="group-info-date">
+							<p>10:00</p>
+							<a href="#acc-body2" class="acc-btn collapsed" data-parent="#accLists" data-toggle="collapse">
+								<span class="btn-circle minus"><i class="fas fa-minus"></i></span>
+							</a>
+						</div>
+						<div class="student-list-dt collapse" id="acc-body2">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko</dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status temp">
+											<button type="button" class="miss"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko</dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status">
+											<button type="button" class="miss"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko</dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status">
+											<button type="button" class="miss"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="group-info-date">
+							<p>13:00</p>
+							<a href="#acc-body3" class="acc-btn collapsed" data-parent="#accLists" data-toggle="collapse">
+								<span class="btn-circle minus"><i class="fas fa-minus"></i></span>
+							</a>
+						</div>
+						<div class="student-list-dt collapse" id="acc-body3">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko</dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status">
+											<button type="button" class="miss"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko</dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status">
+											<button type="button" class="miss"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko</dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status">
+											<button type="button" class="miss"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="group-info-date">
+							<p>14:00</p>
+							<a href="#acc-body4" class="acc-btn collapsed" data-parent="#accLists" data-toggle="collapse">
+								<span class="btn-circle minus"><i class="fas fa-minus"></i></span>
+							</a>
+						</div>
+						<div class="student-list-dt collapse" id="acc-body4">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko</dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status">
+											<button type="button" class="miss"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko</dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status">
+											<button type="button" class="miss"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="lists">
+										<div class="details">
+											<dl>
+												<dt>Mary.ko</dt>
+												<dd>ELE /Grade2</dd>
+											</dl>
+											<a href="" class="more"></a>
+										</div>
+										<div class="btns status">
+											<button type="button" class="miss"><span></span></button>
+										</div>
+										<div class="btns">
+											<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+	</div>
+
+	<div class="slideout-overlay"></div>
+</div>
+
+<div class="modal fade mobile-only" id="myStudentModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-sm" role="document">
+	<div class="modal-content">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		</div>
+		<div class="modal-body">
+			<ul class="list-custom before-none ml-3">
+				<li><a href="#">info</a></li>
+				<li><a href="#">Register Schedule</a></li>
+				<li><a href="#">채점</a></li>
+				<li><a href="#">Payment</a></li>
+			</ul>
+		</div>
+	</div>
+  </div>
+</div>
+
+<!-- progress Setting -->
+<div class="modal fade mobile-only modules-confirm" id="progressSetting" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-md" role="document">
+	<div class="modal-content progress-modal">
+		<div class="modal-header">
+			<h1 class="tit">Progress of Ken Song(K00000038)</h1>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		</div>
+		<div class="modal-body">
+			<ul class="data-lists">
+				<li class="circle">
+					<strong>Progress Period :</strong><span class="em01 block">03/03/2018 ~ 24/03/2018</span>
+				</li>
+			</ul>
+			<span class="radio-group">
+				<span class="radio inline">
+					<input type="radio" id="type11" value="option1" name="types" checked="checked">
+					<label for="type11">Homework</label>
+				</span>
+				<span class="radio inline">
+					<input type="radio" id="type22" value="option2" name="types">
+					<label for="type22">Booklet Test</label>
+				</span>
+			</span>
+			<div class="bx-table size-full top-line">
+				<div class="table">
+					<table>
+						<colgroup>
+							<col style="width:120px">
+							<col style="width:70px">
+							<col style="width:auto">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th class="bg_gray" rowspan="2">0303-0403 (6/6)</th>
+								<td>BTM</td>
+								<td class="left">
+									<span class="booklet-check-group">
+										<span class="check"><input type="radio" id="ck1-1" name="group1"><label for="ck1-1">0602</label></span>
+										<span class="check"><input type="radio" id="ck1-2" name="group1"><label for="ck1-2">0603</label></span>
+										<span class="check"><input type="radio" id="ck1-3" name="group1"><label for="ck1-3">0604</label></span>
+										<span class="check"><input type="radio" id="ck1-4" name="group1"><label for="ck1-4">0608</label></span>
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<td>CTM</td>
+								<td class="left">
+									<span class="booklet-check-group">
+										<span class="check"><input type="radio" id="ck1-1-1" name="group1-1"><label for="ck1-1-1">0602</label></span>
+										<span class="check"><input type="radio" id="ck1-1-2" name="group1-1"><label for="ck1-1-2">0603</label></span>
+										<span class="check"><input type="radio" id="ck1-1-3" name="group1-1"><label for="ck1-1-3">0604</label></span>
+										<span class="check"><input type="radio" id="ck1-1-4" name="group1-1"><label for="ck1-1-4">0608</label></span>
+									</span>
+								</td>
+							</tr>
+							<tr class="today">
+								<th class="bg_gray" rowspan="2">0303-0403 (6/6)</th>
+								<td>BTM</td>
+								<td class="left">
+									<span class="booklet-check-group">
+										<span class="check"><input type="radio" id="ck2-1" name="group2"><label for="ck2-1">0602</label></span>
+										<span class="check"><input type="radio" id="ck2-2" name="group2"><label for="ck2-2">0603</label></span>
+										<span class="check"><input type="radio" id="ck2-3" name="group2"><label for="ck2-3">0604</label></span>
+										<span class="check"><input type="radio" id="ck2-4" name="group2"><label for="ck2-4">0608</label></span>
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<td>CTM</td>
+								<td class="left">
+									<span class="booklet-check-group">
+										<span class="check"><input type="radio" id="ck2-2-1" name="group2-1"><label for="ck2-2-1">0602</label></span>
+										<span class="check"><input type="radio" id="ck2-2-2" name="group2-1"><label for="ck2-2-2">0603</label></span>
+										<span class="check"><input type="radio" id="ck2-2-3" name="group2-1"><label for="ck2-2-3">0604</label></span>
+										<span class="check"><input type="radio" id="ck2-2-4" name="group2-1"><label for="ck2-2-4">0608</label></span>
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<th class="bg_gray" rowspan="2">0303-0403 (6/6)</th>
+								<td>BTM</td>
+								<td class="left">
+									<span class="booklet-check-group">
+										<span class="check"><input type="radio" id="ck3-1" name="group3"><label for="ck3-1">0602</label></span>
+										<span class="check"><input type="radio" id="ck3-2" name="group3"><label for="ck3-2">0603</label></span>
+										<span class="check"><input type="radio" id="ck3-3" name="group3"><label for="ck3-3">0604</label></span>
+										<span class="check"><input type="radio" id="ck3-4" name="group3"><label for="ck3-4">0608</label></span>
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<td>CTM</td>
+								<td class="left">
+									<span class="booklet-check-group">
+										<span class="check"><input type="radio" id="ck3-3-1" name="group3-1"><label for="ck3-3-1">0602</label></span>
+										<span class="check"><input type="radio" id="ck3-3-2" name="group3-1"><label for="ck3-3-2">0603</label></span>
+										<span class="check"><input type="radio" id="ck3-3-3" name="group3-1"><label for="ck3-3-3">0604</label></span>
+										<span class="check"><input type="radio" id="ck3-3-4" name="group3-1"><label for="ck3-3-4">0608</label></span>
+									</span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="table-bottom">
+					<p class="decs">Please tap the homework book.</p>
+				</div>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<button type="button" class="btn btn-primary btn-lg">Save</button>
+			<button type="button" class="btn btn-info btn-lg" data-dismiss="modal">Cancel</button>
+		</div>
+	</div>
+  </div>
+</div>
+<!--// progress Setting -->
+</body>
+</html>

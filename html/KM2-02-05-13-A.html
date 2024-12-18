@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<link rel="SHORTCUT ICON" href="/images/favicon.ico">
+<title>Key&amp;Manager ver.2</title>
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/fontawesome-all.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" type="text/css" href="/css/custom.css">
+<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+<script src="/js/vendors/jquery-ui.min.js"></script>
+<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+<script src="/js/vendors/moment.js"></script>
+<script src="/js/vendors/bootstrap.min.js"></script>
+<script src="/js/vendors/bootstrap-datetimepicker.min.js"></script>
+<script src="/js/vendors/jquery.easypiechart.min.js"></script>
+<script>
+$(function() {
+	$('.chart-div').easyPieChart({
+		scaleColor: false,
+		trackColor: '#e0e0e0',
+		lineCap: 'round',
+		lineWidth: 6,
+		size: 120,
+		animate: 1000
+	});  
+});
+</script>
+</head>
+<body class="nav-sm modal-open">
+
+<!-- Modal -->
+<div class="modal fade in print" id="studentInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4" style="display:block">
+	<div class="modal-dialog modal-wide" role="document"  id="printableArea">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close hidden-print" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h1 class="modal-title" id="myModalLabel4">Eye Level Math Quarterly Report</h1>
+			</div>
+			<div class="modal-body">
+				<div class="px-3">
+					<div class="row test-date">
+						<div class="pull-left col-md-6">
+							Cyndy kim(K0000040)
+						</div>
+						<div class="pull-right col-md-6 text-right">
+							Test Date: 2018.02 ~ 2018.04
+						</div>
+					</div>
+					<h2 class="cm-h4">TEST RESULT</h2>
+					<p class="decs">Eye Level Learning Center 3개월간 학습 결과입니다.<span class="line-break">꾸준한 학습으로 실력을 쌓아가는 <em class="tx-blue bold">sena</em>에게 많은 칭찬을 해 주세요.</span></p>
+					<div class="test-result">
+						<div class="box wide table-type">
+							<div class="inner">
+								<div class="data-table">
+									<table class="table">
+										<colgroup>
+											<col style="width:24%">
+											<col style="width:19%">
+											<col style="width:19%">
+											<col style="width:19%">
+											<col style="width:19%">
+										</colgroup>
+										<thead>
+											<tr>
+												<th>Category</th>
+												<th>February</th>
+												<th>March</th>
+												<th>April</th>
+												<th>Total</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th>Booklets</th>
+												<td>20</td>
+												<td>20</td>
+												<td>20</td>
+												<td>60</td>
+											</tr>
+											<tr>
+												<th>Words Studied</th>
+												<td>1,230</td>
+												<td>1,190</td>
+												<td>1,230</td>
+												<td>3,650</td>
+											</tr>
+											<tr>
+												<th>Cumulative questions number</th>
+												<td>7,300</td>
+												<td>8,490</td>
+												<td>9,720</td>
+												<td>25,510</td>
+											</tr>
+											<tr>
+												<th>Accuracy</th>
+												<td>
+													<div class="chart-wrap">
+														<div class="chart">
+															<div class="chart-div" data-percent="97" data-bar-color="#009ee7"><span>97</span>%</div>
+															<span class="labels">1,195/1,230</span>
+														</div>
+													</div>
+												</td>
+												<td>
+													<div class="chart-wrap">
+														<div class="chart">
+															<div class="chart-div" data-percent="93" data-bar-color="#3ecfc0"><span>93</span>%</div>
+															<span class="labels">1,110/1,190</span>
+														</div>
+													</div>
+												</td>
+												<td>
+													<div class="chart-wrap">
+														<div class="chart">
+															<div class="chart-div" data-percent="98" data-bar-color="#ff9600"><span>98</span>%</div>
+															<span class="labels">1,200/1,230</span>
+														</div>
+													</div>
+												</td>
+												<td>
+													<div class="chart-wrap">
+														<div class="chart">
+															<div class="chart-div" data-percent="96" data-bar-color="#f84062"><span>96</span>%</div>
+															<span class="labels">3,505/3,650</span>
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<th>Attendence</th>
+												<td>
+													<div class="chart-wrap">
+														<div class="chart">
+															<div class="chart-div" data-percent="80" data-bar-color="#009ee7"><span>80</span>%</div>
+															<span class="labels">6/8</span>
+														</div>
+													</div>
+												</td>
+												<td>
+													<div class="chart-wrap">
+														<div class="chart">
+															<div class="chart-div" data-percent="80" data-bar-color="#3ecfc0"><span>80</span>%</div>
+															<span class="labels">6/8</span>
+														</div>
+													</div>
+												</td>
+												<td>
+													<div class="chart-wrap">
+														<div class="chart">
+															<div class="chart-div" data-percent="80" data-bar-color="#ff9600"><span>80</span>%</div>
+															<span class="labels">6/8</span>
+														</div>
+													</div>
+												</td>
+												<td>
+													<div class="chart-wrap">
+														<div class="chart">
+															<div class="chart-div" data-percent="80" data-bar-color="#f84062"><span>80</span>%</div>
+															<span class="labels">6/8</span>
+														</div>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+					<span class="line"></span>
+					<h2 class="cm-h4"><em class="tx-blue">sena</em>’s Leraning Content</h2>
+					<div class="boxs learnn-conts">
+						<div class="inner-wrap">
+							<div class="inner">
+								<h3 class="tit">This Times Content</h3>
+								<dl class="first">
+									<dt>BASIC THINKING MATH</dt>
+									<dd>
+										<div class="bookmark-wrap">
+											<div class="bookmark">
+												<span class="bmark"><i>1</i></span>
+												<span class="set">1 ~ 4</span>
+												<span class="desc">Writing Numbers</span>
+											</div>
+											<div class="bookmark">
+												<span class="bmark"><i>1</i></span>
+												<span class="set">5 ~ 6</span>
+												<span class="desc">Learning Numbers up to 5</span>
+											</div>
+											<div class="bookmark">
+												<span class="bmark"><i>1</i></span>
+												<span class="set">7 ~ 9</span>
+												<span class="desc">Practicing Numbers up to 5</span>
+											</div>
+										</div>
+									</dd>
+								</dl>
+								<dl>
+									<dt>CRITICAL THINKING MATH</dt>
+									<dd>
+										<div class="bookmark-wrap ctm">
+											<div class="bookmark">
+												<span class="bmark"><i>1</i></span>
+												<span class="set">19 ~ 22</span>
+												<span class="desc">Writing Numbers</span>
+											</div>
+											<div class="bookmark">
+												<span class="bmark"><i>1</i></span>
+												<span class="set">23</span>
+												<span class="desc">Learning Numbers up to 5</span>
+											</div>
+										</div>
+									</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="inner-wrap">
+							<div class="inner">
+								<h3 class="tit">Next Times Content</h3>
+								<dl class="first">
+									<dt>BASIC THINKING MATH</dt>
+									<dd>
+										<div class="bookmark-wrap">
+											<div class="bookmark">
+												<span class="bmark"><i>1</i></span>
+												<span class="set">10 ~ 11</span>
+												<span class="desc">Learnig Numbers up to 10</span>
+											</div>
+											<div class="bookmark">
+												<span class="bmark"><i>1</i></span>
+												<span class="set">12 ~ 18</span>
+												<span class="desc">Practicing Numbers up to 10</span>
+											</div>
+											<div class="bookmark">
+												<span class="bmark"><i>2</i></span>
+												<span class="set">1 ~ 2</span>
+												<span class="desc">Making 10</span>
+											</div>
+										</div>
+									</dd>
+								</dl>
+								<dl>
+									<dt>CRITICAL THINKING MATH</dt>
+									<dd>
+										<div class="bookmark-wrap ctm">
+											<div class="bookmark">
+												<span class="bmark"><i>1</i></span>
+												<span class="set">24</span>
+												<span class="desc">Learning Numbers up to 5</span>
+											</div>
+											<div class="bookmark">
+												<span class="bmark"><i>1</i></span>
+												<span class="set">25 ~ 26</span>
+												<span class="desc">Learning Numbers up to 10</span>
+											</div>
+											<div class="bookmark">
+												<span class="bmark"><i>1</i></span>
+												<span class="set">27 ~ 28</span>
+												<span class="desc">Practicing Numbers up to 10</span>
+											</div>
+										</div>
+									</dd>
+								</dl>
+							</div>
+						</div>
+					</div>
+					<div class="cmt-write-wrap">
+						<h2 class="tit-cmts">Instructor Comments</h2>
+						<div class="cmt-wrap">
+							<div class="write"><textarea name="" id="" cols="30" rows="5"></textarea></div>
+						</div>
+						<button type="button" class="btn-save"><span>Save</button>
+					</div>
+					<div class="text-center btn-wrap mb-3">
+						<button type="button" class="btn btn-primary">Pdf file Download</button>
+						<button type="button" class="btn btn-info">Cancel</button>
+						<dl class="btns-share" data-toggleClass="on, off" data-active="off">
+							<dt><button type="button">share</button></dt>
+							<dd>
+								<div>
+									<a href="#">Email</a>
+									<a href="#">Messenger</a>
+									<a href="#">url copy</a>
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+			<span class="paper"><img src="/images/bg_paper.png" alt=""></span>
+		</div>
+	</div>
+</div>
+
+
+<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel4">DT 결과<small class="ml-2">SHekinah Francesca Louis (K30000718)</small></h4>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<span class="lb-txt mb-1">Starting Point 1<i class="required">*</i></span>
+							<div class="form-inline half">
+								<select class="form-control input-sm">
+									<option value="" selected="selected">Select</option>
+								</select>
+								<select class="form-control input-sm">
+									<option value="" selected="selected">Select</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<span class="lb-txt mb-1">Starting Point 2<i class="required">*</i></span>
+							<div class="form-inline half">
+								<select class="form-control input-sm">
+									<option value="" selected="selected">Select</option>
+								</select>
+								<select class="form-control input-sm">
+									<option value="" selected="selected">Select</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class=" form-group">
+							<span class="lb-txt mb-1">Max Booklets/Week<i class="required">*</i></span>
+							<input class="form-control input-sm clearable" type="text">
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class=" form-group">
+							<span class="lb-txt mb-1">진도 모델</span>
+							<input class="form-control input-sm clearable" type="text">
+						</div>
+					</div>
+				</div>
+				<div class="text-center">
+					<button type="button" class="btn btn-primary">OK</button>
+					<button type="button" class="btn btn-info" data-dismiss="modal">Cancel</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal-backdrop fade in"></div>
+
+<script src="/js/custom.js"></script>
+</body>
+</html>

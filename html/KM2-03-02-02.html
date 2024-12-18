@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<link rel="SHORTCUT ICON" href="/images/favicon.ico">
+<title>Key&amp;Manager ver.2</title>
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/fontawesome-all.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" type="text/css" href="/css/custom.css">
+<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+<script src="/js/vendors/jquery-ui.min.js"></script>
+<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+<script src="/js/vendors/moment.js"></script>
+<script src="/js/vendors/bootstrap.min.js"></script>
+<script src="/js/vendors/bootstrap-datetimepicker.min.js"></script>
+</head>
+<body class="nav-sm">
+<div class="wrapper">		
+	<div class="left_col">
+		<div id="sidebar-menu" class="main_menu_side main_menu">
+			<div class="menu_section">
+				<ul class="nav side-menu">
+					<li class="parent_menu"><a href="#"><i class="ico-schedule"></i>Schedule</a><a role="button" class="submenu-open"></a></li>
+					<li class="parent_menu"><a href="#"><i class="ico-member"></i>Member</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Member</a>
+								<ul class="nav-depth3">
+									<li class="active"><a href="#">Subject Transfer</a></li>
+									<li><a href="#">Learning</a></li> 
+									<li><a href="#">Attendance</a></li> 
+								</ul>
+							</li>
+							<li><a href="#">Attendance</a></li> 
+							<li><a href="#">Subject Transfer</a></li>
+							<li><a href="#">Learning</a></li> 
+							<li><a href="#">Attendance</a></li> 
+						</ul>
+					</li>
+					<li class="parent_menu"><a href="#"><i class="ico-learning"></i>Learning</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Member</a></li>
+							<li><a href="#">Attendance</a></li>
+							<li><a href="#">Subject Transfer</a></li>
+							<li><a href="#">Learning</a></li>
+							<li><a href="#">Attendance</a></li>
+						</ul>
+					</li>
+					<li class="parent_menu"><a href="#"><i class="ico-finance"></i>Finance</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Member</a></li>
+							<li><a href="#">Attendance</a></li> 
+							<li><a href="#">Subject Transfer</a></li>
+							<li><a href="#">Learning</a></li> 
+							<li><a href="#">Attendance</a></li> 
+						</ul>
+					</li>
+					<li class="parent_menu"><a href="#"><i class="ico-center"></i>Center</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Member</a></li>
+							<li><a href="#">Attendance</a></li> 
+							<li><a href="#">Subject Transfer</a></li>
+							<li><a href="#">Learning</a></li> 
+							<li><a href="#">Attendance</a></li> 
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="right_col">		
+		<div class="nav_menu">
+			<div class="toggle">
+				<a href="#" class="menu_toggle"><i></i></a>
+			</div>
+			<div class="head-wrap">
+				<div class="pull-left head-favorite">
+					<ul class="head-favorite-list">
+						<li><a href="#" class="list">Create member</a><a href="#" class="ico-delete"><i class="fas fa-times"></i></a></li>
+						<li><a href="#" class="list">Payment</a><a href="#" class="ico-delete"><i class="fas fa-times"></i></a></li>
+						<li><a href="#" class="list">My student</a><a href="#" class="ico-delete"><i class="fas fa-times"></i></a></li>
+					</ul>
+					<a href="#" class="favorite-set"><span class="ico-count cl-gray"></span>My menu add</a>
+				</div>
+				<div class="pull-right head-user-info">
+					<a href="#" class="head-logout">Logout</a>
+					<span class="head-name">Tony tony chopa (FC0001S)</span>
+					<a href="#" class="head-mypage">My page</a>
+				</div>
+			</div>
+		</div>
+		<div class="right_content" role="main">
+			<div class="container-fluid">
+				<div class="col-md-12">
+					<h3>STATEMENT 상세</h3>
+					<div class="row btn-in">
+						<div class="col-md-12 form-tit">
+							<h4 class="tit">Center Info</h4>
+							<div class="info">
+								<ul class="breadcrumb">
+									<li>Daekyo Malaysia</li>
+									<li>Daekyo Malaysia</li>
+									<li>Bukit Damansara</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="bx-table">
+						<div class="x-scroll">
+							<!-- 180717_수정 [화면설계서 v3.1 수정사항 반영] -->
+							<table class="table">
+								<thead>
+									<tr>
+										<th scope="col">Member Name</th>
+										<th scope="col">Mamber ID</th>
+										<th scope="col">입회 날짜</th>
+										<th scope="col">Status</th>
+										<th scope="col">Balance(24/04/2018)</th>
+										<th scope="col">Deposit</th>
+										<th scope="col">환불 가능 금액</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Aidan James Wong</td>
+										<td>G00051366</td>
+										<td>18/04/2011</td>
+										<td>Study</td>
+										<td>0</td>
+										<td>200.00</td>
+										<td>
+											<span class="mr-2">230.11 </span>
+											<button type="button" class="btn btn-default btn-request round">Refund</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<!-- // 180717_수정 [화면설계서 v3.1 수정사항 반영] -->
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-12 mb-1">
+							<div class="text-right">
+								<button type="button" class="btn btn-primary">Adjustment</button>
+								<button type="button" class="btn btn-success">List</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="bx-table">
+						<div class="tb-dimm"><span class="txts">Fetching data...</span></div>
+						<div class="y-scroll h500">
+							<table class="table table-bordered">
+								<thead>
+									<tr>
+										<th scope="col">날짜</th>
+										<th scope="col">청구 월</th>
+										<th scope="col">청구/영수 번호</th>
+										<th scope="col">청구 금액</th>
+										<th scope="col">납부 금액</th>
+										<th scope="col">조정 금액</th>
+										<th scope="col">환불 금액</th>
+										<th scope="col">잔액</th>
+									</tr>
+								</thead>
+								<tfoot>
+									<tr class="bg-color">
+										<td class="bold"></td>
+										<td class="bold">Data Cleansing</td>
+										<td class="bold"></td>
+										<td class="right"></td>
+										<td class="right"></td>
+										<td class="right bold">0.94</td>
+										<td class="right bold">50.00</td>
+										<td class="right bold">100.00</td>
+									</tr>
+								</tfoot>
+								<tbody>
+									<tr>
+										<td>11/01/2018</td>
+										<td>02/2019</td>
+										<td><a href="#">I-2017-09-nnnn</a></td>
+										<td class="right">100.00</td>
+										<td class="right">1.00 </td>
+										<td class="right bold underline"></td>
+										<td class="right"></td>
+										<td class="right">550.94</td>
+									</tr>
+									<tr>
+										<td>11/12/2018</td>
+										<td>01/2019</td>
+										<td><a href="#">I-2017-09-nnnn</a></td>
+										<td class="right">100.00</td>
+										<td class="right">1.00 </td>
+										<td class="right bold underline"></td>
+										<td class="right"></td>
+										<td class="right">450.94</td>
+									</tr>
+									<tr>
+										<td>11/11/2018</td>
+										<td>12/2018</td>
+										<td><a href="#">I-2017-09-nnnn</a></td>
+										<td class="right">100.00</td>
+										<td class="right">1.00 </td>
+										<td class="right bold underline"></td>
+										<td class="right"></td>
+										<td class="right">350.94</td>
+									</tr>
+									<tr>
+										<td>11/10/2018</td>
+										<td>11/2018</td>
+										<td><a href="#">I-2017-09-nnnn</a></td>
+										<td class="right">100.00</td>
+										<td class="right"></td>
+										<td class="right bold underline"></td>
+										<td class="right"></td>
+										<td class="right">250.00</td>
+									</tr>
+									<tr>
+										<td>11/10/2018</td>
+										<td></td>
+										<td></td>
+										<td class="right"></td>
+										<td class="right"></td>
+										<td class="right bold underline">0.94</td>
+										<td class="right"></td>
+										<td class="right">250.00</td>
+									</tr>
+									<tr>
+										<td>11/09/2018</td>
+										<td>10/2018</td>
+										<td><a href="#">I-2017-09-nnnn</a></td>
+										<td class="right">100.00</td>
+										<td class="right"></td>
+										<td class="right bold underline"></td>
+										<td class="right"></td>
+										<td class="right">150.00</td>
+									</tr>
+									<tr>
+										<td>11/08/2018</td>
+										<td>09/2018</td>
+										<td><a href="#">I-2017-09-nnnn</a></td>
+										<td class="right"></td>
+										<td class="right"></td>
+										<td class="right bold underline"></td>
+										<td class="right">50.00</td>
+										<td class="right"></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+				</div>	
+			</div>
+		</div>
+		<footer>
+			<span class="ft-logo">KEY &amp; MANAGER</span>
+			<p class="ft-copy">Copyright &copy; 2018 Daekyo Co., Ltd All rights reserved. For more information, contact <a href="mailto:myeyelevel@myeyelevel.com">myeyelevel@myeyelevel.com</a></p>
+			<div class="ft-site">
+				<dl>
+					<dt><a href="#class">LINKS</a></dt>
+					<dd>
+						<ul>
+							<li><a href="https://sites.google.com/a/myeyelevel.com/itisthekey/" target="_blank">User guide</a></li>
+							<li><a href="http://www.myeyelevel.com/Global/English/" target="_blank">Eyelevel Site</a></li>
+							<li><a href="http://www.iamthekey.com/" target="_blank">Brand Site</a></li>
+							<li><a href="http://eng.daekyo.com/En/default.aspx" target="_blank">Corporate Site</a></li>
+							<li><a href="http://elu.myeyelevel.com" target="_blank">Eye Level University</a></li>
+							<li><a href="http://email.myeyelevel.com" target="_blank">Email</a></li>
+						</ul>
+					</dd>
+				</dl>
+			</div>
+		</footer>
+	</div>
+</div>
+
+<script src="/js/custom.js"></script>
+</body>
+</html>

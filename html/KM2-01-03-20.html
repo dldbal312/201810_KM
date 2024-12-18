@@ -1,0 +1,375 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<link rel="SHORTCUT ICON" href="/images/favicon.ico">
+<title>Key&amp;Manager ver.2</title>
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/fontawesome-all.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" type="text/css" href="/css/custom.css">
+<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+<script src="/js/vendors/jquery-ui.min.js"></script>
+<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+<script src="/js/vendors/moment.js"></script>
+<script src="/js/vendors/bootstrap.min.js"></script>
+<script src="/js/vendors/bootstrap-datetimepicker.min.js"></script>
+</head>
+<body class="nav-sm">
+<div class="wrapper">		
+	<div class="left_col">
+		<div id="sidebar-menu" class="main_menu_side main_menu">
+			<div class="menu_section">
+				<ul class="nav side-menu">
+					<li class="parent_menu"><a href="#"><i class="ico-schedule"></i>Schedule</a><a role="button" class="submenu-open"></a></li>
+					<li class="parent_menu"><a href="#"><i class="ico-member"></i>Member</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Member</a>
+								<ul class="nav-depth3">
+									<li class="active"><a href="#">Subject Transfer</a></li>
+									<li><a href="#">Learning</a></li> 
+									<li><a href="#">Attendance</a></li> 
+								</ul>
+							</li>
+							<li><a href="#">Attendance</a></li> 
+							<li><a href="#">Subject Transfer</a></li>
+							<li><a href="#">Learning</a></li> 
+							<li><a href="#">Attendance</a></li> 
+						</ul>
+					</li>
+					<li class="parent_menu"><a href="#"><i class="ico-learning"></i>Learning</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Member</a></li>
+							<li><a href="#">Attendance</a></li>
+							<li><a href="#">Subject Transfer</a></li>
+							<li><a href="#">Learning</a></li>
+							<li><a href="#">Attendance</a></li>
+						</ul>
+					</li>
+					<li class="parent_menu"><a href="#"><i class="ico-finance"></i>Finance</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Member</a></li>
+							<li><a href="#">Attendance</a></li> 
+							<li><a href="#">Subject Transfer</a></li>
+							<li><a href="#">Learning</a></li> 
+							<li><a href="#">Attendance</a></li> 
+						</ul>
+					</li>
+					<li class="parent_menu"><a href="#"><i class="ico-center"></i>Center</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Member</a></li>
+							<li><a href="#">Attendance</a></li> 
+							<li><a href="#">Subject Transfer</a></li>
+							<li><a href="#">Learning</a></li> 
+							<li><a href="#">Attendance</a></li> 
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="right_col">		
+		<div class="nav_menu">
+			<div class="toggle">
+				<a href="#" class="menu_toggle"><i></i></a>
+			</div>
+			<div class="head-wrap">
+				<div class="pull-left head-favorite">
+					<ul class="head-favorite-list">
+						<li><a href="#" class="list">Create member</a><a href="#" class="ico-delete"><i class="fas fa-times"></i></a></li>
+						<li><a href="#" class="list">Payment</a><a href="#" class="ico-delete"><i class="fas fa-times"></i></a></li>
+						<li><a href="#" class="list">My student</a><a href="#" class="ico-delete"><i class="fas fa-times"></i></a></li>
+					</ul>
+					<a href="#" class="favorite-set"><span class="ico-count cl-gray"></span>My menu add</a>
+				</div>
+				<div class="pull-right head-user-info">
+					<a href="#" class="head-logout">Logout</a>
+					<span class="head-name">Tony tony chopa (FC0001S)</span>
+					<a href="#" class="head-mypage">My page</a>
+				</div>
+			</div>
+		</div>
+		<div class="right_content" role="main">
+			<div class="container-fluid">
+				<div class="col-md-12">
+					<h3>메시지 발송</h3>
+					<div class="row btn-in">
+						<div class="col-md-12 form-tit">
+							<h4 class="tit">Center Info</h4>
+							<div class="info">
+								<ul class="breadcrumb">
+									<li>Daekyo Malaysia</li>
+									<li>Daekyo Malaysia</li>
+									<li>Bukit Damansara</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-11 bx-search">
+							<form class="form-inline">
+								<div class="row">
+									<div class="col-md-12">
+										<div class="form-group">
+											<span class="lb-txt st1">발송일자</span>
+											<div class="input-group date">
+												<input type="text" class="form-control input-sm clearable datepicker" placeholder="dd/mm/yyyy">
+												<span class="input-group-addon">
+													<span class="calendar-icon"></span>
+												</span>
+											</div>
+											<span class="date-period-divider">~</span>
+											<div class="input-group date">
+												<input type="text" class="form-control input-sm clearable datepicker" placeholder="dd/mm/yyyy">
+												<span class="input-group-addon">
+													<span class="calendar-icon"></span>
+												</span>
+											</div>
+										</div>
+										<div class="form-group">
+											<span class="lb-txt st1">Instructor</span>
+											<div class="input-group">
+												<input class="form-control input-sm clearable" type="text">
+												<div class="input-group-btn">
+													<button type="button" class="btn btn-search" data-toggle="modal" data-target="#searchManager"><span class="fas fa-search"></span><span class="hide">Search</span></button>
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<span class="lb-txt st1">제목/내용</span>
+											<input class="form-control input-sm clearable" type="text">
+										</div>
+										<div class="form-group">
+											<span class="lb-txt st1">발송 상태</span>
+											<select class="form-control input-sm">
+												<option value="" selected="selected">All</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="btn-area col-md-1">
+							<a href="#" class="btn btn-primary">Search</a>
+						</div>
+					</div>
+					<div class="ln_solid"></div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="pull-right mb-1">
+								<a href="#" class="btn btn-success" data-toggle="modal" data-target="#modal1">Send</a>
+							</div>
+						</div>
+					</div>
+					<div class="bx-table">
+						<div class="tb-dimm"><span class="txts">Fetching data...</span></div>
+						<div class="x-scroll">
+							<table class="table table-sort">
+								<colgroup>
+									<col style="width:80px">
+									<col style="width:auto">
+									<col style="width:auto">
+									<col style="width:auto">
+									<col style="width:auto">
+									<col style="width:35%">
+									<col style="width:25%">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col"><a href="#" class="sorting">No</a></th>
+										<th scope="col"><a href="#" class="sorting">발송 교사</a></th>
+										<th scope="col"><a href="#" class="sorting">발송 일자</a></th>
+										<th scope="col"><a href="#" class="sorting">발송 상태</a></th>
+										<th scope="col"><a href="#" class="sorting">발송 채널</a></th>
+										<th scope="col"><a href="#" class="sorting">제목</a></th>
+										<th scope="col"><a href="#" class="sorting">Remarks</a></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>Bukit Damansara</td>
+										<td>17:00 30/05/2018</td>
+										<td><span class="tx-green">예정</span></td>
+										<td>E-mail, Wechat</td>
+										<td>[학부모공지] 센터 휴무 안내</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>Bukit Damansara</td>
+										<td>17:00 30/05/2018</td>
+										<td><span class="tx-red">실패</span></td>
+										<td>Wechat, Facebook</td>
+										<td>[학부모공지] 학습 과정 변경 안내</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>Bukit Damansara</td>
+										<td>17:00 30/05/2018</td>
+										<td><span>완료</span></td>
+										<td>Wechat, Facebook</td>
+										<td>[학부모공지] 센터 이용 유의사항 안내</td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="text-center">
+						<nav>
+							<ul class="pagination">
+								<li class="disabled"><a href="#" aria-label="First"><i class="fas fa-angle-double-left"></i></a></li>
+								<li class="disabled"><a href="#" aria-label="Previous"><i class="fas fa-angle-left"></i></a></li>
+								<li class="active"><a href="#">1<span class="sr-only">(current)</span></a></li>
+								<li><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><a href="#">4</a></li>
+								<li><a href="#">5</a></li>
+								<li><a href="#">6</a></li>
+								<li><a href="#">7</a></li>
+								<li><a href="#">8</a></li>
+								<li><a href="#">9</a></li>
+								<li><a href="#">10</a></li>
+								<li><a href="#" aria-label="Next"><i class="fas fa-angle-right"></i></a></li>
+								<li><a href="#" aria-label="Last"><i class="fas fa-angle-double-right"></i></a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<span class="ft-logo">KEY &amp; MANAGER</span>
+			<p class="ft-copy">Copyright &copy; 2018 Daekyo Co., Ltd All rights reserved. For more information, contact <a href="mailto:myeyelevel@myeyelevel.com">myeyelevel@myeyelevel.com</a></p>
+			<div class="ft-site">
+				<dl>
+					<dt><a href="#class">LINKS</a></dt>
+					<dd>
+						<ul>
+							<li><a href="https://sites.google.com/a/myeyelevel.com/itisthekey/" target="_blank">User guide</a></li>
+							<li><a href="http://www.myeyelevel.com/Global/English/" target="_blank">Eyelevel Site</a></li>
+							<li><a href="http://www.iamthekey.com/" target="_blank">Brand Site</a></li>
+							<li><a href="http://eng.daekyo.com/En/default.aspx" target="_blank">Corporate Site</a></li>
+							<li><a href="http://elu.myeyelevel.com" target="_blank">Eye Level University</a></li>
+							<li><a href="http://email.myeyelevel.com" target="_blank">Email</a></li>
+						</ul>
+					</dd>
+				</dl>
+			</div>
+		</footer>
+	</div>
+</div>
+
+<div class="modal fade" id="modal1" tabindex="-1" role="dialog">
+	<div class="modal-dialog modal-md" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel1">전체 메시지 발송</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-md-7 col-sm-7">
+						<div class="form-group">
+							<span class="lb-txt mb-1">Send Invoice<i class="required">*</i></span>
+							<div class="form-inline">
+								<div class="checkbox checkbox-primary checkbox-inline">
+									<input type="checkbox" id="checkbox1" value="checkbox1" name="checkbox1" checked="checked">
+									<label for="checkbox1">E-mail</label>
+								</div>
+								<div class="checkbox checkbox-primary checkbox-inline">
+									<input type="checkbox" id="checkbox2" value="checkbox2" name="checkbox2">
+									<label for="checkbox2">Wechat</label>
+								</div>
+								<div class="checkbox checkbox-primary checkbox-inline">
+									<input type="checkbox" id="checkbox3" value="checkbox3" name="checkbox3">
+									<label for="checkbox3">Facebook</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-5 col-sm-5">
+						<div class=" form-group">
+							<span class="lb-txt mb-1">Send Instructor<i class="required">*</i></span>
+							<div class="input-group">
+								<input class="form-control input-sm clearable" type="text">
+								<div class="input-group-btn">
+									<button type="button" class="btn btn-search" data-toggle="modal" data-target="#searchManager"><span class="fas fa-search"></span><span class="hide">Search</span></button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-7 col-sm-7">
+						<div class="form-group">
+							<span class="lb-txt mb-1">Enrollment Date<i class="required">*</i></span>
+							<div class="form-inline">
+								<div class="input-group date">
+									<input class="form-control input-sm clearable datepicker" type="text" placeholder="dd/mm/yyyy">
+									<span class="input-group-addon">
+										<span class="calendar-icon"></span>
+									</span>
+								</div>
+								<div class="checkbox checkbox-primary checkbox-inline">
+									<input type="checkbox" id="checkbox1" value="checkbox11" name="checkbox11">
+									<label for="checkbox11">바로 보내기</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-5 col-sm-5">
+						<div class=" form-group">
+							<span class="lb-txt mb-1">발송 시간<i class="required">*</i></span>
+							<div class="form-inline">
+								<select class="form-control input-sm">
+									<option value="" selected="selected">00</option>
+								</select>
+								<span class="date-period-divider">시</span>
+								<select class="form-control input-sm">
+									<option value="" selected="selected">00</option>
+								</select>
+								<span class="date-period-divider">분</span>
+							</div>
+						</div>
+					</div>	
+				</div>
+				<div class="ln_dashed"></div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="form-group">
+							<span class="lb-txt mb-1">메시지 제목<i class="required">*</i></span>
+							<input type="text" class="form-control input-sm clearable" placeholder="50Byte 이내 입력">
+							<p class="text-right mt-1">(<span>0</span>/30)</p>
+						</div>
+						<div class="form-group">
+							<span class="lb-txt mb-1">메시지 내용<i class="required">*</i></span>
+							<textarea class="form-control" rows="3"></textarea>
+							<p class="text-right mt-1">(<span>0</span>/30)</p>
+						</div>
+						<div class="form-group">
+							<span class="lb-txt mb-1">Remarks</span>
+							<input type="text" class="form-control input-sm clearable" placeholder="50Byte 이내 입력">
+							<p class="text-right mt-1">(<span>0</span>/30)</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary">Send</button>
+				<button type="button" class="btn btn-info" data-dismiss="modal">Cancel</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="/js/custom.js"></script>
+</body>
+</html>

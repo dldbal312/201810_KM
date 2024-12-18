@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<link rel="SHORTCUT ICON" href="/images/favicon.ico">
+<title>Key&amp;Manager ver.2</title>
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/fontawesome-all.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" type="text/css" href="/css/custom.css">
+<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+<script src="/js/vendors/jquery-ui.min.js"></script>
+<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+<script src="/js/vendors/moment.js"></script>
+<script src="/js/vendors/bootstrap.min.js"></script>
+<script src="/js/vendors/bootstrap-datetimepicker.min.js"></script>
+</head>
+<body class="nav-sm modal-open">
+
+<div class="modal fade in" id="modal1" tabindex="-1" style="display: block;">
+	<div class="modal-dialog modal-md" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title">Consultation reservation</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<form>
+						<div class="col-md-12">
+							<div class=" form-group form-inline">
+								<span class="lb-txt mb-1 mr-2">Search Member</span>
+								<div class="input-group">
+									<input class="form-control input-sm clearable" type="text" placeholder="">
+									<div class="input-group-btn">
+										<button type="button" class="btn btn-search" data-toggle="modal" data-target="#searchMember"><span class="fas fa-search"></span><span class="hide">Search</span></button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class=" form-group">
+								<span class="lb-txt mb-1">First name<i class="required">*</i></span>
+								<input type="text" class="form-control input-sm clearable">
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class=" form-group">
+								<span class="lb-txt mb-1">Middle name</span>
+								<input type="text" class="form-control input-sm clearable">
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class=" form-group">
+								<span class="lb-txt mb-1">Last name<i class="required">*</i></span>
+								<input type="text" class="form-control input-sm clearable">
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class=" form-group">
+								<span class="lb-txt mb-1">Contact<i class="required">*</i></span>
+								<input type="tel" class="form-control input-sm clearable">
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class=" form-group">
+								<span class="lb-txt mb-1">Grade<i class="required">*</i></span>
+								<select class="form-control input-sm">
+									<option value="" selected="selected">select</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class=" form-group">
+								<span class="lb-txt mb-1">Instructor<i class="required">*</i></span>
+								<div class="input-group">
+									<input class="form-control input-sm clearable" type="text" placeholder="Sunny.kim">
+									<div class="input-group-btn">
+										<button type="button" class="btn btn-search" data-toggle="modal" data-target="#searchManager"><span class="fas fa-search"></span><span class="hide">Search</span></button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class=" form-group">
+								<span class="lb-txt mb-1">Reservation Date<i class="required">*</i></span>
+								<div class="form-group form-inline">
+									<div class="input-group date">
+										<input type="text" class="form-control input-sm clearable datepicker" style="width:100px;" placeholder="15/03/218">
+										<span class="input-group-addon">
+											<span class="calendar-icon"></span>
+										</span>
+									</div>
+									<select class="form-control input-sm">
+										<option value="" selected="selected">08</option>
+									</select>
+									<select class="form-control input-sm">
+										<option value="" selected="selected">00</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class=" form-group">
+								<span class="lb-txt mb-1">Type<i class="required">*</i></span>
+								<select class="form-control input-sm">
+									<option value="" selected="selected">All</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class=" form-group">
+								<span class="lb-txt mb-1">접수 창수<i class="required">*</i></span>
+								<select class="form-control input-sm">
+									<option value="" selected="selected">All</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class=" form-group">
+								<span class="lb-txt mb-1">상담 과목<i class="required">*</i></span>
+								<div class="form-inline h30">
+									<div class="checkbox checkbox-primary checkbox-inline">
+										<input type="checkbox" id="checkbox1" value="checkbox1" name="checkbox1" checked="checked">
+										<label for="checkbox1">English</label>
+									</div>
+									<div class="checkbox checkbox-primary checkbox-inline">
+										<input type="checkbox" id="checkbox2" value="checkbox2" name="checkbox2" checked="checked">
+										<label for="checkbox2">Math</label>
+									</div>
+									<div class="checkbox checkbox-primary checkbox-inline">
+										<input type="checkbox" id="checkbox3" value="checkbox3" name="checkbox3">
+										<label for="checkbox3">Etc</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-md-12">
+							<div class=" form-group">
+								<span class="lb-txt mb-1">Reservation Comments (<span>0</span>/500)</span>
+								<textarea class="form-control clearable" rows="3"></textarea>
+							</div>
+						</div>
+					</form>
+					<div class="text-center">
+						<button type="button" class="btn btn-primary">Save</button>
+						<button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal-backdrop fade in"></div>
+
+<script src="/js/custom.js"></script>
+</body>
+</html>

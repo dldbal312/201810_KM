@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<link rel="SHORTCUT ICON" href="/images/favicon.ico">
+<title>Key&amp;Manager ver.2</title>
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/fontawesome-all.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" type="text/css" href="/css/custom.css">
+<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+<script src="/js/vendors/jquery-ui.min.js"></script>
+<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+<script src="/js/vendors/moment.js"></script>
+<script src="/js/vendors/bootstrap.min.js"></script>
+<script src="/js/vendors/bootstrap-datetimepicker.min.js"></script>
+</head>
+<body class="nav-sm modal-open">
+<div class="modal fade in" id="modal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel5" style="display: block;">
+	<div class="modal-dialog modal-md" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h1 class="modal-title" id="myModalLabel5">Transfer - 방문횟수충전 방식</h1>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-md-12">
+						<h2 class="cm-h4 mt-0">Subject Info</h2>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<span class="lb-txt mb-1">AS-IS Subject</span>
+							<p class="ml-2 mt-1 tx-blue bold">EL MATH</p>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<span class="lb-txt mb-1">To-be Subject</span>
+							<select class="form-control input-sm">
+								<option value="" selected="selected">Select</option>
+							</select>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<span class="lb-txt mb-1">Starting Point 1</span>
+							<div class="form-inline half">
+								<select class="form-control input-sm">
+									<option value="" selected="selected">Select</option>
+								</select>
+								<select class="form-control input-sm">
+									<option value="" selected="selected">Select</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<span class="lb-txt mb-1">Starting Point 2</span>
+							<div class="form-inline half">
+								<select class="form-control input-sm">
+									<option value="" selected="selected">Select</option>
+								</select>
+								<select class="form-control input-sm">
+									<option value="" selected="selected">Select</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<span class="lb-txt mb-1">과목 전환 시작</span>
+							<div class="btn-group" data-toggle="buttons">
+								<label class="btn btn-default">
+									<input type="radio" name="options" id="option1" autocomplete="off" checked="checked">
+									<span>이번 달부터</span>
+								</label>
+								<label class="btn btn-default active">
+									<input type="radio" name="options" id="option2" autocomplete="off">
+									<span>다음달부터</span>
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<span class="lb-txt mb-1">Study Start Date<i class="required">*</i></span>
+							<div class="form-inline input-group date">
+								<input class="form-control input-sm clearable datepicker" type="text" placeholder="dd/mm/yyyy">
+								<span class="input-group-addon">
+									<span class="calendar-icon"></span>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class=" form-group">
+							<span class="lb-txt mb-1">Study Day<i class="required">*</i></span>
+							<div class="form-inline">
+								<select class="form-control input-sm">
+									<option value="" selected="selected">MON</option>
+								</select>
+								<select class="form-control input-sm">
+									<option value="" selected="selected">00</option>
+								</select>
+								<span class="date-period-divider">시</span>
+								<select class="form-control input-sm">
+									<option value="" selected="selected">00</option>
+								</select>
+								<span class="date-period-divider">분</span>
+								<a href="#" class="btn-list-open">Add</a>
+							</div>
+						</div>
+						<div class="edit-week">
+							<div class="edit-week-box">
+								<span class="alert alert-info" role="alert">MON 15:00<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button></span>
+								<span class="alert alert-info" role="alert">TUE 16:00<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button></span>
+								<span class="alert alert-info" role="alert">WED 17:00<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button></span>
+								<span class="alert alert-info" role="alert">THU 17:00<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button></span>
+								<span class="alert alert-info" role="alert">FRI 17:00<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button></span>
+								<span class="alert alert-info" role="alert">SAT 17:00<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button></span>
+								<span class="alert alert-info" role="alert">SUN 17:00<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="ln_dashed"></div>
+				<h2 class="cm-h4 mt-0">Tuition Info</h2>
+				<div class="bx-table">
+					<form class="form-group">
+						<table  class="table">
+							<colgroup>
+								<col style="width:12%">
+								<col style="width:auto">
+								<col style="width:12%">
+								<col style="width:12%">
+								<col style="width:12%">
+								<col style="width:12%">
+								<col style="width:12%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">회비 정보</th>
+									<th scope="col">회비 타입</th>
+									<th scope="col">충전 횟수</th>
+									<th scope="col">충전 금액</th>
+									<th scope="col">회당 단가</th>
+									<th scope="col">남은 횟수</th>
+									<th scope="col">남은 금액</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">AS-IS</th>
+									<td>KK0002991</td>
+									<td>150</td>
+									<td>1,500</td>
+									<td>10</td>
+									<td>120</td>
+									<td><span class="tx-blue">1,200</span></td>
+								</tr>
+								<tr>
+									<th scope="row">TO-BE</th>
+									<td>
+										<select class="form-control input-sm">
+											<option selected="selected">KK0002801</option>
+										</select>
+									</td>
+									<td>
+										<div class="form-inline">
+											<select class="form-control input-sm">
+												<option selected="selected">70</option>
+											</select>
+											<button type="button" class="btn ml-0"><i class="fas fa-sync-alt"></i></button>
+										</div>
+									</td>
+									<td><span class="tx-blue">1,190</span></td>
+									<td>17</td>
+									<td>70</td>
+									<td><span class="tx-blue">10</span></td>
+								</tr>
+							</tbody>
+						</table>
+					</form>
+				</div>	
+				<div class="row">
+					<div class="text-center">
+						<button type="button" class="btn btn-primary">Save</button>
+						<button type="button" class="btn btn-info" data-dismiss="modal">Cancel</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal-backdrop fade in"></div>
+
+<script src="/js/custom.js"></script>
+</body>
+</html>

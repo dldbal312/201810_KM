@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Pragma" content="no-cache">
+	<title>K&amp;M2 버튼 / 탭 가이드</title>
+	<link rel="SHORTCUT ICON" href="/images/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="/guide/base.css">
+	<link rel="stylesheet" type="text/css" href="/guide/shCoreDefault.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap-datetimepicker.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendors/fontawesome-all.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendors/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" type="text/css" href="/css/custom.css">
+	<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+	<script src="/js/vendors/jquery-ui.min.js"></script>
+	<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+	<script src="/js/vendors/moment.js"></script>
+	<script src="/js/vendors/bootstrap.min.js"></script>
+	<script src="/js/vendors/bootstrap-datetimepicker.min.js"></script>
+	<script src="/guide/shCore.js"></script>
+	<script src="/guide/shBrushXml.js"></script>
+	<script src="/guide/shBrushCss.js"></script>
+	<script src="/guide/shBrushJScript.js"></script>
+	<script type="text/javascript">SyntaxHighlighter.all();</script>	
+</head>
+<body>
+<div id="wrap" class="coding_guide">
+	<h1 class="h1_guide">버튼 / 탭 가이드</h1>
+	<h2 class="h2_guide">anchor 버튼</h2>
+	<div class="dscBox">
+		<div class="dscImg">
+			<div class="">
+				<a href="#" class="btn btn-default">default</a>
+				<a href="#" class="btn btn-primary">OK</a>
+				<a href="#" class="btn btn-success">Save</a>
+				<a href="#" class="btn btn-warning">Save</a>
+				<a href="#" class="btn btn-info">Close</a>
+				<a href="#" class="btn btn-default disabled">default(비활성화)</a>
+				<a href="#" class="btn btn-primary disabled">Save(비활성화)</a>
+				<a href="#" class="btn btn-warning disabled">Save(비활성화)</a>
+				<a href="#" class="btn btn-info disabled">Close(비활성화)</a>
+				<a href="#" class="btn-list-del">Delete</a>
+				<a href="#" class="btn-list-open">Add</a>
+				<a href="#" class="btn btn-default"><i class="far fa-file-pdf"></i> PDF</a>
+				<a href="#" class="btn btn-default"><i class="far fa-file-excel"></i> Excel</a>
+				<a href="#" class="btn btn-default btn-request">Request</a>
+			</div>
+			<div class="modal" style="display:block;position:relative;left:auto;top:auto;right:auto;bottom:auto;margin-top:10px">
+				<a href="#" class="btn btn-default">default</a>
+				<a href="#" class="btn btn-primary">OK</a>
+				<a href="#" class="btn btn-success">Save</a>
+				<a href="#" class="btn btn-warning">Save</a>
+				<a href="#" class="btn btn-info">Close</a>
+				<a href="#" class="btn btn-default disabled">default(비활성화)</a>
+				<a href="#" class="btn btn-primary disabled">Save(비활성화)</a>
+				<a href="#" class="btn btn-warning disabled">Save(비활성화)</a>
+				<a href="#" class="btn btn-info disabled">Close(비활성화)</a>
+				<a href="#" class="btn-list-del">Delete</a>
+				<a href="#" class="btn-list-open">Add</a>
+				<a href="#" class="btn btn-default"><i class="far fa-file-pdf"></i> PDF</a>
+				<a href="#" class="btn btn-default"><i class="far fa-file-excel"></i> Excel</a>
+				<a href="#" class="btn btn-default btn-request">Request</a>
+			</div>
+		</div>
+<pre class="brush: xml;">
+<!-- 기본스타일 -->
+<a href="#" class="btn btn-default">default</a>
+<a href="#" class="btn btn-primary">하늘색</a>
+<a href="#" class="btn btn-success">파란색</a>
+<a href="#" class="btn btn-warning">회색</a>
+<a href="#" class="btn btn-info">회색</a>
+
+<!-- 비활성화 -->
+<a href="#" class="btn btn-default disabled"></a>
+<a href="#" class="btn btn-primary disabled"></a>
+<a href="#" class="btn btn-warning disabled"></a>
+<a href="#" class="btn btn-info disabled"></a>
+
+<!-- 리스트 추가/제거 -->
+<a href="#" class="btn-list-del">Delete</a>
+<a href="#" class="btn-list-open">Add</a>
+
+<!-- PDF, Excel 다운로드 -->
+<a href="#" class="btn btn-default"><i class="far fa-file-pdf"></i> PDF</a>
+<a href="#" class="btn btn-default"><i class="far fa-file-excel"></i> Excel</a>
+
+<!-- 센터 정렬 버튼 -->
+<div class="text-center">
+	<a href="#" class="btn">Add Student</a>
+	<a href="#" class="btn">Delete</a>
+</div>
+
+<!-- 오른쪽 정렬 버튼 -->
+<div class="text-right">
+	<a href="#" class="btn">Add Student</a>
+	<a href="#" class="btn">Delete</a>
+</div>
+
+<!-- 좌우 정렬 버튼 -->
+<div class="row">
+	<div class="col-md-12">
+		<span class="pull-left">
+			<a href="#" class="btn btn-primary">left</a>
+		</span> 
+		<span class="pull-right">
+			<a href="#" class="btn btn-primary">right</a>
+		</span>
+	</div>
+</div>
+</pre>
+	</div>
+
+	<h2 class="h2_guide">button 버튼</h2>
+	<div class="dscBox">
+		<div class="dscImg">
+			<button type="button" class="btn btn-default">default</button>
+			<button type="button" class="btn btn-primary">OK</button>
+			<button type="button" class="btn btn-success">Save</button>
+			<button type="button" class="btn btn-warning">Save</button>
+			<button type="button" class="btn btn-info">Close</button>
+			<button type="button" class="btn btn-default" disabled="disabled">default(비활성화)</button>
+			<button type="button" class="btn btn-primary" disabled="disabled">Save(비활성화)</button>
+			<button type="button" class="btn btn-warning" disabled="disabled">Save(비활성화)</button>
+			<button type="button" class="btn btn-info" disabled="disabled">Close(비활성화)</button>
+			<button type="button" class="btn-list-del">Delete</button>
+			<button type="button" class="btn-list-open">Add</button>
+			<button type="button" class="btn btn-default"><i class="far fa-file-pdf"></i> PDF</button>
+			<button type="button" class="btn btn-default"><i class="far fa-file-excel"></i> Excel</button>
+			<button type="button" class="btn btn-default btn-request">Request</button>
+			<div class="modal" style="display:block;position:relative;left:auto;top:auto;right:auto;bottom:auto;margin-top:10px">
+				<button type="button" class="btn btn-default">default</button>
+				<button type="button" class="btn btn-primary">OK</button>
+				<button type="button" class="btn btn-success">Save</button>
+				<button type="button" class="btn btn-warning">Save</button>
+				<button type="button" class="btn btn-info">Close</button>
+				<button type="button" class="btn btn-default disabled">default(비활성화)</button>
+				<button type="button" class="btn btn-primary disabled">Save(비활성화)</button>
+				<button type="button" class="btn btn-warning disabled">Save(비활성화)</button>
+				<button type="button" class="btn btn-info disabled">Close(비활성화)</button>
+				<button type="button" class="btn-list-del">Delete</button>
+				<button type="button" class="btn-list-open">Add</button>
+				<button type="button" class="btn btn-default"><i class="far fa-file-pdf"></i> PDF</button>
+				<button type="button" class="btn btn-default"><i class="far fa-file-excel"></i> Excel</button>
+				<button type="button" class="btn btn-default btn-request">Request</button>
+			</div>
+		</div>
+<pre class="brush: xml;">
+<button type="button" class="btn btn-primary">OK</button>
+<button type="button" class="btn btn-success">Save</button>   
+<button type="button" class="btn btn-info">Close</button>
+<button type="button" class="btn btn-primary disabled" disabled="disabled">Save(비활성화)</button>
+<button type="button" class="btn btn-info disabled" disabled="disabled">Reset(비활성화)</button>
+<button type="button" class="btn-list-del">Delete</button>
+<button type="button" class="btn-list-open">Add</button>
+</pre>
+	</div>
+	
+
+	<h2 class="h2_guide">탭</h2>
+	<div class="dscBox">
+		<ul class="nav nav-tabs" role="tablist">
+			<li role="presentation" class="active"><a href="#tab-box1" aria-controls="tab-box1" role="tab" data-toggle="tab">tab1</a></li>
+			<li role="presentation"><a href="#tab-box2" aria-controls="tab-box2" role="tab" data-toggle="tab">tab2</a></li>
+		</ul>
+		<div class="tab-content">
+			<div role="tabpanel" class="tab-pane active" id="tab-box1">
+				tab 내용11111
+			</div>
+			<div role="tabpanel" class="tab-pane" id="tab-box2">
+				tab 내용22222
+			</div>
+		</div>
+
+<pre class="brush: xml;">
+<ul class="nav nav-tabs" role="tablist">
+	<li role="presentation" class="active"><a href="" aria-controls="" role="tab" data-toggle="tab"></a></li>
+	<li role="presentation"><a href="" aria-controls="" role="tab" data-toggle="tab"></a></li>
+</ul>
+<div class="tab-content">
+	<div role="tabpanel" class="tab-pane active" id="">
+		
+	</div>
+	<div role="tabpanel" class="tab-pane" id="">
+		
+	</div>
+</div>
+</pre>
+	</div>
+	
+
+
+
+</div>
+</body>
+</html>

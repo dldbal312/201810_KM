@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<link rel="SHORTCUT ICON" href="/images/favicon.ico">
+<title>Key&amp;Manager ver.2</title>
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/fontawesome-all.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" type="text/css" href="/css/custom.css">
+<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+<script src="/js/vendors/jquery-ui.min.js"></script>
+<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+<script src="/js/vendors/moment.js"></script>
+<script src="/js/vendors/bootstrap.min.js"></script>
+<script src="/js/vendors/bootstrap-datetimepicker.min.js"></script>
+</head>
+<body class="nav-sm">
+<div class="wrapper">		
+	<div class="left_col">
+		<div id="sidebar-menu" class="main_menu_side main_menu">
+			<div class="menu_section">
+				<ul class="nav side-menu">
+					<li class="parent_menu"><a href="#"><i class="ico-schedule"></i>Schedule</a><a role="button" class="submenu-open"></a></li>
+					<li class="parent_menu"><a href="#"><i class="ico-member"></i>Member</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Member</a>
+								<ul class="nav-depth3">
+									<li class="active"><a href="#">Subject Transfer</a></li>
+									<li><a href="#">Learning</a></li> 
+									<li><a href="#">Attendance</a></li> 
+								</ul>
+							</li>
+							<li><a href="#">Attendance</a></li> 
+							<li><a href="#">Subject Transfer</a></li>
+							<li><a href="#">Learning</a></li> 
+							<li><a href="#">Attendance</a></li> 
+						</ul>
+					</li>
+					<li class="parent_menu"><a href="#"><i class="ico-learning"></i>Learning</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Member</a></li>
+							<li><a href="#">Attendance</a></li>
+							<li><a href="#">Subject Transfer</a></li>
+							<li><a href="#">Learning</a></li>
+							<li><a href="#">Attendance</a></li>
+						</ul>
+					</li>
+					<li class="parent_menu"><a href="#"><i class="ico-finance"></i>Finance</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Member</a></li>
+							<li><a href="#">Attendance</a></li> 
+							<li><a href="#">Subject Transfer</a></li>
+							<li><a href="#">Learning</a></li> 
+							<li><a href="#">Attendance</a></li> 
+						</ul>
+					</li>
+					<li class="parent_menu"><a href="#"><i class="ico-center"></i>Center</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Member</a></li>
+							<li><a href="#">Attendance</a></li> 
+							<li><a href="#">Subject Transfer</a></li>
+							<li><a href="#">Learning</a></li> 
+							<li><a href="#">Attendance</a></li> 
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="right_col">		
+		<div class="nav_menu">
+			<div class="toggle">
+				<a href="#" class="menu_toggle"><i></i></a>
+			</div>
+			<div class="head-wrap">
+				<div class="pull-left head-favorite">
+					<ul class="head-favorite-list">
+						<li><a href="#" class="list">Create member</a><a href="#" class="ico-delete"><i class="fas fa-times"></i></a></li>
+						<li><a href="#" class="list">Payment</a><a href="#" class="ico-delete"><i class="fas fa-times"></i></a></li>
+						<li><a href="#" class="list">My student</a><a href="#" class="ico-delete"><i class="fas fa-times"></i></a></li>
+					</ul>
+					<a href="#" class="favorite-set"><span class="ico-count cl-gray"></span>My menu add</a>
+				</div>
+				<div class="pull-right head-user-info">
+					<a href="#" class="head-logout">Logout</a>
+					<span class="head-name">Tony tony chopa (FC0001S)</span>
+					<a href="#" class="head-mypage">My page</a>
+				</div>
+			</div>
+		</div>
+		<div class="right_content" role="main">
+			<div class="container-fluid">
+				<div class="col-md-12">
+					<h3>진도수정 주문현황</h3>
+					<div class="row btn-in">
+						<div class="col-md-12 form-tit">
+							<h4 class="tit">Center Info</h4>
+							<div class="info">
+								<ul class="breadcrumb">
+									<li>Daekyo Malaysia</li>
+									<li>Daekyo Malaysia</li>
+									<li>Bukit Damansara</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-11 bx-search">
+							<form class="form-inline">
+								<div class="row">
+									<div class="col-md-12">
+										<div class="form-group">
+											<span class="lb-txt st1">Order Date</span>
+											<div class="input-group date">
+												<input type="text" class="form-control input-sm clearable datepicker" placeholder="dd/mm/yyyy">
+												<span class="input-group-addon">
+													<span class="calendar-icon"></span>
+												</span>
+											</div>
+											<span class="date-period-divider">~</span>
+											<div class="input-group date">
+												<input type="text" class="form-control input-sm clearable datepicker" placeholder="dd/mm/yyyy">
+												<span class="input-group-addon">
+													<span class="calendar-icon"></span>
+												</span>
+											</div>
+										</div>
+										<div class="form-group">
+											<span class="lb-txt st1">Order No.</span>
+											<input class="form-control input-sm clearable" type="text">
+										</div>
+										<div class="form-group">
+											<span class="lb-txt st1">Type</span>
+											<select class="form-control input-sm">
+												<option value="" selected="selected">All</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="btn-area col-md-1">
+							<a href="#" class="btn btn-primary">Search</a>
+						</div>
+					</div>
+					<div class="ln_solid"></div>
+
+					<div class="row">
+						<div class="col-md-12">
+							<div class="pull-right">
+								<a href="#" class="btn btn-default"><i class="far fa-file-pdf"></i> PDF</a><!-- 180724_수정 [버튼명칭 수정] -->
+								<a href="#" class="btn btn-default"><i class="far fa-file-excel"></i> Excel</a><!-- 180724_수정 [버튼명칭 수정] -->
+							</div>
+							<ul class="list-inline pull-left mt-2">
+								<li class="total">Count : <span>0</span></li>
+							</ul>
+						</div>
+					</div>
+					<div class="bx-table">
+						<div class="tb-dimm"><span class="txts">Fetching data...</span></div>
+						<div class="x-scroll">
+							<table class="table table-sort">
+								<thead>
+									<tr>
+										<th scope="col"><a href="#" class="sorting">Order Type</a></th>
+										<th scope="col"><a href="#" class="sorting">Order Date</a></th>
+										<th scope="col"><a href="#" class="sorting">Order No.</a></th>
+										<th scope="col"><a href="#" class="sorting">Corporation</a></th>
+										<th scope="col"><a href="#" class="sorting">Office</a></th>
+										<th scope="col"><a href="#" class="sorting">Center ID</a></th>
+										<th scope="col"><a href="#" class="sorting">Center Name</a></th>
+										<th scope="col"><a href="#" class="sorting">Instructor</a></th>
+										<th scope="col"><a href="#" class="sorting">Status</a></th>
+										<th scope="col"><a href="#" class="sorting">Total Qty</a></th>
+										<th scope="col"><a href="#" class="sorting">Approved Qty</a></th>
+										<th scope="col"><a href="#" class="sorting">Detail</a></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>진도수정(추가 주문)</td>
+										<td>27/04/2018</td>
+										<td></td>
+										<td>Daekyo Malaysia</td>
+										<td>Daekyo Malaysia</td>
+										<td>CN0000038</td>
+										<td>Bukit Damansara</td>
+										<td>Bukit Damansara</td>
+										<td>Request</td>
+										<td>5</td>
+										<td>5</td>
+										<td><a href="#" class="link-modal" data-toggle="modal" data-target="#detail">View</a></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+		<footer>
+			<span class="ft-logo">KEY &amp; MANAGER</span>
+			<p class="ft-copy">Copyright &copy; 2018 Daekyo Co., Ltd All rights reserved. For more information, contact <a href="mailto:myeyelevel@myeyelevel.com">myeyelevel@myeyelevel.com</a></p>
+			<div class="ft-site">
+				<dl>
+					<dt><a href="#class">LINKS</a></dt>
+					<dd>
+						<ul>
+							<li><a href="https://sites.google.com/a/myeyelevel.com/itisthekey/" target="_blank">User guide</a></li>
+							<li><a href="http://www.myeyelevel.com/Global/English/" target="_blank">Eyelevel Site</a></li>
+							<li><a href="http://www.iamthekey.com/" target="_blank">Brand Site</a></li>
+							<li><a href="http://eng.daekyo.com/En/default.aspx" target="_blank">Corporate Site</a></li>
+							<li><a href="http://elu.myeyelevel.com" target="_blank">Eye Level University</a></li>
+							<li><a href="http://email.myeyelevel.com" target="_blank">Email</a></li>
+						</ul>
+					</dd>
+				</dl>
+			</div>
+		</footer>
+	</div>
+</div>
+
+<div class="modal fade" id="searchManager" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title" id="myModalLabel2">Search Manager</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal form-label-left">
+                    <div class="form-group">
+                        <div class="col-md-8 col-md-offset-2">
+                            <label class="control-label col-md-4" for="first-name">Manager ID</label>
+                            <div class="col-md-8">
+                                <input type="text" id="manager-id" class="form-control input-sm clearable col-md-12">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-8 col-md-offset-2">
+                            <label class="control-label col-md-4" for="member-name">Name</label>
+                            <div class="col-md-8">
+                                <input type="text" id="member-name" class="form-control input-sm clearable col-md-12">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group text-center">
+                        <a href="#" class="btn btn-primary">조회</a>
+                    </div>
+                </form>
+                <div class="bx-table">
+                    <div class="tb-dimm"><span class="txts">Fetching data...</span></div>
+                    <table class="table">
+                        <colgroup>
+                            <col style="width:30%">
+                            <col style="width:70%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">Manager ID</th>
+                                <th scope="col">Name</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="#">K30001134</a></td>
+                                <td><a href="#">hwkim hwkim</a></td>
+                            </tr>
+							<tr>
+                                <td><a href="#">K30001134</a></td>
+                                <td><a href="#">hwkim hwkim</a></td>
+                            </tr>
+							<tr>
+                                <td><a href="#">K30001134</a></td>
+                                <td><a href="#">hwkim hwkim</a></td>
+                            </tr>
+							<tr>
+                                <td><a href="#">K30001134</a></td>
+                                <td><a href="#">hwkim hwkim</a></td>
+                            </tr>
+							<tr>
+                                <td><a href="#">K30001134</a></td>
+                                <td><a href="#">hwkim hwkim</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Save</button>
+                <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="detail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3">
+    <div class="modal-dialog modal-wide" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title" id="myModalLabel3">진도수정 주문현황 Detail</h4>
+            </div>
+            <div class="modal-body">
+				<div class="text-right mb-1">
+					<a href="#" class="btn btn-default"><i class="far fa-file-pdf"></i> PDF</a><!-- 180724_수정 [버튼명칭 수정] -->
+					<a href="#" class="btn btn-default"><i class="far fa-file-excel"></i> Excel</a><!-- 180724_수정 [버튼명칭 수정] -->
+				</div>
+				<div class="bx-table">
+					<div class="tb-dimm"><span class="txts">Fetching data...</span></div>
+					<div class="x-scroll">
+						<table class="table">
+							<thead>
+								<tr>
+									<th scope="col">Order Type</th>
+									<th scope="col">Order Date</th>
+									<th scope="col">Order No.</th>
+									<th scope="col">Corporation</th>
+									<th scope="col">Office</th>
+									<th scope="col">Center ID</th>
+									<th scope="col">Center Name</th>
+									<th scope="col">Subject</th>
+									<th scope="col">Type</th>
+									<th scope="col">Level</th>
+									<th scope="col">Set</th>
+									<th scope="col">Supplemental Booklet Name</th>
+									<th scope="col">Promotional Booklet Name</th>
+									<th scope="col">Qty</th>
+									<th scope="col">Approved Qty</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>진도수정(추가 주문)</td>
+									<td>27/04/2018</td>
+									<td></td>
+									<td>Daekyo Malaysia</td>
+									<td>Daekyo Malaysia</td>
+									<td>CN0000038</td>
+									<td>Bukit Damansara</td>
+									<td>EL Eng</td>
+									<td>Supplemental Booklet</td>
+									<td></td>
+									<td></td>
+									<td>EL Eng Alphabet Reader A</td>
+									<td></td>
+									<td>7</td>
+									<td>7</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/js/custom.js"></script>
+</body>
+</html>

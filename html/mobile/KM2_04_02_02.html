@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+	<link rel="SHORTCUT ICON" href="../images/favicon.ico">
+	<title>Key&amp;Manager ver.2</title>
+	<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap-datetimepicker.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendors/fontawesome-all.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendors/jquery.mCustomScrollbar.css">
+	<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+	<script src="/js/vendors/jquery-ui.min.js"></script>
+	<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+	<script src="/js/vendors/moment.js"></script>
+	<script src="/js/vendors/bootstrap.min.js"></script>
+	<script src="/js/vendors/bootstrap-datetimepicker.min.js"></script>
+	
+	<!-- mobile 추가 -->
+	<link rel="stylesheet" type="text/css" href="/css/custom-mobile.css">
+	<script src="/js/vendors/jquery.touchSwipe.min.js"></script>
+	<script src="/js/custom-mobile.js"></script>
+</head>
+<body>
+<div class="wrapper">
+	<div class="main-content" role="main" style="min-height:100vh;">
+		<div class="page-info">
+			<a href="#" class="bt-prev">Prev page</a>
+			<h1>Diagnostic Test</h1>
+			<a href="#" class="bt-close">Close</a>
+		</div>
+		<div class="select_groups">
+			<div class="row">
+				<div class="col-sm-12">
+					<span class="radio-group">
+						<span class="radio inline">
+							<input type="radio" id="inlineRadio1" value="option1" name="radioInline1" checked="checked">
+							<label for="inlineRadio1">Booklet</label>
+						</span>
+						<span class="radio inline">
+							<input type="radio" id="inlineRadio2" value="option2" name="radioInline1">
+							<label for="inlineRadio2">Level Test</label>
+						</span>
+						<span class="radio inline">
+							<input type="radio" id="inlineRadio3" value="option3" name="radioInline1">
+							<label for="inlineRadio3">Diagnostic Test</label>
+						</span>
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="cnt-box form first">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="form-group">
+						<span class="lb-txt">Subject</span>
+						<div class="btn-group form-control" data-toggle="buttons">
+							<label class="btn btn-default btn-sm active">
+								<input type="radio" name="options" id="option1" autocomplete="off" checked="checked">
+								<span>EL Math</span>
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<span class="lb-txt">Level/set</span>
+						<span class="select_group size2">
+							<select class="form-control input-sm">
+								<option value="" title="" selected="selected">08</option>
+							</select>
+							<select class="form-control input-sm">
+								<option value="" title="" selected="selected">01</option>
+							</select>
+						</span>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<span class="lb-txt">Level/set/Unit</span>
+						<span class="select_group size3">
+							<select class="form-control input-sm">
+								<option value="" title="" selected="selected">1</option>
+							</select>
+							<select class="form-control input-sm">
+								<option value="" title="" selected="selected">A</option>
+							</select>
+							<select class="form-control input-sm">
+								<option value="" title="" selected="selected">14</option>
+							</select>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="btn-wrap">
+			<!-- 비활성화 시 disabled 클래스 추가 -->
+			<div class="row">
+				<!-- <div class="pull-left">
+					<a href="#" class="btn-circle prev"><i class="fas fa-chevron-left"></i></a>
+				</div> -->
+				<div class="pull-right">
+					<a href="#" class="btn-circle next"><i class="fas fa-chevron-right"></i></a><!-- 180619_수정 -->
+				</div>	
+			</div>
+			
+		</div>
+	</div>
+	<div class="slideout-overlay"></div>
+</div>
+
+
+</body>
+</html>

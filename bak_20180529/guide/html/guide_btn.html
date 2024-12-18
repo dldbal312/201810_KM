@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Pragma" content="no-cache">
+	<title>K&amp;M2 버튼 / 탭 가이드</title>
+	<link rel="SHORTCUT ICON" href="/images/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="/guide/base.css">
+	<link rel="stylesheet" type="text/css" href="/guide/shCoreDefault.css">
+	<link rel="stylesheet" href="/css/common.css">
+	<link rel="stylesheet" href="/css/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" href="/css/jquery-ui.css">
+	<script src="/js/jQuery/jquery-2.2.4.min.js"></script>
+	<script src="/js/jQuery/jquery-ui.js"></script>
+	<script src="/js/jQuery/jquery.mCustomScrollbar.js"></script>
+	<script src="/js/common.js"></script>
+	<script src="/guide/shCore.js"></script>
+	<script src="/guide/shBrushXml.js"></script>
+	<script src="/guide/shBrushCss.js"></script>
+	<script src="/guide/shBrushJScript.js"></script>
+	<script type="text/javascript">SyntaxHighlighter.all();</script>	
+</head>
+<body>
+<div id="wrap" class="coding_guide">
+	<h1 class="h1_guide">버튼 / 탭 가이드</h1>
+	<h2 class="h2_guide">anchor 버튼</h2>
+	<div class="dscBox">
+		<div class="dscImg">
+			<a href="#" class="btn">OK</a>
+			<a href="#" class="btn btn-gray">Reset</a>
+			<a href="#" class="btn btn-blue">Add Student</a>
+			<a href="#" class="btn disabled">Save</a>
+			<a href="#" class="btn-list-del">Delete</a>
+			<a href="#" class="btn-list-open">Add</a>
+		</div>
+<pre class="brush: xml;">
+<!-- 검색영역 및 레이어 팝업 사용 -->
+<a href="#" class="btn"></a>
+<a href="#" class="btn btn-gray"></a>
+
+<!-- 테이블 상단 -->
+<a href="#" class="btn btn-blue"></a>
+
+<!-- 비활성화 -->
+<a href="#" class="btn disabled"></a>
+
+<!-- 리스트 추가/제거 -->
+<a href="#" class="btn-list-del">Delete</a>
+<a href="#" class="btn-list-open">Add</a>
+
+<!-- 센터 정렬 버튼 -->
+<div class="bx-btn al-right">
+	<a href="#" class="btn"></a>
+	<a href="#" class="btn"></a>
+</div>
+
+<!-- 오른쪽 정렬 버튼 -->
+<div class="bx-btn al-right">
+	<a href="#" class="btn"></a>
+	<a href="#" class="btn"></a>
+</div>
+
+<!-- 좌우 정렬 버튼 -->
+<div class="bx-btn">
+	<span class="left">
+		<a href="#" class="btn"></a>
+	</span> 
+	<span class="right">
+		<a href="#" class="btn"></a>
+	</span> 
+</div>
+</pre>
+	</div>
+
+	<h2 class="h2_guide">button 버튼</h2>
+	<div class="dscBox">
+		<div class="dscImg">
+			<button type="button" class="btn ">OK</button>
+			<button type="button" class="btn btn-gray">Reset</button>
+			<button type="button" class="btn btn-blue">Add Student</button>   
+			<button type="button" class="btn disabled" disabled="disabled">Save</button>
+			<button type="button" class="btn-list-del">Delete</button>
+			<button type="button" class="btn-list-open">Add</button>
+		</div>
+<pre class="brush: xml;">
+<button type="button" class="btn"></button>
+<button type="button" class="btn btn-blue"></button>   
+<button type="button" class="btn btn-gray"></button>
+<button type="button" class="btn disabled" disabled="disabled"></button>
+<button type="button" class="btn-list-del">Delete</button>
+<button type="button" class="btn-list-open">Add</button>
+</pre>
+	</div>
+
+
+
+	<script type="text/javascript">
+		$(function() {
+			$(".dscBox > .bx-tabs").tabs();
+		});
+	</script>
+
+	<h2 class="h2_guide">탭</h2>
+	<div class="dscBox">
+		<div class="bx-tabs">
+			<ul>
+				<li><a href="#tabs-1">tab1</a></li>
+				<li><a href="#tabs-2">tab2</a></li>
+			</ul>
+			<div id="tabs-1" class="bx-tab-cont">
+				<div style="height:100px;padding: 20px;box-sizing: border-box;background:#fff">
+					tab1
+				</div>
+			</div>
+			<div id="tabs-2" class="bx-tab-cont">
+				<div style="height:100px;padding: 20px;box-sizing: border-box;background:#fff">
+					tab2
+				</div>
+			</div>
+		</div>
+
+		<div class="bx-tabs btn-in">
+			<ul>
+				<li><a href="#tabs-1">tab1</a></li>
+				<li><a href="#tabs-2">tab2</a></li>
+			</ul>
+			<div class="bx-btn al-right">
+				<a href="#" class="btn btn-blue">btn</a>
+			</div>
+			<div id="tabs-1" class="bx-tab-cont">
+				<div style="height:100px;padding: 20px;box-sizing: border-box;background:#fff">
+					tab1
+				</div>
+			</div>
+			<div id="tabs-2" class="bx-tab-cont">
+				<div style="height:100px;padding: 20px;box-sizing: border-box;background:#fff">
+					tab2
+				</div>
+			</div>
+		</div>
+
+<pre class="brush: xml;">
+
+<!-- 오른쪽 버튼이 추가 될 경우 : [ btn-in ] class 추가 후 ul 하단 &lt;div class="bx-tab-cont"&gt; 사이에 버튼영역 추가 -->
+<div class="bx-tabs">
+	<ul>
+		<li><a href="#tabs1-1"></a></li>
+		<li><a href="#tabs1-2"></a></li>
+	</ul>
+	<div id="tabs1-1" class="bx-tab-cont">
+	</div>
+	<div id="tabs1-2" class="bx-tab-cont">
+	</div>
+</div>
+</pre>
+	</div>
+	
+
+
+
+</div>
+</body>
+</html>

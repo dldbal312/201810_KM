@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+	<link rel="SHORTCUT ICON" href="../images/favicon.ico">
+	<title>Key&amp;Manager ver.2</title>
+	<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap-datetimepicker.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendors/fontawesome-all.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendors/jquery.mCustomScrollbar.css">
+	<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+	<script src="/js/vendors/jquery-ui.min.js"></script>
+	<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+	<script src="/js/vendors/moment.js"></script>
+	<script src="/js/vendors/bootstrap.min.js"></script>
+	<script src="/js/vendors/bootstrap-datetimepicker.min.js"></script>
+	
+	<!-- mobile 추가 -->
+	<link rel="stylesheet" type="text/css" href="/css/custom-mobile.css">
+	<script src="/js/vendors/jquery.touchSwipe.min.js"></script>
+	<script src="/js/custom-mobile.js"></script>
+</head>
+<body>
+<div class="wrapper">
+	<div class="main-content" role="main" style="min-height:100vh;">
+		<div class="page-info">
+			<a href="#" class="bt-prev">Prev page</a>
+			<h1>Diagnostic Test</h1>
+			<a href="#" class="bt-close">Close</a>
+		</div>
+		<div class="progressbar size5" id="fixed">
+			<ul >
+				<li class="active">BTM </li>
+				<li>WP</li>
+				<li>CTM</li>
+				<li>Check</li>
+				<li>Result</li>
+			</ul>
+		</div>
+		<!-- 180625_수정 -->
+		<div class="usertest-lists cnt-box">
+			<h1 class="tit01">PROGRESS RECOMMENDATION</h1>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="model-type-select">
+						<div class="inner">
+							<span class="radio">
+								<input type="radio" id="inlineRadio1" name="radioInline1" checked="checked">
+								<label for="inlineRadio1">Fast</label>
+							</span>
+							<span class="radio">
+								<input type="radio" id="inlineRadio2" name="radioInline1" checked="checked">
+								<label for="inlineRadio2">Normal</label>
+							</span>
+							<span class="radio">
+								<input type="radio" id="inlineRadio3" name="radioInline1" checked="checked">
+								<label for="inlineRadio3">Slow</label>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row plan-wrap">
+				<div class="col-md-6">
+					<ul class="plan-step">
+						<li class="points start">
+							<div class="left">
+								<span class="data">
+									<span class="btm"><em class="em01">BTM</em>01/05</span>
+									<span class="ctm"><em class="em01">CTM</em>19/01</span>
+								</span>
+							</div>
+							<div class="steps">
+								<span class="ico-step">S</span>
+							</div>
+							<div class="right">
+								<span class="month">Feb</span>
+							</div>
+						</li>
+						<li class="points">
+							<div class="left">
+								<span class="month">Mar</span>
+							</div>
+							<div class="steps">
+								<span class="ico-step"><i class="fas fa-check"></i></span>
+							</div>
+							<div class="right">
+								
+								<span class="data">
+									<span class="btm"><em class="em01">BTM</em>01/05</span>
+									<span class="ctm"><em class="em01">CTM</em>19/01</span>
+								</span>
+							</div>
+						</li>
+						<li class="points">
+							<div class="left">
+								<span class="data">
+									<span class="btm"><em class="em01">BTM</em>01/05</span>
+									<span class="ctm"><em class="em01">CTM</em>19/01</span>
+								</span>
+							</div>
+							<div class="steps">
+								<span class="ico-step"><i class="fas fa-check"></i></span>
+							</div>
+							<div class="right">
+								<span class="month">Apr</span>
+							</div>
+						</li>
+						<li class="points">
+							<div class="left">
+								<span class="month">May</span>
+							</div>
+							<div class="steps">
+								<span class="ico-step"><i class="fas fa-check"></i></span>
+							</div>
+							<div class="right">
+								
+								<span class="data">
+									<span class="btm"><em class="em01">BTM</em>01/05</span>
+									<span class="ctm"><em class="em01">CTM</em>19/01</span>
+								</span>
+							</div>
+						</li>
+						<li class="points">
+							<div class="left">
+								<span class="data">
+									<span class="btm"><em class="em01">BTM</em>01/05</span>
+									<span class="ctm"><em class="em01">CTM</em>19/01</span>
+								</span>
+							</div>
+							<div class="steps">
+								<span class="ico-step"><i class="fas fa-check"></i></span>
+							</div>
+							<div class="right">
+								<span class="month">Jun</span>
+							</div>
+						</li>
+						<li class="points">
+							<div class="left">
+								<span class="month">Jul</span>
+							</div>
+							<div class="steps">
+								<span class="ico-step"><i class="fas fa-check"></i></span>
+							</div>
+							<div class="right">
+								
+								<span class="data">
+									<span class="btm"><em class="em01">BTM</em>01/05</span>
+									<span class="ctm"><em class="em01">CTM</em>19/01</span>
+								</span>
+							</div>
+						</li>
+						<li class="points end">
+							<div class="left">
+								<span class="data">
+									<span class="btm"><em class="em01">BTM</em>01/05</span>
+									<span class="ctm"><em class="em01">CTM</em>19/01</span>
+								</span>
+							</div>
+							<div class="steps">
+								<span class="ico-step">E</span>
+							</div>
+							<div class="right">
+								<span class="month">Jun</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="col-md-6">
+					<div class="user-comment">
+						<div class="name">
+							<p>Ken song</p>
+						</div>
+						<div class="message-box">
+							<div class="tooltip-ch left">
+								<p class="inner">BTM 0105 (10 to 10), CTM 1901 (can calculate the units of 10).</p>
+							</div>
+							<div class="tooltip-ch left">
+								<p class="inner"><span class="date">After 6 months</span>
+								BTM 0120 (up to 100) and CTM 2002 (which can calculate the unit of back).</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="comment-write">
+						<div class="tooltip-ch right write">
+							<textarea class="inner" cols="10" rows="5" class="form-control comment"></textarea>
+							<span class="pen"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+
+		<div class="btn-wrap">
+			<div class="row">
+				<div class="pull-right">
+					<a href="#" class="btn-pdf">Parent Report</a>	
+				</div>	
+			</div>
+		</div>
+		<!--// 180625_수정 -->
+	</div>
+	<div class="slideout-overlay"></div>
+</div>
+</body>
+</html>

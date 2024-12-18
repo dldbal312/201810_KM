@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<link rel="SHORTCUT ICON" href="/images/favicon.ico">
+<title>Key&amp;Manager ver.2</title>
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/fontawesome-all.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" type="text/css" href="/css/custom.css">
+<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+<script src="/js/vendors/jquery-ui.min.js"></script>
+<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+<script src="/js/vendors/moment.js"></script>
+<script src="/js/vendors/bootstrap.min.js"></script>
+<script src="/js/vendors/bootstrap-datetimepicker.min.js"></script>
+</head>
+<body class="nav-sm modal-open">
+
+<!-- Modal -->
+<div class="modal fade in" id="searchManager" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" style="display:block;">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title" id="myModalLabel2">Search Manager</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal form-label-left">
+                    <div class="form-group">
+                        <div class="col-md-8 col-md-offset-2">
+                            <label class="control-label col-md-4" for="first-name">Manager ID</label>
+                            <div class="col-md-8">
+                                <input type="text" id="manager-id" class="form-control input-sm clearable col-md-12">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-8 col-md-offset-2">
+                            <label class="control-label col-md-4" for="member-name">Name</label>
+                            <div class="col-md-8">
+                                <input type="text" id="member-name" class="form-control input-sm clearable col-md-12">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group text-center">
+                        <a href="#" class="btn btn-primary">조회</a>
+                    </div>
+                </form>
+                <div class="bx-table">
+                    <div class="tb-dimm"><span class="txts">Fetching data...</span></div>
+                    <table class="table">
+                        <colgroup>
+                            <col style="width:30%">
+                            <col style="width:70%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">Manager ID</th>
+                                <th scope="col">Name</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="#">K30001134</a></td>
+                                <td><a href="#">hwkim hwkim</a></td>
+                            </tr>
+							<tr>
+                                <td><a href="#">K30001134</a></td>
+                                <td><a href="#">hwkim hwkim</a></td>
+                            </tr>
+							<tr>
+                                <td><a href="#">K30001134</a></td>
+                                <td><a href="#">hwkim hwkim</a></td>
+                            </tr>
+							<tr>
+                                <td><a href="#">K30001134</a></td>
+                                <td><a href="#">hwkim hwkim</a></td>
+                            </tr>
+							<tr>
+                                <td><a href="#">K30001134</a></td>
+                                <td><a href="#">hwkim hwkim</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">계속</button>
+                <!-- <button type="button" class="btn btn-info" data-dismiss="modal">Close</button> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal-backdrop fade in"></div>
+
+<script src="/js/custom.js"></script>
+</body>
+</html>

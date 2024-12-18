@@ -1,0 +1,410 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<link rel="SHORTCUT ICON" href="/images/favicon.ico">
+<title>Key&amp;Manager ver.2</title>
+<link rel="stylesheet" href="/css/vendors/bootstrap.min.css">
+<link rel="stylesheet" href="/css/vendors/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" href="/css/vendors/fontawesome-all.min.css">
+<link rel="stylesheet" href="/css/vendors/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" href="/css/vendors/jquery-ui.dynatree.css">
+<link rel="stylesheet" href="/css/custom.css">
+<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+<script src="/js/vendors/jquery-ui.min.js"></script>
+<script src="/js/vendors/jquery-ui.dynatree.js"></script>
+<script src="/js/vendors/moment.js"></script>
+<script src="/js/vendors/bootstrap.min.js"></script>
+<script src="/js/vendors/bootstrap-datetimepicker.min.js"></script>
+</head>
+<body class="nav-sm">
+<div class="wrapper">	
+	<div class="left_col">
+		<div id="sidebar-menu" class="main_menu_side main_menu">
+			<div class="menu_section">
+				<ul class="nav side-menu">
+					<li class="parent_menu"><a href="#"><i class="ico-schedule"></i>Schedule</a><a role="button" class="submenu-open"></a></li>
+					<li class="parent_menu"><a href="#"><i class="ico-member"></i>Member</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Member</a>
+								<ul class="nav-depth3">
+									<li class="active"><a href="#">Subject Transfer</a></li>
+									<li><a href="#">Learning</a></li> 
+									<li><a href="#">Attendance</a></li> 
+								</ul>
+							</li>
+							<li><a href="#">Attendance</a></li> 
+							<li><a href="#">Subject Transfer</a></li>
+							<li><a href="#">Learning</a></li> 
+							<li><a href="#">Attendance</a></li> 
+						</ul>
+					</li>
+					<li class="parent_menu"><a href="#"><i class="ico-learning"></i>Learning</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Member</a></li>
+							<li><a href="#">Attendance</a></li>
+							<li><a href="#">Subject Transfer</a></li>
+							<li><a href="#">Learning</a></li>
+							<li><a href="#">Attendance</a></li>
+						</ul>
+					</li>
+					<li class="parent_menu"><a href="#"><i class="ico-finance"></i>Finance</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Member</a></li>
+							<li><a href="#">Attendance</a></li> 
+							<li><a href="#">Subject Transfer</a></li>
+							<li><a href="#">Learning</a></li> 
+							<li><a href="#">Attendance</a></li> 
+						</ul>
+					</li>
+					<li class="parent_menu"><a href="#"><i class="ico-center"></i>Center</a>
+						<a role="button" class="submenu-open"><span class="fa fa-plus"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="#">Member</a></li>
+							<li><a href="#">Attendance</a></li> 
+							<li><a href="#">Subject Transfer</a></li>
+							<li><a href="#">Learning</a></li> 
+							<li><a href="#">Attendance</a></li> 
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="right_col">		
+		<div class="nav_menu">
+			<div class="toggle">
+				<a href="#" class="menu_toggle"><i></i></a>
+			</div>
+			<div class="head-wrap">
+				<div class="pull-left head-favorite">
+					<ul class="head-favorite-list">
+						<li><a href="#" class="list">Create member</a><a href="#" class="ico-delete"><i class="fas fa-times"></i></a></li>
+						<li><a href="#" class="list">Payment</a><a href="#" class="ico-delete"><i class="fas fa-times"></i></a></li>
+						<li><a href="#" class="list">My student</a><a href="#" class="ico-delete"><i class="fas fa-times"></i></a></li>
+					</ul>
+					<a href="#" class="favorite-set"><span class="ico-count cl-gray"></span>My menu add</a>
+				</div>
+				<div class="pull-right head-user-info">
+					<a href="#" class="head-logout">Logout</a>
+					<span class="head-name">Tony tony chopa (FC0001S)</span>
+					<a href="#" class="head-mypage">My page</a>
+				</div>
+			</div>
+		</div>
+		<!-- 180717_수정 [화면설계서 v3.1 수정사항 반영] -->
+		<div class="right_content" role="main">
+			<div class="container-fluid dash-board">
+				<div class="col-md-12">
+					<h3>Center Management</h3>
+
+					<!-- 법인에서 사용 -->
+					<!-- <div class="form-tit">
+						<h4 class="tit">Center Info</h4>
+						<div class="info">
+							<ul class="breadcrumb">
+								<li>
+									<select class="form-control input-sm">
+										<option value="" selected="">Daekyo Malaysia</option>
+									</select>
+								</li>
+								<li>
+									<select class="form-control input-sm">
+										<option value="" selected="">Bukit Damansara</option>
+									</select>
+								</li>
+							</ul>
+						</div>
+					</div> -->
+					<div class="card-stats-wrap">
+						<ul class="list-inline">
+							<li>Today is Friday 2018/04/20</li>
+							<li>13:05</li>
+							<li><a href="#" class="btn btn-default py-2"><i class="fas fa-sync-alt"></i></a></li>
+						</ul>
+					</div>
+
+					<!-- 법인에서 사용 -->
+					<!-- <div class="top_dash size4 mint">
+						<div class="boxs">
+							<dl class="data">
+								<dt>Treatment Subject</dt>
+								<dd>5</dd>
+							</dl>
+						</div>
+						<div class="boxs">
+							<dl class="data">
+								<dt>Time Zone</dt>
+								<dd>UTC+08:00</dd>
+							</dl>
+						</div>
+						<div class="boxs">
+							<dl class="data">
+								<dt>Date Format</dt>
+								<dd>dd/mm/yy</dd>
+							</dl>
+						</div>
+						<div class="boxs">
+							<dl class="data">
+								<dt>Home Default</dt>
+								<dd>Schedule</dd>
+							</dl>
+						</div>
+					</div> -->
+
+					<div class="top_dash size5 mint">
+						<div class="boxs">
+							<dl class="data">
+								<dt>Treatment Subject</dt>
+								<dd>5</dd>
+							</dl>
+						</div>
+						<div class="boxs">
+							<dl class="data">
+								<dt>Time Zone</dt>
+								<dd>UTC+08:00</dd>
+							</dl>
+						</div>
+						<div class="boxs">
+							<dl class="data">
+								<dt>Date Format</dt>
+								<dd>dd/mm/yy</dd>
+							</dl>
+						</div>
+						<div class="boxs">
+							<dl class="data">
+								<dt>Home Default</dt>
+								<dd>Schedule</dd>
+							</dl>
+						</div>
+						<div class="boxs">
+							<dl class="data">
+								<dt>Closing Day Payment Dues</dt>
+								<dd>05</dd>
+							</dl>
+						</div>
+					</div>
+					<div class="row card-lists">
+						<div class="col-lg-5 col-md-6 col-sm-12">
+							<div class="card members center">
+								<div class="card-head">
+									<dl class="num">
+										<dt>Staff Info<span class="big">Using Account</span></dt>
+										<dd>07</dd>
+									</dl>
+								</div>
+								<div class="card-body">
+									<div class="member-table">
+										<div class="bx-table">
+											<div class="x-scroll">
+												<table class="table">
+													<colgroup>
+														<col style="width:8%">
+														<col style="width:15%">
+														<col style="width:30%">
+														<col style="width:auto">
+														<col style="width:15%">
+													</colgroup>
+													<thead>
+														<tr>
+															<th scope="col">NO.</th>
+															<th scope="col">Account</th>
+															<th scope="col">Instructor</th>
+															<th scope="col">E-mail</th>
+															<th scope="col">CONTACT</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>1</td>
+															<td><span class="tx-blue">A</span></td>
+															<td>Edward Morgan</td>
+															<td>EdwardMorgan@keymanager.com</td>
+															<td>01085462053</td>
+														</tr>
+														<tr>
+															<td>2</td>
+															<td><span class="tx-blue">B</span></td>
+															<td>Edward Morgan</td>
+															<td>EdwardMorgan@keymanager.com</td>
+															<td>01085462053</td>
+														</tr>
+														<tr>
+															<td>3</td>
+															<td><span class="tx-blue">F</span></td>
+															<td>Edward Morgan</td>
+															<td>EdwardMorgan@keymanager.com</td>
+															<td>01085462053</td>
+														</tr>
+														<tr>
+															<td>4</td>
+															<td><span class="tx-blue">H</span></td>
+															<td>Edward Morgan</td>
+															<td>EdwardMorgan@keymanager.com</td>
+															<td>01085462053</td>
+														</tr>
+														<tr>
+															<td>5</td>
+															<td><span class="tx-blue">I</span></td>
+															<td>Edward Morgan</td>
+															<td>EdwardMorgan@keymanager.com</td>
+															<td>01085462053</td>
+														</tr>
+														<tr>
+															<td>6</td>
+															<td><span class="tx-blue">J</span></td>
+															<td>Edward Morgan</td>
+															<td>EdwardMorgan@keymanager.com</td>
+															<td>01085462053</td>
+														</tr>
+														<tr>
+															<td>7</td>
+															<td><span class="tx-blue">R</span></td>
+															<td>Edward Morgan</td>
+															<td>EdwardMorgan@keymanager.com</td>
+															<td>01085462053</td>
+														</tr>
+														<tr>
+															<td>8</td>
+															<td><span class="tx-blue">W</span></td>
+															<td>Edward Morgan</td>
+															<td>EdwardMorgan@keymanager.com</td>
+															<td>01085462053</td>
+														</tr>
+														<tr>
+															<td>9</td>
+															<td><span class="tx-blue">A</span></td>
+															<td>Edward Morgan</td>
+															<td>EdwardMorgan@keymanager.com</td>
+															<td>01085462053</td>
+														</tr>
+														<tr>
+															<td>10</td>
+															<td><span class="tx-blue">A</span></td>
+															<td>Edward Morgan</td>
+															<td>EdwardMorgan@keymanager.com</td>
+															<td>01085462053</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+								<a href="" class="btn btn-info"><i class="fas fa-angle-double-right"></i><span class="sr-only">more</span></a>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-sm-12">
+							<div class="card consults open-day">
+								<div class="card-head">
+									<p class="bold">Open day/WEEK</p>
+								</div>
+								<div class="card-body">
+									<span class="days">3DAYS</span>
+									<ul class="days-list">
+										<li class="active">MON</li>
+										<li>TUE</li>
+										<li class="active">WED</li>
+										<li>THU</li>
+										<li class="active">FRI</li>
+										<li>SAT</li>
+										<li>SUN</li>
+									</ul>
+								</div>
+								<a href="" class="btn btn-info"><i class="fas fa-angle-double-right"></i><span class="sr-only">more</span></a>
+							</div>
+							<div class="card consults open-time">
+								<div class="card-head">
+									<p class="bold">Open Time</p>
+								</div>
+								<div class="card-body">
+									<div class="open-clock">
+										<span class="tit"><i class="fas fa-clock"></i>OPEN</span>
+										<div class="clock">
+											<span class="time">09 : 30</span> 
+											<span class="meridiem">AM</span>
+										</div>
+									</div>
+									<div class="close-clock">
+										<span class="tit"><i class="fas fa-clock"></i>CLOSE</span>
+										<div class="clock">
+											<span class="time">05 : 30</span> 
+											<span class="meridiem">PM</span>
+										</div>
+									</div>
+								</div>
+								<a href="" class="btn btn-info"><i class="fas fa-angle-double-right"></i><span class="sr-only">more</span></a>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6 col-sm-12">
+							<div class="card consults">
+								<div class="card-head">
+									<p class="bold"><i class="fas fa-info-circle"></i>Center Info</p>
+								</div>
+								<div class="card-body">
+									<div class="info-list">
+										<div class="form-group">
+											<span class="lb-txt st1">Center Name</span>
+											<p class="info">Antipolo, Rizal </p>
+										</div>
+										<div class="form-group">
+											<span class="lb-txt st1">Center Address</span>
+											<p class="info">Antipolo, Rizal 3/F FBM Bldg., M.L. Quezon St., Brgy. San Roque, Antipolo City</p>
+										</div>
+										<div class="form-group">
+											<span class="lb-txt st1">Center E-mail</span>
+											<p class="info">Antipolo@eyelevel.com</p>
+										</div>
+										<div class="form-group">
+											<span class="lb-txt st1">Center Telephone</span>
+											<p class="info">000-0000-0000</p>
+										</div>
+									</div>
+								</div>
+								<a href="" class="btn btn-info"><i class="fas fa-angle-double-right"></i><span class="sr-only">more</span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // 180717_수정 [화면설계서 v3.1 수정사항 반영] -->
+		<footer class="hidden-xs hidden-sm">
+			<span class="ft-logo">KEY &amp; MANAGER</span>
+			<p class="ft-copy">Copyright &copy; 2018 Daekyo Co., Ltd All rights reserved. For more information, contact <a href="mailto:myeyelevel@myeyelevel.com">myeyelevel@myeyelevel.com</a></p>
+			<div class="ft-site">
+				<dl>
+					<dt><a href="#class">Links</a></dt>
+					<dd>
+						<ul>
+							<li><a href="https://sites.google.com/a/myeyelevel.com/itisthekey/" target="_blank">User guide</a></li>
+							<li><a href="http://www.myeyelevel.com/Global/English/" target="_blank">Eyelevel Site</a></li>
+							<li><a href="http://www.iamthekey.com/" target="_blank">Brand Site</a></li>
+							<li><a href="http://eng.daekyo.com/En/default.aspx" target="_blank">Corporate Site</a></li>
+							<li><a href="http://elu.myeyelevel.com" target="_blank">Eye Level University</a></li>
+							<li><a href="http://email.myeyelevel.com" target="_blank">Email</a></li>
+						</ul>
+					</dd>
+				</dl>
+			</div>
+		</footer>
+	</div>
+</div>
+<script src="/js/custom.js"></script>
+<script>
+	;(function(){
+		$('.consult-lists').mCustomScrollbar({
+			theme:"rounded-dark"
+		});
+		$(window).on('load', function(){
+			$('.consult-lists').mCustomScrollbar("update");
+		})
+	})();
+</script>
+</body>
+</html>

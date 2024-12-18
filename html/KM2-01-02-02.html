@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<link rel="SHORTCUT ICON" href="/images/favicon.ico">
+<title>Key&amp;Manager ver.2</title>
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/fontawesome-all.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" type="text/css" href="/css/custom.css">
+<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+<script src="/js/vendors/jquery-ui.min.js"></script>
+<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+<script src="/js/vendors/moment.js"></script>
+<script src="/js/vendors/bootstrap.min.js"></script>
+<script src="/js/vendors/bootstrap-datetimepicker.min.js"></script>
+</head>
+<body class="nav-sm modal-open">
+
+<div class="modal fade in" id="modal1" tabindex="-1" style="display: block;">
+	<div class="modal-dialog modal-md" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title">Consultation reservation</h4>
+			</div>
+			<div class="modal-body">
+				<!-- 180717_수정 [화면설계서 v3.1 수정사항 반영] -->
+				<div class="row">
+					<form>
+						<div class="col-md-12">
+							<div class=" form-group form-inline">
+								<span class="lb-txt mb-1 mr-2">Search Member</span>
+								<div class="input-group">
+									<input class="form-control input-sm clearable" type="text" placeholder="">
+									<div class="input-group-btn">
+										<button type="button" class="btn btn-search" data-toggle="modal" data-target="#searchMember"><span class="fas fa-search"></span><span class="hide">Search</span></button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class=" form-group">
+								<span class="lb-txt mb-1">First name<i class="required">*</i></span>
+								<input type="text" class="form-control input-sm clearable">
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class=" form-group">
+								<span class="lb-txt mb-1">Middle name</span>
+								<input type="text" class="form-control input-sm clearable">
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class=" form-group">
+								<span class="lb-txt mb-1">Last name<i class="required">*</i></span>
+								<input type="text" class="form-control input-sm clearable">
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class=" form-group">
+								<span class="lb-txt mb-1">Contact<i class="required">*</i></span>
+								<input type="tel" class="form-control input-sm clearable">
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<span class="lb-txt mb-1">Grade<i class="required">*</i></span>
+								<!--  180801_수정 -->
+								<div class="form-inline">
+									<select class="form-control input-sm">
+										<option value="1" title="Age 0~1">Age 0~1</option>
+										<option value="2" title="Age 1~2">Age 1~2</option>
+										<option value="3" title="Age 2~3">Age 2~3</option>
+										<option value="4" title="Age 3~4">Age 3~4</option>
+										<option value="5" title="Age 4~5">Age 4~5</option>
+										<option value="6" title="Age 5~6">Age 5~6</option>
+										<option value="7" title="Primary Standard 1" selected="selected">Primary Standard 1</option>
+										<option value="8" title="Primary Standard 2">Primary Standard 2</option>
+										<option value="9" title="Primary Standard 3">Primary Standard 3</option>
+										<option value="10" title="Primary Standard 4">Primary Standard 4</option>
+										<option value="11" title="Primary Standard 5">Primary Standard 5</option>
+										<option value="12" title="Primary Standard 6">Primary Standard 6</option>
+										<option value="13" title="Secondary Form 1">Secondary Form 1</option>
+										<option value="14" title="Secondary Form 2">Secondary Form 2</option>
+										<option value="15" title="Secondary Form 3">Secondary Form 3</option>
+										<option value="16" title="Secondary Form 4">Secondary Form 4</option>
+										<option value="17" title="Secondary Form 5">Secondary Form 5</option>
+										<option value="18" title="Secondary Form 6">Secondary Form 6</option>
+									</select>
+									<span class="ico-gpm"></span>
+									<select class="form-control input-sm">
+										<option value="" title="" selected="selected">12</option>
+									</select>
+								</div>
+								<!-- // 180801_수정 -->
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class=" form-group">
+								<span class="lb-txt mb-1">Instructor<i class="required">*</i></span>
+								<div class="input-group">
+									<input class="form-control input-sm clearable" type="text" placeholder="Sunny.kim">
+									<div class="input-group-btn">
+										<button type="button" class="btn btn-search" data-toggle="modal" data-target="#searchManager"><span class="fas fa-search"></span><span class="hide">Search</span></button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class=" form-group">
+								<span class="lb-txt mb-1">Reservation Date<i class="required">*</i></span>
+								<div class="form-group form-inline">
+									<div class="input-group date">
+										<input type="text" class="form-control input-sm clearable datepicker" style="width:100px;" placeholder="15/03/218">
+										<span class="input-group-addon">
+											<span class="calendar-icon"></span>
+										</span>
+									</div>
+									<select class="form-control input-sm">
+										<option value="" selected="selected">08</option>
+									</select>
+									<select class="form-control input-sm">
+										<option value="" selected="selected">00</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class=" form-group">
+								<span class="lb-txt mb-1">Type<i class="required">*</i></span>
+								<select class="form-control input-sm">
+									<option value="" selected="selected">All</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class=" form-group">
+								<span class="lb-txt mb-1">접수 창구<i class="required">*</i></span><!-- 180801_수정 -->
+								<select class="form-control input-sm">
+									<option value="" selected="selected">All</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class=" form-group">
+								<span class="lb-txt mb-1">상담 과목<i class="required">*</i></span>
+								<div class="form-inline h30">
+									<div class="checkbox checkbox-primary checkbox-inline">
+										<input type="checkbox" id="checkbox1" value="checkbox1" name="checkbox1" checked="checked">
+										<label for="checkbox1">English</label>
+									</div>
+									<div class="checkbox checkbox-primary checkbox-inline">
+										<input type="checkbox" id="checkbox2" value="checkbox2" name="checkbox2" checked="checked">
+										<label for="checkbox2">Math</label>
+									</div>
+									<div class="checkbox checkbox-primary checkbox-inline">
+										<input type="checkbox" id="checkbox3" value="checkbox3" name="checkbox3">
+										<label for="checkbox3">Etc</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-md-12">
+							<div class=" form-group">
+								<span class="lb-txt mb-1">Reservation Comments (<span>0</span>/500)</span>
+								<textarea class="form-control clearable" rows="3"></textarea>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="text-center">
+					<button type="button" class="btn btn-primary">Save</button>
+					<button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+				</div>
+				<!-- // 180717_수정 [화면설계서 v3.1 수정사항 반영] -->
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal-backdrop fade in"></div>
+
+<script src="/js/custom.js"></script>
+</body>
+</html>

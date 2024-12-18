@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+	<link rel="SHORTCUT ICON" href="../images/favicon.ico">
+	<title>Key&amp;Manager ver.2</title>
+	<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap-datetimepicker.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendors/fontawesome-all.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendors/jquery.mCustomScrollbar.css">
+	<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+	<script src="/js/vendors/jquery-ui.min.js"></script>
+	<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+	<script src="/js/vendors/moment.js"></script>
+	<script src="/js/vendors/bootstrap.min.js"></script>
+	<script src="/js/vendors/bootstrap-datetimepicker.min.js"></script>
+
+	<!-- mobile 추가 -->
+	<link rel="stylesheet" type="text/css" href="/css/custom-mobile.css">
+	<script src="/js/vendors/jquery.touchSwipe.min.js"></script>
+	<script src="/js/custom-mobile.js"></script>
+</head>
+<body>
+<div class="wrapper mobile-only">
+	<!-- menu bar -->
+	<div class="mHeader">
+		<div class="mHeader-contents-wrap">
+			<div class="mHeader-btn mHeader-allmenu">
+				<a href="#" class="slideout-button" data-selector="allMenu">ALL MENU</a>
+			</div>
+			<div class="mHeader-contents">
+				<div class="mHeader-btn mHeader-mymenu">
+					<a href="#" class="hidden-tablet no-link" data-selector="myMenu">MY MENU</a>
+				</div>
+				<div class="mHeader-btn mHeader-search">
+					<a href="#" class="hidden-desktop no-link" data-selector="search">SEARCH</a>
+				</div>
+			</div>
+			<div class="mHeader-btn mHeader-studentList">
+				<a href="#" class="slideout-button" data-selector="studentList">STUDENT LIST</a>
+			</div>
+		</div>
+	</div>
+	
+	<!-- my menu, search -->
+	<div class="mHeader-sub-wrap">
+		<div class="mHeader-sub-menu mymenu-slideout closed">
+			<div class="slideout-info-area">
+				<a href="#" class="slideout-btn bt-close">닫기</a>
+				<div class="user-info pl-0">
+					<span class="user-name">My menu<em class="ico-count ml-3">4</em></span>
+				</div>
+			</div>
+			<div class="box">
+				<ul class="list-custom btn-in">
+					<li><a href="#">Consultation</a><a href="#" class="ico-delete"><span class="sr-only">Delete</span></a></li>
+					<li><a href="#">Attendance</a><a href="#" class="ico-delete"><span class="sr-only">Delete</span></a></li>
+					<li><a href="#">Member</a><a href="#" class="ico-delete"><span class="sr-only">Delete</span></a></li>
+					<li><a href="#">Diagnostic test</a><a href="#" class="ico-delete"><span class="sr-only">Delete</span></a></li>
+				</ul>
+				<div class="recently-menu">
+					<div class="box">
+						<span class="tit">Recently used menu</span>
+						<ul class="list-custom list-inline btn-in">
+							<li><a href="">Answer book</a><a href="#" class="ico-add"><span class="sr-only">Add</span></a></li>
+							<li><a href="">Staff info </a><a href="#" class="ico-add"><span class="sr-only">Add</span></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="allmenu-list myMenuAdd-list">
+					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+						<div class="panel">
+							<div class="panel-heading" role="tab" id="headingMenuAdd">
+								<span class="panel-title"><a class="collapsed"><i class="ico-count cl-gray mr-3"></i>My menu add</a></span>
+							</div>
+							<div class="panel-collapse">
+								<div class="panel-body">
+									<ul class="list-custom btn-in">
+										<li><a href="#">Lead</a><a href="#" class="ico-add"><span class="sr-only">Add</span></a></li>
+										<li><a href="#">Progress</a><a href="#" class="ico-add"><span class="sr-only">Add</span></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="mHeader-sub-menu search-slideout closed">
+			<div class="search-form ">
+				<form class="form-group">
+					<input type="text" class="form-text"  placeholder="Search" id="tags" >
+					<a href="#" class="form-submit  bt-search">검색</a>
+					<a href="#" class="slideout-btn bt-close">닫기</a>
+				</form>
+			</div>
+			<div class="">
+				<div class="student-list">
+					<ul>
+						<li>
+							<span class="student-type enroll">입회</span>
+							<span class="student-name">HANHAN HAN(G00200365)</span>
+							<a class="student-menu collapsed" data-toggle="collapse" data-parent="#accordion" href="#st1" aria-expanded="false" aria-controls="st1"><i class="fas fa-caret-down"></i><span class="sr-only">menu</span></a>
+							<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+							<div id="st1" class="panel-collapse collapse" role="tabpanel">
+								<ul class="list-menu">
+									<li><a href="#">Consultation</a></li>
+									<li><a href="#">Trial</a></li>
+									<li><a href="#">DT</a></li>
+									<li><a href="#">Enroll</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<span class="student-type lead">가망</span>
+							<span class="student-name">HANHAN HAN(G00200365)</span>
+							<a class="student-menu collapsed" data-toggle="collapse" data-parent="#accordion" href="#st2" aria-expanded="false" aria-controls="st2"><i class="fas fa-caret-down"></i><span class="sr-only">menu</span></a>
+							<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+							<div id="st2" class="panel-collapse collapse" role="tabpanel">
+								<ul class="list-menu">
+									<li><a href="#">Consultation</a></li>
+									<li><a href="#">Trial</a></li>
+									<li><a href="#">DT</a></li>
+									<li><a href="#">Enroll</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- all menu -->
+	<div class="allmenu-slideout slideout">
+		<div class="slideout-info-area">
+			<a href="#" class="slideout-btn bt-close">닫기</a>
+			<a href="#" class="slideout-btn bt-prev-small">닫기</a>
+			<div class="user-info-wrap">
+				<div class="user-info">
+					<span class="user-name">Nebula, Karen Gillan</span>
+					<span class="user-code">(CN00000039)</span>
+				</div>
+				<div class="half-group">
+					<span class="left"><a href="#" class="bt-mypage">My page</a></span>
+					<span class="right"><a href="#" class="bt-logout">log-out</a></span>
+				</div>
+			</div>
+		</div>
+		<div class="allmenu-list">
+			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+			  <div class="panel">
+				<div class="panel-heading" role="tab" id="headingOne">
+				  <span class="panel-title member"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseMember" aria-expanded="false" aria-controls="collapseMember">Member</a></span>
+				</div>
+				<div id="collapseMember" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+				  <div class="panel-body">
+					<ul class="list-custom">
+						<li><a href="#">Lead</a></li>
+						<li><a href="#">Consultation</a></li>
+						<li><a href="#">Member</a></li>
+					</ul>
+				  </div>
+				</div>
+			  </div>
+			  <div class="panel">
+				<div class="panel-heading" role="tab" id="headingTwo">
+				  <span class="panel-title learning"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseLearning" aria-expanded="false" aria-controls="collapseLearning">Learning</a></span>
+				</div>
+				<div id="collapseLearning" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+				  <div class="panel-body">
+					<ul class="list-custom">
+						<li><a href="#">Schedule</a></li>
+						<li><a href="#">Attendance</a></li>
+						<li><a href="#">Progress</a></li>
+						<li><a href="#">Diagnostic Test</a></li>
+						<li><a href="#">Test result</a></li>
+						<li><a href="#">Booklet management</a></li>
+					</ul>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- my student -->
+	<div  class="studentList-slideout slideout">
+		<div class="slideout-info-area">
+			<a href="#" class="slideout-btn bt-prev-small">닫기</a>
+			<a href="#" class="slideout-btn bt-close">닫기</a>
+			<div class="user-info">
+				<span class="user-name">My student</span>
+			</div>
+		</div>
+		<div class="col-md-12 py-2">
+			<div class="pull-left total">
+				Total 20
+			</div>
+			<div class="pull-right form-inline ">
+				<select class="form-control ">
+					<option value="" selected>Name</option>
+				</select>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+		<div class="student-list">
+			<ul>
+				<li>
+					<span class="student-name">
+						HANHAN HAN(G00200365)
+					</span>
+					<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+				</li>
+				<li>
+					<span class="student-name">
+						HANHAN HAN(G00200365)
+					</span>
+					<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+				</li>
+				<li>
+					<span class="student-name">
+						HANHAN HAN(G00200365)
+					</span>
+					<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+				</li>
+				<li>
+					<span class="student-name">
+						HANHAN HAN(G00200365)
+					</span>
+					<button data-toggle="modal" data-target="#myStudentModal"><span class="fas fa-ellipsis-v"></span><span class="sr-only">Menu Open</span></button>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="main-content" role="main">
+		<div class="page-info center">
+			<h1>Progress</h1>
+		</div>
+		<!-- user data -->
+		<div class='user-data btn-in first'>
+			<div class="row">
+				<div class="col-md-6 lists">
+					<dl>
+						<dt class="bull-list">
+							<span class="dot">Name</span>
+						</dt>
+						<dd>Ken. Song(K00000039)</dd>
+					</dl>
+				</div>
+				<div class="col-md-6 lists">
+					<dl>
+						<dt class="bull-list">
+							<span class="dot">grade</span>
+						</dt>
+						<dd>Standard primary 1</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 lists">
+					<dl>
+						<dt class="bull-list">
+							<span class="dot">Subject</span>
+						</dt>
+						<dd>EL Math Math Math</dd>
+					</dl>
+				</div>
+			</div>
+			<a href="#confirm-layers2" class="btn btn-primary round" data-toggle="modal">Test Result</a>
+		</div>
+		<!--// user data -->
+		<!-- progress set -->
+		<div class="set-progress">
+			<div class="row">
+				<div class="col-md-12">
+					<span class="radio-group">
+						<span class="radio inline">
+							<input type="radio" id="inlineRadio1" value="option1" name="radioInline1" checked="checked">
+							<label for="inlineRadio1">Standard</label>
+						</span>
+						<span class="radio inline">
+							<input type="radio" id="inlineRadio2" value="option2" name="radioInline1">
+							<label for="inlineRadio2">manual</label>
+						</span>
+					</span>
+					<div class="progress-types">
+						<dl>
+							<dt>BTM</dt>
+							<dd class="btns">
+								<span>SP : 01/08</span>
+								<a href="#selectUnit" data-toggle="modal" class="btn-ico"><i class="fas fa-edit"></i></a>
+							</dd>
+						</dl>
+						<dl>
+							<dt>CTM</dt>
+							<dd class="btns">
+								<span>SP : <i class="sp-text">01/08</i></span>
+								<a href="#" class="btn-ico sp-button"><i class="fas fa-edit"></i></a>
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--// progress set -->
+		<div class="bx-table size-full top-line">
+			<div class="table-header period-tit">
+				<div class="tit">
+					<span class="rect"><span class="inner"></span></span>
+					<p>Progress period<span class="date">2019/02/01-02/28</span></p>
+					<a href="#monthSelect" data-toggle="modal" class="btn-ico"><i class="fas fa-edit"></i></a>
+				</div>
+				<span class="sub-date">Closing Date : 2019/01/15</span>
+			</div>
+			<div class="table">
+				<table>
+					<colgroup>
+						<col style="width:30%">
+						<col style="width:20%">
+						<col style="width:50%">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th class="bg_gray" rowspan="2">03/03-04/03 <span class="line-break">(6/6)<a href="#booksSetting" data-toggle="modal" class="btn-ico"><i class="fas fa-edit"></i></a></span></th>
+							<td>BTM</td>
+							<td class="left">A/06, A/07, A08</td>
+						</tr>
+						<tr>
+							<td>CTM</td>
+							<td class="left">18/19,18/20,18/21</td>
+						</tr>
+						<tr>
+							<th class="bg_gray" rowspan="2">03/03-04/03 <span class="line-break">(6/6)<a href="#booksSetting" data-toggle="modal" class="btn-ico"><i class="fas fa-edit"></i></a></span></th>
+							<td>BTM</td>
+							<td class="left">A/06, A/07, A08</td>
+						</tr>
+						<tr>
+							<td>CTM</td>
+							<td class="left">18/19,18/20,18/21</td>
+						</tr>
+						<tr>
+							<th class="bg_gray" rowspan="2">03/03-04/03 <span class="line-break">(6/6)<a href="#booksSetting" data-toggle="modal" class="btn-ico"><i class="fas fa-edit"></i></a></span></th>
+							<td>BTM</td>
+							<td class="left">A/06, A/07, A08</td>
+						</tr>
+						<tr>
+							<td>CTM</td>
+							<td class="left">18/19,18/20,18/21</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="btn-wrap">
+			<div class="row">
+				<div class="pull-right">
+					<a href="#" class="btn btn-success">Save</a>
+					<a href="#" id="test" class="btn btn-info">Cancel</a>					
+				</div>	
+			</div>
+		</div>
+
+		<div class="data-loading">
+			<span class="txts">Fetching data...</span>
+		</div>
+	</div>
+	<div class="slideout-overlay"></div>
+</div>
+
+<div class="modal fade mobile-only modules-confirm" id="monthSelect" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-sm" role="document">
+	<div class="modal-content">
+		<div class="modal-header">
+			<h1 class="tit">Progress Month</h1>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		</div>
+		<div class="modal-body">
+			<div class="select-month-wrap">
+				<div class="years">
+					<!-- 비 활성화 시 disabled 속성 추가 -->
+					<button type="button" class="prev"><i class="fas fa-caret-left"></i></button>
+					<span>2018</span>
+					<button type="button" class="next"><i class="fas fa-caret-right"></i></button>
+				</div>
+				<div class="select-numbers size04">
+					<span class="radio">
+						<input type="radio" id="month01" name="select-month">
+						<label for="month01">01</label>
+					</span>
+					<span class="radio">
+						<input type="radio" id="month02" name="select-month">
+						<label for="month02">02</label>
+					</span>
+					<span class="radio">
+						<input type="radio" id="month03" name="select-month">
+						<label for="month03">03</label>
+					</span>
+					<span class="radio">
+						<input type="radio" id="month04" name="select-month">
+						<label for="month04">04</label>
+					</span>
+					<span class="radio">
+						<input type="radio" id="month05" name="select-month">
+						<label for="month05">05</label>
+					</span>
+					<span class="radio">
+						<input type="radio" id="month06" name="select-month">
+						<label for="month06">06</label>
+					</span>
+					<span class="radio">
+						<input type="radio" id="month07" name="select-month">
+						<label for="month07">07</label>
+					</span>
+					<span class="radio">
+						<input type="radio" id="month08" name="select-month">
+						<label for="month08">08</label>
+					</span>
+					<span class="radio">
+						<input type="radio" id="month09" name="select-month">
+						<label for="month09">09</label>
+					</span>
+					<span class="radio">
+						<input type="radio" id="month10" name="select-month">
+						<label for="month10">10</label>
+					</span>
+					<span class="radio">
+						<input type="radio" id="month11" name="select-month">
+						<label for="month11">11</label>
+					</span>
+					<span class="radio">
+						<input type="radio" id="month12" name="select-month">
+						<label for="month12">12</label>
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<button type="button" class="btn btn-primary btn-lg">Save</button>
+			<button type="button" class="btn btn-info btn-lg" data-dismiss="modal">Cancel</button>
+		</div>
+	</div>
+  </div>
+</div>
+
+<div class="modal fade mobile-only modules-confirm" id="selectUnit" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-sm" role="document">
+	<div class="modal-content">
+		<div class="modal-header">
+			<h1 class="tit">1A UNIT</h1>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		</div>
+		<div class="modal-body">
+			<div class="select-numbers size03">
+				<span class="radio">
+					<input type="checkbox" id="unit1" name="select-unit">
+					<label for="unit1">01</label>
+				</span>
+				<span class="radio">
+					<input type="checkbox" id="unit2" name="select-unit">
+					<label for="unit2">02</label>
+				</span>
+				<span class="radio">
+					<input type="checkbox" id="unit3" name="select-unit">
+					<label for="unit3">03</label>
+				</span>
+				<span class="radio">
+					<input type="checkbox" id="unit4" name="select-unit">
+					<label for="unit4">04</label>
+				</span>
+				<span class="radio">
+					<input type="checkbox" id="unit5" name="select-unit">
+					<label for="unit5">05</label>
+				</span>
+				<span class="radio">
+					<input type="checkbox" id="unit6" name="select-unit">
+					<label for="unit6">06</label>
+				</span>
+				<span class="radio">
+					<input type="checkbox" id="unit7" name="select-unit">
+					<label for="unit7">07</label>
+				</span>
+				<span class="radio">
+					<input type="checkbox" id="unit8" name="select-unit">
+					<label for="unit8">08</label>
+				</span>
+				<span class="radio">
+					<input type="checkbox" id="unit9" name="select-unit">
+					<label for="unit9">09</label>
+				</span>
+				<span class="radio">
+					<input type="checkbox" id="unit10" name="select-unit">
+					<label for="unit10">10</label>
+				</span>
+				<span class="radio">
+					<input type="checkbox" id="unit11" name="select-unit">
+					<label for="unit11">11</label>
+				</span>
+				<span class="radio">
+					<input type="checkbox" id="unit12" name="select-unit">
+					<label for="unit12">12</label>
+				</span>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<button type="button" class="btn btn-primary btn-lg">Save</button>
+			<button type="button" class="btn btn-info btn-lg" data-dismiss="modal">Cancel</button>
+		</div>
+	</div>
+  </div>
+</div>
+
+<!-- Booklet Setting -->
+<div class="modal fade mobile-only modules-confirm" id="booksSetting" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-md" role="document">
+	<div class="modal-content">
+		<div class="modal-header">
+			<h1 class="tit">Booklet Setting</h1>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		</div>
+		<div class="books-select">
+			<div class="book-type">
+				<span class="nums"><em>5</em> /6 Max Booklets/Week</span>
+			</div>
+			<div class="selects-list">
+				<div class="inner">
+					<div class="books">
+						<span>04/06</span>
+						<span class="btn-x"><i class="fas fa-times"></i></span>
+					</div>
+					<div class="books">
+						<span>04/06</span>
+						<span class="btn-x"><i class="fas fa-times"></i></span>
+					</div>
+					<div class="books">
+						<span>04/06</span>
+						<span class="btn-x"><i class="fas fa-times"></i></span>
+					</div>
+					<div class="books">
+						<span>04/06</span>
+						<span class="btn-x"><i class="fas fa-times"></i></span>
+					</div>
+					<div class="books">
+						<span>04/06</span>
+						<span class="btn-x"><i class="fas fa-times"></i></span>
+					</div>
+					<div class="books">
+						<span>04/06</span>
+						<span class="btn-x"><i class="fas fa-times"></i></span>
+					</div>
+				</div>
+				<span class="btn-x"><i class="far fa-times-circle"></i></span>
+			</div>
+		</div>
+		<div class="modal-body">
+			<span class="radio-group">
+				<span class="radio inline">
+					<input type="radio" id="type1" value="option1" name="types" checked="checked">
+					<label for="type1">BTM</label>
+				</span>
+				<span class="radio inline">
+					<input type="radio" id="type2" value="option2" name="types">
+					<label for="type2">CTM</label>
+				</span>
+			</span>
+			<div class="levels mt-2">
+				<dl class="lists default">
+					<dt>
+						<div class="form-group">                
+							<select class="form-control">
+								<option value="">Level4 </option>
+							</select>
+						</div>
+					</dt>
+					<dd>
+						<div class="levels-list">
+							<span class="group1 active"><a href="#">01</a></span>
+							<span class="group1"><a href="#">02</a></span>
+							<span class="group1"><a href="#">03</a></span>
+							<span class="group2"><a href="#">04</a></span>
+							<span class="group1"><a href="#">05</a></span>
+							<span class="group1"><a href="#">06</a></span>
+							<span class="group1"><a href="#">07</a></span>
+							<span class="group2"><a href="#">08</a></span>
+							<span class="group2"><a href="#">09</a></span>
+							<span class="group2"><a href="#">10</a></span>
+							<span class="group1"><a href="#">11</a></span>
+							<span class="group1"><a href="#">12</a></span>
+							<span class="group1"><a href="#">13</a></span>
+							<span class="group2"><a href="#">14</a></span>
+							<span class="group1"><a href="#">15</a></span>
+							<span class="group1"><a href="#">16</a></span>
+							<span class="group1"><a href="#">17</a></span>
+							<span class="group2"><a href="#">18</a></span>
+						</div>
+					</dd>
+				</dl>
+				<div class="decs-wrap">
+					<p class="decs"> Systems of Equations(8-5) </p>
+				</div>
+				
+			</div>
+		</div>
+		<div class="modal-footer">
+			<button type="button" class="btn btn-primary btn-lg">Save</button>
+			<button type="button" class="btn btn-info btn-lg" data-dismiss="modal">Cancel</button>
+		</div>
+	</div>
+  </div>
+</div>
+<!--// Booklet Setting -->
+</body>
+</html>

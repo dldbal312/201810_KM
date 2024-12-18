@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<link rel="SHORTCUT ICON" href="/images/favicon.ico">
+<title>Key&amp;Manager ver.2</title>
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/fontawesome-all.min.css">
+<link rel="stylesheet" type="text/css" href="/css/vendors/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" type="text/css" href="/css/custom.css">
+<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+<script src="/js/vendors/jquery-ui.min.js"></script>
+<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+<script src="/js/vendors/moment.js"></script>
+<script src="/js/vendors/bootstrap.min.js"></script>
+<script src="/js/vendors/bootstrap-datetimepicker.min.js"></script>
+<style>
+	html{overflow: hidden;}
+</style>
+</head>
+<body>
+	<div class="clearfix my-2">
+		<div class="pull-right">
+			<form class="form-inline">
+				<span class="tx_red">* 6개월 기준 STATEMENT가 보여집니다.</span>
+				<div class="form-group mx-2">
+					<span class="lb-txt mt-1">Balance</span>
+					<input type="text" class="form-control input-sm clearable" placeholder="0.00">
+				</div>
+				<a href="#" class="btn btn-success round">Payment Detail</a><!-- 180625_수정 [class 추가: "round"] -->
+			</form>
+		</div>
+	</div>
+	<div class="bx-table">
+		<div class="tb-dimm"><span class="txts">Fetching data...</span></div>
+		<div class="y-scroll">
+			<table class="table tb-check table-sort">
+				<thead>
+					<tr>
+						<th scope="col"><a href="#" class="sorting">날짜</a></th>
+						<th scope="col"><a href="#" class="sorting">청구 월</a></th>
+						<th scope="col"><a href="#" class="sorting">청구/영수 번호</a></th>
+						<th scope="col"><a href="#" class="sorting">청구 금액</a></th>
+						<th scope="col"><a href="#" class="sorting">납부 금액</a></th>
+						<th scope="col"><a href="#" class="sorting">조정 금액</a></th>
+						<th scope="col"><a href="#" class="sorting">환불 금액</a></th>
+						<th scope="col"><a href="#" class="sorting">잔액</a></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>23/04/2018</td>
+						<td>11-2017</td>
+						<td><a href="#" class="link-modal">I-2017-11-nnnn</a></td>
+						<td class="right">123.34</td>
+						<td class="right"></td>
+						<td class="right"></td>
+						<td class="right"></td>
+						<td class="right">4655.33</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	
+<script src="/js/custom.js"></script>
+</body>
+</html>

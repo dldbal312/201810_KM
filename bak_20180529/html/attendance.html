@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<link rel="SHORTCUT ICON" href="/images/favicon.ico">
+<title>Key&amp;Manager ver.2</title>
+<link rel="stylesheet" href="/css/common.css">
+<link rel="stylesheet" href="/css/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" href="/css/jquery-ui.css">
+<link rel="stylesheet" media="all and (min-width: 0) and (max-width: 1280px)" href="/css/tablet.css" />
+<link rel="stylesheet" media="all and (min-width: 0) and (max-width: 767px)" href="/css/mobile.css" />
+<script src="/js/jQuery/jquery-2.2.4.min.js"></script>
+<script src="/js/jQuery/jquery-ui.js"></script>
+<script src="/js/jQuery/jquery.mCustomScrollbar.js"></script>
+<script src="/js/common.js"></script>
+
+<script type="text/javascript">
+	$(document).ready( function() {
+		$('.key').on('mousedown' , function(evt) {
+			if (this.id == 'key10') {
+				$('#attCode').val('');
+				return false;
+			}
+			if (this.id == 'key11') {
+				$('#attCode').val($('#attCode').val().slice(0,-1));
+				return false;
+			}
+			if ($('#attCode').val().length < 4 ) {
+				$('#attCode').val($('#attCode').val() + $(this).text());
+			}
+			return false;
+		});
+		
+
+		$(".keypad-right-info").hide();
+		$('#checkIn').click(function() {
+			$(".keypad-right-effect").css('opacity','0.2');
+			$(".keypad-right-info").fadeIn(600);
+		});
+	});
+
+	function animation() {
+		$('.eggAni img').animate({"top":"+=15px"},400).animate({"top":"-=15px"},400);
+	}
+	setInterval(animation,600);
+
+</script>
+
+</head>
+<body>
+<div id="kmWrap">
+	<div class="login">
+		<div class="login-top">
+			<h1 class="logo"><a href="#">Key &amp; Manager</a></h1>
+		</div>
+		<div class="keypad-wrap">
+			<div class="bx-btn">
+				<div class="left">
+					FC00001039 (Global FC Ken)
+				</div>
+				<div class="right">
+					Today : 2018.12.31
+				</div>
+			</div>
+			<div class="keypad">
+				<div class="keypad-left">
+					<span class="keyinp"><input type="tel" name="attendanceCode" id="attCode" placeholder="key input" maxlength="4" value=""></span>
+					<div class="keyboard"> 
+						<div class="keyboard-row"> 
+							<button data-role="button" class="key" id="key1">1</button>
+							<button data-role="button" class="key" id="key2">2</button>
+							<button data-role="button" class="key" id="key3">3</button>
+						</div> 
+						<div class="keyboard-row"> 
+							<button data-role="button" class="key" id="key4">4</button>
+							<button data-role="button" class="key" id="key5">5</button>
+							<button data-role="button" class="key" id="key6">6</button>
+						</div> 
+						<div class="keyboard-row"> 
+							<button data-role="button" class="key" id="key7">7</button>
+							<button data-role="button" class="key" id="key8">8</button>
+							<button data-role="button" class="key" id="key9">9</button>
+						</div> 
+						<div class="keyboard-row"> 
+							<button data-role="button" class="key" id="key11">←</button> 
+							<button data-role="button" class="key" id="key0">0</button>
+							<button data-role="button" class="key" id="key10">clear</button>
+						</div>  
+					</div>
+					<div class="bx-btn">
+						<div class="left">
+							<a href="#" class="btn" id="checkIn">IN</a>
+						</div>
+						<div class="right">
+							<a href="#" class="layer2 btn-layer btn btn-blue" id="checkOut">OUT</a>
+						</div>
+					</div>
+				</div>
+				<div class="keypad-right">
+					<div class="keypad-right-effect">
+						<div class="eggAni">
+							<img src="/images/keypad.png" alt="">
+						</div>
+						<div class="eggAni">
+							<img src="/images/keypad.png" alt="">
+						</div>
+						<div class="eggAni">
+							<img src="/images/keypad.png" alt="">
+						</div>
+						<div class="eggAni">
+							<img src="/images/keypad.png" alt="">
+						</div>
+					</div>
+					<div class="keypad-right-info">
+						<div class="keypad-right-msg">
+							<span class="user-name">Hi <span id="userName">Ken Song</span></span>
+							<span class="user-subject" id="dateOfContract">EL Math - 13:30</span>
+							<span class="user-study-date">Time In : <span id="inTime">31-12-2018  12:25</span></span>
+							<span class="user-study-date">Time Out : <span id="outTime">31-12-2018  12:25</span></span>
+							<span class="user-guide">Attendance email/SNS message has been sent</span>
+						</div>
+						<div class="bx-btn">
+							<a href="#" class="btn btn-blue">OK</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- s : kmFooter -->
+	<div id="kmFooter">
+		<div class="ft-area">
+			<span class="ft-logo">KEY &amp; MANAGER</span>
+			<p class="ft-copy">Copyright &copy; 2018 Daekyo Co., Ltd All rights reserved. For more information, contact <a href="mailto:myeyelevel@myeyelevel.com">myeyelevel@myeyelevel.com</a></p>
+			<div class="ft-site">
+				<dl>
+					<dt><a href="#class">Links</a></dt>
+					<dd>
+						<ul>
+							<li><a href="https://sites.google.com/a/myeyelevel.com/itisthekey/" target="_blank">User guide</a></li>
+							<li><a href="http://www.myeyelevel.com/Global/English/" target="_blank">Eyelevel Site</a></li>
+							<li><a href="http://www.iamthekey.com/" target="_blank">Brand Site</a></li>
+							<li><a href="http://eng.daekyo.com/En/default.aspx" target="_blank">Corporate Site</a></li>
+							<li><a href="http://elu.myeyelevel.com" target="_blank">Eye Level University</a></li>
+							<li><a href="http://email.myeyelevel.com" target="_blank">Email</a></li>
+						</ul>
+					</dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+	<!-- e : kmFooter -->
+</div>
+<div class="dimm"></div>
+
+<div id="layer1" class="layer layer-s">
+	<div class="layer-tit">
+		<h3 class="ico-info">info</h3>
+	</div>
+	<div class="layer-con">
+		<div class="bx-msg">
+			Please check your attendance numbers.
+		</div>
+		<div class="bx-btn">
+			<a href="#" class="btn btn-layer-close">OK</a>
+		</div>
+	</div>
+</div>
+
+<div id="layer2" class="layer layer-s">
+	<div class="layer-tit">
+		<h3 class="ico-info">info</h3>
+		<a href="#" class="btn-layer-close"><span>닫기</span></a>
+	</div>
+	<div class="layer-con">
+		<div class="bx-msg">
+			Ken Song(K30001988)이 맞나요?
+		</div>
+		<div class="bx-btn">
+			<a href="#" class="btn">YES</a>
+			<a href="#" class="btn btn-gray">NO</a>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

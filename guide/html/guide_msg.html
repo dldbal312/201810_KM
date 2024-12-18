@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Pragma" content="no-cache">
+	<title>K&amp;M2 메시지 가이드</title>
+	<link rel="SHORTCUT ICON" href="/images/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="/guide/base.css">
+	<link rel="stylesheet" type="text/css" href="/guide/shCoreDefault.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap-datetimepicker.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendors/fontawesome-all.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendors/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" type="text/css" href="/css/custom.css">
+	<script src="/js/vendors/jquery-2.2.4.min.js"></script>
+	<script src="/js/vendors/jquery-ui.min.js"></script>
+	<script src="/js/vendors/jquery.mCustomScrollbar.js"></script>
+	<script src="/js/vendors/moment.js"></script>
+	<script src="/js/vendors/bootstrap.min.js"></script>
+	<script src="/js/vendors/bootstrap-datetimepicker.min.js"></script>
+	<script src="/guide/shCore.js"></script>
+	<script src="/guide/shBrushXml.js"></script>
+	<script src="/guide/shBrushCss.js"></script>
+	<script src="/guide/shBrushJScript.js"></script>
+	<script type="text/javascript">SyntaxHighlighter.all();</script>	
+</head>
+<body>
+<div id="wrap" class="coding_guide">
+	<h1 class="h1_guide">메시지 가이드</h1>
+	<h2 class="h2_guide">정보알림</h2>
+	<div class="dscBox">
+		<div class="modal" style="display:block;position:relative;left:auto;top:auto;right:auto;bottom:auto;margin-top:10px">
+			<div class="modal-dialog modal-sm">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="myModalLabel5">INFO</h4>
+					</div>
+					<div class="modal-body">
+						<p>Page Expired - Key&Manager</p>
+						<p>The page has expired. Click OK to continue.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+<pre class="brush: xml;">
+<div class="modal fade" id="" tabindex="-1" role="dialog" aria-labelledby="myModalLabel5">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title" id="myModalLabel5">INFO</h4>
+			</div>
+			<div class="modal-body">
+				<p></p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+</pre>
+	</div>
+
+	<h2 class="h2_guide">확인</h2>
+	<div class="dscBox">
+		<div class="modal" style="display:block;position:relative;left:auto;top:auto;right:auto;bottom:auto;margin-top:10px">
+			<div class="modal-dialog modal-sm">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel6">INFO</h4>
+					</div>
+					<div class="modal-body">
+						<p>예약 코멘트가 없습니다. </p>
+						<p>등록하시겠습니까?</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary">OK</button>
+						<button type="button" class="btn btn-info" data-dismiss="modal">Cancel</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+<pre class="brush: xml;">
+<div class="modal fade" id="" tabindex="-1" role="dialog" aria-labelledby="myModalLabel6">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel6">INFO</h4>
+			</div>
+			<div class="modal-body">
+				<p></p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary">OK</button>
+				<button type="button" class="btn btn-info" data-dismiss="modal">Cancel</button>
+			</div>
+		</div>
+	</div>
+</div>
+</pre>
+	</div>
+
+	<h2 class="h2_guide">회원검색</h2>
+	<div class="dscBox">
+		<div class="modal" style="display:block;position:relative;left:auto;top:auto;right:auto;bottom:auto;margin-top:10px">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel1">Search Member</h4>
+					</div>
+					<div class="modal-body">
+						<form class="form-horizontal form-label-left">
+							<div class="form-group">
+								<div class="col-md-8 col-md-offset-2">
+									<label class="control-label col-md-4" for="member-id">Member ID</label>
+									<div class="col-md-8">
+										<input type="text" id="member-id" class="form-control input-sm clearable col-md-12">
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div  class="col-md-8 col-md-offset-2">
+									<label class="control-label col-md-4" for="member-name">Name</label>
+									<div class="col-md-8">
+										<input type="text" id="member-name" name="member-name" class="form-control input-sm clearable col-md-12">
+									</div>
+								</div>
+							</div>
+							<div class="form-group text-center">
+								<a href="#" class="btn btn-primary">조회</a>
+							</div>
+						</form>
+						<div class="bx-table">
+							<div class="tb-dimm"><span class="txts">Fetching data...</span></div>
+							<table class="table">
+								<colgroup>
+									<col style="width:30%">
+									<col style="width:40%">
+									<col style="width:30%">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">Member ID</th>
+										<th scope="col">Name</th>
+										<th scope="col">Birthday</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><a href="#">G00204614</a></td>
+										<td><a href="#">Brandon Tan</a></td>
+										<td><a href="#">02/03/2013</a></td>
+									</tr>
+									<tr>
+										<td><a href="#">K30001494</a></td>
+										<td><a href="#">chulhee</a></td>
+										<td><a href="#">22/09/2015</a></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary">Save</button>
+						<button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+<pre class="brush: xml;">
+<div class="modal fade" id="" tabindex="-1" role="dialog" aria-labelledby="myModalLabel6">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel1">Search Member</h4>
+			</div>
+			<div class="modal-body">
+				<form class="form-horizontal form-label-left">
+					<div class="form-group">
+						<div class="col-md-8 col-md-offset-2">
+							<label class="control-label col-md-4" for="member-id">Member ID</label>
+							<div class="col-md-8">
+								<input type="text" id="member-id" class="form-control input-sm clearable col-md-12">
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div  class="col-md-8 col-md-offset-2">
+							<label class="control-label col-md-4" for="member-name">Name</label>
+							<div class="col-md-8">
+								<input type="text" id="member-name" name="member-name" class="form-control input-sm clearable col-md-12">
+							</div>
+						</div>
+					</div>
+					<div class="form-group text-center">
+						<a href="#" class="btn btn-primary">조회</a>
+					</div>
+				</form>
+				<div class="bx-table">
+					<div class="tb-dimm"><span class="txts">Fetching data...</span></div>
+					<table class="table">
+						<colgroup>
+							<col style="width:30%">
+							<col style="width:40%">
+							<col style="width:30%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">Member ID</th>
+								<th scope="col">Name</th>
+								<th scope="col">Birthday</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><a href="#">G00204614</a></td>
+								<td><a href="#">Brandon Tan</a></td>
+								<td><a href="#">02/03/2013</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary">Save</button>
+				<button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+</pre>
+	</div>
+
+	<h2 class="h2_guide">교사검색</h2>
+	<div class="dscBox">
+		<div class="modal" style="display:block;position:relative;left:auto;top:auto;right:auto;bottom:auto;margin-top:10px">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel2">Search Manager</h4>
+					</div>
+					<div class="modal-body">
+						<form class="form-horizontal form-label-left">
+							<div class="form-group">
+								<div class="col-md-8 col-md-offset-2">
+									<label class="control-label col-md-4" for="manager-id">Manager ID</label>
+									<div class="col-md-8">
+										<input type="text" id="manager-id" class="form-control input-sm clearable col-md-12">
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div  class="col-md-8 col-md-offset-2">
+									<label class="control-label col-md-4" for="manager-name">Name</label>
+									<div class="col-md-8">
+										<input type="text" id="manager-name" name="member-name" class="form-control input-sm clearable col-md-12">
+									</div>
+								</div>
+							</div>
+							<div class="form-group text-center">
+								<a href="#" class="btn btn-primary">조회</a>
+							</div>
+						</form>
+						<div class="bx-table">
+							<div class="tb-dimm"><span class="txts">Fetching data...</span></div>
+							<table class="table">
+								<colgroup>
+									<col style="width:30%">
+									<col style="width:70%">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">Manager ID</th>
+										<th scope="col">Name</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><a href="#">K30001134</a></td>
+										<td><a href="#">hwkim hwkim</a></td>
+									</tr>
+									<tr>
+										<td><a href="#">K30001507</a></td>
+										<td><a href="#">nadia kim</a></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary">Save</button>
+						<button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+<pre class="brush: xml;">
+<div class="modal fade" id="" tabindex="-1" role="dialog" aria-labelledby="myModalLabel6">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel2">Search Manager</h4>
+			</div>
+			<div class="modal-body">
+				<form class="form-horizontal form-label-left">
+					<div class="form-group">
+						<div class="col-md-8 col-md-offset-2">
+							<label class="control-label col-md-4" for="first-name">Manager ID</label>
+							<div class="col-md-8">
+								<input type="text" id="manager-id" class="form-control input-sm clearable col-md-12">
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div  class="col-md-8 col-md-offset-2">
+							<label class="control-label col-md-4" for="member-name">Name</label>
+							<div class="col-md-8">
+								<input type="text" id="member-name" class="form-control input-sm clearable col-md-12">
+							</div>
+						</div>
+					</div>
+					<div class="form-group text-center">
+						<a href="#" class="btn btn-primary">조회</a>
+					</div>
+				</form>
+				<div class="bx-table">
+					<div class="tb-dimm"><span class="txts">Fetching data...</span></div>
+					<table class="table">
+						<colgroup>
+							<col style="width:30%">
+							<col style="width:70%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">Manager ID</th>
+								<th scope="col">Name</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><a href="#">K30001134</a></td>
+								<td><a href="#">hwkim hwkim</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary">Save</button>
+				<button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+</pre>
+	</div>
+
+
+</div>
+</body>
+</html>
